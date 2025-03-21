@@ -1,8 +1,8 @@
-# **Trainee 2024.2**
+# **Trainee 2025.1**
 
 # **Nome do seu blog**
 
-## **Projeto Trainee, Code Jr, Grupo 000, 2024.2**
+## **Projeto Trainee, Code Jr, 2025.1**
 
 | **Sumário** |
 |-------------|
@@ -13,28 +13,25 @@
 
 #### Desenvolvedores:
 
-* Trainee 1
-* Trainee 2
-* Trainee 3
-* Trainee 4
-* Trainee 5
+* [Trainee 1](coloque o link do github)
+* [Trainee 2](coloque o link do github)
+* [Trainee 3](coloque o link do github)
+* [Trainee 4](coloque o link do github)
 
 
 #### Scrum Master:
 
-* [Nome do Scrum](coloque o link do github, se quiser).
+* [Nome do Scrum](coloque o link do github).
 
 #### Links Úteis:
 
 * [Trello]()
 
-* [Drive com ID Visual]()
-
 
 
 ## Descrição do Projeto:
 
-* Blog / Sistema de treinamento e capacitação dos Trainees da [CodeJR](https://codejr.com.br/), na gestão 2024.2;
+* Blog / Sistema de treinamento e capacitação dos Trainees da [CodeJR](https://codejr.com.br/), na gestão 2025.1;
 * Possuirá Front-End em HTML, CSS, JavaScript, Bootstrap e Back-End em PHP (puro), com Banco de Dados MySQL;
 
 
