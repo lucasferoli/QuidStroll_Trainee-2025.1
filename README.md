@@ -1,6 +1,6 @@
 # **Trainee 2025.1**
 
-# **Nome do seu blog**
+# **Quid Stroll Trainee**
 
 ## **Projeto Trainee, Code Jr, 2025.1**
 
@@ -13,19 +13,19 @@
 
 #### Desenvolvedores:
 
-* [Trainee 1](coloque o link do github)
-* [Trainee 2](coloque o link do github)
-* [Trainee 3](coloque o link do github)
-* [Trainee 4](coloque o link do github)
+* Delio Amaro (link do github)
+* Deyvison (link do github)
+* João Gabriel (link do github)
+* Yan Dias (link do github)
 
 
 #### Scrum Master:
 
-* [Nome do Scrum](coloque o link do github).
+* Lucas Fernandes https://github.com/lucasferoli
 
 #### Links Úteis:
 
-* [Trello]()
+* [Trello](https://trello.com/b/9E3bXCpX/251-trello-quid-stroll)
 
 
 
