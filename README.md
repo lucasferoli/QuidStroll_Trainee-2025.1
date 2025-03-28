@@ -13,9 +13,9 @@
 
 #### Desenvolvedores:
 
-* Delio Amaro (link do github)
-* Deyvison (link do github)
-* João Gabriel (link do github)
+* Delio Amaro https://github.com/delioamaro
+* Deyvison https://github.com/deyvisonfernandes
+* João Gabriel https://github.com/JgDuart1
 * Yan Dias (link do github)
 
 
