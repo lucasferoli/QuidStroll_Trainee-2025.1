@@ -16,8 +16,7 @@
 * Delio Amaro https://github.com/delioamaro
 * Deyvison https://github.com/deyvisonfernandes
 * João Gabriel https://github.com/JgDuart1
-* Yan Dias (link do github)
-
+* Yan Dias https://github.com/daysf
 
 #### Scrum Master:
 
