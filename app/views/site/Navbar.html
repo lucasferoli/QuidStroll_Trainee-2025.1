@@ -5,13 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
+        body {
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-image: linear-gradient( to right,  #f4f6f7 20%,#85c1e9 80%);
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /*.botoes a {
+            display: inline-flex;
+            margin-right: 15px;
+            padding: 8px, 15px;
+            text-decoration: nome;
+            color: #1b4f72;
+            font-size: 16px;
+            align-items: center;
+            border: 1px solid #1b4f72;
+            border-radius: 5px;
+        }*/
+
+        .botoes {
+            display: flex;
+            gap: 15px;
+        }
+
+        .botoes a {
+            text-decoration: nome;
+            color: #1b4f72;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            padding: 8px 15px;
+            border: 1px solid #1b4f72;
+        }
     </style>
 </head>
 <body>
-    <nav>
-        
-        <div>
+    <nav class="navbar">
+        <div class="botoes">
             <a href="#">Home</a>
             <a href="#">Publicações</a>
             <a href="#">Login</a>
