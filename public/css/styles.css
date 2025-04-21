@@ -185,6 +185,16 @@ section{
     align-self: stretch;
 }
 
+#autor img{
+    display: flex;
+    height: 60px;
+    padding-right: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
 #conteudo{
     border-radius: 0px 0px 15px 15px;
     border-top: 1px solid #1B4F72;
@@ -193,5 +203,16 @@ section{
     justify-content: center;
     align-items: center;
     flex: 1 0 0;
+    align-self: stretch;
+}
+
+#imagem img{
+    display: flex;
+    width: 478px;
+    padding: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     align-self: stretch;
 }
