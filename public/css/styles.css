@@ -8,4 +8,14 @@ footer{
     padding: 10px;
     justify-content: space-between;
     align-items: center;
+    height: 26vh;
+}
+.Texto{
+    font-family: 'Nunito', sans-serif ;
+    font: 900;
+    color: #F4F6F7;
+    font-weight: bold;
+}
+.Redes{
+    font: bold;
 }
