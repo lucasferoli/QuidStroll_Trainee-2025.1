@@ -1,4 +1,6 @@
-
+body {
+    background-color: #F4F6F7;
+}
 
 .barraDePesquisa {
     margin: 20px;
@@ -7,7 +9,6 @@
     width: 400px;
     height: 30px;
     padding: 70px 10px 0px 543px;
-
 }
 
 .barraDePesquisa input {
@@ -27,7 +28,7 @@
 
 .card {
     background-color: #B0DAF9;
-    width: 180px;
+    width: 220px;
     height: 260px;
     border-radius: 10px;
     border: 3px solid #1B4F72;
