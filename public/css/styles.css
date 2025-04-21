@@ -15,7 +15,7 @@ footer{
     font-family: 'Nunito', sans-serif ;
     font: 600;
     color: #F4F6F7;
-    font-weight: bold;
+    font-weight:600;
 }
 
 #redes{
@@ -30,6 +30,7 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
 #desenvolvedor{
@@ -37,11 +38,11 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2vh;
+    gap: 0vh;
 }
 
 #code img{
-    width: 110%;
+    width: 30vh;
 }
 
 #objetivos{
