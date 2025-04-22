@@ -180,18 +180,21 @@ body{
   filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2));
 }
 .carrossel-posts{
-  margin: 2% 0% 0% 0%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 0% 0% 0% 0%;
   gap: 1%;
   filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2));
+  overflow-x:auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
 
 }
 .post{
-  width: 15%;
-  margin: 0% 0% 0% 0%;
+  flex: 0 0 200px;
+  min-width: 200px;
+  margin-right: 1%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -199,8 +202,8 @@ body{
   padding: 1% 1% 1% 2%;
   border-radius: 20px;
   filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2));
-}
 
+}
 .post h1{
   font-family: "Nunito", sans-serif;
   color: #1A1A1A;
