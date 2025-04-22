@@ -114,105 +114,101 @@ footer{
 }*/
 
 #voltar{
-    width: 100%;
     display: flex;
     height: 20vh;
-    padding: 0vh 14vh;
     align-items: center;
-    gap: 10px;
-    align-self: stretch;
+    gap: 1vh;
     border-bottom: 0.1vh solid #1B4F72;
     background: #F4F6F7;
+    padding-left: 20vh;
 }
 
 #voltar img{
-    /*width: 20%;*/
     display: flex;
-    width: 74px;
-    padding: 21px 18px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    flex-shrink: 0;
+    width: 12vh;
+    padding: 6vh 5vh;
 }
 
 .text{
-    width: 104px;
-    height: 44px;
-    flex-shrink: 0;
-    aspect-ratio: 26/11;
     color: #1A1A1A;
     text-align: center;
     font-family: Rubik;
-    font-size: 40px;
-    font-style: normal;
+    font-size: 6vh;
     font-weight: 700;
-    line-height: normal;
 }
 
 main{
     background-color: #F4F6F7;
-    width: 100%;
     display: flex;
-    height: 733px;
-    padding: 50px;
     justify-content: center;
     align-items: center;
-    gap: 20px;
     align-self: stretch;
+    padding: 8vh;
 }
 
 section{
-    border-radius: 15px;
-    border: 1px solid #1B4F72;
+    border-radius: 2vh;
+    border: 0.1vh solid #1B4F72;
     background: #1B4F72;
     display: flex;
-    padding: 20px;
+    padding: 3vh;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1 0 0;
-    align-self: stretch;
 }
 
 #autor{
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 2vh 2vh 0vh 0vh;
     background: #85C1E9;
     display: flex;
-    height: 123px;
-    padding: 0px 40px;
+    height: 18vh;
+    padding-left: 8vh;
     align-items: center;
-    align-self: stretch;
+    gap: 1vh;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 3.25vh;
 }
 
-#autor img{
-    display: flex;
-    height: 60px;
-    padding-right: 10px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+#data{
+    font-weight: 400;
 }
-
 
 #conteudo{
-    border-radius: 0px 0px 15px 15px;
-    border-top: 1px solid #1B4F72;
+    border-radius: 0vh 0vh 2vh 2vh;
+    border-top: 0.1vh solid #1B4F72;
     background: #85C1E9;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1 0 0;
-    align-self: stretch;
 }
 
 #imagem img{
     display: flex;
-    width: 478px;
-    padding: 50px;
+    width: 50vh;
+    padding: 8vh;
+}
+
+#textual{
+    color: #1A1A1A;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    align-self: stretch;
+}
+
+#textual h1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    font-family: Rubik;
+    font-size: 4.87vh;
+    font-weight: 600;
+}
+
+#textual p{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: Nunito;
+    font-size: 3.25vh;
+    font-weight: 400;
+    padding-right: 8vh;
 }
