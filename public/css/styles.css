@@ -1,0 +1,291 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.hero-section{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    flex-direction: row;
+    background-color: #1B4F72;
+    width: 100%;
+    height: auto;
+    padding: 5% 10% 4% 10%;
+    background-image: url(brain-background.png);
+    background-size: 140%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.texto-hs{
+    padding: 0%;
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+}
+
+.texto-hs h1{
+    color: #E74C3C ;
+    position: relative;
+    z-index: 4;
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    font-size: 96px;
+    margin: 0%;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+.logo-descricao{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo-descricao img{
+    width: 200px;
+    top: 2px;
+    height: auto;
+}
+
+.balao-descricao{
+    align-items: center;
+    padding: 2%;
+    width: 30%;
+    height: auto;
+    border: 2px solid #2E86C1;
+    border-radius: 10%;
+    border-bottom-right-radius: 0%;
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.6));
+
+}
+
+.balao-descricao p{
+    color: #F4F6F7;
+    margin: 0%;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 200%;
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.5));
+
+}
+
+
+
+
+
+.imagem-mascote{
+    position: absolute;
+    top: 7vh;
+    left: 60vw;
+    z-index: 3;
+    width: 35.4vw;
+    height: 34vw;
+    background-color: #F4F6F7;
+    border-radius: 100%;
+    padding: 0%;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2));
+    align-items: center;
+}
+
+#img-user{
+  position: absolute;
+    width: 35vw;
+    height: auto;
+    top: -1vh;
+    left: -1vw;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5));
+    z-index: 5;
+}
+
+#img-notas{
+    position: absolute;
+    width: 10vw;
+    height: auto;
+    left: 20vw;
+    z-index: 4;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2));
+}
+#img-guitarra{
+    position: absolute;
+    width: 18vw;
+    height: auto;
+    top: -4vh;
+    left: -2vw;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+#img-coracao{
+    position: absolute;
+    width: 8vw;
+    height: auto;
+    top: 20vw;
+    left: -2vw;
+    transform: rotate(320deg);
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+#img-bola{
+    position: absolute;
+    width: 6vw;
+    height: auto;
+    top: 15vw;
+    left: 30vw;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2));
+
+}
+
+#img-batata{
+    position: absolute;
+    width: 6vw;
+    height: auto;
+    z-index: 8;
+    top: 28vw;
+    left: 8.5vw;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+#img-semaforo{
+    position: absolute;
+    width: 6vw;
+    height: auto;
+    top: 28vw;
+    left: 22vw;
+    z-index: 8;
+    transform: rotate(25deg);
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+
+.posts-recentes{
+  display: flex;
+  flex-direction: column;
+  margin: 0%;
+  background-color: #F4F6F7;
+  width: 100%;
+  height: auto;
+  padding: 0% 0% 0% 0%;
+}
+
+.posts-recentes h1{
+  margin: 0%;
+  color:#1B4F72;
+  font-family: "Nunito", sans-serif;
+  font-size: 300%;
+  font-weight: 600;
+  margin: 2% 0% 0% 2%;
+  filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2));
+}
+.carrossel-posts{
+  margin: 2% 0% 0% 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0% 0% 0% 0%;
+  gap: 1%;
+  filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2));
+
+}
+.post{
+  width: 15%;
+  margin: 0% 0% 0% 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid #2E86C1;
+  padding: 1% 1% 1% 2%;
+  border-radius: 20px;
+  filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+.post h1{
+  font-family: "Nunito", sans-serif;
+  color: #1A1A1A;
+  font-weight: 400;
+  font-size: 149%;
+  filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2));
+}
+.post img{
+  margin: 0% 0% 0% 0%;
+  width: 13vw;
+  height: 13vw;
+  object-fit: cover;
+  filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2));
+}
+.post p{
+  font-family: "Rubik", sans-serif;
+  color: #1A1A1A;
+  font-weight: 200;
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+    .hero-section {
+      flex-direction: column;
+      align-items: center;
+      padding: 5%;
+    }
+  
+    .imagem-mascote {
+      display: none;
+    }
+  
+    #img-user {
+      display: none;
+    }
+  
+    .texto-hs h1 {
+      font-size: 8vw;
+      text-align: center;
+    }
+  
+    .logo-descricao {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .logo-descricao img {
+      width: 120px;
+    }
+  
+    .balao-descricao {
+      width: 90%;
+      margin-top: 10px;
+      text-align: center;
+    }
+  
+    /* Esconde elementos decorativos */
+    #img-guitarra,
+    #img-notas,
+    #img-coracao,
+    #img-bola,
+    #img-batata,
+    #img-semaforo {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .texto-hs h1 {
+      font-size: 10vw;
+    }
+    .balao-descricao{
+      align-items: center;
+      padding: 9% 0% 9% 0%;
+      border-radius:20% 20% 0% 20%;
+    }
+  
+    .balao-descricao p {
+      font-size: 2rem;
+    }
+  
+    .logo-descricao img {
+      width: 100px;
+    }
+}
