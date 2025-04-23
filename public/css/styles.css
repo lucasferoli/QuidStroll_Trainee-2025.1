@@ -224,6 +224,21 @@ body{
   font-weight: 200;
 }
 
+.botao-ver-mais{
+  align-items: center;
+  padding: 2% 1% 0% 2%;
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0% 0% 0% 0%;
+  width: 50px;
+  height: 25px;
+  border: 2px solid #E74C3C;
+  border-radius: 10%;
+
+}
+
+
 
 
 
