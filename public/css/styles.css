@@ -293,6 +293,9 @@ body{
   }
   
   @media (max-width: 600px) {
+    .hero-section{
+      background-size: 340%;
+    }
     .texto-hs h1 {
       font-size: 10vw;
     }
