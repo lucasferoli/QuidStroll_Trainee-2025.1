@@ -238,10 +238,13 @@ body{
 
 }
 
+@media(min-width: 1500px){
+  .hero-section {
+    padding: 10%;
+    height: 120%;
+  }
 
-
-
-
+}
 
 @media (max-width: 1024px) {
     .hero-section {
