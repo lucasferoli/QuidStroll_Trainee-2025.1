@@ -9,6 +9,7 @@ body {
     width: 400px;
     height: 30px;
     padding: 70px 10px 0px 543px;
+    align-items: center;
 }
 
 .barraDePesquisa input {
