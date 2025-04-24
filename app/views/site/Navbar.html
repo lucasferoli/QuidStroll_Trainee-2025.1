@@ -70,6 +70,60 @@
             height: 100%;
             width: auto;
         }
+
+        .menuMobile {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #1b4f72;
+        }
+
+        @media (max-width: 768px) {
+            .menuMobile {
+                display: block; /* Mostra apenas no mobile */
+            }
+            
+            .botoes {
+                display: none;
+                position: absolute;
+                top: 90px;
+                left: 0;
+                width: 100%;
+                background-image: linear-gradient(to right, white 20%, #85c1e9 80%);
+                flex-direction: column;
+                align-items: center; 
+                padding: 20px 0; 
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                z-index: 100;
+                gap: 15px;
+            }
+
+            .botoes.active {
+                display: flex;
+            }
+
+            .botoes a {
+                width: 80%; 
+                min-width: 200px; 
+                text-align: center; 
+                justify-content: center; 
+                padding: 12px 0; 
+                border: 1px solid #1b4f72;
+                border-radius: 10px;
+                font-size: 16px;
+                color: #1b4f72;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+        }
+
+
+            
+        
     </style>
 </head>
 <body>
@@ -78,7 +132,11 @@
             <img src="Logo/Logo QuidStroll Original.jpg">
         </div>
         
-        <div class="botoes">
+        <button class="menuMobile" id="mobileMenu">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="botoes" id="botoes">
             <a href="#"><i class="fas fa-home"></i>Home</a>
             <a href="#"><i class="fas fa-newspaper"></i>Publicações</a>
             <a href="#"><i class="fas fa-sign-in-alt"></i>Login</a>
@@ -88,5 +146,11 @@
     <div style="padding: 30px;">
         <h1>Conteúdo da Página</h1>
     </div>
+
+    <script>
+        const mobileMenu = document.getElementById('mobileMenu');
+        const botoes = document.getElementById('botoes')
+        mobileMenu.addEventListener('click', () => {botoes.classList.toggle('active');});
+    </script>
 </body>
 </html>
