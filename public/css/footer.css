@@ -3,17 +3,13 @@ body{
     padding: 0;
     display: flex;
     flex-direction: column;
-    width: 100%;
 }
 footer{
     background-color: #1B4F72;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 50%;
-    gap: 10%;
-    margin-top: auto;
-    width: 100%;
+    height: 22vh;
 }
 .texto{
     font-family: 'Nunito', sans-serif ;
@@ -22,15 +18,21 @@ footer{
 }
 
 #redes{
+    background-color: #1B4F72;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 25%;
+    width: 25vh;
+    height: 100%;
+    gap: 2vh;
+    padding-left: 3%;
 }
 
 #tituloRedes .texto {
     white-space: nowrap;
 }
+
 
 #logos{
     gap: 2%;
@@ -42,73 +44,68 @@ footer{
 }
 
 #logos .logo img{
-    width: 35px;
+    width: 5.46vh;
 }
 
 #desenvolvedor{
+    background-color: #1B4F72;
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    align-items: end;
+    justify-content: center;
     align-items: center;
     text-align: center;  
-    width: 25%;
+    width: 25vh;
+    height: 100%;
+    gap: 2vh;
+    padding-right: 3%;
 }
 
 #code img{
     height: auto;
-    width: 140px;
+    width: 21.84vh;
 }
 #objetivos{
+    background-color: #1B4F72;
     display: flex;
+    align-items: center;
     text-align: center;
-    min-width: 250px;
+    min-width: 39vh;
     width: 50%;
+    height: 100%;
 }
 
 #objetivos .texto {
-    font-size: clamp(10px, 1.2vw, 14px);
-    line-height: 2;
+    font-size: clamp(1.56vh, 1.2vw, 2vh);
+    line-height: 1.5;
 }
 
-/*@media (max-width: 768px) {
+@media (max-width: 768px) {
     footer{
-        height: 1vh;
-        padding: 4vh 4vh;
         gap: 10%;
         margin-top: auto;
         width: 100%;
+        height: 12vh;
     }
-    
-    #tituloRedes .texto {
-        white-space: nowrap;
-    }
-    
-    #logos{
-        gap: 10%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
+   
+    #redes, #desenvolvedor{
+        font-size: 1.3vh;
+        gap: 0.5vh
     }
     
     #logos .logo img{
-        width: 50%;
+        width: 2vh;
     }
     
     #code img{
-        height: auto;
-        width: 10vh;
+        width: 8vh;
     }
     #objetivos{
         display: flex;
         text-align: center;
-        min-width: 125px;
-        width: 100%;
+        min-width: 19.5vh;
     }
     
     #objetivos .texto {
-        font-size: clamp(5px, 0.6vw, 7px);
+        font-size: clamp(0.6vh, 0.6vw, 1vh);
     }
-}*/
+}
