@@ -46,7 +46,7 @@ body{
 }
 
 .logo-descricao img{
-    width: 200px;
+    width: 250px;
     top: 2px;
     height: auto;
 }
@@ -214,8 +214,9 @@ body{
 }
 .post img{
   margin: 0% 0% 0% 0%;
-  width: 13vw;
-  height: 13vw;
+  width: 200px;
+  height: 200px;
+  border-radius: 10%;
   object-fit: cover;
   filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2));
 }
@@ -261,6 +262,14 @@ body{
     #img-user {
       display: none;
     }
+    #img-guitarra,
+    #img-notas,
+    #img-coracao,
+    #img-bola,
+    #img-batata,
+    #img-semaforo {
+      display: none;
+    }
   
     .texto-hs h1 {
       font-size: 8vw;
@@ -282,20 +291,12 @@ body{
       text-align: center;
     }
   
-    /* Esconde elementos decorativos */
-    #img-guitarra,
-    #img-notas,
-    #img-coracao,
-    #img-bola,
-    #img-batata,
-    #img-semaforo {
-      display: none;
-    }
+    
   }
   
   @media (max-width: 600px) {
     .hero-section{
-      background-size: 340%;
+      background-size: 400%;
     }
     .texto-hs h1 {
       font-size: 10vw;
@@ -311,6 +312,6 @@ body{
     }
   
     .logo-descricao img {
-      width: 100px;
+      width: 300px;
     }
 }
