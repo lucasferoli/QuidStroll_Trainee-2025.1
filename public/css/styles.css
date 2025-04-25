@@ -169,8 +169,7 @@ body{
   height: auto;
   padding: 0% 0% 0% 0%;
 }
-
-.posts-recentes h1{
+#titulo-pr{
   margin: 0%;
   color:#1B4F72;
   font-family: "Nunito", sans-serif;
@@ -179,11 +178,21 @@ body{
   margin: 2% 0% 0% 2%;
   filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2));
 }
+.carrossel-posts h1{
+  margin: 0%;
+  color:#1B4F72;
+  font-family: "Nunito", sans-serif;
+  font-size: 300%;
+  font-weight: 600;
+  margin: 2% 0% 0% 2%;
+  padding: 4% 0% 0% 3%;
+  filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2));
+}
 .carrossel-posts{
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  padding: 1% 0% 0% 2%;
+  padding: 1% 0% 0% 4%;
   gap: 1%;
   filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2));
   overflow-x:auto;
