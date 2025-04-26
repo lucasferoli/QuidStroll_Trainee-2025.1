@@ -26,7 +26,7 @@ body {
     color: #1B4F72;
 }
 
-#card {
+.card {
     display: flex;
     background-color: #85C1E9;
     justify-content: center;
@@ -78,7 +78,7 @@ a{
         align-items: center;
         flex-direction: column;
     }
-    #card {
+    .card {
         border: 0.5vh solid #1B4F72;
         border-radius: 1.25vh;
         margin: 0.5vh;
