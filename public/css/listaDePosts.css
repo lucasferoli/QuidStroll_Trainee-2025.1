@@ -124,3 +124,62 @@ body {
         margin-bottom: 15vh; 
     }
 }
+
+@media only screen and (max-width: 500px) {
+    .segBarraDePesquisa {
+        margin: 2vh 0;
+        height: auto;
+    }
+
+    .barraDePesquisa {
+        width: 80%;
+        height: 40px;
+    }
+
+    .grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 5vw;
+        margin: 0;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .card .imagem {
+        width: 30%;
+        height: 80px;
+        background-size: cover;
+    }
+
+    .card .conteudo {
+        width: 70%;
+        padding: 0 10px;
+    }
+
+    .card .conteudo h3 {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+
+    .card .conteudo p {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+
+    .card .autor {
+        font-size: 10px;
+        text-align: left;
+        padding: 2px 4px;
+    }
+
+    .pagination {
+        font-size: 12px;
+    }
+}
