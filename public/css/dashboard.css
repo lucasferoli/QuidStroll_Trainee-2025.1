@@ -3,20 +3,32 @@ body {
     background-color: rgb(68, 68, 245);
     justify-content: center;
     padding: 10vh 0 10vh 0;
+
 }
 
 .grid {
     display: grid;
+    align-items: center;
     justify-content: center;
     background-color: aliceblue;
-    width: 60vh;
+    width: 70vh;
     height: 80vh;
+
 }
 
 #text_dashboard {
-    padding: 2vh 0 2vh 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 #card {
-    border: 2px solid black;
+    display: flex;
+    background-color: #85C1E9;
+    justify-content: center;
+    border: 4px solid rgb(0, 42, 156);
+    border-radius: 16px;
+    margin: 1vh;
+    height: 8vh;
+    width: 40vh;
 }
