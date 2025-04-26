@@ -3,36 +3,54 @@ body {
     background-color: #1B4F72;
     justify-content: center;
     padding: 10vh 0 10vh 0;
-
+    margin: 0;
 }
 
 .grid {
     display: grid;
     align-items: center;
     justify-content: center;
-    background-color: aliceblue;
+    background-color: #f4f6f7;
     width: 70vh;
     height: 80vh;
-
+    border-radius: 2.5vh;
 }
 
 #text_dashboard {
     display: flex;
     justify-content: center;
     width: 100%;
+    font-weight: 600;
+    font-family: rubik;
+    font-size: 4vh;
+    color: #1B4F72;
 }
 
 #card {
     display: flex;
     background-color: #85C1E9;
     justify-content: center;
+    align-items: center;
     border: 4px solid rgb(0, 42, 156);
-    border-radius: 16px;
+    border: 1vh solid #1B4F72;
+    border-radius: 2.5vh;
     margin: 1vh;
     height: 8vh;
     width: 40vh;
+    color: #1B4F72;
+    font-family: nunito;
+    font-size: 2vh;
+    font-weight: 800;
 }
 
 #logo {
-    padding-left: 5.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
+
+#logo img{
+    width: 60%;
+}
+
