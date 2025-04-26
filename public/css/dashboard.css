@@ -1,6 +1,6 @@
 body {
     display: grid;
-    background-color: rgb(68, 68, 245);
+    background-color: #1B4F72;
     justify-content: center;
     padding: 10vh 0 10vh 0;
 
@@ -31,4 +31,8 @@ body {
     margin: 1vh;
     height: 8vh;
     width: 40vh;
+}
+
+#logo {
+    padding-left: 5.5vh;
 }
