@@ -1,4 +1,4 @@
-const botoes = document.querySelectorAll('.card');
+const botoes = document.querySelectorAll('.cardDashboard');
 
 botoes.forEach(botao => {
     botao.addEventListener('mouseover', () => {

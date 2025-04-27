@@ -1,4 +1,4 @@
-body {
+#bodyDashboard {
     display: grid;
     background-color: #1B4F72;
     justify-content: center;
@@ -6,7 +6,7 @@ body {
     margin: 0;
 }
 
-.grid {
+#conteudoDashboard {
     display: grid;
     align-items: center;
     justify-content: center;
@@ -16,7 +16,7 @@ body {
     border-radius: 2.5vh;
 }
 
-#text_dashboard {
+#textoDashboard {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -26,7 +26,13 @@ body {
     color: #1B4F72;
 }
 
-.card {
+#cardsDashboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cardDashboard {
     display: flex;
     background-color: #85C1E9;
     justify-content: center;
@@ -43,42 +49,42 @@ body {
     font-weight: 800;
 }
 
-#logo {
+#logoDashboard {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
 
-#logo img{
+#logoDashboard img{
     width: 60%;
 }
 
-a{
+.linkDashboard{
     text-decoration: none;
 }
 
 @media (max-width: 768px){
-    body{
+    #bodyDashboard{
         padding: 20vh
     }
-    .grid{
+    #conteudoDashboard{
         height:60vh ;
         width: 40vh;
     }
-    #text_dashboard {
+    #textDashboard {
         font-weight: 600;
         font-family: rubik;
         font-size: 3vh;
         color: #1B4F72;
     }
-    #cards{
+    #cardsDasboard{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
-    .card {
+    .cardDashboard {
         border: 0.5vh solid #1B4F72;
         border-radius: 1.25vh;
         margin: 0.5vh;
@@ -87,7 +93,7 @@ a{
         font-size: 1.5vh;
     }
 
-    #logo img{
+    #logoDashboard img{
         width: 50%;
     }
 }
