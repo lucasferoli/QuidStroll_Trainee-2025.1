@@ -47,7 +47,9 @@
     border-width: 0px;
     background-color: #F4F6F7;
 }
-
+.acoesTabelaDePosts button{
+    background-color: #2E86C1;
+}
 /* Tabela*/
 #conteudoTabelaDePosts{
     display: flex;
@@ -59,10 +61,20 @@
 
 #tabelaDePosts{
     width: 100%;
-    border-radius: 2.34vh;
     border: 0.31vh solid #1B4F72;
+    border-spacing: 0;
+    border-radius: 2.34vh;
 }
 
+#cabecalhoTabelaDePosts{
+    background-color: #1B4F72;
+    font-family: rubik;
+    color: #F4F6F7;
+}
+#bodyTabelaDePosts{
+    background-color: #2E86C1;
+    font-family: nunito;
+}
 /* Paginação*/
 #paginacaoTabelaDePosts{
     height: 14.5vh;
