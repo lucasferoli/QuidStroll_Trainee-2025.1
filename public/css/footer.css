@@ -75,7 +75,7 @@ footer{
 }
 
 #objetivosFooter .textoFooter {
-    font-size: clamp(1.56vh, 1.2vw, 2vh);
+    font-size: clamp(1.56vh, 1.2vw, 2.25vh);
     line-height: 1.5;
 }
 
