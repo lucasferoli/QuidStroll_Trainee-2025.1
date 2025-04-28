@@ -4,111 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
-<body id="bodyTabelaDePosts">
+<body id="bodyPaginaTabelaDePosts">
 
     <!-- Cabeçalho -->
-    <div id="cabeçalhoTabelaDePosts">
-        <div id="tituloTabelaDePosts">
+    <div id="cabecalhoPaginaTabelaDePosts">
+        <div id="tituloPaginaTabelaDePosts">
             <h1>Tabela de Posts</h1>
         </div>
-        <div>
-            <img src="/public/assets/Plus.png" alt="Criar novo post">
+        <div id="criarNovoPost">
+            <button id="botaoCriarNovoPost"><img src="/public/assets/Plus.png" alt="Criar novo post"></button>
         </div>
     </div>
 
     <!-- Tabela -->
     <main id="conteudoTabelaDePosts">
-        <div id="tabelaDePosts">
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>TÍTULO</th>
-                        <th>AUTOR</th>
-                        <th>DATA</th>
-                        <th>AÇÕES</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Ah nao vei ah nao</td>
-                        <td>Yan</td>
-                        <td>28/04/2025</td>
-                        <td>
-                            <img src="/public/assets/Eye.png" alt="Visualizar">
-                            <img src="/public/assets/Pen.png" alt="Editar">
-                            <img src="/public/assets/Trash.png" alt="Excluir">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Ah nao vei ah nao</td>
-                        <td>Yan</td>
-                        <td>28/04/2025</td>
-                        <td>
-                            <img src="/public/assets/Eye.png" alt="Visualizar">
-                            <img src="/public/assets/Pen.png" alt="Editar">
-                            <img src="/public/assets/Trash.png" alt="Excluir">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Ah nao vei ah nao</td>
-                        <td>Yan</td>
-                        <td>28/04/2025</td>
-                        <td>
-                            <img src="/public/assets/Eye.png" alt="Visualizar">
-                            <img src="/public/assets/Pen.png" alt="Editar">
-                            <img src="/public/assets/Trash.png" alt="Excluir">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Ah nao vei ah nao</td>
-                        <td>Yan</td>
-                        <td>28/04/2025</td>
-                        <td>
-                            <img src="/public/assets/Eye.png" alt="Visualizar">
-                            <img src="/public/assets/Pen.png" alt="Editar">
-                            <img src="/public/assets/Trash.png" alt="Excluir">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Ah nao vei ah nao</td>
-                        <td>Yan</td>
-                        <td>28/04/2025</td>
-                        <td>
-                            <img src="/public/assets/Eye.png" alt="Visualizar">
-                            <img src="/public/assets/Pen.png" alt="Editar">
-                            <img src="/public/assets/Trash.png" alt="Excluir">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Ah nao vei ah nao</td>
-                        <td>Yan</td>
-                        <td>28/04/2025</td>
-                        <td>
-                            <img src="/public/assets/Eye.png" alt="Visualizar">
-                            <img src="/public/assets/Pen.png" alt="Editar">
-                            <img src="/public/assets/Trash.png" alt="Excluir">
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <table id="tabelaDePosts">
+            <thead id="cabecalhoTabelaDePosts">
+                <tr class="trTabelaDePosts">
+                    <th class="idTabelaDePosts">ID</th>
+                    <th class="tituloTabelaDePosts">TÍTULO</th>
+                    <th class="autorTabelaDePosts">AUTOR</th>
+                    <th class="dataTabelaDePosts">DATA</th>
+                    <th class="acoesTabelaDePosts">AÇÕES</th>
+                </tr>
+            </thead>
+            <tbody id="bodyTabelaDePosts">
+                <tr class="trTabelaDePosts">
+                    <td class="idTabelaDePosts">1</td>
+                    <td class="tituloTabelaDePosts">Ah nao vei ah nao</td>
+                    <td class="autorTabelaDePosts">Yan</td>
+                    <td class="dataTabelaDePosts">28/04/2025</td>
+                    <td class="acoesTabelaDePosts">
+                        <button><img class="visualizarTabelaDePosts" src="/public/assets/Eye.png" alt="Visualizar"></button>
+                        <button><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                        <button><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
+                    </td>
+                </tr>
+                <tr class="trTabelaDePosts">
+                    <td class="idTabelaDePosts">1</td>
+                    <td class="tituloTabelaDePosts">Ah nao vei ah nao</td>
+                    <td class="autorTabelaDePosts">Yan</td>
+                    <td class="dataTabelaDePosts">28/04/2025</td>
+                    <td class="acoesTabelaDePosts">
+                        <button><img class="visualizarTabelaDePosts" src="/public/assets/Eye.png" alt="Visualizar"></button>
+                        <button><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                        <button><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
+                    </td>
+                </tr>
+                <tr class="trTabelaDePosts">
+                    <td class="idTabelaDePosts">1</td>
+                    <td class="tituloTabelaDePosts">Ah nao vei ah nao</td>
+                    <td class="autorTabelaDePosts">Yan</td>
+                    <td class="dataTabelaDePosts">28/04/2025</td>
+                    <td class="acoesTabelaDePosts">
+                        <button><img class="visualizarTabelaDePosts" src="/public/assets/Eye.png" alt="Visualizar"></button>
+                        <button><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                        <button><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
+                    </td>
+                </tr>
+                <tr class="trTabelaDePosts">
+                    <td class="idTabelaDePosts">1</td>
+                    <td class="tituloTabelaDePosts">Ah nao vei ah nao</td>
+                    <td class="autorTabelaDePosts">Yan</td>
+                    <td class="dataTabelaDePosts">28/04/2025</td>
+                    <td class="acoesTabelaDePosts">
+                        <button><img class="visualizarTabelaDePosts" src="/public/assets/Eye.png" alt="Visualizar"></button>
+                        <button><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                        <button><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
+                    </td>
+                </tr>
+                <tr class="trTabelaDePosts">
+                    <td class="idTabelaDePosts">1</td>
+                    <td class="tituloTabelaDePosts">Ah nao vei ah nao</td>
+                    <td class="autorTabelaDePosts">Yan</td>
+                    <td class="dataTabelaDePosts">28/04/2025</td>
+                    <td class="acoesTabelaDePosts">
+                        <button><img class="visualizarTabelaDePosts" src="/public/assets/Eye.png" alt="Visualizar"></button>
+                        <button><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                        <button><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </main>
 
     <!-- Paginação -->
-     <div>
-        <img src="/public/assets/arrowLeftShort.png" alt="">
-        <img src="/public/assets/1.png" alt="">
-        <img src="/public/assets/2.png" alt="">
-        <img src="/public/assets/3.png" alt="">
-        <img src="/public/assets/arrowLeftShort.png" alt="">
-     </div>
+    <div id="paginacaoTabelaDePosts">
+        <button><img src="/public/assets/arrowLeftShort.png" alt=""></button>
+        <button><img src="/public/assets/1.png" alt=""></button>
+        <button><img src="/public/assets/2.png" alt=""></button>
+        <button><img src="/public/assets/3.png" alt=""></button>
+        <button><img src="/public/assets/arrowLeftShort.png" alt=""></button>
+    </div>
 </body>
 </html>
