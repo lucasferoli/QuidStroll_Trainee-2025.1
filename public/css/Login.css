@@ -70,3 +70,27 @@ input {
     max-width: 100px;
     height: auto;
 }
+
+.senhaOculta {
+    position: relative;
+}
+
+.esconderSenha {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #1b4f72;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+.esconderSenha i {
+    font-size: 18px;
+}
+
+.campoSenha input {
+    padding-right: 35px;
+}

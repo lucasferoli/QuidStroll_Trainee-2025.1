@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/public/css/Login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="corpoLogin">
@@ -20,7 +21,12 @@
             
         <div class="campoSenha">
             <label>Senha:</label>
-            <input type="senha" id="senha">
+            <div class="senhaOculta">
+                <input type="senha" id="senha">
+                <button class="esconderSenha">
+                    <i class="fas fa-eye-slash" id="iconeOcultar"></i>
+                </button>
+            </div>
         </div>
 
         <button class="botaoLogin">LOGIN</button>
@@ -29,5 +35,7 @@
             <img src="/public/assets/Logo QuidStroll Original.jpg">
         </div>
     </div>
+
+    <script src="/public/js/Login.js"></script>
 </body>
 </html>
