@@ -47,9 +47,6 @@ body{
     background-color: #F4F6F7;
 }
 .botaoAdicionar-listaDeUsuarios button{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     width: 4.5vw;
     padding: 1% 2% 1% 2%;
     align-items: center;
@@ -118,6 +115,28 @@ td img{
     font-weight: 300;
     margin: 1% 1% 1% 1%;
 }
+
+.paginacao-listaDeUsuarios{
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    width: fit-content;
+    margin-left: auto;
+    padding: 0% 2% 0% 0%;
+    font-family: "Rubik", sans-serif;
+    font-weight: 800;
+
+}
+.paginacao-listaDeUsuarios button{
+    width: 3vw;
+    height: 2vw;
+    align-items: center;
+    border: none;
+    background-color: #85C1E9;
+    border-radius: 20px;
+}
+
+
 
 
 
