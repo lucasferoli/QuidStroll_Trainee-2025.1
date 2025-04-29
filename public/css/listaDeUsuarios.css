@@ -75,12 +75,6 @@ body{
 
 
 
-.tabela-listaDeUsuarios th, td{
-    padding: 2% 2% 2% 2%;
-    height: auto;
-    text-align: center;
-}
-
 .cabecalhoTabela-listaDeUsuarios{
     font-family: "Rubik", sans-serif;
     font-weight: 700;
@@ -88,6 +82,15 @@ body{
     border-radius: 20px;
 }
 .cabecalhoTabela-listaDeUsuarios th{
+    padding: 2% 2% 2% 2%;
+    height: auto;
+    text-align: center;
+    width: 10%;
+}
+.cabecalhoTabela-listaDeUsuarios tr{
+    padding: 2% 2% 2% 2%;
+    height: auto;
+    text-align: center;
     width: 10%;
 }
 
@@ -95,6 +98,9 @@ body{
 .corpoTabela-listaDeUsuarios td{
     font-family: "Nunito", sans-serif;
     font-weight: 500;
+    padding: 2% 2% 2% 2%;
+    height: auto;
+    text-align: center;
     
 }
 
