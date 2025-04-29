@@ -9,7 +9,7 @@ body{
     flex-direction: row;
 }
 
-.teste{
+.sidebar-listaDeUsuarios{
     display: flex;
     flex-direction: column;
     width: 20vw;
@@ -29,7 +29,7 @@ body{
     background-color: #F4F6F7;
     color: #1A1A1A;
     width: 100%;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 .titulo-listaDeUsuarios{
     padding: 2% 0% 0% 2%;
@@ -45,14 +45,12 @@ body{
     width: 70%;
     height: auto;
     background-color: #F4F6F7;
-    gap: 2vw;
 }
 .botaoAdicionar-listaDeUsuarios button{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 10%;
-    width: 5vw;
+    width: 4.5vw;
     padding: 1% 2% 1% 2%;
     align-items: center;
     border: none;
@@ -61,7 +59,7 @@ body{
 }
 
 .botaoAdicionar-listaDeUsuarios img{
-    width: 3vw;
+    width: 2.5vw;
     height: auto;
 
 }
@@ -70,10 +68,8 @@ body{
     width: 100%;
     height: 90%;
     background-color: #F4F6F7;
-    padding: 2% 2% 0% 0%;
+    padding: 2% 2% 0% 2%;
 }
-
-
 
 .cabecalhoTabela-listaDeUsuarios{
     font-family: "Rubik", sans-serif;
@@ -87,13 +83,6 @@ body{
     text-align: center;
     width: 10%;
 }
-.cabecalhoTabela-listaDeUsuarios tr{
-    padding: 2% 2% 2% 2%;
-    height: auto;
-    text-align: center;
-    width: 10%;
-}
-
 
 .corpoTabela-listaDeUsuarios td{
     font-family: "Nunito", sans-serif;
