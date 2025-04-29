@@ -1,5 +1,5 @@
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Nunito', sans-serif;
     margin: 0;
     background: #f4f6f7;
 }
@@ -9,8 +9,8 @@ body{
     position: fixed;
     top: 15px;
     left: 15px;
-    background: #3498db;
-    color: white;
+    background: #2e86c1;
+    color: #f4f6f7;
     border: none;
     border-radius: 5px;
     padding: 10px 15px;
@@ -20,8 +20,8 @@ body{
 
 .sidebar {
     width: 250px;
-    background: #2c3e50;
-    color: white;
+    background: #1b4f72;
+    color: #f4f6f7;
     height: 100vh;
     position: fixed;
 }
@@ -29,7 +29,7 @@ body{
 .sidebarHeader {
     padding: 20px;
     text-align: center;
-    border-bottom: 1px solid #34495e;
+    border-bottom: 1px solid #1b4f72;
 }
 
 .sidebarNav {
@@ -39,7 +39,7 @@ body{
 }
 
 .sidebarNav a {
-    color: white;
+    color: #f4f6f7;
     text-decoration: none;
     padding: 12px;
     border-radius: 5px;
@@ -49,11 +49,11 @@ body{
 }
 
 .sidebarNav a:hover, .sidebarNav a.active {
-    background: #34495e;
+    background: #1b4f72;
 }
 
 .sidebarNav a.active {
-    background: #3498db;
+    background: #2e86c1;
 }
 
 .sidebarNav i {
@@ -66,11 +66,11 @@ body{
     bottom: 0;
     width: 100%;
     padding: 15px;
-    border-top: 1px solid #2c3e50;
+    border-top: 1px solid #1b4f72;
 }
 
 .sidebarFooter a {
-    color: white;
+    color: #1b4f72;
     text-decoration: none;
     display: flex;
     align-items: center;
