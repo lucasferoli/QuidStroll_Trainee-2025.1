@@ -23,7 +23,7 @@ body{
     height: 100vh;
     background-color: #F4F6F7;
 }
-.listaDeUsuarios h1{
+.titulo-listaDeUsuarios h1{
     font-family: "Nunito", sans-serif;
     font-weight: 300;
     background-color: #F4F6F7;
@@ -114,6 +114,14 @@ td img{
     display: flex;
     gap: 20%;
     justify-content: center;
+}
+
+.tabela-listaDeUsuarios caption{
+    caption-side: bottom;
+    text-align: left;
+    font-family: "Nunito", sans-serif;
+    font-weight: 300;
+    margin: 1% 1% 1% 1%;
 }
 
 
