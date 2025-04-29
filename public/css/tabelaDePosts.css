@@ -5,7 +5,7 @@
     padding: 0%;
 }
 
-/*Cabecalho*/
+/*--------------------------------Cabecalho------------------------------*/
 #cabecalhoPaginaTabelaDePosts{
     width: 100%;
     height: 30vh;
@@ -50,13 +50,14 @@
 .acoesTabelaDePosts button{
     background-color: #2E86C1;
 }
-/* Tabela*/
+/* -------------------------------Tabela--------------------------------*/
 #conteudoTabelaDePosts{
     display: flex;
     padding: 7.8vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 2.34vh;
 }
 
 #tabelaDePosts{
@@ -70,12 +71,84 @@
     background-color: #1B4F72;
     font-family: rubik;
     color: #F4F6F7;
+    border-radius: 2.34vh;
+}
+#cabecalhoTabelaDePosts tr{
+    display: flex;
+    height: 14vh;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2.34vh;
 }
 #bodyTabelaDePosts{
     background-color: #2E86C1;
     font-family: nunito;
+    border-radius: 2.34vh;
 }
-/* Paginação*/
+
+#bodyTabelaDePosts tr{
+    display: flex;
+    height: 12.5vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.trTabelaDePosts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.31vh solid #1B4F72;
+}
+
+/*---------------------------------------------*/
+.idTabelaDePosts{
+    display: flex;
+    width: 10%;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2.34vh;
+}
+
+.tituloTabelaDePosts{
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.autorTabelaDePosts{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.dataTabelaDePosts{
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.acoesTabelaDePosts{
+    display: flex;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 2.34vh;
+}
+
+.acoesTabelaDePosts img{
+    
+}
+
+/*----------------------------------Paginação-------------------------------*/
 #paginacaoTabelaDePosts{
     height: 14.5vh;
     display: flex;
