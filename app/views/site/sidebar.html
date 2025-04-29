@@ -1,11 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sidebar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/public/css/Sidebar.css">
 </head>
 <body>
-    Teste
+    <button class="menuBotaoMobile" id="menuMobile">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebarHeader">
+            <h3>Painel Admin</h3>
+        </div>
+        <nav class="sidebarNav">
+            <a href="#" class="active" data-page="dashboard">
+                <i class="fas fa-tachometer-alt"></i>
+                Dashboard
+            </a>
+            <a href="#" data-page="posts">
+                <i class="fas fa-newspaper"></i>
+                Posts
+            </a>
+            <a href="#" data-page="users">
+                <i class="fas fa-users"></i>
+                Usuários
+            </a>
+        </nav>
+        <div class="sidebarFooter">
+            <a href="#" id="logout">
+                <i class="fas fa-sign-out-alt"></i>
+                Logout
+            </a>
+        </div>
+    </div>
+
+    <main id="conteudoPagina">
+        <h1>Bem Vindo ao Painel</h1>
+        <div class="card">
+            <p>Selecione uma opção ao lado</p>
+        </div>
+    </main>
+
+    <script src="/public/js/Sidebar.js"></script>
 </body>
 </html>
