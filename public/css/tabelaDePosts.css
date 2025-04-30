@@ -1,11 +1,12 @@
 #bodyPaginaTabelaDePosts{
-    width: 100%;
     background-color: #F4F6F7;
     margin: 0%;
     padding: 0%;
 }
 
+/*-----------------------------------------------------------------------*/
 /*--------------------------------Cabecalho------------------------------*/
+
 #cabecalhoPaginaTabelaDePosts{
     width: 100%;
     height: 30vh;
@@ -20,7 +21,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    padding-left: 20vh;
+    padding-left: 10%;
 }
 #tituloPaginaTabelaDePosts h1{
     display: flex;
@@ -30,13 +31,14 @@
     font-family: Rubik;
     font-size: 6vh;
     font-weight: 800;
+    white-space: nowrap;
 }
 #criarNovoPost{
     width: 100vh;
     display: flex;
     justify-content: end;
     align-items: center;
-    padding-right: 20vh;
+    padding-right: 10%;
 }
 #criarNovoPost img{
     height: 8vh;
@@ -50,7 +52,10 @@
 .acoesTabelaDePosts button{
     background-color: #2E86C1;
 }
+
+/*----------------------------------------------------------------------*/
 /* -------------------------------Tabela--------------------------------*/
+
 #conteudoTabelaDePosts{
     display: flex;
     padding: 7.8vh;
@@ -62,28 +67,27 @@
 
 #tabelaDePosts{
     width: 100%;
-    border: 0.31vh solid #1B4F72;
     border-spacing: 0;
-    border-radius: 2.34vh;
+    border-radius: 2.6vh;
+    background-color: #2E86C1;
+    border: 0.31vh solid #1B4F72;
 }
 
 #cabecalhoTabelaDePosts{
-    background-color: #1B4F72;
-    font-family: rubik;
+    font-family: nunito;
     color: #F4F6F7;
-    border-radius: 2.34vh;
+    font-weight:bold;
 }
 #cabecalhoTabelaDePosts tr{
     display: flex;
     height: 14vh;
     justify-content: center;
     align-items: center;
-    border-radius: 2.34vh;
+    background-color: #1B4F72;
+    border-radius: 2.34vh 2.34vh 0vh 0vh;
 }
 #bodyTabelaDePosts{
-    background-color: #2E86C1;
-    font-family: nunito;
-    border-radius: 2.34vh;
+    
 }
 
 #bodyTabelaDePosts tr{
@@ -97,58 +101,54 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 0.31vh solid #1B4F72;
+    border-bottom: 0.31vh solid #1B4F72;
 }
 
-/*---------------------------------------------*/
-.idTabelaDePosts{
+.cincoTP{
+    border-bottom: 0vh;
+}
+
+/*-------------------------------------------------------------------------*/
+/*---------------------------ElementosDaTabela-----------------------------*/
+
+.trTabelaDePosts td, .trTabelaDePosts th{
     display: flex;
-    width: 10%;
-    flex-direction: column;
     align-items: center;
-    border-radius: 2.34vh;
+    justify-content: center;
+    white-space: nowrap;
+    font-family: nunito;
+}
+.trTabelaDePosts td{
+    font-weight: 700;
+    color: #1A1A1A;
+}
+.idTabelaDePosts{
+    width: 10%;
 }
 
 .tituloTabelaDePosts{
-    display: flex;
-    width: 20%;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
+    width: 30%;
 }
 
 .autorTabelaDePosts{
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
+    width: 20%;
 }
 
 .dataTabelaDePosts{
-    display: flex;
     width: 20%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
 }
 
 .acoesTabelaDePosts{
-    display: flex;
-    width: 25%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    border-radius: 2.34vh;
+    width: 20%;
 }
 
 .acoesTabelaDePosts img{
     
 }
 
+/*--------------------------------------------------------------------------*/
 /*----------------------------------Paginação-------------------------------*/
+
 #paginacaoTabelaDePosts{
     height: 14.5vh;
     display: flex;
