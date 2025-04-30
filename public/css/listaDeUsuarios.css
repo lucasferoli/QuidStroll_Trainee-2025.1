@@ -23,19 +23,22 @@ body{
     height: 100vh;
     background-color: #F4F6F7;
 }
+
+.titulo-listaDeUsuarios{
+    padding: 2% 0% 0% 2%;
+    width: 100%;
+    height: auto;
+    background-color: #F4F6F7;
+    border-bottom: 2px solid #1A1A1A;
+}
 .titulo-listaDeUsuarios h1{
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     font-family: "Nunito", sans-serif;
     font-weight: 300;
     background-color: #F4F6F7;
     color: #1A1A1A;
     width: 100%;
     font-size: 3rem;
-}
-.titulo-listaDeUsuarios{
-    padding: 2% 0% 0% 2%;
-    width: 100%;
-    height: auto;
-    background-color: #F4F6F7;
 }
 
 .botaoAdicionar-listaDeUsuarios{
@@ -53,6 +56,7 @@ body{
     border: none;
     background-color: #85C1E9;
     border-radius: 20px;
+    box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
 }
 
 .botaoAdicionar-listaDeUsuarios img{
@@ -67,11 +71,14 @@ body{
     background-color: #F4F6F7;
     padding: 2% 2% 0% 2%;
 }
-
+.tabela-listaDeUsuarios{
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+}
 .cabecalhoTabela-listaDeUsuarios{
     font-family: "Rubik", sans-serif;
     font-weight: 700;
     background-color: #85C1E9;
+    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.25);
 }
 .cabecalhoTabela-listaDeUsuarios th{
     padding: 2% 2% 2% 2%;
@@ -118,6 +125,7 @@ td img{
     border-radius: 999px 999px 999px 999px;
     margin-left: auto;
     margin-right: 4%;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
 
 }
 .paginacao-listaDeUsuarios button{
@@ -133,6 +141,7 @@ td img{
 #paginaEmUso-listaDeUsuarios{
     background-color: #F4F6F7;
     border-radius: 20px;
+    box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
 }
 
 
