@@ -12,5 +12,5 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Você foi desconectado!');
         }
     });
-
 });
+
