@@ -85,9 +85,7 @@
     align-items: center;
     background-color: #1B4F72;
     border-radius: 2.34vh 2.34vh 0vh 0vh;
-}
-#bodyTabelaDePosts{
-    
+    gap: 2.5vh;
 }
 
 #bodyTabelaDePosts tr{
@@ -95,6 +93,7 @@
     height: 12.5vh;
     justify-content: center;
     align-items: center;
+    gap: 2.5vh;
 }
 
 .trTabelaDePosts{
@@ -123,27 +122,30 @@
     color: #1A1A1A;
 }
 .idTabelaDePosts{
-    width: 10%;
+    width: 15%;
 }
 
 .tituloTabelaDePosts{
-    width: 30%;
+    width: 25%;
 }
 
 .autorTabelaDePosts{
-    width: 20%;
+    width: 25%;
 }
 
 .dataTabelaDePosts{
-    width: 20%;
+    width: 15%;
 }
 
 .acoesTabelaDePosts{
-    width: 20%;
+    width: 25%;
 }
 
 .acoesTabelaDePosts img{
-    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*--------------------------------------------------------------------------*/
@@ -157,3 +159,74 @@
     align-items: start;
     gap: 1vh;
 }
+
+/*--------------------------------------------------------------------------*/
+/*----------------------------------Celulares-------------------------------*/
+
+@media (max-width: 769px){
+    /*-----------------------------------------------------------------------*/
+    /*--------------------------------Cabecalho------------------------------*/
+    #cabecalhoPaginaTabelaDePosts{
+        height: 15vh;
+    }
+    
+    #tituloPaginaTabelaDePosts h1{
+        height: 4.5vh;
+        font-size: 3vh;
+    }
+    #criarNovoPost img{
+        height: 4vh;
+    }
+    /*----------------------------------------------------------------------*/
+    /* -------------------------------Tabela--------------------------------*/
+    
+    #conteudoTabelaDePosts{
+        padding: 3vh;
+    }
+    
+    #cabecalhoTabelaDePosts tr{
+        height: 8.5vh;
+    }
+    
+    #bodyTabelaDePosts tr{
+        height: 8vh;
+    }
+    
+    /*-------------------------------------------------------------------------*/
+    /*---------------------------ElementosDaTabela-----------------------------*/
+    
+    .trTabelaDePosts td, .trTabelaDePosts th{
+        font-size: 1.65vh;
+    }
+    .trTabelaDePosts td{
+        font-weight: 600;
+    }
+    .acoesTabelaDePosts img{
+        width: 70%;
+    }
+    
+    /*--------------------------------------------------------------------------*/
+    /*----------------------------------Paginação-------------------------------*/
+    
+    #paginacaoTabelaDePosts{
+        height: 7.25vh;
+    }
+
+    #paginacaoTabelaDePosts img{
+        width: 4vh;
+    }
+}
+
+@media (max-width: 400px){
+    .trTabelaDePosts td, .trTabelaDePosts th{
+        font-size: 1.5vh;
+    }
+    .trTabelaDePosts td{
+        font-weight: 500;
+    }
+    .acoesTabelaDePosts img{
+        width: 100%;
+    }
+}
+
+/*botões não testados. podendo haver interferencia com o css pelo padrão do css de "button".*/
