@@ -203,3 +203,23 @@ td img{
 
     
 }
+
+@media (max-width: 750px){
+    .tabela-listaDeUsuarios{
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0% 10% 0% 10%;
+    }
+    th{
+        display: none;
+    }
+    td{
+        display: block;
+    }
+    td::before{
+        content: attr(data-cell) " ";
+        display: flex;
+        justify-content: flex-start;
+        font-weight: 700;
+    }
+}
