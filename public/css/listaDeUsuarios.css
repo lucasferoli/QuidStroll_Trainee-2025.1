@@ -50,7 +50,10 @@ body{
     background-color: #F4F6F7;
 }
 .botaoAdicionar-listaDeUsuarios button{
-    width: 4.5vw;
+    display: flex;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
     padding: 1% 2% 1% 2%;
     align-items: center;
     border: none;
@@ -59,10 +62,22 @@ body{
     box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
 }
 
-.botaoAdicionar-listaDeUsuarios img{
-    width: 2.5vw;
+.botaoAdicionar-listaDeUsuarios button img{
+    width: 2rem;
     height: auto;
 
+}
+.botaoAdicionar-listaDeUsuarios button:hover{
+    display: flex;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    padding: 1% 2% 1% 2%;
+    align-items: center;
+    border: none;
+    background-color: #F4F6F7;
+    border-radius: 20px;
+    box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
 }
 
 .campoTabela-listaDeUsuarios{
@@ -105,7 +120,7 @@ td button{
     width: 10%;
 }
 td img{
-    width: 100%;
+    width: 3rem;
     height: auto;
 }
 
@@ -153,22 +168,13 @@ td img{
 
 }
 
-.botaoAdicionar-listaDeUsuarios button:hover{
-    width: 4.5vw;
-    padding: 1% 2% 1% 2%;
-    align-items: center;
-    border: none;
-    background-color: #F4F6F7;
-    border-radius: 20px;
-    box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
-}
-
 
 
 @media (max-width: 900px) {
     .listaDeUsuarios{
         width: 100vw;
         height: auto;
+        overflow-x: hidden;
     }
     .titulo-listaDeUsuarios{
         background-color: #F4F6F7;
@@ -184,6 +190,7 @@ td img{
     }
     .paginacao-listaDeUsuarios{
        margin-top: 2rem;
+       margin-bottom: 1rem;
         margin-left: auto;
        margin-right: auto;
     
