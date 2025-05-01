@@ -144,12 +144,27 @@ td img{
     box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
 }
 
+.paginacao-listaDeUsuarios button:hover{
+    background-color: #F4F6F7;
+    border-radius: 20px;
+    box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
 
+}
+
+.botaoAdicionar-listaDeUsuarios button:hover{
+    width: 4.5vw;
+    padding: 1% 2% 1% 2%;
+    align-items: center;
+    border: none;
+    background-color: #F4F6F7;
+    border-radius: 20px;
+    box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
+}
 
 
 
 @media (max-width: 900px) {
-    .teste{
+    .sidebar-listaDeUsuarios{
             display: none;
             flex-direction: none;
             width: none;
