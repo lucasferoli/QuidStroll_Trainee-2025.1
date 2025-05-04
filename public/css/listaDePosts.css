@@ -1,5 +1,5 @@
 body {
-    background-color: #F4F6F7;
+    background-color: #f4f6f7;
     margin: 0;
     padding: 0;
 }
@@ -9,7 +9,7 @@ body {
     justify-content: center;
     margin: 4vh 0px 4vh 0px;
     width: 100%;
-    height: 6.00vh;
+    height: 5.6vh;
 }
 
 .barraDePesquisa {
@@ -18,9 +18,10 @@ body {
     justify-content: right;
     width: 40%;
     height: 100%;
-    border: 2px solid #0057FF;
+    border: 2px solid #1B4F72;
     border-radius: 50px;
     font-size: 16px;
+    background-color: white;
 }
 
 .barraDePesquisa input {
@@ -146,13 +147,15 @@ body {
 
 .pagination {
     width: 100%;
+    height: 8vh;
     border-top: 2px solid #1B4F72;
     border-right: none;
     border-left: none;
     border-bottom: none;
     text-align: center;
-    margin: 3.12vh 0;
+    margin: 3.12vh 0 0 0;
     font-size: 14px;
+    background: linear-gradient(#85c1e9);
 }
 
 .pagination p {
