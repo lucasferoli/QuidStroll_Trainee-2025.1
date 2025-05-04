@@ -22,7 +22,7 @@
             <h1>Lista de Usuários</h1>
         </div>
         <div class="botaoAdicionar-listaDeUsuarios">
-            <button><img src="/public/assets/novoUsuario.png" alt="" id="novoUsuario-listaDeUsuarios"></button>
+            <button onclick="abrirmodal('criar')"><img src="/public/assets/novoUsuario.png" alt="" id="novoUsuario-listaDeUsuarios"></button>
         </div>
 
         <div class="campoTabela-listaDeUsuarios">
@@ -96,7 +96,18 @@
             <button>3</button>
             <button>&gt</button>
         </nav>
+
+        <div class="modalc" id = "criar">
+            Nome <input type="text">
+            E-mail <input type="text">
+            Senha <input type="text">
+            <div>
+                <button>SALVAR</button>
+                <button onclick="fecharmodal('criar')">CANCELAR</button>
+            </div>
+        </div>
     </section>
     
 </body>
+<script src = "/public/js/index.js"></script>
 </html>

@@ -223,3 +223,15 @@ td img{
         font-weight: 700;
     }
 }
+
+.modalc {
+    width: 20%;
+    background-color: rgb(189, 229, 255);
+    border-radius: 30px;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 45%;
+    left: 40%;
+}
