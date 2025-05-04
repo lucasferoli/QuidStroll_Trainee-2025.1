@@ -29,7 +29,7 @@
     flex-direction: column;
     color: #1B4F72;
     font-family: Rubik;
-    font-size: 6vh;
+    font-size: 8vh;
     font-weight: 800;
     white-space: nowrap;
 }
@@ -41,7 +41,9 @@
     padding-right: 10%;
 }
 #criarNovoPost img{
-    height: 8vh;
+    height: 8vh;    
+    background-color: #1B4F72;
+    border-radius: 2.6vh;
 }
 #criarNovoPost button, .acoesTabelaDePosts button, #paginacaoTabelaDePosts button{
     padding-block: 0px;
@@ -71,6 +73,7 @@
     border-radius: 2.6vh;
     background-color: #2E86C1;
     border: 0.31vh solid #1B4F72;
+    box-shadow: 0px 5px 10px 0px rgb(0, 0, 0);
 }
 
 #cabecalhoTabelaDePosts{
@@ -116,10 +119,12 @@
     justify-content: center;
     white-space: nowrap;
     font-family: nunito;
+    font-size: 3.5vh;
 }
 .trTabelaDePosts td{
     font-weight: 700;
     color: #1A1A1A;
+    font-size: 3vh;
 }
 .idTabelaDePosts{
     width: 15%;
