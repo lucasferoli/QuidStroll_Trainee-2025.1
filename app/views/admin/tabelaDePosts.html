@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body id="bodyPaginaTabelaDePosts">
-
+<section class="secao-tabelaDePosts">
     <!------------------------- Cabeçalho ----------------------->
     <!----------------------------------------------------------->
 
@@ -45,7 +45,7 @@
                     <td class="dataTabelaDePosts">28/04/2025</td>
                     <td class="acoesTabelaDePosts">
                         <button><img class="visualizarTabelaDePosts" src="/public/assets/Eye.png" alt="Visualizar"></button>
-                        <button><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                        <button onclick="abrirModal('janelaModalEditar','fundoModalEditar')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
                         <button><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
                     </td>
                 </tr>
@@ -56,7 +56,7 @@
                     <td class="dataTabelaDePosts">28/04/2025</td>
                     <td class="acoesTabelaDePosts">
                         <button><img class="visualizarTabelaDePosts" src="/public/assets/Eye.png" alt="Visualizar"></button>
-                        <button><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                        <button onclick="abrirModal('janelaModalEditar','fundoModalEditar')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
                         <button><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
                     </td>
                 </tr>
@@ -67,7 +67,7 @@
                     <td class="dataTabelaDePosts">28/04/2025</td>
                     <td class="acoesTabelaDePosts">
                         <button><img class="visualizarTabelaDePosts" src="/public/assets/Eye.png" alt="Visualizar"></button>
-                        <button><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                        <button onclick="abrirModal('janelaModalEditar','fundoModalEditar')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
                         <button><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
                     </td>
                 </tr>
@@ -78,7 +78,7 @@
                     <td class="dataTabelaDePosts">28/04/2025</td>
                     <td class="acoesTabelaDePosts">
                         <button><img class="visualizarTabelaDePosts" src="/public/assets/Eye.png" alt="Visualizar"></button>
-                        <button><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                        <button onclick="abrirModal('janelaModalEditar','fundoModalEditar')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
                         <button><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
                     </td>
                 </tr>
@@ -89,7 +89,7 @@
                     <td class="dataTabelaDePosts">28/04/2025</td>
                     <td class="acoesTabelaDePosts">
                         <button><img class="visualizarTabelaDePosts" src="/public/assets/Eye.png" alt="Visualizar"></button>
-                        <button><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                        <button onclick="abrirModal('janelaModalEditar','fundoModalEditar')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
                         <button><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
                     </td>
                 </tr>
@@ -107,5 +107,37 @@
         <button><img src="/public/assets/3.png" alt=""></button>
         <button><img src="/public/assets/arrowRightShort.png" alt=""></button>
     </div>
+</section>
+    <!----------------------Modal------------------------------->
+    <!---------------------------------------------------------->
+    
+    <div class="fundoModalEditar-tabelaDePosts" id="fundoModalEditar"></div>
+    <div class="modalEditar-tabelaDePosts" id="janelaModalEditar">
+        <header class="cabecalhoModalEditar-tabelaDePosts">
+            <h1>Editar Post</h1>
+            <button onclick="fecharModal('janelaModalEditar', 'fundoModalEditar')"><img src="/public/assets/simboloFecharPost.png" alt="Fechar Guia"></button>
+        </header>
+        <form class="formModalEditar-tabelaDePosts" action="">
+            <img src="/public/assets/imagemPost.jfif" alt="">
+            <div class="corpoModalEditar-tabelaDePosts">
+                <div class="tituloModalEditar-tabelaDePosts">
+                    <h1>Lorem Ipsum Lorem Ipsum</h1>
+                </div>
+                <div class="textoModalEditar-tabelaDePosts">
+                    <h2>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum
+                    </h2>
+                </div>
+                <div class="autorModalEditar-tabelaDePosts">
+                    <p>Lorem Ipsum</p>
+                </div>
+                <div class="dataModalEditar-tabelaDePosts">
+                    <p>12/12/12</p>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
 </body>
+<script src="/public/js/indexTabelaDePosts.js"></script>
 </html>
