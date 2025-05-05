@@ -326,7 +326,7 @@
 }
 
 .fundoModalEditar-tabelaDePosts{
-    position: fixed;
+    position: absolute;
     z-index: 2;
     width: 100vw;
     height: 100vh;
@@ -334,10 +334,4 @@
     opacity: 0.6;
     display: none;
 
-}
-
-.secao-tabelaDePosts{
-    display: block;
-    position: relative;
-    z-index: 1;
 }
