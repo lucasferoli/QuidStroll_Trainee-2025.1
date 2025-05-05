@@ -227,7 +227,6 @@ td img{
 /**************************************MODAL********************************************/
 
 .modal-listaDeUsuarios {
-    width: 20%;
     height: fit-content;
     background-color: #1A1A1A;
     padding: 4vh;
@@ -248,11 +247,13 @@ td img{
     padding: 0vh 0vh 5vh 0vh;
     font-family: rubik;
     color: #E74C3C;
+    font-size: 4vh;
 }
 
 .modal-listaDeUsuarios p{
     font-family: Nunito;
-    font-size: 2vh;
+    font-size: 2.25vh;
+    font-weight: 600;
     color: #E74C3C;
 }
 
@@ -262,6 +263,10 @@ td img{
     height: 4vh;
     border: 0.1vh solid #E74C3C;
     border-radius: 1vh;
+    font-size: 2vh;
+    color: #E74C3C;
+    padding-left: 1vh;
+    width: 30vh;
 }
 
 .botoesModais-listaDeUsuarios{
@@ -279,10 +284,11 @@ td img{
     border: 0vh;
     height: 4vh;
     width: 12vh;
-    font-size: 1.5vh;
+    font-size: 2vh;
     border: 0.1vh solid #E74C3C;
     border-radius: 1vh;
     transition: 0.5s;
+    font-weight: bold;
 }
 
 .botoesModais-listaDeUsuarios button:hover{
@@ -297,3 +303,11 @@ td img{
     display: none;
 }
 
+#visualizarUsuario div{
+    display: flex;
+    justify-content: center;
+}
+
+#deletarUsuario p{
+    text-align: center;
+}
