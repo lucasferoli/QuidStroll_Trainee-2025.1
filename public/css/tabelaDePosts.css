@@ -166,6 +166,18 @@
 }
 
 /*--------------------------------------------------------------------------*/
+/*------------------------------------Hover---------------------------------*/
+/*A ideia p/ o olho/caneta/lixo seria colocar olho aberto, caneta/lixo preto*/
+
+#paginacaoTabelaDePosts button, #criarNovoPost button {
+    transition: transform 0.3s ease;
+}
+
+#paginacaoTabelaDePosts button:hover, #criarNovoPost button:hover {
+    transform: scale(1.2); 
+}
+
+/*--------------------------------------------------------------------------*/
 /*----------------------------------Celulares-------------------------------*/
 
 @media (max-width: 769px){
@@ -181,6 +193,7 @@
     }
     #criarNovoPost img{
         height: 4vh;
+        border-radius: 1.6vh;
     }
     /*----------------------------------------------------------------------*/
     /* -------------------------------Tabela--------------------------------*/
