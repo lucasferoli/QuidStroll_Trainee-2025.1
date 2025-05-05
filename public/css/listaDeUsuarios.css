@@ -224,14 +224,68 @@ td img{
     }
 }
 
+/**************************************MODAL********************************************/
+
 .modal-listaDeUsuarios {
     width: 20%;
-    background-color: rgb(189, 229, 255);
-    border-radius: 30px;
-    padding: 10px;
+    height: fit-content;
+    background-color: #1A1A1A;
+    padding: 4vh;
     display: none;
     flex-direction: column;
     position: absolute;
     top: 45%;
     left: 40%;
+    border: 2vh solid #E74C3C;
+    border-radius: 1vh;
 }
+
+.modal-listaDeUsuarios h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0vh 0vh 5vh 0vh;
+    font-family: rubik;
+    color: #E74C3C;
+}
+
+.modal-listaDeUsuarios p{
+    font-family: Nunito;
+    font-size: 2vh;
+    color: #E74C3C;
+}
+
+.modal-listaDeUsuarios input{
+    background-color: #85C1E9;
+    border: 0vh;
+    height: 4vh;
+    border: 0.1vh solid #E74C3C;
+    border-radius: 1vh;
+}
+
+.botoesModais-listaDeUsuarios{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vh 0vh 0vh 0vh;
+}
+
+.botoesModais-listaDeUsuarios button{
+    font-family: Nunito;
+    color: #1A1A1A;
+    background-color: #E74C3C;
+    border: 0vh;
+    height: 4vh;
+    width: 12vh;
+    font-size: 1.5vh;
+    border: 0.1vh solid #E74C3C;
+    border-radius: 1vh;
+    transition: 0.5s;
+}
+
+.botoesModais-listaDeUsuarios button:hover{
+    transform: scale(1.2);
+}
+
+

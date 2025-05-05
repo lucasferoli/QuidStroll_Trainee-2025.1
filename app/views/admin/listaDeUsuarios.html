@@ -13,6 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="tela"></div>
     <section class="sidebar-listaDeUsuarios">
 
         <!-- NECESSARIOS MELHORIAS EM RESPONSIVIDADE E BOTOES DE PAGINAÇÃO!!-->
@@ -100,19 +101,27 @@
 <!-------------------------------------MODAL-------------------------------------------->
 
         <div class="modal-listaDeUsuarios" id="criarUsuario">
+            <h1>Criar</h1>
+            <p>Nome:</p>
             <input type="text">
+            <p>Email:</p>
             <input type="text">
+            <p>Senha:</p>
             <input type="text">
-            <div>
+            <div class="botoesModais-listaDeUsuarios">
                 <button>SALVAR</button>
                 <button onclick="fecharModal('criarUsuario')">CANCELAR</button>
             </div>
         </div>
         <div class="modal-listaDeUsuarios" id="editarUsuario">
+            <h1>Editar</h1>
+            <p>Nome:</p>
             <input type="text">
+            <p>Email:</p>
             <input type="text">
+            <p>Senha:</p>
             <input type="text">
-            <div>
+            <div class="botoesModais-listaDeUsuarios">
                 <button>SALVAR</button>
                 <button onclick="fecharModal('editarUsuario')">CANCELAR</button>
             </div>
