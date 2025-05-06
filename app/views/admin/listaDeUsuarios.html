@@ -15,6 +15,72 @@
 <body>
     <section class="sidebar-listaDeUsuarios">
 
+        <!---Modal Adicionar-->
+        <div id="addModal" class="modal">
+            <div class="modalConteudo">
+                <h2>Adicionar Novo Conteúdo</h2>
+                <form id="addForm">
+                    <div class="form">
+                        <label for="addTitle">Título:</label>
+                        <input type="text" id="addTitle" name="title" required>
+                    </div>
+                    <div class="form">
+                        <label for="addContent">Descrição:</label>
+                        <textarea id="addContent" name="content" rows="4" required></textarea>
+                    </div>
+                    <div class="form">
+                        <label for="addImage">Imagem:</label>
+                        <input type="file" id="addImage" name="image">
+                    </div>
+                    <div class="form">
+                        <label for="addDate">Data de criação:</label>
+                        <input type="date" id="addDate" name="date" required>
+                    </div>
+                    <div class="form">
+                        <label for="addAuthor">Autor (Usuário):</label>
+                        <input type="text" id="addAuthor" name="author" required>
+                    </div>
+                    <div class="modalBtn">
+                        <button type="button" class="btnCancelar">Cancelar</button>
+                        <button type="submit" class="btnSalvar">Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!--Modal Editar-->
+        <div id="editModal" class="modal">
+            <div class="modalConteudo">
+                <h2>Editar Conteúdo</h2>
+                <form id="editForm">
+                    <div class="form">
+                        <label for="editTitle">Título:</label>
+                        <input type="text" id="editTitle" name="title" value="Título Exemplo" required>
+                    </div>
+                    <div class="form">
+                        <label for="editContent">Descrição:</label>
+                        <textarea id="editContent" name="content" rows="4" required>Conteúdo de exemplo para demonstração do modal.</textarea>
+                    </div>
+                    <div class="form">
+                        <label for="editImage">Imagem:</label>
+                        <input type="file" id="editImage" name="image">
+                    </div>
+                    <div class="form">
+                        <label for="editDate">Data de criação:</label>
+                        <input type="date" id="editDate" name="date" value="2023-01-01" required>
+                    </div>
+                    <div class="form">
+                        <label for="editAuthor">Autor (Usuário):</label>
+                        <input type="text" id="editAuthor" name="author" value="Leandro" required>
+                    </div>
+                    <div class="modalBtn">
+                        <button type="button" class="btnCancelar">Cancelar</button>
+                        <button type="submit" class="btnSalvar">Salvar Alterações</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
         <!-- NECESSARIOS MELHORIAS EM RESPONSIVIDADE E BOTOES DE PAGINAÇÃO!!-->
     </section>
     <section class="listaDeUsuarios">
