@@ -1,0 +1,96 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-image: linear-gradient(to bottom, #2e86c1, #1b4f72);/*background-color: #1b4f72;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.corpoLogin {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px; /*borda arredondada*/ 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #1b4f72;
+}
+
+.campoEmail {
+    margin-bottom: 20px; /* #2e86c1 #e74c3c */
+    color: #1a1a1a;
+    text-align: left;
+}
+
+.campoSenha {
+    margin-bottom: 20px;
+    color: #1a1a1a;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #1a1a1a;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    background-color: #85c1e9;
+    border: 1px solid #2e86c1;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.botaoLogin {
+    background-color: #2e86c1; /* #2e86c1 #e74c3c */
+    color: #1a1a1a; 
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.botaoLogin:hover {
+    background-color: #1b4f72;
+}
+
+.logoLogin img {
+    margin-top: 20px;
+    max-width: 100px;
+    height: auto;
+}
+
+.senhaOculta {
+    position: relative;
+}
+
+.esconderSenha {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #1b4f72;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+.esconderSenha i {
+    font-size: 18px;
+}
+
+.campoSenha input {
+    padding-right: 35px;
+}
