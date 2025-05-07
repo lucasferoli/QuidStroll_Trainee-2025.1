@@ -330,7 +330,7 @@
     font-size: 1.3rem;
 }
 
-.fundoModalEditar-tabelaDePosts, .fundoModalEditar-tabelaDePosts {
+.fundoModal-tabelaDePosts {
     position: fixed;
     z-index: 2;
     width: 100vw;
@@ -340,9 +340,11 @@
     display: none;
 }
 
+
 .modalExcluir-tabelaDePosts{
     display: none;
     position: fixed;
+    z-index: 10;
     flex-direction: column;
     top: 50%;
     left: 50%;

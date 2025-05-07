@@ -44,8 +44,8 @@
                     <td class="dataTabelaDePosts">28/04/2025</td>
                     <td class="acoesTabelaDePosts">
                         <button><img class="visualizarTabelaDePosts" src="/public/assets/Eye.png" alt="Visualizar"></button>
-                        <button onclick="abrirModal('janelaModalEditar','fundoModalEditar')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
-                        <button><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
+                        <button onclick="abrirModalEditar('janelaModalEditar','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                        <button onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
                     </td>
                 </tr>
                 <tr class="trTabelaDePosts">
@@ -55,8 +55,8 @@
                     <td class="dataTabelaDePosts">28/04/2025</td>
                     <td class="acoesTabelaDePosts">
                         <button><img class="visualizarTabelaDePosts" src="/public/assets/Eye.png" alt="Visualizar"></button>
-                        <button onclick="abrirModal('janelaModalEditar','fundoModalEditar')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
-                        <button><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
+                        <button onclick="abrirModalEditar('janelaModalEditar','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                        <button onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
                     </td>
                 </tr>
                 <tr class="trTabelaDePosts">
@@ -66,8 +66,8 @@
                     <td class="dataTabelaDePosts">28/04/2025</td>
                     <td class="acoesTabelaDePosts">
                         <button><img class="visualizarTabelaDePosts" src="/public/assets/Eye.png" alt="Visualizar"></button>
-                        <button onclick="abrirModal('janelaModalEditar','fundoModalEditar')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
-                        <button><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
+                        <button onclick="abrirModalEditar('janelaModalEditar','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                        <button onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
                     </td>
                 </tr>
                 <tr class="trTabelaDePosts">
@@ -77,8 +77,8 @@
                     <td class="dataTabelaDePosts">28/04/2025</td>
                     <td class="acoesTabelaDePosts">
                         <button><img class="visualizarTabelaDePosts" src="/public/assets/Eye.png" alt="Visualizar"></button>
-                        <button onclick="abrirModal('janelaModalEditar','fundoModalEditar')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
-                        <button><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
+                        <button onclick="abrirModalEditar('janelaModalEditar','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                        <button onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
                     </td>
                 </tr>
                 <tr class="trTabelaDePosts cincoTP">
@@ -88,8 +88,8 @@
                     <td class="dataTabelaDePosts">28/04/2025</td>
                     <td class="acoesTabelaDePosts">
                         <button><img class="visualizarTabelaDePosts" src="/public/assets/Eye.png" alt="Visualizar"></button>
-                        <button onclick="abrirModal('janelaModalEditar','fundoModalEditar')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
-                        <button><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
+                        <button onclick="abrirModalEditar('janelaModalEditar','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                        <button onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
                     </td>
                 </tr>
             </tbody>
@@ -109,11 +109,11 @@
 
     <!----------------------Modal------------------------------->
     <!---------------------------------------------------------->
-    <div class="fundoModalEditar-tabelaDePosts" id="fundoModalEditar"></div>
+    <div class="fundoModal-tabelaDePosts" id="fundoModal"></div>
     <div class="modalEditar-tabelaDePosts" id="janelaModalEditar">
         <header class="cabecalhoModalEditar-tabelaDePosts">
             <h1>Editar Post</h1>
-            <button onclick="fecharModal('janelaModalEditar', 'fundoModalEditar')"><img src="/public/assets/simboloFecharPost.png" alt="Fechar Guia"></button>
+            <button onclick="fecharModalEditar('janelaModalEditar', 'fundoModal')"><img src="/public/assets/simboloFecharPost.png" alt="Fechar Guia"></button>
         </header>
         <form class="formModalEditar-tabelaDePosts" action="">
             <img src="/public/assets/imagemPost.jfif" alt="">
@@ -135,14 +135,14 @@
         </form>
     </div>
 
-    <div class="fundoModalExcluir-tabelaDePosts" id="fundoModalExcluir"></div>
-    <div class="modalExcluir-tabelaDePosts" id="modalExcluir">
+    <div class="fundoModal-tabelaDePosts" id="fundoModal"></div>
+    <div class="modalExcluir-tabelaDePosts" id="janelaModalExcluir">
         <div class="cabecalhoModalExcluir-tabelaDePosts">
             <h1>Excluir Post?</h1>
         </div>
         <div class="botoesModalExcluir-tabelaDePosts">
             <button>Excluir</button>
-            <button>Cancelar</button>
+            <button onclick="fecharModalExcluir('janelaModalExcluir', 'fundoModal')" >Cancelar</button>
         </div>
     </div>
 
