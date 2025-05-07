@@ -53,6 +53,7 @@
     padding-inline: 0px;
     border-width: 0px;
     background-color: #F4F6F7;
+    cursor: pointer;
 }
 .acoesTabelaDePosts button{
     background-color: #2E86C1;
@@ -561,27 +562,6 @@
     }
 }
 
-@media (max-width: 480px) {
-    .modalVisualizar-tabelaDePosts,
-    .modalAdicionar-tabelaDePosts {
-        width: 95%;
-        padding: 3%;
-    }
-    
-    .cabecalhoModalVisualizar-tabelaDePosts h1,
-    .cabecalhoModalAdicionar-tabelaDePosts h1 {
-        font-size: 1.5rem;
-    }
-    
-    .botoesFormModalAdicionar {
-        flex-direction: column;
-    }
-    
-    .botoesFormModalAdicionar button {
-        width: 100%;
-    }
-}
-
 /*Modal Visualizar*/
 .modalVisualizar-tabelaDePosts {
     display: none;
@@ -676,4 +656,25 @@
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 2;
     display: none;
+}
+
+@media (max-width: 480px) {
+    .modalVisualizar-tabelaDePosts,
+    .modalAdicionar-tabelaDePosts {
+        width: 95%;
+        padding: 3%;
+    }
+    
+    .cabecalhoModalVisualizar-tabelaDePosts h1,
+    .cabecalhoModalAdicionar-tabelaDePosts h1 {
+        font-size: 1.5rem;
+    }
+    
+    .botoesFormModalAdicionar {
+        flex-direction: column;
+    }
+    
+    .botoesFormModalAdicionar button {
+        width: 100%;
+    }
 }
