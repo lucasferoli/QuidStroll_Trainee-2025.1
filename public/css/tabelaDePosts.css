@@ -397,3 +397,12 @@
     background-color: #2e86c1;
 }
 
+
+@media (max-width: 1000px){
+    .cabecalhoModalEditar-tabelaDePosts{
+        font-size: 30px;
+    }
+
+    
+}
+
