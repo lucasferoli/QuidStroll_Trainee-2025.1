@@ -384,6 +384,13 @@
 
 }
 
+.formModalExcluir-tabelaDePosts{
+    padding: 0%;
+    margin: 0%;
+    display: flex;
+    flex-direction: row;
+}
+
 .botoesModalExcluir-tabelaDePosts{
     padding-top: 5%;
     padding-bottom: 5%;
