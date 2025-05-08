@@ -338,7 +338,7 @@
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 .autorModalEditar-tabelaDePosts, .dataModalEditar-tabelaDePosts{
-    font-size: 1.3rem;
+    font-size: 35%;
 }
 
 .fundoModal-tabelaDePosts {
@@ -376,6 +376,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 0% 3% 0% 3%;
+    font-size: 40px;
+}
+.cabecalhoModalExcluir-tabelaDePosts h1{
+    width: 100%;
+    font-size: 100%;
+
 }
 
 .botoesModalExcluir-tabelaDePosts{
@@ -410,9 +416,39 @@
 
 
 @media (max-width: 1000px){
+    .modalEditar-tabelaDePosts{
+        width: 90%;
+
+    }
     .cabecalhoModalEditar-tabelaDePosts{
         font-size: 30px;
     }
+    .formModalEditar-tabelaDePosts{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .corpoModalEditar-tabelaDePosts{
+        width: 90%;
+        gap: 5px;
+    }
+    .modalExcluir-tabelaDePosts{
+        width: 70%;
+    }
+
+    .cabecalhoModalExcluir-tabelaDePosts{
+        font-size: 30px;
+    }
+    .botoesModalExcluir-tabelaDePosts{
+        flex-direction: column;
+        gap: 10px;
+
+    }
+    .botoesModalExcluir-tabelaDePosts button{
+        width: 90%;
+    }
+
+
 
     
 }
