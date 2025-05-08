@@ -316,16 +316,26 @@
     flex-direction: column;
     padding: 2% 0% 2% 2%;
     justify-content: space-between;
+    width: 60%;
+    font-size: 60px;
 }
 
-.tituloModalEditar-tabelaDePosts, .textoModalEditar-tabelaDePosts{
+.tituloModalEditar-tabelaDePosts{
     padding: 2%;
+    width: 100%;
     border-radius: 20px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 40%;
+    font-weight: 800;
 }
 
-.textoModalEditar-tabelaDePosts h2{
-    font-weight: 300;
+.textoModalEditar-tabelaDePosts{
+    width: 100%;
+    height: 30%;
+    padding: 2%;
+    font-size: 40%;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 .autorModalEditar-tabelaDePosts, .dataModalEditar-tabelaDePosts{
     font-size: 1.3rem;
