@@ -15,7 +15,7 @@ function abrirModalExcluir(idJanelaModalExcluir, idFundoModal){
 
 }
 
-function fecharModalExcluir(idJanelaModalExcluir, idFundoModalExcluir){
+function fecharModalExcluir(idJanelaModalExcluir, idFundoModal){
     document.getElementById(idJanelaModalExcluir).style.display = "none";
     document.getElementById(idFundoModal).style.display = "none";
 }
