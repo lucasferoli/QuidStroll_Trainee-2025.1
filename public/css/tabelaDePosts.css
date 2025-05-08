@@ -290,8 +290,8 @@
     width: fit-content;
     background: none;
     border: none;
-    width: 3%;
-    height: 3%;
+    width: 40px;
+    height: auto;
 }
 
 .cabecalhoModalEditar-tabelaDePosts button img{
