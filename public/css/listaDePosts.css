@@ -2,6 +2,9 @@ body {
     background-color: #f4f6f7;
     margin: 0;
     padding: 0;
+}
+
+p {
     font-family: 'Nunito', sans-serif;
 }
 
@@ -153,9 +156,10 @@ h1, h2, h3, h4, h5, h6 {
 .pagination {
     display: flex;
     gap: 1vh;
+    padding-top: 0.8vh;
     flex-direction: row;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     border-top: 2px solid #1B4F72;
     border-right: none;
     border-left: none;
@@ -164,17 +168,22 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(#c1e0f7)
 }
 
+.pagination button, #criarNovoPost button {
+    transition: transform 0.3s ease;
+}
+
+.pagination button:hover, #criarNovoPost button:hover {
+    transform: scale(1.2); 
+}
+
 .pagination button {
     width: 7.5vh;
-    height: 7.5vh;
+    height: 50%;
     border: 0px solid white;
     border-color: white;
     background: linear-gradient(#c1e0f7)
 }
 
-.pagination p {
-    color: #082a6e;
-}
 
 
 @media only screen and (max-width: 806px) {
