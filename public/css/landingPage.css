@@ -294,4 +294,7 @@ body{
     .logo-descricao-landingPage img {
       width: 250px;
     }
+    .botao-ver-mais-landingPage{
+      width: 80%;
+    }
 }
