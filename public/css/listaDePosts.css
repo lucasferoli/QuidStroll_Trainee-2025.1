@@ -155,7 +155,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .pagination {
     display: flex;
-    gap: 1vh;
+    gap: 0vh;
     padding-top: 0.8vh;
     flex-direction: row;
     justify-content: center;
@@ -177,8 +177,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pagination button {
-    width: 7.5vh;
-    height: 50%;
     border: 0px solid white;
     border-color: white;
     background: linear-gradient(#c1e0f7)
