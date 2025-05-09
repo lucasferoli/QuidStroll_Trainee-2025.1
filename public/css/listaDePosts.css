@@ -184,7 +184,9 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(#c1e0f7)
 }
 
-
+.pagination img{
+    width: 4vh;
+}
 
 @media only screen and (max-width: 806px) {
     .grid {
