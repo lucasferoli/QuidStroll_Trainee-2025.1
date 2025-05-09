@@ -13,7 +13,7 @@ body{
     background-color: #1B4F72;
     width: 100%;
     height: auto;
-    padding: 5% 10% 4% 10%;
+    padding: 5% 10% 0% 10%;
     background-image: url(/public/assets/cerebro.png);
     background-size: 190vw;
     background-position: center;
@@ -264,7 +264,7 @@ body{
 
 @media(min-width: 1500px){
   .hero-section-landingPage {
-    padding: 10%;
+    padding: 5%;
     height: 120%;
   }
 }
