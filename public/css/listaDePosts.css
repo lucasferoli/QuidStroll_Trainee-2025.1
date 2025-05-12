@@ -1,0 +1,321 @@
+body {
+    background-color: #f4f6f7;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rubik', sans-serif;
+  }
+
+.segBarraDePesquisa {
+    display: flex;
+    justify-content: center;
+    margin: 4vh 0px 4vh 0px;
+    width: 100%;
+    height: 5.6vh;
+}
+
+.barraDePesquisa {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 40%;
+    height: 100%;
+    border: 2px solid #1B4F72;
+    border-radius: 50px;
+    font-size: 16px;
+    background-color: white;
+}
+
+.barraDePesquisa input {
+    flex: 1; 
+    border: none;
+    outline: none;
+    padding: 0 1.56vh;
+    font-size: 2.19vh;
+    background-color: transparent; 
+    color: black; 
+}
+
+.segBarraDePesquisa i {
+    color: white;
+    background-color: #0057FF;
+    padding: 1.56vh 1.56vh 1.8vh 1.56vh;
+    border-top-right-radius: 7.82vh;
+    border-bottom-right-radius: 7.82vh;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 5.8vh;
+    row-gap: 4.69vh;
+    justify-content: center;
+    padding: 0 6.25vh;
+}
+
+.card1 {
+    background-color: #c1e0f7;
+    width: 34.4vh;
+    height: 40.6vh;
+    border-radius: 10px;
+    border: 3px solid #1B4F72;
+    box-shadow: 0 2px 4px #001959;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.card1 .imagem {
+    height: 50%;
+    background-image: linear-gradient(45deg, #ccc 25%, transparent 25%), 
+                      linear-gradient(-45deg, #ccc 25%, transparent 25%), 
+                      linear-gradient(45deg, transparent 75%, #ccc 75%), 
+                      linear-gradient(-45deg, transparent 75%, #ccc 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.card1 .conteudo {
+    padding: 1.56vh;
+    color: #000;
+}
+
+.card1 .conteudo h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0.93vh;
+}
+
+.card1 .conteudo p {
+    font-size: 13px;
+    margin-bottom: 1.56vh;
+}
+
+.card1 .autor {
+    background-color: #0A639E;
+    color: white;
+    font-size: 12px;
+    text-align: left;
+    padding: 0.62vh 1.25vh;
+}
+
+.card {
+    background-color: #c1e0f7;
+    width: 34.4vh;
+    height: 40.6vh;
+    border-radius: 10px;
+    border: 3px solid #1B4F72;
+    box-shadow: 0 2px 4px #001959;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.card .imagem {
+    height: 50%;
+    background-image: linear-gradient(45deg, #ccc 25%, transparent 25%), 
+                      linear-gradient(-45deg, #ccc 25%, transparent 25%), 
+                      linear-gradient(45deg, transparent 75%, #ccc 75%), 
+                      linear-gradient(-45deg, transparent 75%, #ccc 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.card .conteudo {
+    padding: 1.56vh;
+    color: #000;
+}
+
+.card .conteudo h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0.93vh;
+}
+
+.card .conteudo p {
+    font-size: 13px;
+    margin-bottom: 1.56vh;
+}
+
+.card .autor {
+    background-color: #0A639E;
+    color: white;
+    font-size: 12px;
+    text-align: left;
+    padding: 0.62vh 1.25vh;
+}
+
+.pagination {
+    display: flex;
+    gap: 0vh;
+    padding-top: 0.8vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #1B4F72;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    margin: 3.12vh 0 0 0;
+    background: linear-gradient(#c1e0f7)
+}
+
+.pagination button, #criarNovoPost button {
+    transition: transform 0.3s ease;
+}
+
+.pagination button:hover, #criarNovoPost button:hover {
+    transform: scale(1.2); 
+}
+
+.pagination button {
+    border: 0px solid white;
+    border-color: white;
+    background: linear-gradient(#c1e0f7)
+}
+
+.pagination img{
+    width: 4vh;
+}
+
+@media only screen and (max-width: 806px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4%;
+        justify-content: center;
+        margin-left: 25vh;
+        margin-right: 20vh;
+        margin-bottom: 15vh; 
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .segBarraDePesquisa {
+        margin: 2vh 0;
+        height: auto;
+    }
+
+    .barraDePesquisa {
+        width: 60%;
+        height: 40px;
+    }
+
+    .barraDePesquisa input {
+        flex: 1; 
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 0 1.56vh;
+        font-size: 2.19vh;
+        background-color: transparent; 
+        color: black; 
+    }
+
+    .grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 5vw;
+        margin: 0;
+        gap: 8px;
+        
+    }
+
+    .card1 {
+        background-color: #c1e0f7;
+        width: 52vw;
+        height: 30.16vh;
+        border-radius: 10px;
+        border: 3px solid #1B4F72;
+        box-shadow: 0 2px 4px #001959;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+    
+    .card1 .imagem {
+        height: 50%;
+        background-image: linear-gradient(45deg, #ccc 25%, transparent 25%), 
+                          linear-gradient(-45deg, #ccc 25%, transparent 25%), 
+                          linear-gradient(45deg, transparent 75%, #ccc 75%), 
+                          linear-gradient(-45deg, transparent 75%, #ccc 75%);
+        background-size: 20px 20px;
+        background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    }
+    
+    .card1 .conteudo {
+        padding: 1.56vh;
+        color: #000;
+    }
+    
+    .card1 .conteudo h3 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 0.93vh;
+    }
+    
+    .card1 .conteudo p {
+        font-size: 13px;
+        margin-bottom: 1.56vh;
+    }
+    
+    .card1 .autor {
+        background-color: #0A639E;
+        color: white;
+        font-size: 12px;
+        text-align: left;
+        padding: 0.62vh 1.25vh;
+    }    
+
+    .card {
+        background-color: #c1e0f7;
+        box-shadow: 0 2px 4px #001959;
+        width: 90%;
+        height: 10vh;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .card .imagem {
+        width: 30%;
+        height: 80px;
+        background-size: cover;
+    }
+
+    .card .conteudo {
+        width: 70%;
+        padding: 0 10px;
+    }
+
+    .card .conteudo h3 {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+
+    .card .conteudo p {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+
+    .card .autor {
+        font-size: 10px;
+        text-align: left;
+        padding: 2px 4px;
+    }
+
+    .pagination {
+        font-size: 12px;
+    }
+
+}
