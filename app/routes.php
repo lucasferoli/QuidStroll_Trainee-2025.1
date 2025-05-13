@@ -8,3 +8,4 @@ $router->get('', 'LandingController@index');
 
 $router->get('login', 'LoginController@index');
 $router->get('dashboard', 'DashboardController@index');
+$router->get('lista', 'ListaDePostsController@index');

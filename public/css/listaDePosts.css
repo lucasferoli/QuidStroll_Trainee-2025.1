@@ -1,7 +1,7 @@
 body {
     background-color: #f4f6f7;
     margin: 0;
-    padding: 0;
+    padding: 0 0 1% 0;
 }
 
 p {
@@ -101,9 +101,11 @@ h1, h2, h3, h4, h5, h6 {
 .card1 .autor {
     background-color: #0A639E;
     color: white;
+    font-weight: 600;
     font-size: 12px;
     text-align: left;
     padding: 0.62vh 1.25vh;
+    font-family: 'Nunito', sans-serif
 }
 
 .card {
@@ -151,40 +153,37 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 12px;
     text-align: left;
     padding: 0.62vh 1.25vh;
+    font-weight: 600;
 }
 
-.pagination {
+.paginacao-listaDePosts{
+    margin: 2% 0% 0% 0%;
     display: flex;
-    gap: 0vh;
-    padding-top: 0.8vh;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
-    border-top: 2px solid #1B4F72;
-    border-right: none;
-    border-left: none;
-    border-bottom: none;
-    margin: 3.12vh 0 0 0;
-    background: linear-gradient(#c1e0f7)
+    gap: 1rem;
+    width: fit-content;
+    padding: 1% 3% 1% 3%;
+    background-color: #0A639E;
+    border-radius: 999px 999px 999px 999px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+}
+.paginacao-listaDePosts button{
+    font-size: 0.9em;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    color: #f4f6f7;
+    width: 0.9rem;
+    height: 0.3rem;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: #0A639E;
 }
 
-.pagination button, #criarNovoPost button {
-    transition: transform 0.3s ease;
-}
-
-.pagination button:hover, #criarNovoPost button:hover {
-    transform: scale(1.2); 
-}
-
-.pagination button {
-    border: 0px solid white;
-    border-color: white;
-    background: linear-gradient(#c1e0f7)
-}
-
-.pagination img{
-    width: 4vh;
-}
 
 @media only screen and (max-width: 806px) {
     .grid {
