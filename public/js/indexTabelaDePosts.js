@@ -44,6 +44,11 @@ function fecharModal(idJanelaModalVisualizar, idFundoModalVizualizar){
 
 //Abrir modal 3 pontinhos
 function abrirModalVerMais(idjanelaModalVerMais, idfundoModalVerMais){
-    document.getElementById(idjanelaModalVerMais).style.display = "flex";
-    document.getElementById(idfundoModalVerMais).style.display = "block";
-}
+      document.getElementById(idjanelaModalVerMais).style.display = "flex";
+      document.getElementById(idfundoModalVerMais).style.display = "flex";
+  }
+
+  function fecharModalVerMais(idjanelaModalVerMais, idfundoModalVerMais){
+      document.getElementById(idjanelaModalVerMais).style.display = "none";
+      document.getElementById(idfundoModalVerMais).style.display = "none";
+  }
