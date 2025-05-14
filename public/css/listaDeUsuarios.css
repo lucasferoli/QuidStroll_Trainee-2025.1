@@ -228,13 +228,14 @@ td img{
 /**************************************MODAL********************************************/
 
 .modal-listaDeUsuarios {
-    height: fit-content;
+    height: 80vh;
+    width: 70vh;
     background-color: #F4F6F7;
     padding: 4vh;
     display: none;
     flex-direction: column;
     position: absolute;
-    border-radius: 1vh;
+    border-radius: 5vh;
     border: 2vh solid #1B4F72;
     z-index: 5;
     gap: 2vh;
@@ -248,15 +249,16 @@ td img{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0vh 0vh 3vh 0vh;
+    padding: 1vh 0vh 4vh 0vh;
     font-family: rubik;
     color: #1B4F72;
-    font-size: 4vh;
+    font-size: 6vh;
+    border-bottom: 0.1vh solid #1B4F72;
 }
 
 .modal-listaDeUsuarios p{
     font-family: Nunito;
-    font-size: 2.25vh;
+    font-size: 3vh;
     font-weight: bold;
     color: #1B4F72;
 }
@@ -264,40 +266,41 @@ td img{
 .modal-listaDeUsuarios input{
     background-color: #F4F6F7;
     border: 0vh;
-    height: 4vh;
+    height: 6vh;
     border: 0.2vh solid #1B4F72;
-    border-radius: 1vh;
-    font-size: 2vh;
+    border-radius: 2vh;
+    font-size: 2.5vh;
     color: #1B4F72;
     padding-left: 1vh;
-    width: 30vh;
+    width: 100%;
     outline: none;
 }
 
 .botoesModais-listaDeUsuarios{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     padding: 3vh 0vh 0vh 0vh;
+    gap: 8vh;
+    justify-content: center;
 }
 
 .botoesModais-listaDeUsuarios button{
     font-family: Nunito;
     color: #F4F6F7;
-    background-color: #1B4F72;
+    background-color: #2E86C1;
     border: 0vh;
-    height: 4vh;
-    width: 12vh;
-    font-size: 2vh;
+    height: 8vh;
+    width: 20vh;
+    font-size: 3vh;
     border: 0.1vh solid #1B4F72;
-    border-radius: 1vh;
+    border-radius: 2vh;
     transition: 0.5s;
     font-weight: bold;
 }
 
-.botoesModais-listaDeUsuarios button:hover{
-    transform: scale(1.2);
+.cancelar-listaDeUsuarios:hover{
+    background-color: #E74C3C;
 }
 
 .tela{
@@ -317,4 +320,17 @@ td img{
 
 #deletarUsuario p{
     text-align: center;
+    padding-top: 2vh;
+}
+
+#deletarUsuario{
+    height: 50vh;
+}
+
+#inputs-listaDeUsuarios{
+    padding: 4vh 0vh 0vh 0vh;
+}
+
+#inputs-listaDeUsuarios div{
+    padding-bottom: 2vh;
 }
