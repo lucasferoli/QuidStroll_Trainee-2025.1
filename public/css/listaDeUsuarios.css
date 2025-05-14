@@ -302,7 +302,9 @@ td img{
 .cancelar-listaDeUsuarios:hover{
     background-color: #E74C3C;
 }
-
+.confirmar-listaDeUsuarios:hover{
+    background-color: #1B4F72;
+}
 .tela{
     position: fixed;
     width: 100%;
