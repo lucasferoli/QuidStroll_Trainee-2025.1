@@ -27,14 +27,15 @@
     color: #1A1A1A;
     text-align: center;
     font-family: Rubik;
-    font-size: 6.25vh;
+    font-size: 7vh;
     font-weight: 700;
+    white-space: nowrap;
 }
 
 #postIndividualBackground{
     background-color: #F4F6F7;
     display: flex;
-    height: 114.5vh;
+    height: 100%;
     padding: 7.8vh;
     justify-content: center;
     align-items: center;
@@ -145,6 +146,14 @@
     font-weight: 400;
     margin: 0;
 }
+/********************************* HOVER *****************************************/
+
+#postIndividualVoltar img:hover{
+    transform: scale(1.5);
+    transition: 1s;
+}
+
+
 @media (max-width: 1300px){
     #postIndividualTextoPost{
         font-size: 2.5vh;
