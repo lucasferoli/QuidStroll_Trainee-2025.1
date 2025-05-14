@@ -61,6 +61,8 @@
     background-color: #F4F6F7;
 }
 
+
+
 /*----------------------------------------------------------------------*/
 /* -------------------------------Tabela--------------------------------*/
 
@@ -154,6 +156,12 @@
 
 .acoesTabelaDePosts{
     width: 25%;
+}
+
+.acoesTabelaDePosts .TresPontosTabelaDePosts {
+    display: none;
+    width: 10%;
+    height: 10%;
 }
 
 .acoesTabelaDePosts img{
@@ -259,17 +267,19 @@
     
     /*--------------------------------------------------------------------------*/
     /*----------------------------------Paginação-------------------------------*/
-    
+
     #paginacaoTabelaDePosts{
         height: 7.25vh;
+        
     }
 
     #paginacaoTabelaDePosts img{
-        width: 4vh;
+        width: 4vw;
     }
 }
 
-@media (max-width: 400px){
+@media (max-width: 450px){
+
     .trTabelaDePosts td, .trTabelaDePosts th{
         font-size: 1.5vh;
     }
@@ -279,6 +289,29 @@
     .acoesTabelaDePosts img{
         width: 100%;
     }
+}
+
+@media (max-width: 350px) {
+
+        .acoesTabelaDePosts .excluirTabelaDePosts{
+        display: none;
+    }
+
+    .acoesTabelaDePosts .editarTabelaDePosts {
+        display: none;
+    }
+
+    .acoesTabelaDePosts .visualizarTabelaDePosts {
+        display: none;
+    }
+
+        .acoesTabelaDePosts .TresPontosTabelaDePosts {
+        display: flex;
+        height: 2.5vh;
+        width: 4vw;
+        padding-left: 0%;
+    }
+
 }
 
 /*botões não testados. podendo haver interferencia com o css pelo padrão do css de "button".*/
