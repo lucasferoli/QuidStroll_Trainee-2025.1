@@ -153,7 +153,7 @@
     transition: 1s;
 }
 
-
+/****************************** RESPONSIVIADE **********************************/
 @media (max-width: 1300px){
     #postIndividualTextoPost{
         font-size: 2.5vh;
@@ -289,4 +289,50 @@
         font-size: 1.6vh;
         padding: 0;
     }
+
+@media (max-width: 320px){
+    #postIndividualVoltar {
+        display: flex;
+        height: 12vh;
+        padding-left: 4.5vh;
+    }
+    #postIndividualTextual {
+        height: 75.2vh;
+        padding: 4vh 6vh 4vh 6vh;
+    }
+     #postIndividualVoltar img {
+        width: 7vh;
+        padding: 2.5px 0px;
+    }
+    
+    #postIndividualTituloPagina {
+        font-size: 4vh;
+    }
+    #postIndividualTituloPost {
+        font-size: 2.5vh;
+        height: auto;
+    }
+    #postIndividualTextoPost {
+        font-size: 1.9vh;
+        padding: 0;
+    }
+
+    #postIndividualNome{
+        font-weight: bold;
+    }
+    #postIndividualNome, #postIndividualData, #postIndividualBolinha{
+        font-size: 2vh;
+        white-space: nowrap;
+    }
+    #postIndividualData{
+        font-size: 1.8vh;
+    }
+
+    #postIndividualAutor{
+        gap: 1vh;
+    }
+    #postIndividualAutor img{
+        width: 6vh;
+    }
+}
 }
