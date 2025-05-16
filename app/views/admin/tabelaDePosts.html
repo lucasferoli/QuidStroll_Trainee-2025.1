@@ -180,15 +180,7 @@
                 <button type="button" onclick="fecharModal('janelaModalAdicionar', 'fundoModalAdicionar')">Cancelar</button>
                 <button type="submit">Adicionar</button>
             </div>
-
-        <!----------------- MODAL DE TELAS PEQUENAS ------------------------------>
-        <div class="ModalVerMais" id="fundoModalVerMais">
-            <div class="corpo-do-modal" id="janelaModalVerMais">
-                <button type="button" onclick="abrirModal('janelaModalVisualizar', 'fundoModalVisualizar')"><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
-                <button type="button" onclick="abrirModalEditar('janelaModalEditar','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
-                <button type="button" onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>   
-            </div>
-        </div>
+        
         </form>
     </div>
 
@@ -215,6 +207,16 @@
             </div>
         </div>
     </div>
+
+    <!----------------- MODAL DE TELAS PEQUENAS ------------------------------>
+        <div class="ModalVerMais" id="fundoModalVerMais">
+            <div class="corpo-do-VerMais" id="janelaModalVerMais">
+                <button type="button" onclick="abrirModal('janelaModalVisualizar', 'fundoModalVisualizar')"><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
+                <button type="button" onclick="abrirModalEditar('janelaModalEditar','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                <button type="button" onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
+                <button id = "botao-fechar-ver-mais" type="button" onclick="fecharModal('janelaModalVerMais', 'fundoModalVerMais')">fechar</button>   
+            </div>
+        </div>
 
 </body>
 <script src="/public/js/indexTabelaDePosts.js"></script>
