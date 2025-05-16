@@ -821,15 +821,18 @@
 }
 
 .corpo-do-VerMais .visualizarTabelaDePosts {
-    height: 3vh;
+    width: 100%;
+    height: 100%;
 }
 
 .corpo-do-VerMais .editarTabelaDePosts {
-    height: 3vh;
+    width: 100%;
+    height: 100%;
 }
 
 .corpo-do-VerMais .excluirTabelaDePosts {
-    height: 3.3vh;
+    width: 100%;
+    height: 100%;
 }
 
 .corpo-do-VerMais #botao-fechar-ver-mais {
@@ -841,4 +844,5 @@
 
 .corpo-do-VerMais button {
     border: none;
+    background-color: #2E86C1;
 }
