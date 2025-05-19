@@ -21,6 +21,7 @@
     flex-direction: column;
     align-items: flex-start;
     border-radius: 10vh;
+    transition: 0.5s ease;
 }
 
 #postIndividualTituloPagina{
@@ -150,7 +151,6 @@
 
 #postIndividualVoltar img:hover{
     transform: scale(1.5);
-    transition: 1s;
 }
 
 /****************************** RESPONSIVIADE **********************************/
