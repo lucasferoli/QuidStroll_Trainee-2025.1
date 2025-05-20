@@ -5,13 +5,13 @@ namespace app\Controllers;
 use App\Core\App;
 use Exception;
 
-class ListaDeUsuariosControllerController {
+class ListaDeUsuariosController {
 
     public function index() 
     {
-        $usuarios = App::get('database')->selectALL('usuarios');
+        #$usuarios = App::get('database')->selectALL('usuarios');
 
-        return view('admin\ListaDeUsuarios', $usuarios);
+        return view('admin/ListaDeUsuarios');
     }
 
 }
