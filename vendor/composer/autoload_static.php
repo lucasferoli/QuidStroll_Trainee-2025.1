@@ -23,6 +23,7 @@ class ComposerStaticInit90bbf95869b4e88bf0dc5022e708a458
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInit90bbf95869b4e88bf0dc5022e708a458' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'app\\Controllers\\UsuariosController' => __DIR__ . '/../..' . '/app/Controllers/UsuariosController.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

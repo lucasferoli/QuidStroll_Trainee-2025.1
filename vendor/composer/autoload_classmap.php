@@ -18,4 +18,5 @@ return array(
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
     'Composer\\Autoload\\ComposerStaticInit90bbf95869b4e88bf0dc5022e708a458' => $vendorDir . '/composer/autoload_static.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'app\\Controllers\\UsuariosController' => $baseDir . '/app/Controllers/UsuariosController.php',
 );
