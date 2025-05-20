@@ -107,7 +107,7 @@
             </div>
         </form>
         <form action="" method=""> 
-            <div class="modal-listaDeUsuarios" id= <?php $usuario->id ?>>
+            <div class="modal-listaDeUsuarios" id= "visualizarUsuario">
                 <h1>Informações</h1>
                 <div>
                     <p>Nome:</p>
