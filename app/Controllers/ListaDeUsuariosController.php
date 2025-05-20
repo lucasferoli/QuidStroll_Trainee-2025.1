@@ -9,9 +9,9 @@ class ListaDeUsuariosController {
 
     public function index() 
     {
-        #$usuarios = App::get('database')->selectALL('usuarios');
+        $usuarios = App::get('database')->selectALL('usuarios');
 
-        return view('admin\listaDeUsuarios');
+        return view('admin\listaDeUsuarios', compact('usuarios'));
     }
 
 }

@@ -37,57 +37,21 @@
                     </tr>
                 </thead>
                 <tbody class="corpoTabela-listaDeUsuarios">
+                <?php foreach($usuarios as $usuario): ?>
                     <tr>
-                        <td data-cell = "ID">1344</td>
-                        <td data-cell="Nome">Jonas Silva</td>
-                        <td data-cell="Email">jonassilva@gmail.com</td>
+                        <td data-cell = "ID"><?= $usuario->id ?></td>
+                        <td data-cell = "Nome"><?= $usuario->nome ?></td>
+                        <td data-cell = "Email"><?= $usuario->email ?></td>
                         <td class="acoes-listaDeUsuarios">
-                            <button onclick="abrirModal('visualizarUsuario')"><img src="/public/assets/visualizar.png" alt="" id="visualizar-listaDeUsuarios"></button>
-                            <button onclick="abrirModal('editarUsuario')"><img src="/public/assets/editarUsuario-3.png" alt="" id="editar-listaDeUsuarios"></button>
-                            <button onclick="abrirModal('deletarUsuario')"><img src="/public/assets/delete.png" alt="" id="deletar-listaDeUsuarios"></button>
+                            <button onclick="abrirModal('visualizarUsuario')" <?php $usuario->id ?>><img src="/public/assets/visualizar.png" alt="" id="visualizar-listaDeUsuarios"></button>
+                            <button onclick="abrirModal('editarUsuario')" <?php $usuario->id ?>><img src="/public/assets/editarUsuario-3.png" alt="" id="editar-listaDeUsuarios"></button>
+                            <button onclick="abrirModal('deletarUsuario')" <?php $usuario->id ?>><img src="/public/assets/delete.png" alt="" id="deletar-listaDeUsuarios"></button>
                         </td>
                     </tr>
-                    <tr>
-                        <td data-cell = "ID">1694</td>
-                        <td data-cell="Nome">Josten Silva</td>
-                        <td data-cell="Email">jostensilva@gmail.com</td>
-                        <td class="acoes-listaDeUsuarios">
-                            <button onclick="abrirModal('visualizarUsuario')"><img src="/public/assets/visualizar.png" alt="" id="visualizar-listaDeUsuarios"></button>
-                            <button onclick="abrirModal('editarUsuario')"><img src="/public/assets/editarUsuario-3.png" alt="" id="editar-listaDeUsuarios"></button>
-                            <button onclick="abrirModal('deletarUsuario')"><img src="/public/assets/delete.png" alt="" id="deletar-listaDeUsuarios"></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td data-cell = "ID">1984</td>
-                        <td data-cell="Nome">Joana Silva</td>
-                        <td data-cell="Email">joanasilva@gmail.com</td>
-                        <td class="acoes-listaDeUsuarios">
-                            <button onclick="abrirModal('visualizarUsuario')"><img src="/public/assets/visualizar.png" alt="" id="visualizar-listaDeUsuarios"></button>
-                            <button onclick="abrirModal('editarUsuario')"><img src="/public/assets/editarUsuario-3.png" alt="" id="editar-listaDeUsuarios"></button>
-                            <button onclick="abrirModal('deletarUsuario')"><img src="/public/assets/delete.png" alt="" id="deletar-listaDeUsuarios"></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td data-cell = "ID">4644</td>
-                        <td data-cell="Nome">João Silva</td>
-                        <td data-cell="Email">joaosilva@gmail.com</td>
-                        <td class="acoes-listaDeUsuarios">
-                            <button onclick="abrirModal('visualizarUsuario')"><img src="/public/assets/visualizar.png" alt="" id="visualizar-listaDeUsuarios"></button>
-                            <button onclick="abrirModal('editarUsuario')"><img src="/public/assets/editarUsuario-3.png" alt="" id="editar-listaDeUsuarios"></button>
-                            <button onclick="abrirModal('deletarUsuario')"><img src="/public/assets/delete.png" alt="" id="deletar-listaDeUsuarios"></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td data-cell = "ID">6232</td>
-                        <td data-cell="Nome">Juca Silva</td>
-                        <td data-cell="Email">jucasilva@gmail.com</td>
-                        <td class="acoes-listaDeUsuarios">
-                            <button onclick="abrirModal('visualizarUsuario')"><img src="/public/assets/visualizar.png" alt="" id="visualizar-listaDeUsuarios"></button>
-                            <button onclick="abrirModal('editarUsuario')"><img src="/public/assets/editarUsuario-3.png" alt="" id="editar-listaDeUsuarios"></button>
-                            <button onclick="abrirModal('deletarUsuario')"><img src="/public/assets/delete.png" alt="" id="deletar-listaDeUsuarios"></button>
-                        </td>
-                    </tr>
+                <?php endforeach; ?>
+                    
                 </tbody>
+
             </table>
         </div>
         <nav class="paginacao-listaDeUsuarios">
@@ -99,7 +63,7 @@
         </nav>
         
 <!-------------------------------------MODAL-------------------------------------------->
-        
+        <?php foreach($usuarios as $usuario): ?>
         <form action="" method="">
             <div class="modal-listaDeUsuarios" id="criarUsuario">
                 <h1>Criar</h1>
@@ -143,19 +107,19 @@
             </div>
         </form>
         <form action="" method=""> 
-            <div class="modal-listaDeUsuarios" id="visualizarUsuario">
+            <div class="modal-listaDeUsuarios" id= <?php $usuario->id ?>>
                 <h1>Informações</h1>
                 <div>
                     <p>Nome:</p>
-                    <input type="text" value="Euzinho da Silva" disabled>
+                    <input type="text" value= <?php $usuario->nome ?> disabled>
                 </div>
                 <div>
                     <p>Email:</p>
-                    <input type="text" value="euzinhodasilva@gmail.com" disabled>
+                    <input type="email" value= <?php $usuario->email ?> disabled>
                 </div>
                 <div>
                     <p>Senha:</p>
-                    <input type="text" value="40028922" disabled>
+                    <input type="password" value= <?php $usuario->senha ?> disabled>
                 </div>
                 <div class="botoesModais-listaDeUsuarios">
                     <button type="button" onclick="fecharModal('visualizarUsuario')">FECHAR</button>
@@ -172,6 +136,7 @@
                 </div>
             </div>
         </form>
+        <?php endforeach; ?>
     </section>
     
 </body>
