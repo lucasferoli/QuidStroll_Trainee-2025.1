@@ -11,7 +11,7 @@ class ListaDeUsuariosController {
     {
         $usuarios = App::get('database')->selectALL('usuarios');
 
-        return view('admin\ListaDeUsuarios', compact('usuarios'));
+        return view('admin/ListaDeUsuarios', compact('usuarios'));
     }
 
     public function store()
@@ -24,6 +24,22 @@ class ListaDeUsuariosController {
 
         App::get('database')->insert('usuarios', $parametros);
 
+        header('Location: /ListaDeUsuarios');
+
+    }
+
+    public function edit()
+    {
+        $parametros = [
+            'nome' => $_POST['nome'],
+            'email' => $_POST['email'],
+            'senha' => $_POST['senha'],
+        ];
+
+        $id = $_POST['id'];
+
+        App::get('database')->update('usuarios', $id, $parametros);
+        
         header('Location: /ListaDeUsuarios');
 
     }

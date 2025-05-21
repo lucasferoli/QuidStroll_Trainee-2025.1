@@ -85,7 +85,10 @@
                 </div>
             </div>
         </form>
-        <form action="" method="">
+        <?php endforeach; ?>
+
+        <?php foreach($usuarios as $usuario): ?>
+        <form action="/ListaDeUsuarios/edit" method="POST">
             <div class="modal-listaDeUsuarios" id="editarUsuario">
                 <h1>Editar</h1>
                 <div>
@@ -106,26 +109,30 @@
                 </div>
             </div>
         </form>
-        <form action="" method=""> 
-            <div class="modal-listaDeUsuarios" id= "visualizarUsuario">
+        <?php endforeach; ?>
+
+        <?php foreach($usuarios as $usuario): ?>
+            <div class="modal-listaDeUsuarios" id= "visualizarUsuario" >
                 <h1>Informações</h1>
                 <div>
                     <p>Nome:</p>
-                    <input type="text" value= <?php $usuario->nome ?> disabled>
+                    <input type="text" value= <?= $usuario->nome ?> disabled> 
                 </div>
                 <div>
                     <p>Email:</p>
-                    <input type="email" value= <?php $usuario->email ?> disabled>
+                    <input type="email" value= <?= $usuario->email ?> disabled>
                 </div>
                 <div>
                     <p>Senha:</p>
-                    <input type="password" value= <?php $usuario->senha ?> disabled>
+                    <input type="password" value= <?= $usuario->senha ?> disabled>
                 </div>
                 <div class="botoesModais-listaDeUsuarios">
                     <button type="button" onclick="fecharModal('visualizarUsuario')">FECHAR</button>
                 </div>
             </div>
-        </form>
+        <?php endforeach; ?>
+
+        <?php foreach($usuarios as $usuario): ?>
         <form action="" method="">
             <div class="modal-listaDeUsuarios" id="deletarUsuario">
                 <h1>Excluir</h1>
@@ -137,6 +144,7 @@
             </div>
         </form>
         <?php endforeach; ?>
+
     </section>
     
 </body>
