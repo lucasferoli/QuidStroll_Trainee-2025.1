@@ -12,3 +12,7 @@ $router->get('lista', 'ListaDePostsController@index');
 $router->get('admin/tabelaDePosts', 'TabelaDePostsAdminController@index');
 $router->post('admin/tabelaDePosts/create', 'TabelaDePostsAdminController@store');
 
+
+
+$router->post('admin/tabelaDePosts/delete', 'TabelaDePostsAdminController@delete');
+

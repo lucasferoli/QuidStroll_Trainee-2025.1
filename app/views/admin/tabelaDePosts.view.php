@@ -132,13 +132,13 @@
             </div>
         </form>
     </div>
-
+<!--Modal Excluir-->
     <div class="fundoModal-tabelaDePosts" id="fundoModal"></div>
     <div class="modalExcluir-tabelaDePosts" id="janelaModalExcluir">
         <div class="cabecalhoModalExcluir-tabelaDePosts">
             <h1>Excluir Post?</h1>
         </div>
-        <form class="botoesModalExcluir-tabelaDePosts">
+        <form class="botoesModalExcluir-tabelaDePosts" method="POST" action="/admin/tabelaDePosts/delete" >
             <button>Excluir</button>
             <button onclick="fecharModalExcluir('janelaModalExcluir', 'fundoModal')" >Cancelar</button>
         </form>

@@ -27,4 +27,11 @@ class TabelaDePostsAdminController
         App::get('database')->insert('posts', $parametros);
         header('Location: /tabelaDePosts');
     }
+
+    public function delete(){
+        $id = $_POST['id'];
+
+        App::get('database')->delete('posts', $id);
+        header('Location: /TabelaDePosts');
+    }
 }
