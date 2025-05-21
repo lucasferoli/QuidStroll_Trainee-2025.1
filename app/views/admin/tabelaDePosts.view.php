@@ -41,8 +41,8 @@
                     <tr class="trTabelaDePosts">
                         <td class="idTabelaDePosts"><?= $posts->id ?></td>
                         <td class="tituloTabelaDePosts"><?= $posts->titulo ?></td>
-                        <td class="autorTabelaDePosts"><?= $posts->autor ?></td>
-                        <td class="dataTabelaDePosts"><?= $posts->data ?></td>
+                        <td class="autorTabelaDePosts">Teste</td>
+                        <td class="dataTabelaDePosts"><?= $posts->criado_em ?></td>
                         <td class="acoesTabelaDePosts">
                             <button onclick="abrirModal('janelaModalVisualizar<?= $posts->id ?>', 'fundoModalVisualizar')"><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
                             <button onclick="abrirModalEditar('janelaModalEditar','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
@@ -154,23 +154,23 @@
         <form class="formModalAdicionar-tabelaDePosts" method="POST" action="/admin/tabelaDePosts/create">
             <div class="campoFormModalAdicionar">
                 <label for="tituloPost">Título:</label>
-                <input type="text" id="tituloPost" name="tituloPost" required>
+                <input type="text" id="tituloPost" name="titulo" required>
             </div>
-            <div class="campoFormModalAdicionar">
+            <!-- <div class="campoFormModalAdicionar">
                 <label for="autorPost">Autor:</label>
-                <input type="text" id="autorPost" name="autorPost" required>
+                <input type="text" id="autorPost" name="id_autor" required>
             </div>
             <div class="campoFormModalAdicionar">
                 <label for="dataPost">Data:</label>
-                <input type="date" id="dataPost" name="dataPost" required>
-            </div>
+                <input type="date" id="dataPost" name="criado_em" required>
+            </div> -->
             <div class="campoFormModalAdicionar">
                 <label for="imagemPost">Imagem:</label>
-                <input type="file" id="imagemPost" name="imagemPost" accept="image/*">
+                <input type="file" id="imagemPost" name="imagem" accept="image/*">
             </div>
             <div class="campoFormModalAdicionar">
                 <label for="conteudoPost">Conteúdo:</label>
-                <textarea id="conteudoPost" name="conteudoPost" rows="5" required></textarea>
+                <textarea id="conteudoPost" name="descricao" rows="5" required></textarea>
             </div>
             <div class="botoesFormModalAdicionar">
                 <button type="button" onclick="fecharModal('janelaModalAdicionar', 'fundoModalAdicionar')">Cancelar</button>

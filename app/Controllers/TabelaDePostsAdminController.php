@@ -11,21 +11,22 @@ class TabelaDePostsAdminController
     public function index()
     {
         $posts = App::get('database')->selectAll('posts');
+
         return view('/admin/tabelaDePosts', compact('posts'));
     }
 
     public function store() {
         $parametros = [
-            'id' => $_POST['id'],
-            'tituloPost' => $_POST['tituloPost'],
-            'conteudoPost'=> $_POST['conteudoPost'],
-            'imagemPost' => $_POST['imagemPost'],
-            'dataPost' => $_POST['dataPost'],
-            'autorPost' => $_POST['autorPost'],
+            //'id' => $_POST['id'],
+            'titulo' => $_POST['titulo'],
+            'descricao'=> $_POST['descricao'],
+            'imagem' => $_POST['imagem'],
+            //'criado_em' => $_POST['criado_em'],
+            'id_autor' => 1
         ];
         
         App::get('database')->insert('posts', $parametros);
-        header('Location: /tabelaDePosts');
+        header('Location: /admin/tabelaDePosts');
     }
 
     public function delete(){
