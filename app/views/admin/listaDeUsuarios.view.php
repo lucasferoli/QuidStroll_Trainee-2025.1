@@ -91,23 +91,23 @@
         <form action="/ListaDeUsuarios/edit" method="POST">
             <div class="modal-listaDeUsuarios" id="editarUsuario<?= $usuario->id ?>">
                 <h1>Editar</h1>
+                <input type="hidden" value ="<?= $usuario->id ?>" name = 'id'>
                 <div>
                     <p>Nome:</p>
-                    <input type="text" value= <?= $usuario->nome ?> name = 'nome'> 
+                    <input type="text" value="<?= $usuario->nome ?>" name = 'nome'> 
                 </div>
                 <div>
                     <p>Email:</p>
-                    <input type="email" value= <?= $usuario->email ?> name = 'email'>
+                    <input type="email" value="<?= $usuario->email ?>" name = 'email'>
                 </div>
                 <div>
                     <p>Senha:</p>
-                    <input type="text" value= <?= $usuario->senha ?> name = 'senha'>
+                    <input type="text" value="<?= $usuario->senha ?>" name = 'senha'>
                 </div>
                 <div class="botoesModais-listaDeUsuarios">
                     <button>SALVAR</button>
                     <button type="button" onclick="fecharModal('editarUsuario<?= $usuario->id?>')">CANCELAR</button>
                 </div>
-                <input type="hidden" value = <?= $usuario->id ?> name = 'id'>
             </div>
         </form>
 
@@ -115,15 +115,15 @@
                 <h1>Informações</h1>
                 <div>
                     <p>Nome:</p>
-                    <input type="text" value= <?= $usuario->nome ?> disabled> 
+                    <input type="text" value="<?= $usuario->nome ?>" disabled> 
                 </div>
                 <div>
                     <p>Email:</p>
-                    <input type="email" value= <?= $usuario->email ?> disabled>
+                    <input type="email" value="<?= $usuario->email ?>" disabled>
                 </div>
                 <div>
                     <p>Senha:</p>
-                    <input type="password" value= <?= $usuario->senha ?> disabled>
+                    <input type="password" value="<?= $usuario->senha ?>" disabled>
                 </div>
                 <div class="botoesModais-listaDeUsuarios">
                     <button type="button" onclick="fecharModal('visualizarUsuario<?= $usuario->id?>')">FECHAR</button>
