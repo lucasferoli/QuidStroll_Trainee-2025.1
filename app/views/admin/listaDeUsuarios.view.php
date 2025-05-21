@@ -43,9 +43,9 @@
                         <td data-cell = "Nome"><?= $usuario->nome ?></td>
                         <td data-cell = "Email"><?= $usuario->email ?></td>
                         <td class="acoes-listaDeUsuarios">
-                            <button onclick="abrirModal('visualizarUsuario') <?php $usuario->id ?>"><img src="/public/assets/visualizar.png" alt="" id="visualizar-listaDeUsuarios"></button>
-                            <button onclick="abrirModal('editarUsuario') <?php $usuario->id ?>"><img src="/public/assets/editarUsuario-3.png" alt="" id="editar-listaDeUsuarios"></button>
-                            <button onclick="abrirModal('deletarUsuario') <?php $usuario->id ?>"><img src="/public/assets/delete.png" alt="" id="deletar-listaDeUsuarios"></button>
+                            <button type="button" onclick="abrirModal('visualizarUsuario<?= $usuario->id?>')" ><img src="/public/assets/visualizar.png" alt="" id="visualizar-listaDeUsuarios"></button>
+                            <button type="button" onclick="abrirModal('editarUsuario<?php $usuario->id ?>')"><img src="/public/assets/editarUsuario-3.png" alt="" id="editar-listaDeUsuarios"></button>
+                            <button type="button" onclick="abrirModal('deletarUsuario<?php $usuario->id ?>')"><img src="/public/assets/delete.png" alt="" id="deletar-listaDeUsuarios"></button>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -63,7 +63,7 @@
         </nav>
         
 <!-------------------------------------MODAL-------------------------------------------->
-        <?php foreach($usuarios as $usuario): ?>
+
         <form action="/ListaDeUsuarios/create" method="POST">
             <div class="modal-listaDeUsuarios" id="criarUsuario">
                 <h1>Criar</h1>
@@ -85,7 +85,7 @@
                 </div>
             </div>
         </form>
-        <?php endforeach; ?>
+
 
         <?php foreach($usuarios as $usuario): ?>
         <form action="/ListaDeUsuarios/edit" method="POST">
@@ -93,7 +93,7 @@
                 <h1>Editar</h1>
                 <div>
                     <p>Nome:</p>
-                    <input type="text">
+                    <input type="text" value= <?= $usuario->nome ?> disabled> 
                 </div>
                 <div>
                     <p>Email:</p>
@@ -105,14 +105,12 @@
                 </div>
                 <div class="botoesModais-listaDeUsuarios">
                     <button>SALVAR</button>
-                    <button type="button" onclick="fecharModal('editarUsuario')">CANCELAR</button>
+                    <button type="button" onclick="fecharModal('editarUsuario<?= $usuario->id?>')">CANCELAR</button>
                 </div>
             </div>
         </form>
-        <?php endforeach; ?>
 
-        <?php foreach($usuarios as $usuario): ?>
-            <div class="modal-listaDeUsuarios" id= "visualizarUsuario" >
+            <div class="modal-listaDeUsuarios" id= "visualizarUsuario<?= $usuario->id ?>" >
                 <h1>Informações</h1>
                 <div>
                     <p>Nome:</p>
@@ -127,19 +125,17 @@
                     <input type="password" value= <?= $usuario->senha ?> disabled>
                 </div>
                 <div class="botoesModais-listaDeUsuarios">
-                    <button type="button" onclick="fecharModal('visualizarUsuario')">FECHAR</button>
+                    <button type="button" onclick="fecharModal('visualizarUsuario<?= $usuario->id?>')">FECHAR</button>
                 </div>
             </div>
-        <?php endforeach; ?>
 
-        <?php foreach($usuarios as $usuario): ?>
         <form action="" method="">
             <div class="modal-listaDeUsuarios" id="deletarUsuario">
                 <h1>Excluir</h1>
                 <p>TEM CERTEZA QUE DESEJA <br> DELETAR O USUÁRIO?</p>
                 <div class="botoesModais-listaDeUsuarios">
                     <button>SIM</button>
-                    <button type="button" onclick="fecharModal('deletarUsuario')">NÃO</button>
+                    <button type="button" onclick="fecharModal('deletarUsuario<?= $usuario->id?>')">NÃO</button>
                 </div>
             </div>
         </form>
