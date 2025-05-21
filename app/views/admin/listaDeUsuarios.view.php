@@ -44,8 +44,8 @@
                         <td data-cell = "Email"><?= $usuario->email ?></td>
                         <td class="acoes-listaDeUsuarios">
                             <button type="button" onclick="abrirModal('visualizarUsuario<?= $usuario->id?>')" ><img src="/public/assets/visualizar.png" alt="" id="visualizar-listaDeUsuarios"></button>
-                            <button type="button" onclick="abrirModal('editarUsuario<?php $usuario->id ?>')"><img src="/public/assets/editarUsuario-3.png" alt="" id="editar-listaDeUsuarios"></button>
-                            <button type="button" onclick="abrirModal('deletarUsuario<?php $usuario->id ?>')"><img src="/public/assets/delete.png" alt="" id="deletar-listaDeUsuarios"></button>
+                            <button type="button" onclick="abrirModal('editarUsuario<?= $usuario->id ?>')"><img src="/public/assets/editarUsuario-3.png" alt="" id="editar-listaDeUsuarios"></button>
+                            <button type="button" onclick="abrirModal('deletarUsuario<?= $usuario->id ?>')"><img src="/public/assets/delete.png" alt="" id="deletar-listaDeUsuarios"></button>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -89,24 +89,25 @@
 
         <?php foreach($usuarios as $usuario): ?>
         <form action="/ListaDeUsuarios/edit" method="POST">
-            <div class="modal-listaDeUsuarios" id="editarUsuario">
+            <div class="modal-listaDeUsuarios" id="editarUsuario<?= $usuario->id ?>">
                 <h1>Editar</h1>
                 <div>
                     <p>Nome:</p>
-                    <input type="text" value= <?= $usuario->nome ?> disabled> 
+                    <input type="text" value= <?= $usuario->nome ?> name = 'nome'> 
                 </div>
                 <div>
                     <p>Email:</p>
-                    <input type="email">
+                    <input type="email" value= <?= $usuario->email ?> name = 'email'>
                 </div>
                 <div>
                     <p>Senha:</p>
-                    <input type="text">
+                    <input type="text" value= <?= $usuario->senha ?> name = 'senha'>
                 </div>
                 <div class="botoesModais-listaDeUsuarios">
                     <button>SALVAR</button>
                     <button type="button" onclick="fecharModal('editarUsuario<?= $usuario->id?>')">CANCELAR</button>
                 </div>
+                <input type="hidden" value = <?= $usuario->id ?> name = 'id'>
             </div>
         </form>
 
@@ -130,7 +131,7 @@
             </div>
 
         <form action="" method="">
-            <div class="modal-listaDeUsuarios" id="deletarUsuario">
+            <div class="modal-listaDeUsuarios" id="deletarUsuario<?= $usuario->id ?>">
                 <h1>Excluir</h1>
                 <p>TEM CERTEZA QUE DESEJA <br> DELETAR O USUÁRIO?</p>
                 <div class="botoesModais-listaDeUsuarios">

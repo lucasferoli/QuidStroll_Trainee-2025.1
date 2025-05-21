@@ -53,8 +53,8 @@ class QueryBuilder
     {
         $sql = sprintf('UPDATE %s SET %s WHERE id = %s',
         $table,
-        implode('. ', array_map(function($param) {
-            return $param - ' = !' .$param;
+        implode(', ', array_map(function($param) {
+            return $param . ' = :' . $param;
         }, array_keys($parametros))),
         $id,
     );
