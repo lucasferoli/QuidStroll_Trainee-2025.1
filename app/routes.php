@@ -9,3 +9,4 @@ $router->get('', 'LandingController@index');
 $router->get('login', 'LoginController@index');
 $router->get('dashboard', 'DashboardController@index');
 $router->get('ListaDeUsuarios', 'ListaDeUsuariosController@index');
+$router->post('ListaDeUsuarios/create', 'ListaDeUsuariosController@index');

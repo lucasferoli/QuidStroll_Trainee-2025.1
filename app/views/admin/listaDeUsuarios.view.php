@@ -43,9 +43,9 @@
                         <td data-cell = "Nome"><?= $usuario->nome ?></td>
                         <td data-cell = "Email"><?= $usuario->email ?></td>
                         <td class="acoes-listaDeUsuarios">
-                            <button onclick="abrirModal('visualizarUsuario')" <?php $usuario->id ?>><img src="/public/assets/visualizar.png" alt="" id="visualizar-listaDeUsuarios"></button>
-                            <button onclick="abrirModal('editarUsuario')" <?php $usuario->id ?>><img src="/public/assets/editarUsuario-3.png" alt="" id="editar-listaDeUsuarios"></button>
-                            <button onclick="abrirModal('deletarUsuario')" <?php $usuario->id ?>><img src="/public/assets/delete.png" alt="" id="deletar-listaDeUsuarios"></button>
+                            <button onclick="abrirModal('visualizarUsuario') <?php $usuario->id ?>"><img src="/public/assets/visualizar.png" alt="" id="visualizar-listaDeUsuarios"></button>
+                            <button onclick="abrirModal('editarUsuario') <?php $usuario->id ?>"><img src="/public/assets/editarUsuario-3.png" alt="" id="editar-listaDeUsuarios"></button>
+                            <button onclick="abrirModal('deletarUsuario') <?php $usuario->id ?>"><img src="/public/assets/delete.png" alt="" id="deletar-listaDeUsuarios"></button>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -64,20 +64,20 @@
         
 <!-------------------------------------MODAL-------------------------------------------->
         <?php foreach($usuarios as $usuario): ?>
-        <form action="" method="">
+        <form action="/ListaDeUsuarios/create" method="POST">
             <div class="modal-listaDeUsuarios" id="criarUsuario">
                 <h1>Criar</h1>
                 <div>
                     <p>Nome:</p>
-                    <input required type="text">
+                    <input required type="text" name = "nome">
                 </div>
                 <div>
                     <p>Email:</p>
-                    <input required type="email">
+                    <input required type="email" name = "email">
                 </div>
                 <div>
                     <p>Senha:</p>
-                    <input required type="text">
+                    <input required type="text" name = "senha">
                 </div>
                 <div class="botoesModais-listaDeUsuarios">
                     <button>SALVAR</button>
