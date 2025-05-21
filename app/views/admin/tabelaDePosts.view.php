@@ -37,18 +37,20 @@
                 </tr>
             </thead>
             <tbody id="bodyTabelaDePosts">
-                <tr class="trTabelaDePosts">
-                    <td class="idTabelaDePosts">1</td>
-                    <td class="tituloTabelaDePosts">Ah nao vei ah nao</td>
-                    <td class="autorTabelaDePosts">Yan</td>
-                    <td class="dataTabelaDePosts">28/04/2025</td>
-                    <td class="acoesTabelaDePosts">
-                        <button onclick="abrirModal('janelaModalVisualizar', 'fundoModalVisualizar')"><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
-                        <button onclick="abrirModalEditar('janelaModalEditar','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
-                        <button onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
-                    </td>
-                </tr>
-                <tr class="trTabelaDePosts">
+               <?php foreach($posts as $posts): ?>
+                    <tr class="trTabelaDePosts">
+                        <td class="idTabelaDePosts"><?= $posts->id ?></td>
+                        <td class="tituloTabelaDePosts"><?= $posts->titulo ?></td>
+                        <td class="autorTabelaDePosts"><?= $posts->autor ?></td>
+                        <td class="dataTabelaDePosts"><?= $posts->data ?></td>
+                        <td class="acoesTabelaDePosts">
+                            <button onclick="abrirModal('janelaModalVisualizar<?= $posts->id ?>', 'fundoModalVisualizar')"><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
+                            <button onclick="abrirModalEditar('janelaModalEditar','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                            <button onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
+                        </td>
+                    </tr>
+                <?php endforeach ?>    
+                <!--<tr class="trTabelaDePosts">
                     <td class="idTabelaDePosts">1</td>
                     <td class="tituloTabelaDePosts">Ah nao vei ah nao</td>
                     <td class="autorTabelaDePosts">Yan</td>
@@ -91,7 +93,7 @@
                         <button onclick="abrirModalEditar('janelaModalEditar','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
                         <button onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
                     </td>
-                </tr>
+                </tr>-->
             </tbody>
         </table>
     </main>
@@ -149,7 +151,7 @@
             <h1>Adicionar Novo Post</h1>
             <button onclick="fecharModal('janelaModalAdicionar', 'fundoModalAdicionar')"><img src="\public\assets\simboloFecharPost.png" alt="Fechar Guia"></button>
         </header>
-        <form class="formModalAdicionar-tabelaDePosts">
+        <form class="formModalAdicionar-tabelaDePosts" method="POST" action="/admin/tabelaDePosts/create">
             <div class="campoFormModalAdicionar">
                 <label for="tituloPost">Título:</label>
                 <input type="text" id="tituloPost" name="tituloPost" required>

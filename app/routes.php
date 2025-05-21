@@ -9,4 +9,6 @@ $router->get('', 'LandingController@index');
 $router->get('login', 'LoginController@index');
 $router->get('dashboard', 'DashboardController@index');
 $router->get('lista', 'ListaDePostsController@index');
-$router->get('admin/tabeladeposts', 'TabelaDePostsAdminController@index');
+$router->get('admin/tabelaDePosts', 'TabelaDePostsAdminController@index');
+$router->post('admin/tabelaDePosts/create', 'TabelaDePostsAdminController@store');
+
