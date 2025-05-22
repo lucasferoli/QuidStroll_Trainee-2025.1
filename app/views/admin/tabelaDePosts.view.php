@@ -115,20 +115,20 @@
     <div class="modalVisualizar-tabelaDePosts" id="janelaModalVisualizar<?= $post->id ?>">
         <header class="cabecalhoModalVisualizar-tabelaDePosts">
             <h1>Visualizar Post</h1>
-            <button onclick="fecharModal('janelaModalVisualizar', 'fundoModalVisualizar')"><img src="\public\assets\simboloFecharPost.png" alt="Fechar Guia"></button>
+            <button onclick="fecharModal('janelaModalVisualizar<?= $post->id ?>', 'fundoModalVisualizar')"><img src="\public\assets\simboloFecharPost.png" alt="Fechar Guia"></button>
         </header>
         <div class="corpoModalVisualizar-tabelaDePosts">
             <img src="/public/assets/imagemPost.jfif" alt="Imagem do Post">
             <div class="conteudoModalVisualizar-tabelaDePosts">
                 <div class="tituloModalVisualizar-tabelaDePosts">
-                    <h2>Título do Post</h2>
+                    <h2><?= $post->titulo ?></h2>
                 </div>
                 <div class="textoModalVisualizar-tabelaDePosts">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
+                <p><?= $post->descricao?></p>
                 </div>
                 <div class="infoModalVisualizar-tabelaDePosts">
                     <span class="autorModalVisualizar-tabelaDePosts">Autor: Leandro</span>
-                    <span class="dataModalVisualizar-tabelaDePosts">Data: 01/05/2025</span>
+                    <span class="dataModalVisualizar-tabelaDePosts"><?= $post->criado_em ?></span>
                 </div>
             </div>
         </div>
