@@ -30,9 +30,13 @@ class TabelaDePostsAdminController
     }
 
     public function delete(){
+
         $id = $_POST['id'];
 
+        var_dump($id);
+
         App::get('database')->delete('posts', $id);
+        
         header('Location: /tabeladeposts');
     }
 

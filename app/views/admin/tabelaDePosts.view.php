@@ -37,68 +37,20 @@
                 </tr>
             </thead>
             <tbody id="bodyTabelaDePosts">
-               <?php foreach($posts as $posts): ?>
+               <?php foreach($posts as $post): ?>
                     <tr class="trTabelaDePosts">
-                        <td class="idTabelaDePosts"><?= $posts->id ?></td>
-                        <td class="tituloTabelaDePosts"><?= $posts->titulo ?></td>
+                        <td class="idTabelaDePosts"><?= $post->id ?></td>
+                        <td class="tituloTabelaDePosts"><?= $post->titulo ?></td>
                         <td class="autorTabelaDePosts">Teste</td>
-                        <td class="dataTabelaDePosts"><?= $posts->criado_em ?></td>
+                        <td class="dataTabelaDePosts"><?= $post->criado_em ?></td>
                         <td class="acoesTabelaDePosts">
-                            <button onclick="abrirModal('janelaModalVisualizar', 'fundoModalVisualizar')" <?= $posts->id ?>><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
-                            <button onclick="abrirModalEditar('janelaModalEditar','fundoModal')" <?= $posts->id ?>><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
-                            <button onclick="abrirModalVerMais('janelaModalVerMais','fundoModalVerMais')"><img class="TresPontosTabelaDePosts" src="/public/assets/3Pontos (2).png" alt="Ver Mais"></button>
-                        <button onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')" <?= $posts->id ?>><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
+                            <button onclick="abrirModal('janelaModalVisualizar<?= $post->id ?>', 'fundoModalVisualizar')" ><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
+                            <button onclick="abrirModal('janelaModalEditar<? $post->id ?>','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                            <button onclick="abrirModal('janelaModalVerMais<?= $post->id ?>','fundoModalVerMais')"><img class="TresPontosTabelaDePosts" src="/public/assets/3Pontos (2).png" alt="Ver Mais"></button>
+                        <button onclick="abrirModal('janelaModalExcluir<?= $post->id ?>', 'fundoModal<?= $post->id ?>')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
                         </td>
                     </tr>
-                <?php endforeach ?>    
-                <!--<tr class="trTabelaDePosts">
-                    <td class="idTabelaDePosts">1</td>
-                    <td class="tituloTabelaDePosts">Ah nao vei ah nao</td>
-                    <td class="autorTabelaDePosts">Yan</td>
-                    <td class="dataTabelaDePosts">28/04/2025</td>
-                    <td class="acoesTabelaDePosts">
-                        <button onclick="abrirModal('janelaModalVisualizar', 'fundoModalVisualizar')"><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
-                        <button onclick="abrirModalEditar('janelaModalEditar','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
-                        <button onclick="abrirModalVerMais('janelaModalVerMais','fundoModalVerMais')"><img class="TresPontosTabelaDePosts" src="/public/assets/3Pontos (2).png" alt="Ver Mais"></button>
-                        <button onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
-                    </td>
-                </tr>
-                <tr class="trTabelaDePosts">
-                    <td class="idTabelaDePosts">1</td>
-                    <td class="tituloTabelaDePosts">Ah nao vei ah nao</td>
-                    <td class="autorTabelaDePosts">Yan</td>
-                    <td class="dataTabelaDePosts">28/04/2025</td>
-                    <td class="acoesTabelaDePosts">
-                        <button onclick="abrirModal('janelaModalVisualizar', 'fundoModalVisualizar')"><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
-                        <button onclick="abrirModalEditar('janelaModalEditar','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
-                        <button onclick="abrirModalVerMais('janelaModalVerMais','fundoModalVerMais')"><img class="TresPontosTabelaDePosts" src="/public/assets/3Pontos (2).png" alt="Ver Mais"></button>
-                        <button onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
-                    </td>
-                </tr>
-                <tr class="trTabelaDePosts">
-                    <td class="idTabelaDePosts">1</td>
-                    <td class="tituloTabelaDePosts">Ah nao vei ah nao</td>
-                    <td class="autorTabelaDePosts">Yan</td>
-                    <td class="dataTabelaDePosts">28/04/2025</td>
-                    <td class="acoesTabelaDePosts">
-                        <button onclick="abrirModal('janelaModalVisualizar', 'fundoModalVisualizar')"><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
-                        <button onclick="abrirModalEditar('janelaModalEditar','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
-                        <button onclick="abrirModalVerMais('janelaModalVerMais','fundoModalVerMais')"><img class="TresPontosTabelaDePosts" src="/public/assets/3Pontos (2).png" alt="Ver Mais"></button>
-                        <button onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
-                    </td>
-                </tr>
-                <tr class="trTabelaDePosts cincoTP">
-                    <td class="idTabelaDePosts">1</td>
-                    <td class="tituloTabelaDePosts">Ah nao vei ah nao</td>
-                    <td class="autorTabelaDePosts">Yan</td>
-                    <td class="dataTabelaDePosts">28/04/2025</td>
-                    <td class="acoesTabelaDePosts">
-                        <button onclick="abrirModal('janelaModalVisualizar', 'fundoModalVisualizar')"><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
-                        <button onclick="abrirModalEditar('janelaModalEditar','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
-                        <button onclick="abrirModalVerMais('janelaModalVerMais','fundoModalVerMais')"><img class="TresPontosTabelaDePosts" src="/public/assets/3Pontos (2).png" alt="Ver Mais"></button>
-                        <button onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
-                    </td>
-                </tr>-->
+                <?php endforeach ?>
             </tbody>
         </table>
     </main>
@@ -117,13 +69,13 @@
 
     <!----------------------Modal------------------------------->
     <!---------------------------------------------------------->
-    <?php foreach($posts as $posts): ?>
+    <?php foreach($posts as $post): ?>
 
     <div class="fundoModal-tabelaDePosts" id="fundoModal"></div>
-    <div class="modalEditar-tabelaDePosts" id="janelaModalEditar">
+    <div class="modalEditar-tabelaDePosts" id="janelaModalEditar<?= $post->id ?>">
         <header class="cabecalhoModalEditar-tabelaDePosts">
             <h1>Editar Post</h1>
-            <button onclick="fecharModalEditar('janelaModalEditar', 'fundoModal')"><img src="/public/assets/simboloFecharPost.png" alt="Fechar Guia"></button>
+            <button onclick="fecharModal('janelaModalEditar', 'fundoModal')"><img src="/public/assets/simboloFecharPost.png" alt="Fechar Guia"></button>
         </header>
         <form class="formModalEditar-tabelaDePosts" method="POST"  action="admin/tabeladeposts/edit">
             <img src="/public/assets/imagemPost.jfif" alt="">
@@ -141,14 +93,16 @@
         </form>
     </div>
 <!--Modal Excluir-->
-    <div class="fundoModal-tabelaDePosts" id="fundoModal"></div>
-    <div class="modalExcluir-tabelaDePosts" id="janelaModalExcluir">
-        <div class="cabecalhoModalExcluir-tabelaDePosts">
-            <h1>Excluir Post?</h1>
-        </div>
-        <form class="botoesModalExcluir-tabelaDePosts" method="POST" action="admin/tabeladeposts/delete" >
+<div class="fundoModal-tabelaDePosts" id="fundoModal<?= $post->id ?>"></div>
+<div class="modalExcluir-tabelaDePosts" id="janelaModalExcluir<?= $post->id ?>">
+    <div class="cabecalhoModalExcluir-tabelaDePosts">
+        <h1>Excluir Post?</h1>
+    </div>
+    <form class="botoesModalExcluir-tabelaDePosts" method="POST" action="admin/tabeladeposts/delete" >
+        <input name="id" value="<?= $post->id ?>" type="hidden">
+
             <button type="submit">Excluir</button>
-            <button onclick="fecharModalExcluir('janelaModalExcluir', 'fundoModal')" >Cancelar</button>
+            <button onclick="fecharModal('janelaModalExcluir<?= $post->id ?>', 'fundoModal<?= $post->id ?>')" >Cancelar</button>
         </form>
     </div>
 
@@ -158,7 +112,7 @@
 
      <!--Modal Visualizar-->
     <div class="fundoModalVisualizar-tabelaDePosts" id="fundoModalVisualizar"></div>
-    <div class="modalVisualizar-tabelaDePosts" id="janelaModalVisualizar">
+    <div class="modalVisualizar-tabelaDePosts" id="janelaModalVisualizar<?= $post->id ?>">
         <header class="cabecalhoModalVisualizar-tabelaDePosts">
             <h1>Visualizar Post</h1>
             <button onclick="fecharModal('janelaModalVisualizar', 'fundoModalVisualizar')"><img src="\public\assets\simboloFecharPost.png" alt="Fechar Guia"></button>

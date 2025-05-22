@@ -57,6 +57,7 @@ class QueryBuilder
         $table,
         'id = :id'
     );
+    
 
     try {
             $stmt = $this->pdo->prepare($sql);
