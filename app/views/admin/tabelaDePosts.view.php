@@ -46,7 +46,8 @@
                         <td class="acoesTabelaDePosts">
                             <button onclick="abrirModal('janelaModalVisualizar', 'fundoModalVisualizar')" <?= $posts->id ?>><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
                             <button onclick="abrirModalEditar('janelaModalEditar','fundoModal')" <?= $posts->id ?>><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
-                            <button onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')" <?= $posts->id ?>><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
+                            <button onclick="abrirModalVerMais('janelaModalVerMais','fundoModalVerMais')"><img class="TresPontosTabelaDePosts" src="/public/assets/3Pontos (2).png" alt="Ver Mais"></button>
+                        <button onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')" <?= $posts->id ?>><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
                         </td>
                     </tr>
                 <?php endforeach ?>    
@@ -58,6 +59,7 @@
                     <td class="acoesTabelaDePosts">
                         <button onclick="abrirModal('janelaModalVisualizar', 'fundoModalVisualizar')"><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
                         <button onclick="abrirModalEditar('janelaModalEditar','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                        <button onclick="abrirModalVerMais('janelaModalVerMais','fundoModalVerMais')"><img class="TresPontosTabelaDePosts" src="/public/assets/3Pontos (2).png" alt="Ver Mais"></button>
                         <button onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
                     </td>
                 </tr>
@@ -69,6 +71,7 @@
                     <td class="acoesTabelaDePosts">
                         <button onclick="abrirModal('janelaModalVisualizar', 'fundoModalVisualizar')"><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
                         <button onclick="abrirModalEditar('janelaModalEditar','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                        <button onclick="abrirModalVerMais('janelaModalVerMais','fundoModalVerMais')"><img class="TresPontosTabelaDePosts" src="/public/assets/3Pontos (2).png" alt="Ver Mais"></button>
                         <button onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
                     </td>
                 </tr>
@@ -80,6 +83,7 @@
                     <td class="acoesTabelaDePosts">
                         <button onclick="abrirModal('janelaModalVisualizar', 'fundoModalVisualizar')"><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
                         <button onclick="abrirModalEditar('janelaModalEditar','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                        <button onclick="abrirModalVerMais('janelaModalVerMais','fundoModalVerMais')"><img class="TresPontosTabelaDePosts" src="/public/assets/3Pontos (2).png" alt="Ver Mais"></button>
                         <button onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
                     </td>
                 </tr>
@@ -91,6 +95,7 @@
                     <td class="acoesTabelaDePosts">
                         <button onclick="abrirModal('janelaModalVisualizar', 'fundoModalVisualizar')"><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
                         <button onclick="abrirModalEditar('janelaModalEditar','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                        <button onclick="abrirModalVerMais('janelaModalVerMais','fundoModalVerMais')"><img class="TresPontosTabelaDePosts" src="/public/assets/3Pontos (2).png" alt="Ver Mais"></button>
                         <button onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
                     </td>
                 </tr>-->
@@ -100,12 +105,14 @@
 
     <!------------------------- Paginação ----------------------->
     <!----------------------------------------------------------->
-    <div id="paginacaoTabelaDePosts">
-        <button><img src="/public/assets/arrowLeftShort.png" alt=""></button>
-        <button><img src="/public/assets/1.png" alt=""></button>
-        <button><img src="/public/assets/2.png" alt=""></button>
-        <button><img src="/public/assets/3.png" alt=""></button>
-        <button><img src="/public/assets/arrowRightShort.png" alt=""></button>
+    <div id="paginacao-tabelaDePosts">
+        <div id="botoes-tabelaDePosts">
+            <button>&lt</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>&gt</button>
+        </div>
     </div>
 
     <!----------------------Modal------------------------------->
@@ -145,7 +152,79 @@
         </form>
     </div>
 
-   
+    <!--Modal Adicionar-->
+    <div class="fundoModalAdicionar-tabelaDePosts" id="fundoModalAdicionar"></div>
+    <div class="modalAdicionar-tabelaDePosts" id="janelaModalAdicionar">
+        <header class="cabecalhoModalAdicionar-tabelaDePosts">
+            <h1>Adicionar Novo Post</h1>
+            <button onclick="fecharModal('janelaModalAdicionar', 'fundoModalAdicionar')"><img src="\public\assets\simboloFecharPost.png" alt="Fechar Guia"></button>
+        </header>
+        <form class="formModalAdicionar-tabelaDePosts">
+            <div class="campoFormModalAdicionar">
+                <label for="tituloPost">Título:</label>
+                <input type="text" id="tituloPost" name="tituloPost" required>
+            </div>
+            <div class="campoFormModalAdicionar">
+                <label for="autorPost">Autor:</label>
+                <input type="text" id="autorPost" name="autorPost" required>
+            </div>
+            <div class="campoFormModalAdicionar">
+                <label for="dataPost">Data:</label>
+                <input type="date" id="dataPost" name="dataPost" required>
+            </div>
+            <div class="campoFormModalAdicionar">
+                <label for="imagemPost">Imagem:</label>
+                <input type="file" id="imagemPost" name="imagemPost" accept="image/*">
+            </div>
+            <div class="campoFormModalAdicionar">
+                <label for="conteudoPost">Conteúdo:</label>
+                <textarea id="conteudoPost" name="conteudoPost" rows="5" required></textarea>
+            </div>
+            <div class="botoesFormModalAdicionar">
+                <button type="button" onclick="fecharModal('janelaModalAdicionar', 'fundoModalAdicionar')">Cancelar</button>
+                <button type="submit">Adicionar</button>
+            </div>
+        
+        </form>
+    </div>
+
+        <?php endforeach ?>   
+     <!--Modal Adicionar-->
+    <div class="fundoModalAdicionar-tabelaDePosts" id="fundoModalAdicionar"></div>
+    <div class="modalAdicionar-tabelaDePosts" id="janelaModalAdicionar">
+        <header class="cabecalhoModalAdicionar-tabelaDePosts">
+            <h1>Adicionar Novo Post</h1>
+            <button onclick="fecharModal('janelaModalAdicionar', 'fundoModalAdicionar')"><img src="\public\assets\simboloFecharPost.png" alt="Fechar Guia"></button>
+        </header>
+        <form class="formModalAdicionar-tabelaDePosts" method="POST" action="tabeladeposts/create">
+            <div class="campoFormModalAdicionar">
+                <label for="tituloPost">Título:</label>
+                <input type="text" id="tituloPost" name="titulo" required>
+            </div>
+            <!-- <div class="campoFormModalAdicionar">
+                <label for="autorPost">Autor:</label>
+                <input type="text" id="autorPost" name="id_autor" required>
+            </div>
+            <div class="campoFormModalAdicionar">
+                <label for="dataPost">Data:</label>
+                <input type="date" id="dataPost" name="criado_em" required>
+            </div> -->
+            <div class="campoFormModalAdicionar">
+                <label for="imagemPost">Imagem:</label>
+                <input type="file" id="imagemPost" name="imagem" accept="image/*">
+            </div>
+            <div class="campoFormModalAdicionar">
+                <label for="conteudoPost">Conteúdo:</label>
+                <textarea id="conteudoPost" name="descricao" rows="5" required></textarea>
+            </div>
+            <div class="botoesFormModalAdicionar">
+                <button type="button" onclick="fecharModal('janelaModalAdicionar', 'fundoModalAdicionar')">Cancelar</button>
+                <button type="submit">Adicionar</button>
+            </div>
+        </form>
+    </div>
+
+
     <!--Modal Visualizar-->
     <div class="fundoModalVisualizar-tabelaDePosts" id="fundoModalVisualizar"></div>
     <div class="modalVisualizar-tabelaDePosts" id="janelaModalVisualizar">
@@ -206,6 +285,15 @@
     </div>
 
 
+    <!----------------- MODAL DE TELAS PEQUENAS ------------------------------>
+        <div class="ModalVerMais" id="fundoModalVerMais">
+            <div class="corpo-do-VerMais" id="janelaModalVerMais">
+                <button type="button" onclick="abrirModal('janelaModalVisualizar', 'fundoModalVisualizar')"><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
+                <button type="button" onclick="abrirModalEditar('janelaModalEditar','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                <button type="button" onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
+                <button id = "botao-fechar-ver-mais" type="button" onclick="fecharModal('janelaModalVerMais', 'fundoModalVerMais')">fechar</button>   
+            </div>
+        </div>
 
 </body>
 <script src="/public/js/indexTabelaDePosts.js"></script>
