@@ -140,7 +140,7 @@
             <h1>Excluir Post?</h1>
         </div>
         <form class="botoesModalExcluir-tabelaDePosts" method="POST" action="admin/tabeladeposts/delete" >
-            <button>Excluir</button>
+            <button type="submit">Excluir</button>
             <button onclick="fecharModalExcluir('janelaModalExcluir', 'fundoModal')" >Cancelar</button>
         </form>
     </div>
