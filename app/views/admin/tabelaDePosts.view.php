@@ -177,7 +177,7 @@
             <h1>Adicionar Novo Post</h1>
             <button onclick="fecharModal('janelaModalAdicionar', 'fundoModalAdicionar')"><img src="\public\assets\simboloFecharPost.png" alt="Fechar Guia"></button>
         </header>
-        <form class="formModalAdicionar-tabelaDePosts" method="POST" action="admin/tabeladeposts/create">
+        <form class="formModalAdicionar-tabelaDePosts" method="POST" action="tabeladeposts/create">
             <div class="campoFormModalAdicionar">
                 <label for="tituloPost">Título:</label>
                 <input type="text" id="tituloPost" name="titulo" required>

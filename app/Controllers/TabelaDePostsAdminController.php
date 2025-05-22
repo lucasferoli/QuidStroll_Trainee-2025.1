@@ -11,7 +11,7 @@ class TabelaDePostsAdminController
     public function index()
     {
         $posts = App::get('database')->selectAll('posts');
-        return view('admin/tabeladeposts', compact('posts'));  //Antes era '/admin/tabelaDePosts'
+        return view('admin/tabelaDePosts', compact('posts'));  //Antes era '/admin/tabelaDePosts'
         
     }
 
@@ -26,14 +26,14 @@ class TabelaDePostsAdminController
         ];
         
         App::get('database')->insert('posts', $parametros);
-        header('Location: /admin/tabelaDePosts');
+        header('Location: /tabeladeposts');
     }
 
     public function delete(){
         $id = $_POST['id'];
 
         App::get('database')->delete('posts', $id);
-        header('Location: /tabelaDePosts');
+        header('Location: /tabeladeposts');
     }
 
 
