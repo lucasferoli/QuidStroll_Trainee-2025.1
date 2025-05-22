@@ -152,43 +152,9 @@
         </form>
     </div>
 
-    <!--Modal Adicionar-->
-    <div class="fundoModalAdicionar-tabelaDePosts" id="fundoModalAdicionar"></div>
-    <div class="modalAdicionar-tabelaDePosts" id="janelaModalAdicionar">
-        <header class="cabecalhoModalAdicionar-tabelaDePosts">
-            <h1>Adicionar Novo Post</h1>
-            <button onclick="fecharModal('janelaModalAdicionar', 'fundoModalAdicionar')"><img src="\public\assets\simboloFecharPost.png" alt="Fechar Guia"></button>
-        </header>
-        <form class="formModalAdicionar-tabelaDePosts">
-            <div class="campoFormModalAdicionar">
-                <label for="tituloPost">Título:</label>
-                <input type="text" id="tituloPost" name="tituloPost" required>
-            </div>
-            <div class="campoFormModalAdicionar">
-                <label for="autorPost">Autor:</label>
-                <input type="text" id="autorPost" name="autorPost" required>
-            </div>
-            <div class="campoFormModalAdicionar">
-                <label for="dataPost">Data:</label>
-                <input type="date" id="dataPost" name="dataPost" required>
-            </div>
-            <div class="campoFormModalAdicionar">
-                <label for="imagemPost">Imagem:</label>
-                <input type="file" id="imagemPost" name="imagemPost" accept="image/*">
-            </div>
-            <div class="campoFormModalAdicionar">
-                <label for="conteudoPost">Conteúdo:</label>
-                <textarea id="conteudoPost" name="conteudoPost" rows="5" required></textarea>
-            </div>
-            <div class="botoesFormModalAdicionar">
-                <button type="button" onclick="fecharModal('janelaModalAdicionar', 'fundoModalAdicionar')">Cancelar</button>
-                <button type="submit">Adicionar</button>
-            </div>
-        
-        </form>
-    </div>
 
         <?php endforeach ?>   
+
      <!--Modal Adicionar-->
     <div class="fundoModalAdicionar-tabelaDePosts" id="fundoModalAdicionar"></div>
     <div class="modalAdicionar-tabelaDePosts" id="janelaModalAdicionar">
@@ -248,41 +214,9 @@
             </div>
         </div>
     </div>
-    <?php endforeach ?>   
-     <!--Modal Adicionar-->
-    <div class="fundoModalAdicionar-tabelaDePosts" id="fundoModalAdicionar"></div>
-    <div class="modalAdicionar-tabelaDePosts" id="janelaModalAdicionar">
-        <header class="cabecalhoModalAdicionar-tabelaDePosts">
-            <h1>Adicionar Novo Post</h1>
-            <button onclick="fecharModal('janelaModalAdicionar', 'fundoModalAdicionar')"><img src="\public\assets\simboloFecharPost.png" alt="Fechar Guia"></button>
-        </header>
-        <form class="formModalAdicionar-tabelaDePosts" method="POST" action="tabeladeposts/create">
-            <div class="campoFormModalAdicionar">
-                <label for="tituloPost">Título:</label>
-                <input type="text" id="tituloPost" name="titulo" required>
-            </div>
-            <!-- <div class="campoFormModalAdicionar">
-                <label for="autorPost">Autor:</label>
-                <input type="text" id="autorPost" name="id_autor" required>
-            </div>
-            <div class="campoFormModalAdicionar">
-                <label for="dataPost">Data:</label>
-                <input type="date" id="dataPost" name="criado_em" required>
-            </div> -->
-            <div class="campoFormModalAdicionar">
-                <label for="imagemPost">Imagem:</label>
-                <input type="file" id="imagemPost" name="imagem" accept="image/*">
-            </div>
-            <div class="campoFormModalAdicionar">
-                <label for="conteudoPost">Conteúdo:</label>
-                <textarea id="conteudoPost" name="descricao" rows="5" required></textarea>
-            </div>
-            <div class="botoesFormModalAdicionar">
-                <button type="button" onclick="fecharModal('janelaModalAdicionar', 'fundoModalAdicionar')">Cancelar</button>
-                <button type="submit">Adicionar</button>
-            </div>
-        </form>
-    </div>
+
+
+     
 
 
     <!----------------- MODAL DE TELAS PEQUENAS ------------------------------>
