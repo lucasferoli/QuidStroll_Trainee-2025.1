@@ -44,9 +44,9 @@
                         <td class="autorTabelaDePosts">Teste</td>
                         <td class="dataTabelaDePosts"><?= $posts->criado_em ?></td>
                         <td class="acoesTabelaDePosts">
-                            <button onclick="abrirModal('janelaModalVisualizar<?= $posts->id ?>', 'fundoModalVisualizar')"><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
-                            <button onclick="abrirModalEditar('janelaModalEditar','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
-                            <button onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
+                            <button onclick="abrirModal('janelaModalVisualizar', 'fundoModalVisualizar')" <?= $posts->id ?>><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
+                            <button onclick="abrirModalEditar('janelaModalEditar','fundoModal')" <?= $posts->id ?>><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                            <button onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')" <?= $posts->id ?>><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
                         </td>
                     </tr>
                 <?php endforeach ?>    
@@ -100,7 +100,6 @@
 
     <!------------------------- Paginação ----------------------->
     <!----------------------------------------------------------->
-
     <div id="paginacaoTabelaDePosts">
         <button><img src="/public/assets/arrowLeftShort.png" alt=""></button>
         <button><img src="/public/assets/1.png" alt=""></button>
@@ -111,6 +110,8 @@
 
     <!----------------------Modal------------------------------->
     <!---------------------------------------------------------->
+    <?php foreach($posts as $posts): ?>
+
     <div class="fundoModal-tabelaDePosts" id="fundoModal"></div>
     <div class="modalEditar-tabelaDePosts" id="janelaModalEditar">
         <header class="cabecalhoModalEditar-tabelaDePosts">
@@ -138,20 +139,45 @@
         <div class="cabecalhoModalExcluir-tabelaDePosts">
             <h1>Excluir Post?</h1>
         </div>
-        <form class="botoesModalExcluir-tabelaDePosts" method="POST" action="/admin/tabelaDePosts/delete" >
+        <form class="botoesModalExcluir-tabelaDePosts" method="POST" action="/admin/tabeladeposts/delete" >
             <button>Excluir</button>
             <button onclick="fecharModalExcluir('janelaModalExcluir', 'fundoModal')" >Cancelar</button>
         </form>
     </div>
 
-    <!--Modal Adicionar-->
+   
+    <!--Modal Visualizar-->
+    <div class="fundoModalVisualizar-tabelaDePosts" id="fundoModalVisualizar"></div>
+    <div class="modalVisualizar-tabelaDePosts" id="janelaModalVisualizar">
+        <header class="cabecalhoModalVisualizar-tabelaDePosts">
+            <h1>Visualizar Post</h1>
+            <button onclick="fecharModal('janelaModalVisualizar', 'fundoModalVisualizar')"><img src="\public\assets\simboloFecharPost.png" alt="Fechar Guia"></button>
+        </header>
+        <div class="corpoModalVisualizar-tabelaDePosts">
+            <img src="/public/assets/imagemPost.jfif" alt="Imagem do Post">
+            <div class="conteudoModalVisualizar-tabelaDePosts">
+                <div class="tituloModalVisualizar-tabelaDePosts">
+                    <h2>Título do Post</h2>
+                </div>
+                <div class="textoModalVisualizar-tabelaDePosts">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
+                </div>
+                <div class="infoModalVisualizar-tabelaDePosts">
+                    <span class="autorModalVisualizar-tabelaDePosts">Autor: Leandro</span>
+                    <span class="dataModalVisualizar-tabelaDePosts">Data: 01/05/2025</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php endforeach ?>   
+     <!--Modal Adicionar-->
     <div class="fundoModalAdicionar-tabelaDePosts" id="fundoModalAdicionar"></div>
     <div class="modalAdicionar-tabelaDePosts" id="janelaModalAdicionar">
         <header class="cabecalhoModalAdicionar-tabelaDePosts">
             <h1>Adicionar Novo Post</h1>
             <button onclick="fecharModal('janelaModalAdicionar', 'fundoModalAdicionar')"><img src="\public\assets\simboloFecharPost.png" alt="Fechar Guia"></button>
         </header>
-        <form class="formModalAdicionar-tabelaDePosts" method="POST" action="/admin/tabelaDePosts/create">
+        <form class="formModalAdicionar-tabelaDePosts" method="POST" action="admin/tabeladeposts/create">
             <div class="campoFormModalAdicionar">
                 <label for="tituloPost">Título:</label>
                 <input type="text" id="tituloPost" name="titulo" required>
@@ -179,29 +205,6 @@
         </form>
     </div>
 
-    <!--Modal Visualizar-->
-    <div class="fundoModalVisualizar-tabelaDePosts" id="fundoModalVisualizar"></div>
-    <div class="modalVisualizar-tabelaDePosts" id="janelaModalVisualizar">
-        <header class="cabecalhoModalVisualizar-tabelaDePosts">
-            <h1>Visualizar Post</h1>
-            <button onclick="fecharModal('janelaModalVisualizar', 'fundoModalVisualizar')"><img src="\public\assets\simboloFecharPost.png" alt="Fechar Guia"></button>
-        </header>
-        <div class="corpoModalVisualizar-tabelaDePosts">
-            <img src="/public/assets/imagemPost.jfif" alt="Imagem do Post">
-            <div class="conteudoModalVisualizar-tabelaDePosts">
-                <div class="tituloModalVisualizar-tabelaDePosts">
-                    <h2>Título do Post</h2>
-                </div>
-                <div class="textoModalVisualizar-tabelaDePosts">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
-                </div>
-                <div class="infoModalVisualizar-tabelaDePosts">
-                    <span class="autorModalVisualizar-tabelaDePosts">Autor: Leandro</span>
-                    <span class="dataModalVisualizar-tabelaDePosts">Data: 01/05/2025</span>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 </body>

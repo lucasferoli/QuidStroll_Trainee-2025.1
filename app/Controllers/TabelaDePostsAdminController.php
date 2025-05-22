@@ -11,8 +11,8 @@ class TabelaDePostsAdminController
     public function index()
     {
         $posts = App::get('database')->selectAll('posts');
-
-        return view('/admin/tabelaDePosts', compact('posts'));
+        return view('admin/tabeladeposts', compact('posts'));  //Antes era '/admin/tabelaDePosts'
+        
     }
 
     public function store() {

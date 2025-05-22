@@ -9,10 +9,10 @@ $router->get('', 'LandingController@index');
 $router->get('login', 'LoginController@index');
 $router->get('dashboard', 'DashboardController@index');
 $router->get('lista', 'ListaDePostsController@index');
-$router->get('admin/tabelaDePosts', 'TabelaDePostsAdminController@index');
-$router->post('admin/tabelaDePosts/create', 'TabelaDePostsAdminController@store');
+$router->get('tabeladeposts', 'TabelaDePostsAdminController@index'); //antes era 'admin/tabelaDePosts' para todos os 3
+$router->post('tabeladeposts/create', 'TabelaDePostsAdminController@store');
 
 
 
-$router->post('admin/tabelaDePosts/delete', 'TabelaDePostsAdminController@delete');
+$router->post('admin/tabeladeposts/delete', 'TabelaDePostsAdminController@delete');
 
