@@ -118,7 +118,7 @@
             <h1>Editar Post</h1>
             <button onclick="fecharModalEditar('janelaModalEditar', 'fundoModal')"><img src="/public/assets/simboloFecharPost.png" alt="Fechar Guia"></button>
         </header>
-        <form class="formModalEditar-tabelaDePosts" action="">
+        <form class="formModalEditar-tabelaDePosts" method="POST"  action="admin/tabeladeposts/edit">
             <img src="/public/assets/imagemPost.jfif" alt="">
             <div class="corpoModalEditar-tabelaDePosts">
                 <input class="tituloModalEditar-tabelaDePosts" value="Lorem Ipsum Lorem Ipsum">
@@ -139,7 +139,7 @@
         <div class="cabecalhoModalExcluir-tabelaDePosts">
             <h1>Excluir Post?</h1>
         </div>
-        <form class="botoesModalExcluir-tabelaDePosts" method="POST" action="/admin/tabeladeposts/delete" >
+        <form class="botoesModalExcluir-tabelaDePosts" method="POST" action="admin/tabeladeposts/delete" >
             <button>Excluir</button>
             <button onclick="fecharModalExcluir('janelaModalExcluir', 'fundoModal')" >Cancelar</button>
         </form>

@@ -33,6 +33,21 @@ class TabelaDePostsAdminController
         $id = $_POST['id'];
 
         App::get('database')->delete('posts', $id);
-        header('Location: /TabelaDePosts');
+        header('Location: /tabelaDePosts');
+    }
+
+
+    public function edit(){
+        $parametros = [
+            //'id' => $_POST['id'],
+            'titulo' => $_POST['titulo'],
+            'descricao'=> $_POST['descricao'],
+            'imagem' => $_POST['imagem'],
+            //'criado_em' => $_POST['criado_em'],
+        ];
+        $id = $_POST['id'];
+        App::get('database')->update('posts', $id, $parametros);
+        header('Location: /tabelaDePosts');
+
     }
 }

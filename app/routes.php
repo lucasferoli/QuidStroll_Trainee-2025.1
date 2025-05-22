@@ -15,4 +15,5 @@ $router->post('tabeladeposts/create', 'TabelaDePostsAdminController@store');
 
 
 $router->post('admin/tabeladeposts/delete', 'TabelaDePostsAdminController@delete');
+$router->post('admin/tabeladeposts/edit', 'TabelaDePostsAdminController@edit');
 
