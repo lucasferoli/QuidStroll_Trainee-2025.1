@@ -46,6 +46,7 @@ class TabelaDePostsAdminController
         $parameters = [
             'titulo' => $_POST['titulo'],
             'descricao'=> $_POST['descricao'],
+            'imagem' => 'default.jpg',
         ];
         $id = $_POST['id'];
         App::get('database')->update('posts', $id, $parameters);

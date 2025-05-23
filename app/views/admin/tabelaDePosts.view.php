@@ -81,7 +81,7 @@
         </header>
         <form class="formModalEditar-tabelaDePosts" method="POST"  action="admin/tabeladeposts/edit">
             <input name="id"  value="<?= $post->id ?>" type="hidden">
-            <img src="/public/assets/imagemPost.jfif" alt="">
+            <img src="/public/assets/imagemPost.jfif" alt="" name="imagem">
             <div class="corpoModalEditar-tabelaDePosts">
                 <input class="tituloModalEditar-tabelaDePosts" name="titulo" value="<?= $post->titulo ?>">
 
@@ -92,8 +92,8 @@
                 <div class="dataModalEditar-tabelaDePosts">
                     <p><?= $post->criado_em ?></p>
                 </div>
+                <button  class="botaoSalvarEdicao-tabelaDePosts"  type="submit">Salvar</button>
             </div>
-            <button type="submit">Salvar</button>
         </form>
     </div>
 <!--Modal Excluir-->
