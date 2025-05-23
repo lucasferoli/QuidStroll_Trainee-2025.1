@@ -48,6 +48,8 @@ class ListaDeUsuariosController {
 
         $id = $_POST['id'];
 
+        var_dump($id);
+
         App::get('database')->delete('usuarios', $id);
         
         header('Location: /ListaDeUsuarios');

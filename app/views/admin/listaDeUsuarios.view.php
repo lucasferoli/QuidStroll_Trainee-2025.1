@@ -132,11 +132,12 @@
 
         <form action="ListaDeUsuarios/delete" method="POST">
             <div class="modal-listaDeUsuarios" id="deletarUsuario<?= $usuario->id ?>">
+                    <input name="id" value="<?= $usuario->id ?>" type="hidden">
                 <h1>Excluir</h1>
                 <p>TEM CERTEZA QUE DESEJA <br> DELETAR O USUÁRIO?</p>
                 <div class="botoesModais-listaDeUsuarios">
-                    <button type="button" onclick="fecharModal('deletarUsuario<?= $usuario->id?>')">SIM</button>
-                    <button>NÃO</button>
+                    <button >SIM</button>
+                    <button type="button" onclick="fecharModal('deletarUsuario<?= $usuario->id?>')">NÃO</button>
                 </div>
             </div>
         </form>

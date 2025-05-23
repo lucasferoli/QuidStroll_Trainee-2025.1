@@ -70,4 +70,16 @@ class QueryBuilder
         }
 
     }
+    public function delete($table, $id)
+{
+    $sql = "DELETE FROM {$table} WHERE id = :id";
+
+    try {
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+        return $stmt->execute();
+    } catch (Exception $e) {
+        die($e->getMessage());
+    }
+}
 }
