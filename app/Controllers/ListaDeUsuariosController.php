@@ -44,12 +44,12 @@ class ListaDeUsuariosController {
 
     }
 
-    public function delete()
-    {
+    public function delete(){
+
         $id = $_POST['id'];
 
         App::get('database')->delete('usuarios', $id);
-
+        
         header('Location: /ListaDeUsuarios');
     }
 
