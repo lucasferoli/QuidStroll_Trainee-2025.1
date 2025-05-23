@@ -417,7 +417,7 @@
     font-size: 40%;
     font-weight: 500;
     color: #1A1A1A;
-    background-color: #2E86C1;
+    background-color: #85C1E9;
     border-radius: 20px;
     align-self:flex-end;
 }
@@ -436,6 +436,7 @@
     opacity: 0.6;
     display: none;
 }
+
 
 
 .modalExcluir-tabelaDePosts{
