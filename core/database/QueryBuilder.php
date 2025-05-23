@@ -90,7 +90,7 @@ class QueryBuilder
     );
      try {
             $stmt = $this->pdo->prepare($sql);
-            $stmt->execute(compact('id'));
+            $stmt->execute($parameters);
 
             return $stmt->fetchAll(PDO::FETCH_CLASS);
 
