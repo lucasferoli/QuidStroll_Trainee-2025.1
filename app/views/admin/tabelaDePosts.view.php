@@ -108,7 +108,7 @@
     <form class="botoesModalExcluir-tabelaDePosts" method="POST" action="admin/tabeladeposts/delete" >
         <input name="id" value="<?= $post->id ?>" type="hidden">
 
-            <button type="submit">Excluir</button>
+            <button type="submit" id="botaoExcluir">Excluir</button>
             <button type="button" onclick="fecharModal('janelaModalExcluir<?= $post->id ?>', 'fundoModal<?= $post->id ?>')" >Cancelar</button>
         </form>
     </div>

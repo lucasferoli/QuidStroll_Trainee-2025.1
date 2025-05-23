@@ -452,6 +452,7 @@
     padding: 0%;
     background-color: #F4F6F7;
     border-radius: 20px;
+    border: 8px solid #1B4F72;
     
 }
 
@@ -502,11 +503,24 @@
 
 }
 
+#botaoExcluir{
+    background-color: #E74C3C;
+    border: 1px solid #E74C3C;
+
+}
+#botaoExcluir:hover{
+    background-color: #C0392B;
+    border: 1px solid #C0392B;
+
+}
 .botoesModalExcluir-tabelaDePosts button:hover{
     border: 1px solid #2E86C1;
     border-radius: 20px;
     background-color: #2e86c1;
 }
+
+
+
 
 
 @media (max-width: 1000px){
