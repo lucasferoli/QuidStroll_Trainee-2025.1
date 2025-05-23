@@ -81,7 +81,10 @@
         </header>
         <form class="formModalEditar-tabelaDePosts" method="POST"  action="admin/tabeladeposts/edit">
             <input name="id"  value="<?= $post->id ?>" type="hidden">
-            <img src="/public/assets/imagemPost.jfif" alt="" name="imagem">
+            <input name="criado_em"  value="<?= $post->criado_em ?>" type="hidden">
+            <input name="id_autor"  value="<?= $post->id_autor ?>" type="hidden">
+            <input name="imagem"  value="imagem" type="hidden" >
+            <img src="/public/assets/imagemPost.jfif" alt="" name="imagem" value="default">
             <div class="corpoModalEditar-tabelaDePosts">
                 <input class="tituloModalEditar-tabelaDePosts" name="titulo" value="<?= $post->titulo ?>">
 
