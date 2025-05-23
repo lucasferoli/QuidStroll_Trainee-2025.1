@@ -102,7 +102,7 @@
         <input name="id" value="<?= $post->id ?>" type="hidden">
 
             <button type="submit">Excluir</button>
-            <button onclick="fecharModal('janelaModalExcluir<?= $post->id ?>', 'fundoModal<?= $post->id ?>')" >Cancelar</button>
+            <button type="button" onclick="fecharModal('janelaModalExcluir<?= $post->id ?>', 'fundoModal<?= $post->id ?>')" >Cancelar</button>
         </form>
     </div>
 
