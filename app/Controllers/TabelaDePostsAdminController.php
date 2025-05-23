@@ -42,15 +42,13 @@ class TabelaDePostsAdminController
 
 
     public function edit(){
-        $parametros = [
-            //'id' => $_POST['id'],
+
+        $parameters = [
             'titulo' => $_POST['titulo'],
             'descricao'=> $_POST['descricao'],
-            'imagem' => $_POST['imagem'],
-            //'criado_em' => $_POST['criado_em'],
         ];
         $id = $_POST['id'];
-        App::get('database')->update('posts', $id, $parametros);
+        App::get('database')->update('posts', $id, $parameters);
         header('Location: /tabelaDePosts');
 
     }

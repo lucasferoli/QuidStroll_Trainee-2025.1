@@ -45,7 +45,7 @@
                         <td class="dataTabelaDePosts"><?= $post->criado_em ?></td>
                         <td class="acoesTabelaDePosts">
                             <button onclick="abrirModal('janelaModalVisualizar<?= $post->id ?>', 'fundoModalVisualizar')" ><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
-                            <button onclick="abrirModal('janelaModalEditar<? $post->id ?>','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+                            <button onclick="abrirModal('janelaModalEditar<?= $post->id ?>','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
                             <button onclick="abrirModal('janelaModalVerMais<?= $post->id ?>','fundoModalVerMais')"><img class="TresPontosTabelaDePosts" src="/public/assets/3Pontos (2).png" alt="Ver Mais"></button>
                         <button onclick="abrirModal('janelaModalExcluir<?= $post->id ?>', 'fundoModal<?= $post->id ?>')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
                         </td>
@@ -71,25 +71,29 @@
     <!---------------------------------------------------------->
     <?php foreach($posts as $post): ?>
 
+
+<!----------------------Editar------------------------------->
     <div class="fundoModal-tabelaDePosts" id="fundoModal"></div>
     <div class="modalEditar-tabelaDePosts" id="janelaModalEditar<?= $post->id ?>">
         <header class="cabecalhoModalEditar-tabelaDePosts">
             <h1>Editar Post</h1>
-            <button onclick="fecharModal('janelaModalEditar', 'fundoModal')"><img src="/public/assets/simboloFecharPost.png" alt="Fechar Guia"></button>
+            <button onclick="fecharModal('janelaModalEditar<?= $post->id ?>', 'fundoModal')"><img src="/public/assets/simboloFecharPost.png" alt="Fechar Guia"></button>
         </header>
         <form class="formModalEditar-tabelaDePosts" method="POST"  action="admin/tabeladeposts/edit">
+            <input name="id"  value="<?= $post->id ?>" type="hidden">
             <img src="/public/assets/imagemPost.jfif" alt="">
             <div class="corpoModalEditar-tabelaDePosts">
-                <input class="tituloModalEditar-tabelaDePosts" value="Lorem Ipsum Lorem Ipsum">
-            </input>
-                <textarea class="textoModalEditar-tabelaDePosts">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum</textarea>
+                <input class="tituloModalEditar-tabelaDePosts" name="titulo" value="<?= $post->titulo ?>">
+
+                <textarea class="textoModalEditar-tabelaDePosts" name="descricao"><?= $post->descricao ?></textarea>
                 <div class="autorModalEditar-tabelaDePosts">
                     <p>Lorem Ipsum</p>
                 </div>
                 <div class="dataModalEditar-tabelaDePosts">
-                    <p>12/12/12</p>
+                    <p><?= $post->criado_em ?></p>
                 </div>
             </div>
+            <button type="submit">Salvar</button>
         </form>
     </div>
 <!--Modal Excluir-->

@@ -53,7 +53,7 @@ class QueryBuilder
 
     //DELETE FROM `posts` WHERE 0
     public function delete($table, $id){
-        $sql = sprintf('DELETE FROM %s WHERE %s',
+     $sql = sprintf('DELETE FROM %s WHERE %s',
         $table,
         'id = :id'
     );
@@ -68,9 +68,20 @@ class QueryBuilder
         }
     }
 
+
+
+
+
+
+
+
+
+
+
+
     //UPDATE `posts`(`id`, `titulo`, `descricao`, `imagem`, `criado_em`, `id_autor`) 
     public function update($table, $id, $parameters) {
-        $sql = sprintf('UPDATE %s SET %s WHERE id = %s',
+        $sql = sprintf("UPDATE %s SET %s WHERE id = %s",
         $table,
         implode(', ', array_map(function($param){
             return $param . '= :' .$param;
@@ -80,12 +91,15 @@ class QueryBuilder
      try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute(compact('id'));
+            $stmt->execute($parameters);
 
         } catch (Exception $e) {
             die($e->getMessage());
         }
 
+
     }
+    
 
 
 }
