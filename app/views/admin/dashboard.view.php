@@ -1,3 +1,12 @@
+<?php 
+session_start();
+if(!isset($_SESSION['id'])){
+    header('Location: /login');
+
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -26,11 +35,15 @@
                         <p>USUÁRIOS</p>
                     </div>
                 </a>
+
+                <form action="logout" method="POST">
+
                 <a class="linkDashboard" href="">
                     <div class="cardDashboard">
-                        <p>LOGOUT</p>
+                    <button type="submit"><p>LOGOUT</p></button>    
                     </div>
                 </a>
+                </form>
             </div>
         <div id="logoDashboard">
             <img src = "/public/assets/QuidStroll-logo.png" alt="Logo">

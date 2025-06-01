@@ -16,7 +16,7 @@
     display: flex;
     flex-direction: row;
     border-top: 0.1vh solid #1B4F72;
-    border-bottom: 0.1vh solid #1B4F72;
+    border-bottom: 0.1vh solid #1A1A1A;
 }
 
 #tituloPaginaTabelaDePosts{
@@ -30,11 +30,12 @@
     display: flex;
     height: 9vh;
     flex-direction: column;
-    color: #1B4F72;
+    color: #1A1A1A;
     font-family: Rubik;
     font-size: 8vh;
-    font-weight: 800;
+    font-weight: 700;
     white-space: nowrap;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 #criarNovoPost{
     width: 100vh;
@@ -45,8 +46,9 @@
 }
 #criarNovoPost img{
     height: 8vh;    
-    background-color: #1B4F72;
-    border-radius: 2.6vh;
+    background-color: #85C1E9;
+    border-radius: 2.8vh;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
 }
 #criarNovoPost button, .acoesTabelaDePosts button, #paginacaoTabelaDePosts button{
     padding-block: 0px;
@@ -56,43 +58,48 @@
     cursor: pointer;
 }
 .acoesTabelaDePosts button{
-    background-color: #2E86C1;
+    background-color: #F4F6F7;
 }
+
+
 
 /*----------------------------------------------------------------------*/
 /* -------------------------------Tabela--------------------------------*/
 
 #conteudoTabelaDePosts{
     display: flex;
-    padding: 7.8vh;
+    padding: 7.8vh 7.8vh 0vh 7.8vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 2.34vh;
+    border-radius: 5vh;
 }
 
 #tabelaDePosts{
     width: 100%;
     border-spacing: 0;
-    border-radius: 2.6vh;
-    background-color: #2E86C1;
-    border: 0.31vh solid #1B4F72;
-    box-shadow: 0px 5px 10px 0px rgb(0, 0, 0);
+    border-radius: 5vh;
+    background-color: #F4F6F7;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 #cabecalhoTabelaDePosts{
-    font-family: nunito;
-    color: #F4F6F7;
-    font-weight:bold;
+    font-family: rubik;
+    color: #1A1A1A;
+    font-weight:800;
 }
 #cabecalhoTabelaDePosts tr{
     display: flex;
     height: 14vh;
     justify-content: center;
     align-items: center;
-    background-color: #1B4F72;
-    border-radius: 2.34vh 2.34vh 0vh 0vh;
+    background-color: #85C1E9;
+    border-radius: 5vh 5vh 0vh 0vh;
     gap: 2.5vh;
+    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.25);
+    font-family: rubik;
+    color: #1A1A1A;
+    font-weight:800;
 }
 
 #bodyTabelaDePosts tr{
@@ -107,7 +114,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 0.31vh solid #1B4F72;
 }
 
 .cincoTP{
@@ -122,10 +128,12 @@
     align-items: center;
     justify-content: center;
     white-space: nowrap;
-    font-family: nunito;
+    font-family: rubik;
     font-size: 3.5vh;
+    font-weight: 800;
 }
 .trTabelaDePosts td{
+    font-family: nunito;
     font-weight: 700;
     color: #1A1A1A;
     font-size: 3vh;
@@ -150,6 +158,12 @@
     width: 25%;
 }
 
+.acoesTabelaDePosts .TresPontosTabelaDePosts {
+    display: none;
+    width: 10%;
+    height: 10%;
+}
+
 .acoesTabelaDePosts img{
     width: 100%;
     display: flex;
@@ -159,16 +173,39 @@
 
 /*--------------------------------------------------------------------------*/
 /*----------------------------------Paginação-------------------------------*/
-
-#paginacaoTabelaDePosts{
-    height: 14.5vh;
+#paginacao-tabelaDePosts{
+    padding-bottom: 4vh;
+}
+#botoes-tabelaDePosts{
+    margin: 2% 0% 0% 0%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: start;
-    gap: 1vh;
+    gap: 1rem;
+    width: fit-content;
+    padding: 1% 3% 1% 3%;
+    background-color: #85C1E9;
+    border-radius: 999px 999px 999px 999px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+}
+#botoes-tabelaDePosts button{
+    font-size: 3vh;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    width: 2.5vw;
+    height: 3.5vh;
+    align-items: center;
+    border: none;
+    background-color: #85C1E9;
 }
 
+#botoes-tabelaDePosts button:hover{
+    background-color: #F4F6F7;
+    border-radius: 20px;
+    box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
+
+}
 /*--------------------------------------------------------------------------*/
 /*------------------------------------Hover---------------------------------*/
 /*A ideia p/ o olho/caneta/lixo seria colocar olho aberto, caneta/lixo preto*/
@@ -229,17 +266,19 @@
     
     /*--------------------------------------------------------------------------*/
     /*----------------------------------Paginação-------------------------------*/
-    
+
     #paginacaoTabelaDePosts{
         height: 7.25vh;
+        
     }
 
     #paginacaoTabelaDePosts img{
-        width: 4vh;
+        width: 4vw;
     }
 }
 
-@media (max-width: 400px){
+@media (max-width: 450px){
+
     .trTabelaDePosts td, .trTabelaDePosts th{
         font-size: 1.5vh;
     }
@@ -251,11 +290,35 @@
     }
 }
 
+@media (max-width: 350px) {
+
+        .acoesTabelaDePosts .excluirTabelaDePosts{
+        display: none;
+    }
+
+    .acoesTabelaDePosts .editarTabelaDePosts {
+        display: none;
+    }
+
+    .acoesTabelaDePosts .visualizarTabelaDePosts {
+        display: none;
+    }
+
+        .acoesTabelaDePosts .TresPontosTabelaDePosts {
+        display: flex;
+        height: 2.5vh;
+        width: 4vw;
+        padding-left: 0%;
+    }
+
+}
+
 /*botões não testados. podendo haver interferencia com o css pelo padrão do css de "button".*/
 
 /*----------------------Modal-------------------------------*/
 /*----------------------------------------------------------*/
 
+/*----------------------Editar-------------------------------*/
 .modalEditar-tabelaDePosts{
     display: none;
     flex-direction: column;
@@ -264,10 +327,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 60%;
+    width: 70%;
     height: auto;
     padding: 0%;
     background-color: #F4F6F7;
+    border: 8px solid #1B4F72;
     border-radius: 20px;
 }
 .cabecalhoModalEditar-tabelaDePosts{
@@ -279,11 +343,14 @@
     align-items: center;
     padding: 0% 2% 0% 2%;
     font-size: 60px;
+    border-bottom: 1px solid #1B4F72 ;
 }
 
 .cabecalhoModalEditar-tabelaDePosts h1{
     width: 100%;
-    font-size: 100%;
+    font-size: 80%;
+    color: #1B4F72;
+    font-weight: 800;
 }
 .cabecalhoModalEditar-tabelaDePosts button{
     display: flex;
@@ -306,8 +373,8 @@
 }
 
 .formModalEditar-tabelaDePosts img{
-    width: 40%;
-    height: 40%;
+    width: 30%;
+    height: 30%;
     border-radius: 20px;
 }
 
@@ -325,21 +392,40 @@
     width: 100%;
     border-radius: 20px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-    font-size: 40%;
+    font-size: 30%;
     font-weight: 800;
 }
 
 .textoModalEditar-tabelaDePosts{
     width: 100%;
-    height: 30%;
+    height: 100px;
     padding: 2%;
-    font-size: 40%;
+    font-size: 28%;
     border-radius: 20px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
 }
 .autorModalEditar-tabelaDePosts, .dataModalEditar-tabelaDePosts{
-    font-size: 35%;
+    padding: 0%;
+    margin: 0%;
+    font-size: 25%;
 }
+
+.botaoSalvarEdicao-tabelaDePosts{
+    width: 30%;
+    font-family: "Rubik", sans-serif;
+    font-size: 40%;
+    font-weight: 500;
+    color: #1A1A1A;
+    background-color: #85C1E9;
+    border-radius: 20px;
+    align-self:flex-end;
+}
+
+.botaoSalvarEdicao-tabelaDePosts:hover{
+    background-color: #1B4F72;
+}
+
 
 .fundoModal-tabelaDePosts {
     position: fixed;
@@ -350,6 +436,7 @@
     opacity: 0.6;
     display: none;
 }
+
 
 
 .modalExcluir-tabelaDePosts{
@@ -365,6 +452,7 @@
     padding: 0%;
     background-color: #F4F6F7;
     border-radius: 20px;
+    border: 8px solid #1B4F72;
     
 }
 
@@ -415,11 +503,24 @@
 
 }
 
+#botaoExcluir{
+    background-color: #E74C3C;
+    border: 1px solid #E74C3C;
+
+}
+#botaoExcluir:hover{
+    background-color: #C0392B;
+    border: 1px solid #C0392B;
+
+}
 .botoesModalExcluir-tabelaDePosts button:hover{
     border: 1px solid #2E86C1;
     border-radius: 20px;
     background-color: #2e86c1;
 }
+
+
+
 
 
 @media (max-width: 1000px){
@@ -439,6 +540,10 @@
         width: 90%;
         gap: 5px;
     }
+
+    .botaoSalvarEdicao-tabelaDePosts{
+    align-self:center;
+}
     .modalExcluir-tabelaDePosts{
         width: 70%;
     }
@@ -474,7 +579,7 @@
     overflow-y: auto;
     padding: 2%;
     background-color: #F4F6F7;
-    border-radius: 20px;
+    border: 2vh solid #1B4F72;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -629,7 +734,7 @@
     overflow-y: auto;
     padding: 2%;
     background-color: #F4F6F7;
-    border-radius: 20px;
+    border: 2vh solid #1B4F72;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -730,4 +835,57 @@
     .botoesFormModalAdicionar button {
         width: 100%;
     }
+}
+
+
+.ModalVerMais {
+    position: relative;
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    width: 35vw;
+    height: 6vh;
+
+}
+
+.corpo-do-VerMais {
+    position: absolute;
+    left: 170%;
+    bottom: 800%;
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #1B4F72;
+    background-color: #2E86C1;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    gap: 1vh;
+}
+
+.corpo-do-VerMais .visualizarTabelaDePosts {
+    width: 100%;
+    height: 100%;
+}
+
+.corpo-do-VerMais .editarTabelaDePosts {
+    width: 100%;
+    height: 100%;
+}
+
+.corpo-do-VerMais .excluirTabelaDePosts {
+    width: 100%;
+    height: 100%;
+}
+
+.corpo-do-VerMais #botao-fechar-ver-mais {
+    position: absolute;
+    top: 6.4vh;
+    left: 45%;
+    height: 4vh;
+}
+
+.corpo-do-VerMais button {
+    border: none;
+    background-color: #2E86C1;
 }

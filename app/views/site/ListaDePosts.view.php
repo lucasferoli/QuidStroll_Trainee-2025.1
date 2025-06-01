@@ -67,12 +67,12 @@
             <div class="autor">Autor: ...</div>
         </div>
     </div>
-    <div class="pagination">
-        <button id="b"><img src="/public/assets/arrowLeftShort.png" alt=""></button>
-        <button id="b"><img src="/public/assets/1.png" alt=""></button>
-        <button id="b"><img src="/public/assets/2.png" alt=""></button>
-        <button id="b"><img src="/public/assets/3.png" alt=""></button>
-        <button id="b"><img src="/public/assets/arrowRightShort.png" alt=""></button>
-    </div>
+    <nav class="paginacao-listaDePosts">
+            <button>&lt</button>
+            <button id="paginaEmUso-listaDeUsuarios">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>&gt</button>
+        </nav>
 </body>
 </html>
