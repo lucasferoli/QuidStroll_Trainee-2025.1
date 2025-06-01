@@ -1,0 +1,321 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing:border-box;
+}
+body{
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar-listaDeUsuarios{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    height: 100vh;
+    background-color: rgb(152, 155, 151);
+}
+.listaDeUsuarios{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: 100vh;
+    background-color: #F4F6F7;
+}
+
+.titulo-listaDeUsuarios{
+    padding: 2% 0% 0% 2%;
+    width: 100%;
+    height: auto;
+    background-color: rgb(244, 246, 247);
+    border-bottom: 2px solid #1A1A1A;
+    font-size: 60px;
+}
+.titulo-listaDeUsuarios h1{
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    font-family: "Nunito", sans-serif;
+    font-weight: 300;
+    background-color: #F4F6F7;
+    color: #1A1A1A;
+    width: 100%;
+    font-size: 100%;
+}
+
+.botaoAdicionar-listaDeUsuarios{
+    display: flex;
+    flex-direction: row;
+    padding: 2% 0% 0% 2%;
+    width: 70%;
+    height: auto;
+    background-color: #F4F6F7;
+}
+.botaoAdicionar-listaDeUsuarios button{
+    display: flex;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    padding: 1% 2% 1% 2%;
+    align-items: center;
+    border: none;
+    background-color: #85c1e9;
+    border-radius: 20px;
+    box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+.botaoAdicionar-listaDeUsuarios button img{
+    width: 2rem;
+    height: auto;
+
+}
+.botaoAdicionar-listaDeUsuarios button:hover{
+    display: flex;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    padding: 1% 2% 1% 2%;
+    align-items: center;
+    border: none;
+    background-color: #E74C3C;
+    border-radius: 20px;
+    box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+.campoTabela-listaDeUsuarios{
+    width: 100%;
+    height: auto;
+    background-color: #F4F6F7;
+    padding: 2% 2% 0% 2%;
+}
+.tabela-listaDeUsuarios{
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.cabecalhoTabela-listaDeUsuarios{
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    background-color: #85C1E9;
+    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.25);
+    font-size: 1.5rem;
+}
+.cabecalhoTabela-listaDeUsuarios th{
+    padding: 2% 2% 2% 2%;
+    height: auto;
+    text-align: center;
+    width: 10%;
+}
+
+.corpoTabela-listaDeUsuarios td{
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    padding: 2% 2% 2% 2%;
+    height: auto;
+    text-align: center;
+    
+}
+
+
+
+td button{
+    border: none;
+    background-color: #F4F6F7;
+    width: 10%;
+}
+td img{
+    width: 3rem;
+    height: auto;
+}
+
+.acoes-listaDeUsuarios{
+    display: flex;
+    gap: 20%;
+    justify-content: center;
+}
+
+.paginacao-listaDeUsuarios{
+    margin: 2% 0% 0% 0%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: fit-content;
+    padding: 1% 3% 1% 3%;
+    background-color: #85C1E9;
+    border-radius: 999px 999px 999px 999px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+}
+.paginacao-listaDeUsuarios button{
+    font-size: 1em;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    width: 3rem;
+    height: 2rem;
+    align-items: center;
+    border: none;
+    background-color: #85C1E9;
+}
+
+#paginaEmUso-listaDeUsuarios{
+    background-color: #F4F6F7;
+    border-radius: 20px;
+    box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+.paginacao-listaDeUsuarios button:hover{
+    background-color: #F4F6F7;
+    border-radius: 20px;
+    box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
+
+}
+
+
+
+@media (max-width: 900px) {
+    .listaDeUsuarios{
+        width: 100vw;
+        height: auto;
+        overflow-x: hidden;
+    }
+    .titulo-listaDeUsuarios{
+        background-color: #F4F6F7;
+        border-bottom: 2px solid #1A1A1A;
+        font-size: 40px;
+    }
+    .sidebar-listaDeUsuarios{
+            display: none;
+            flex-direction: none;
+            width: none;
+            height: none;
+            background-color: none;
+    }
+    .paginacao-listaDeUsuarios{
+       margin-top: 2rem;
+       margin-bottom: 1rem;
+        margin-left: auto;
+       margin-right: auto;
+    
+    }
+
+    
+}
+
+@media (max-width: 750px){
+    .tabela-listaDeUsuarios{
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0% 10% 0% 10%;
+    }
+    th{
+        display: none;
+    }
+    td{
+        display: block;
+    }
+    td::before{
+        content: attr(data-cell) " ";
+        display: flex;
+        justify-content: flex-start;
+        font-weight: 700;
+    }
+    
+}
+
+/**************************************MODAL********************************************/
+
+.modal-listaDeUsuarios {
+    height: fit-content;
+    background-color: #F4F6F7;
+    padding: 4vh;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    border-radius: 1vh;
+    border: 2vh solid #1B4F72;
+    z-index: 5;
+    gap: 2vh;
+    position: fixed; /* alterado de absolute para fixed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-listaDeUsuarios h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0vh 0vh 3vh 0vh;
+    font-family: rubik;
+    color: #1B4F72;
+    font-size: 4vh;
+}
+
+.modal-listaDeUsuarios p{
+    font-family: Nunito;
+    font-size: 2.25vh;
+    font-weight: bold;
+    color: #1B4F72;
+}
+
+.modal-listaDeUsuarios input{
+    background-color: #F4F6F7;
+    border: 0vh;
+    height: 4vh;
+    border: 0.2vh solid #1B4F72;
+    border-radius: 1vh;
+    font-size: 2vh;
+    color: #1B4F72;
+    padding-left: 1vh;
+    width: 30vh;
+    outline: none;
+}
+
+.botoesModais-listaDeUsuarios{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vh 0vh 0vh 0vh;
+}
+
+.botoesModais-listaDeUsuarios button{
+    font-family: Nunito;
+    color: #F4F6F7;
+    background-color: #1B4F72;
+    border: 0vh;
+    height: 4vh;
+    width: 12vh;
+    font-size: 2vh;
+    border: 0.1vh solid #1B4F72;
+    border-radius: 1vh;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.botoesModais-listaDeUsuarios button:hover{
+    transform: scale(1.2);
+}
+
+.tela{
+    position: fixed;
+    width: 100%;
+    height: 100%; 
+    backdrop-filter: blur(0.5vh);
+    display: none;
+    z-index: 4;
+}
+
+.modal-listaDeUsuarios div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+#deletarUsuario p{
+    text-align: center;
+}

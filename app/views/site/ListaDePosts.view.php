@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quid Stroll</title>
     <link rel="stylesheet" href="/public/css/listaDePosts.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Rubik:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
@@ -66,8 +67,12 @@
             <div class="autor">Autor: ...</div>
         </div>
     </div>
-    <div class="pagination">
-         <p> ᐸ 1  2  3  4  5 ᐳ </p> 
-    </div>
+    <nav class="paginacao-listaDePosts">
+            <button>&lt</button>
+            <button id="paginaEmUso-listaDeUsuarios">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>&gt</button>
+        </nav>
 </body>
 </html>

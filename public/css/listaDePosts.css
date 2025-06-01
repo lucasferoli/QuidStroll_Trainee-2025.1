@@ -1,8 +1,16 @@
 body {
     background-color: #f4f6f7;
     margin: 0;
-    padding: 0;
+    padding: 0 0 1% 0;
 }
+
+p {
+    font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rubik', sans-serif;
+  }
 
 .segBarraDePesquisa {
     display: flex;
@@ -93,9 +101,11 @@ body {
 .card1 .autor {
     background-color: #0A639E;
     color: white;
+    font-weight: 600;
     font-size: 12px;
     text-align: left;
     padding: 0.62vh 1.25vh;
+    font-family: 'Nunito', sans-serif
 }
 
 .card {
@@ -143,23 +153,35 @@ body {
     font-size: 12px;
     text-align: left;
     padding: 0.62vh 1.25vh;
+    font-weight: 600;
 }
 
-.pagination {
-    width: 100%;
-    height: 8vh;
-    border-top: 2px solid #1B4F72;
-    border-right: none;
-    border-left: none;
-    border-bottom: none;
-    text-align: center;
-    margin: 3.12vh 0 0 0;
-    font-size: 14px;
-    background: linear-gradient(#85c1e9);
+.paginacao-listaDePosts{
+    margin: 2% 0% 0% 0%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    width: fit-content;
+    padding: 1% 3% 1% 3%;
+    background-color: #0A639E;
+    border-radius: 999px 999px 999px 999px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
 }
-
-.pagination p {
-    color: #082a6e;
+.paginacao-listaDePosts button{
+    font-size: 0.9em;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    color: #f4f6f7;
+    width: 0.9rem;
+    height: 0.3rem;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: #0A639E;
 }
 
 

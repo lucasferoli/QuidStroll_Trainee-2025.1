@@ -16,24 +16,9 @@
 <link rel="stylesheet" href="/public/css/footer-landinPage.css">
 </head>
 <body>
-
-     <nav class="navbar">
-        <div class="logoNavbar">
-            <img src="/public/assets/Logo QuidStroll Original.png">
-        </div>
-        
-        <button class="menuMobile" id="mobileMenu">
-            <i class="fas fa-bars"></i>
-        </button>
-
-        <div class="botoesNavbar" id="botoesNavbar">
-            <a href="#"><i class="fas fa-home"></i>Home</a>
-            <a href="#"><i class="fas fa-newspaper"></i>Publicações</a>
-            <a href="#"><i class="fas fa-sign-in-alt"></i>Login</a>
-        </div>
-    </nav>
-    
-<!---->
+<?php
+require('app\views\site\componentes\navbar.view.php')
+?>
 
 
 
@@ -110,43 +95,9 @@
     </section>
 <!---->
 
-<section id="bodyFooter">
-    <footer> 
-        <div id="redesFooter">
-            <div id="tituloRedesFooter">                
-                <p class="textoFooter"> Redes Sociais</p>
-            </div>
-            <div id="logosFooter">
-                <a class="logoFooter facebookFooter" href="https://www.google.com/">
-                    <img src="/public/assets/Facebook.png" alt="">
-                </a>
-                <a class="logoFooter twitterFooter" href="https://www.google.com/">
-                    <img src="/public/assets/Twitter.png" alt="">
-                </a>
-                <a class="logoFooter instagramFooter" href="https://www.google.com/">
-                    <img src="/public/assets/Instagram.png" alt="">
-                </a>
-            </div>
-        </div>
-
-        <div id="objetivosFooter">
-            <div>
-                <p class="textoFooter">Quid Stroll – Um espaço para compartilhar pensamentos, 
-                    reflexões e desabafos sobre o cotidiano e o mundo. Aqui, toda experiência tem voz, 
-                    das pequenas situações do dia a dia aos grandes acontecimentos globais.
-                </p>
-            </div>
-        </div>
-
-        <div id="desenvolvedorFooter">
-            <div id="tituloDesenvolvedorFooter">
-                <p class="textoFooter">Desenvolvedor</p>
-            </div>
-            <div id= "codeFooter">
-                <img src="/public/assets/code-logo.png" alt="">
-            </div>
-        </div>        
-    </footer>
+<?php
+require('app\views\site\componentes\footer.view.php')
+?>
 
 
 

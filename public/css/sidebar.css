@@ -1,0 +1,177 @@
+body{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    background: #f4f6f7;
+}
+
+.menuBotaoMobile {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: #2e86c1;
+    color: #f4f6f7;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.sidebar {
+    width: 250px;
+    background: #2e86c1;
+    color: #f4f6f7;
+    height: 100vh;
+    position: fixed;
+    transition: width 0.3s ease;
+    overflow: hidden;
+}
+
+.sidebar.collapsed {
+    width: 70px;
+}
+
+.sidebar.collapsed .sidebarTitle,
+.sidebar.collapsed .link-text {
+    display: none;
+}
+
+.sidebar.collapsed .sidebarNav a,
+.sidebar.collapsed .sidebarFooter a {
+    justify-content: center;
+}
+
+.sidebar.collapsed .sidebar-toggle i {
+    transform: rotate(180deg);
+}
+
+.sidebarHeader {
+    padding: 30px;
+    text-align: center;
+    border-bottom: 1px solid #1b4f72;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1001;
+}
+
+.sidebar-toggle {
+    background: none;
+    border: none;
+    color: #f4f6f7;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.sidebar-toggle:hover {
+    background: #1b4f72;
+}
+
+.sidebarNav {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.sidebarNav a {
+    color: #f4f6f7;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 5px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.sidebarNav a:hover, .sidebarNav a.active {
+    background: #1b4f72;
+}
+
+.sidebarNav a.active {
+    background: #2e86c1;
+}
+
+.sidebarNav i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar.collapsed .sidebarNav i {
+    margin-right: 0;
+}
+
+.sidebarFooter {
+    position: absolute;
+    bottom: 0;
+    width: 88%;
+    padding: 15px;
+}
+
+.sidebarFooter a:hover {
+    background: #1b4f72;
+}
+
+.sidebarFooter a {
+    color: #f4f6f7;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+main {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar.collapsed + main {
+    margin-left: 70px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media(max-width: 768px) {
+    .menuBotaoMobile {
+        display: block;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+        width: 250px;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .sidebar-toggle {
+        display: none;
+    }
+
+    .sidebar.collapsed .sidebarTitle,
+    .sidebar.collapsed .link-text {
+        display: inline !important;
+    }
+
+    .sidebar.collapsed .sidebarNav a,
+    .sidebar.collapsed .sidebarFooter a {
+        justify-content: flex-start !important;
+    }
+
+    main {
+        margin-left: 0;
+    }
+}
+
