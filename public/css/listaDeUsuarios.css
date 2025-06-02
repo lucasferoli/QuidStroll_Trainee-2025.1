@@ -314,10 +314,11 @@ td img{
     z-index: 4;
 }
 
-#visualizarUsuario div{
+.modal-listaDeUsuarios div{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    gap: 10px;
 }
 
 #deletarUsuario p{

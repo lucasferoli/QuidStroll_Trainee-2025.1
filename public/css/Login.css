@@ -94,3 +94,8 @@ input {
 .campoSenha input {
     padding-right: 35px;
 }
+
+.mensagem-erro-Login{
+    color: #E74C3C;
+    font-weight: 800;
+}
