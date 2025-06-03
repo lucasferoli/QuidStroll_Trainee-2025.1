@@ -14,10 +14,13 @@ class QueryBuilder
         $this->pdo = $pdo;
     }
 
-    public function selectAll($table)
+    public function selectAll($table, $inicio = null, $rows_count = null)
     {
         $sql = "select * from {$table}";
 
+        if($inicio >= 0 && $rows_count > 0) {
+            $sql .= " LIMIT {$inicio}, {$rows_count}";
+        }
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
@@ -71,15 +74,29 @@ class QueryBuilder
 
     }
     public function delete($table, $id)
-{
-    $sql = "DELETE FROM {$table} WHERE id = :id";
+    {
+        $sql = "DELETE FROM {$table} WHERE id = :id";
 
-    try {
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
-        return $stmt->execute();
-    } catch (Exception $e) {
-        die($e->getMessage());
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+            return $stmt->execute();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
-}
+
+    public function countAll($table)
+    {
+        $sql = "SELECT COUNT(*) FROM {$table}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return intval($stmt->fetch(PDO::FETCH_COLUMN));
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
 }

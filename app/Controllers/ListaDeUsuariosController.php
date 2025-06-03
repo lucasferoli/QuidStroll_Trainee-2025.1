@@ -55,4 +55,27 @@ class ListaDeUsuariosController {
         header('Location: /ListaDeUsuarios');
     }
 
+    public function paginate()
+    {
+        $page =1;
+        if(isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero'])) {
+            $page = intval($_GET['paginacaoNumero']);
+
+            if($page <= 0){
+                return redirect('admin/ListaDeUsuarios');
+            }
+        }
+        $itensPage = 5;
+        $inicio = $itensPage * ($page - 1);
+        $rows_count = App::get('database')->countAll('usuarios');
+
+        if($inicio > $rows_count){
+            return redirect('admin/ListaDeUsuarios');
+        }
+
+        $usuarios = App::get('database')->selectAll('usuarios', $inicio, $itensPage);
+        $total_pages = ceil($rows_count / $itensPage);
+        return view('admin/ListaDeUsuarios', compact('usuarios','page', 'total_pages'));
+    }
+
 }

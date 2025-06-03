@@ -148,8 +148,10 @@ td img{
     margin-right: auto;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
     font-size: 20px;
+    justify-content: center;
+    align-items: center;
 }
-.paginacao-listaDeUsuarios button{
+.paginacao-listaDeUsuarios li{
     font-size: 1em;
     font-family: "Rubik", sans-serif;
     font-weight: 600;
@@ -158,6 +160,7 @@ td img{
     align-items: center;
     border: none;
     background-color: #85C1E9;
+    list-style-type: none
 }
 
 #paginaEmUso-listaDeUsuarios{
@@ -166,7 +169,7 @@ td img{
     box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
 }
 
-.paginacao-listaDeUsuarios button:hover{
+.paginacao-listaDeUsuarios li:hover{
     background-color: #F4F6F7;
     border-radius: 20px;
     box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
