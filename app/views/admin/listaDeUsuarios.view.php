@@ -60,7 +60,7 @@
         <!-- Página Anterior -->
         <li<?= $page <= 1 ? ' class="disabled"' : '' ?>>
             <?php if ($page > 1): ?>
-                <a href="?paginacaoNumero=<?= $page - 1 ?>">
+                <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page - 1 ?>">
                     <span>&laquo;</span>
                 </a>
             <?php else: ?>
@@ -71,7 +71,7 @@
         <!-- Números das páginas -->
         <?php for ($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
             <li>
-                <a href="?paginacaoNumero=<?= $page_number ?>" 
+                <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page_number ?>" 
                    class="<?= $page_number == $page ? 'active' : '' ?>">
                     <?= $page_number ?>
                 </a>
@@ -81,7 +81,7 @@
         <!-- Página Seguinte -->
         <li<?= $page >= $total_pages ? ' class="disabled"' : '' ?>>
             <?php if ($page < $total_pages): ?>
-                <a href="?paginacaoNumero=<?= $page + 1 ?>">
+                <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page + 1 ?>">
                     <span>&raquo;</span>
                 </a>
             <?php else: ?>

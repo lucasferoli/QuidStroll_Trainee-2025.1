@@ -150,7 +150,14 @@ td img{
     font-size: 20px;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
+
+.paginacao-listaDeUsuarios ul {
+    display: flex;
+    flex-direction: row;
+}
+
 .paginacao-listaDeUsuarios li{
     font-size: 1em;
     font-family: "Rubik", sans-serif;
@@ -160,8 +167,9 @@ td img{
     align-items: center;
     border: none;
     background-color: #85C1E9;
-    list-style-type: none
+    list-style-type: none;
 }
+
 
 #paginaEmUso-listaDeUsuarios{
     background-color: #F4F6F7;
@@ -173,9 +181,13 @@ td img{
     background-color: #F4F6F7;
     border-radius: 20px;
     box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
 
 }
 
+.paginacao-listaDeUsuarios ul{
+        margin-bottom: 0 !important;
+    }
 
 
 @media (max-width: 900px) {
@@ -197,11 +209,13 @@ td img{
             background-color: none;
     }
     .paginacao-listaDeUsuarios{
-       margin-top: 2rem;
-       margin-bottom: 1rem;
         margin-left: auto;
        margin-right: auto;
     
+    }
+
+    .paginacao-listaDeUsuarios ul{
+            margin-bottom: 0 !important;
     }
 
     
