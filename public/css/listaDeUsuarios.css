@@ -149,27 +149,27 @@ td img{
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
     font-size: 20px;
     justify-content: center;
-    align-items: center;
     text-decoration: none;
 }
 
-.paginacao-listaDeUsuarios ul {
-    display: flex;
-    flex-direction: row;
-}
+
 
 .paginacao-listaDeUsuarios li{
+    display: flex;
+    justify-content: center;
     font-size: 1em;
     font-family: "Rubik", sans-serif;
     font-weight: 600;
     width: 3rem;
     height: 2rem;
-    align-items: center;
     border: none;
     background-color: #85C1E9;
     list-style-type: none;
 }
 
+.paginacao-listaDeUsuarios li {
+    color: #0D6EFD !important;
+}
 
 #paginaEmUso-listaDeUsuarios{
     background-color: #F4F6F7;
@@ -178,6 +178,9 @@ td img{
 }
 
 .paginacao-listaDeUsuarios li:hover{
+    display: flex;
+    justify-content: center;
+    width: 3rem;
     background-color: #F4F6F7;
     border-radius: 20px;
     box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
@@ -187,6 +190,9 @@ td img{
 
 .paginacao-listaDeUsuarios ul{
         margin-bottom: 0 !important;
+        display: flex;
+        flex-direction: row;
+        padding-left: 0 !important;
     }
 
 

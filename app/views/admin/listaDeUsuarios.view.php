@@ -58,7 +58,7 @@
         <nav class="paginacao-listaDeUsuarios">
     <ul>
         <!-- Página Anterior -->
-        <li<?= $page <= 1 ? ' class="disabled"' : '' ?>>
+        <li class="page-item <?= $page <= $total_pages ? ' class="disabled"' : '' ?>">
             <?php if ($page > 1): ?>
                 <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page - 1 ?>">
                     <span>&laquo;</span>
@@ -79,7 +79,7 @@
         <?php endfor; ?>
 
         <!-- Página Seguinte -->
-        <li<?= $page >= $total_pages ? ' class="disabled"' : '' ?>>
+        <li class="page-item <?= $page >= $total_pages ? ' class="disabled"' : '' ?>">
             <?php if ($page < $total_pages): ?>
                 <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page + 1 ?>">
                     <span>&raquo;</span>
