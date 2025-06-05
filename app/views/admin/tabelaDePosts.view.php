@@ -84,7 +84,7 @@
             <input name="criado_em"  value="<?= $post->criado_em ?>" type="hidden">
             <input name="id_autor"  value="<?= $post->id_autor ?>" type="hidden">
             <input name="imagem"  value="imagem" type="hidden" >
-            <img src="/public/assets/imagemPost.jfif" alt="" name="imagem" value="default">
+            <img src="/<?= $post->imagem ?>" alt="" name="imagem" value="default">
             <div class="corpoModalEditar-tabelaDePosts">
                 <input class="tituloModalEditar-tabelaDePosts" name="titulo" value="<?= $post->titulo ?>">
 
@@ -125,7 +125,7 @@
             <button onclick="fecharModal('janelaModalVisualizar<?= $post->id ?>', 'fundoModalVisualizar')"><img src="\public\assets\simboloFecharPost.png" alt="Fechar Guia"></button>
         </header>
         <div class="corpoModalVisualizar-tabelaDePosts">
-            <img src="/public/assets/imagemPost.jfif" alt="Imagem do Post">
+            <img src="/<?= $post->imagem ?>" alt="Imagem do Post">
             <div class="conteudoModalVisualizar-tabelaDePosts">
                 <div class="tituloModalVisualizar-tabelaDePosts">
                     <h2><?= $post->titulo ?></h2>
@@ -150,7 +150,7 @@
             <h1>Adicionar Novo Post</h1>
             <button onclick="fecharModal('janelaModalAdicionar', 'fundoModalAdicionar')"><img src="\public\assets\simboloFecharPost.png" alt="Fechar Guia"></button>
         </header>
-        <form class="formModalAdicionar-tabelaDePosts" method="POST" action="tabeladeposts/create">
+        <form class="formModalAdicionar-tabelaDePosts" method="POST" action="tabeladeposts/create" enctype="multipart/form-data">
             <div class="campoFormModalAdicionar">
                 <label for="tituloPost">Título:</label>
                 <input type="text" id="tituloPost" name="titulo" required>
