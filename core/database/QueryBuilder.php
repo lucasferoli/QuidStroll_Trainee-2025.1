@@ -119,10 +119,6 @@ class QueryBuilder
     public function verificaLogin($email, $senha)
     {
         $sql = sprintf('SELECT * FROM usuarios WHERE email = :email AND senha = :senha');
-
-
-
-
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute([
@@ -138,12 +134,6 @@ class QueryBuilder
         } catch (Exception $e) {
             die($e->getMessage());
         }
-
-
-
-
-
-
     }
     
 
