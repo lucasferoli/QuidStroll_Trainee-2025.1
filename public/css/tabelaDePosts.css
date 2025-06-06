@@ -372,9 +372,17 @@
     padding: 3%;
 }
 
-.formModalEditar-tabelaDePosts img{
-    width: 30%;
-    height: 30%;
+.campoImagemModalEditar-tabelaDePosts{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0%;
+    padding: 0%;
+    align-items: center;
+}
+.formModalEditar-tabelaDePosts .campoImagemModalEditar-tabelaDePosts img{
+    width: 70%;
+    height: auto;
     border-radius: 20px;
 }
 

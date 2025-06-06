@@ -79,12 +79,16 @@
             <h1>Editar Post</h1>
             <button onclick="fecharModal('janelaModalEditar<?= $post->id ?>', 'fundoModal')"><img src="/public/assets/simboloFecharPost.png" alt="Fechar Guia"></button>
         </header>
-        <form class="formModalEditar-tabelaDePosts" method="POST"  action="admin/tabeladeposts/edit">
+        <form class="formModalEditar-tabelaDePosts" method="POST"  action="admin/tabeladeposts/edit" enctype="multipart/form-data" >
             <input name="id"  value="<?= $post->id ?>" type="hidden">
             <input name="criado_em"  value="<?= $post->criado_em ?>" type="hidden">
             <input name="id_autor"  value="<?= $post->id_autor ?>" type="hidden">
-            <input name="imagem"  value="imagem" type="hidden" >
-            <img src="/<?= $post->imagem ?>" alt="" name="imagem" value="default">
+
+
+            <div class="campoImagemModalEditar-tabelaDePosts">
+                <img src="/<?= $post->imagem ?>" alt="" value="default">
+            <input type="file" class="form-control" id = "imagem" name="imagem" accept="image/*">
+        </div>
             <div class="corpoModalEditar-tabelaDePosts">
                 <input class="tituloModalEditar-tabelaDePosts" name="titulo" value="<?= $post->titulo ?>">
 

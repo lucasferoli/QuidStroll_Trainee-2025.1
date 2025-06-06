@@ -52,7 +52,24 @@ class TabelaDePostsAdminController
 
 
     public function edit(){
+        $id = $_POST['id'];
+        $post = App::get('database')->selectOne('posts', $id);
+        $caminhoDaImagem = $post->imagem;
 
+        if(isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
+        $temporario = $_FILES['imagem']['tmp_name'];
+
+        $nomeImagem = sha1(uniqid($_FILES['imagem']['name'], true)) . "." . pathinfo($_FILES['imagem']['name'], PATHINFO_EXTENSION);
+        $destinoImagem = "public/assets/imagemPosts/";
+        $caminhoDaImagem = $destinoImagem . $nomeImagem;
+        move_uploaded_file($temporario, $caminhoDaImagem);
+
+        if($post && !empty($post->imagem) && file_exists($post->imagem)){
+            unlink($post->imagem);
+
+        }
+
+        }
         $parameters = [
             'titulo' => $_POST['titulo'],
             'descricao'=> $_POST['descricao'],

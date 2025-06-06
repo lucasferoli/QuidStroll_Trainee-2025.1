@@ -29,6 +29,19 @@ class QueryBuilder
         }
     }
 
+    public function selectOne($table, $id){
+        $sql = sprintf('SELECT * FROM %s WHERE id=:id LIMIT 1', $table);
+         try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(['id' => $id]);
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+
+
+    }
 
     //INSERT INTO `posts`(`id`, `titulo`, `descricao`, `imagem`, `criado_em`, `id_autor`) 
     //VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]')
