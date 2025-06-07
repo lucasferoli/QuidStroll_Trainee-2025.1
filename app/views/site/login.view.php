@@ -36,7 +36,9 @@
 
         <div class="mensagem-erro-Login">
             <p><?php
-                session_start();
+                if (session_status() === PHP_SESSION_NONE) {
+                    session_start();
+                }
                 if(isset($_SESSION['mensagem-erro'])){
                      echo($_SESSION['mensagem-erro']);
                 }

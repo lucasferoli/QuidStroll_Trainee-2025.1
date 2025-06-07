@@ -11,9 +11,9 @@ class LoginController
     public function index()
     {
         session_start();
-        if(!isset($_SESSION['id']))
+        if(isset($_SESSION['id']))
         {
-            header('Location: /login');
+            header('Location: /dashboard');
         }
         return view('site/login');
     }
