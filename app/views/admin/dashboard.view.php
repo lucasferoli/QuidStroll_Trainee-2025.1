@@ -25,7 +25,7 @@ if(!isset($_SESSION['id'])){
             <p>DASHBOARD</p>
         </div>
             <div id="cardsDashboard">
-                <a class="linkDashboard" href="">
+                <a class="linkDashboard" href="/tabeladeposts">
                     <div class="cardDashboard">
                         <p>POSTS</p>
                     </div>

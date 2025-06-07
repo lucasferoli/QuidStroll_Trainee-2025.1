@@ -27,12 +27,10 @@ class TabelaDePostsAdminController
 
 
         $parametros = [
-            //'id' => $_POST['id'],
             'titulo' => $_POST['titulo'],
             'descricao'=> $_POST['descricao'],
             'imagem' => $caminhoDaImagem,
-            //'criado_em' => $_POST['criado_em'],
-            'id_autor' => 1
+            'id_autor' => $_POST['id_autor'],
         ];
         
         App::get('database')->insert('posts', $parametros);

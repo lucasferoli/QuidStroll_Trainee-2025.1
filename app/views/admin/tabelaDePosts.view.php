@@ -1,3 +1,13 @@
+<?php
+
+use App\Core\App;
+
+session_start();
+if(!isset($_SESSION['id'])) {
+    header('Location: /login');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -38,12 +48,14 @@
             </thead>
             <tbody id="bodyTabelaDePosts">
                <?php foreach($posts as $post): ?>
+                <?php $usuario = \App\Core\App::get('database')->selectOne('usuarios', $post->id_autor); ?>
                     <tr class="trTabelaDePosts">
                         <td class="idTabelaDePosts"><?= $post->id ?></td>
                         <td class="tituloTabelaDePosts"><?= $post->titulo ?></td>
-                        <td class="autorTabelaDePosts">Teste</td>
+                        <td class="autorTabelaDePosts"><?= $usuario->nome ?></td>
                         <td class="dataTabelaDePosts"><?= $post->criado_em ?></td>
                         <td class="acoesTabelaDePosts">
+                            <a type="button" href="postIndividual/<?= $post->id ?>">Visualizar Post Individual</a>
                             <button onclick="abrirModal('janelaModalVisualizar<?= $post->id ?>', 'fundoModalVisualizar')" ><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
                             <button onclick="abrirModal('janelaModalEditar<?= $post->id ?>','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
                             <button onclick="abrirModal('janelaModalVerMais<?= $post->id ?>','fundoModalVerMais')"><img class="TresPontosTabelaDePosts" src="/public/assets/3Pontos (2).png" alt="Ver Mais"></button>
@@ -137,8 +149,9 @@
                 <div class="textoModalVisualizar-tabelaDePosts">
                 <p><?= $post->descricao?></p>
                 </div>
+                <?php $usuario = \App\Core\App::get('database')->selectOne('usuarios', $post->id_autor); ?>
                 <div class="infoModalVisualizar-tabelaDePosts">
-                    <span class="autorModalVisualizar-tabelaDePosts">Autor: Leandro</span>
+                    <span class="autorModalVisualizar-tabelaDePosts">Autor: <?= $usuario->nome?></span>
                     <span class="dataModalVisualizar-tabelaDePosts"><?= $post->criado_em ?></span>
                 </div>
             </div>
@@ -159,11 +172,11 @@
                 <label for="tituloPost">Título:</label>
                 <input type="text" id="tituloPost" name="titulo" required>
             </div>
-            <!-- <div class="campoFormModalAdicionar">
-                <label for="autorPost">Autor:</label>
-                <input type="text" id="autorPost" name="id_autor" required>
-            </div>
-            <div class="campoFormModalAdicionar">
+            
+            <input type="hidden" id="autorPost" name="id_autor" value="<?php echo $_SESSION['id']; ?>">
+            
+        
+            <!--<div class="campoFormModalAdicionar">
                 <label for="dataPost">Data:</label>
                 <input type="date" id="dataPost" name="criado_em" required>
             </div> -->
