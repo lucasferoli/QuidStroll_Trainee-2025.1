@@ -15,6 +15,7 @@ class ComposerStaticInit90bbf95869b4e88bf0dc5022e708a458
         'App\\Controllers\\LandingController' => __DIR__ . '/../..' . '/app/Controllers/LandingController.php',
         'App\\Controllers\\ListaDePostsController' => __DIR__ . '/../..' . '/app/Controllers/ListaDePostsController.php',
         'App\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Controllers/LoginController.php',
+        'App\\Controllers\\PostIndividualController' => __DIR__ . '/../..' . '/app/Controllers/PostIndividualController.php',
         'App\\Controllers\\TabelaDePostsAdminController' => __DIR__ . '/../..' . '/app/Controllers/TabelaDePostsAdminController.php',
         'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',
         'App\\Core\\Database\\Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
