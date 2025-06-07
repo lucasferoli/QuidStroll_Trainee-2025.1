@@ -8,8 +8,11 @@ use Exception;
 class PostIndividualController
 {
 
-    public function index()
+    public function index($id)
     {
-        return view('site/postIndividual');
+        $post = App::get('database')->selectOne('posts', $id);
+        return view('site/postIndividual', compact('post'));
     }
+
+
 }

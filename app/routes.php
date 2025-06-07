@@ -11,7 +11,7 @@ $router->get('dashboard', 'DashboardController@index');
 $router->get('lista', 'ListaDePostsController@index');
 $router->get('tabeladeposts', 'TabelaDePostsAdminController@index'); //antes era 'admin/tabelaDePosts' para todos os 3
 $router->post('tabeladeposts/create', 'TabelaDePostsAdminController@store');
-$router->get('postIndividual', 'PostIndividualController@index');
+$router->get('postIndividual/{id}', 'PostIndividualController@index');
 
 
 
