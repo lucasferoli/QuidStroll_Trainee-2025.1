@@ -19,7 +19,6 @@ $router->post('tabeladeposts/create', 'TabelaDePostsAdminController@store');
 $router->get('postIndividual/{id}', 'PostIndividualController@index');
 
 
-
 $router->post('admin/tabeladeposts/delete', 'TabelaDePostsAdminController@delete');
 $router->post('admin/tabeladeposts/edit', 'TabelaDePostsAdminController@edit');
 

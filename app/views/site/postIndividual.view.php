@@ -13,8 +13,11 @@
 </head>
 <body id="bodyPostIndividual">
     
+<?php 
+    require('app\views\site\componentes\navbar.view.php');
+?>
     <div id="postIndividualVoltar">
-        <a href="https://www.google.com"><img id="postIndividualSeta" src="/public/assets/seta.png" alt=""></a>
+        <a href="/lista"><img id="postIndividualSeta" src="/public/assets/seta.png" alt=""></a>
         <h1 id ="postIndividualTituloPagina">Post</h1>
     </div>
 
@@ -39,5 +42,9 @@
             </div>
         </section>   
     </main>
+
+    <?php 
+    require('app\views\site\componentes\footer.view.php');
+    ?>
 </body>
 </html>

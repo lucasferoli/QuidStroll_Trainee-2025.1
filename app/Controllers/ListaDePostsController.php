@@ -10,6 +10,8 @@ class ListaDePostsController
 
     public function index()
     {
-        return view('site/listadeposts');
-    }
+        $posts = App::get('database')->selectAll('posts');
+        return view('site/ListaDePosts', compact('posts'));
+    } 
+    
 }

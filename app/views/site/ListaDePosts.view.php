@@ -10,6 +10,10 @@
 
 </head>
 <body>
+    <main>
+    <?php 
+    require('app\views\site\componentes\navbar.view.php');
+    ?>
     <div class="segBarraDePesquisa">
         <div class="barraDePesquisa">
             <input type="text" placeholder="Barra de pesquisa...">
@@ -17,62 +21,23 @@
         </div>
     </div>
 
+    <?php foreach($posts as $post):?>
+    <?php $usuario = \App\Core\App::get('database')->selectOne('usuarios', $post->id_autor); ?>
     <div class="grid">
         <div class="card1">
             <div class="imagem"></div>
             <div class="conteudo">
-                <h3>Lorem Ipsum Dolor</h3>
-                <p>Descrição: Lorem Ipsum Dolor</p>
+                <h3><a href="postIndividual/<?= $post->id ?>"><?= $post->titulo ?></a></h3>
+                <p><?= $post->descricao?></p>
             </div>
-            <div class="autor">Autor: ...</div>
+            <div class="autor"><?= $usuario->nome ?></div>
         </div>
-        <div class="card">
-            <div class="imagem"></div>
-            <div class="conteudo">
-                <h3>Lorem Ipsum Dolor</h3>
-                <p>Descrição: Lorem Ipsum Dolor</p>
-            </div>
-            <div class="autor">Autor: ...</div>
-        </div>
-        <div class="card">
-            <div class="imagem"></div>
-            <div class="conteudo">
-                <h3>Lorem Ipsum Dolor</h3>
-                <p>Descrição: Lorem Ipsum Dolor</p>
-            </div>
-            <div class="autor">Autor: ...</div>
-        </div>
-        <div class="card">
-            <div class="imagem"></div>
-            <div class="conteudo">
-                <h3>Lorem Ipsum Dolor</h3>
-                <p>Descrição: Lorem Ipsum Dolor</p>
-            </div>
-            <div class="autor">Autor: ...</div>
-        </div>
-        <div class="card">
-            <div class="imagem"></div>
-            <div class="conteudo">
-                <h3>Lorem Ipsum Dolor</h3>
-                <p>Descrição: Lorem Ipsum Dolor</p>
-            </div>
-            <div class="autor">Autor: ...</div>
-        </div>
-        <div class="card">
-            <div class="imagem"></div>
-            <div class="conteudo">
-                <h3>Lorem Ipsum Dolor</h3>
-                <p>Descrição: Lorem Ipsum Dolor</p>
-            </div>
-            <div class="autor">Autor: ...</div>
-        </div>
-    </div>
-    <nav class="paginacao-listaDePosts">
-            <button>&lt</button>
-            <button id="paginaEmUso-listaDeUsuarios">1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>&gt</button>
-        </nav>
+        
+    <?php endforeach ?>
+
+    </main>
+    <?php 
+    require('app\views\site\componentes\footer.view.php');
+    ?>
 </body>
 </html>
