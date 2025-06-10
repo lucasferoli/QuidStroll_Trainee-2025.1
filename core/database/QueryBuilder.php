@@ -29,8 +29,24 @@ class QueryBuilder
         }
     }
 
-    #INSERT INTO `usuarios`(`id`, `nome`, `email`, `senha`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]')
-    public function insert($table, $parametros) {
+    public function selectOne($table, $id){
+        $sql = sprintf('SELECT * FROM %s WHERE id=:id LIMIT 1', $table);
+         try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(['id' => $id]);
+            return $stmt->fetch(PDO::FETCH_OBJ);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+
+
+    }
+
+    //INSERT INTO `posts`(`id`, `titulo`, `descricao`, `imagem`, `criado_em`, `id_autor`) 
+    //VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]')
+    
+    public function insert($table, $parameters) {
         $sql = sprintf('INSERT INTO %s (%s) VALUES (:%s)',
         $table,
         implode(', ', array_keys($parametros)),
@@ -70,16 +86,56 @@ class QueryBuilder
         }
 
     }
-    public function delete($table, $id)
-{
-    $sql = "DELETE FROM {$table} WHERE id = :id";
+        //DELETE FROM `posts` WHERE 0
+    public function delete($table, $id){
+     $sql = sprintf('DELETE FROM %s WHERE %s',
+        $table,
+        'id = :id'
+    );
+    
 
     try {
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
-        return $stmt->execute();
-    } catch (Exception $e) {
-        die($e->getMessage());
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(compact('id'));
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
-}
+
+
+
+
+    public function verificaLogin($email, $senha)
+    {
+        $sql = sprintf('SELECT * FROM usuarios WHERE email = :email AND senha = :senha');
+
+
+
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([
+                'email' => $email,
+                'senha' => $senha
+            ]
+            );
+
+            $user = $stmt->fetch(PDO::FETCH_OBJ);
+
+            return $user;
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+
+
+
+
+
+
+    }
+    
+
+
 }

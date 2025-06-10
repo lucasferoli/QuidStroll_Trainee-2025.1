@@ -1,3 +1,13 @@
+<?php
+
+use App\Core\App;
+
+session_start();
+if(!isset($_SESSION['id'])) {
+    header('Location: /login');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -38,12 +48,14 @@
             </thead>
             <tbody id="bodyTabelaDePosts">
                <?php foreach($posts as $post): ?>
+                <?php $usuario = \App\Core\App::get('database')->selectOne('usuarios', $post->id_autor); ?>
                     <tr class="trTabelaDePosts">
                         <td class="idTabelaDePosts"><?= $post->id ?></td>
                         <td class="tituloTabelaDePosts"><?= $post->titulo ?></td>
-                        <td class="autorTabelaDePosts">Teste</td>
+                        <td class="autorTabelaDePosts"><?= $usuario->nome ?></td>
                         <td class="dataTabelaDePosts"><?= $post->criado_em ?></td>
                         <td class="acoesTabelaDePosts">
+                            <a href="postIndividual/<?= $post->id ?>">Visualizar Post Individual</a>
                             <button onclick="abrirModal('janelaModalVisualizar<?= $post->id ?>', 'fundoModalVisualizar')" ><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
                             <button onclick="abrirModal('janelaModalEditar<?= $post->id ?>','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
                             <button onclick="abrirModal('janelaModalVerMais<?= $post->id ?>','fundoModalVerMais')"><img class="TresPontosTabelaDePosts" src="/public/assets/3Pontos (2).png" alt="Ver Mais"></button>
@@ -79,12 +91,16 @@
             <h1>Editar Post</h1>
             <button onclick="fecharModal('janelaModalEditar<?= $post->id ?>', 'fundoModal')"><img src="/public/assets/simboloFecharPost.png" alt="Fechar Guia"></button>
         </header>
-        <form class="formModalEditar-tabelaDePosts" method="POST"  action="admin/tabeladeposts/edit">
+        <form class="formModalEditar-tabelaDePosts" method="POST"  action="admin/tabeladeposts/edit" enctype="multipart/form-data" >
             <input name="id"  value="<?= $post->id ?>" type="hidden">
             <input name="criado_em"  value="<?= $post->criado_em ?>" type="hidden">
             <input name="id_autor"  value="<?= $post->id_autor ?>" type="hidden">
-            <input name="imagem"  value="imagem" type="hidden" >
-            <img src="/public/assets/imagemPost.jfif" alt="" name="imagem" value="default">
+
+
+            <div class="campoImagemModalEditar-tabelaDePosts">
+                <img src="/<?= $post->imagem ?>" alt="" value="default">
+            <input type="file" class="form-control" id = "imagem" name="imagem" accept="image/*">
+        </div>
             <div class="corpoModalEditar-tabelaDePosts">
                 <input class="tituloModalEditar-tabelaDePosts" name="titulo" value="<?= $post->titulo ?>">
 
@@ -125,7 +141,7 @@
             <button onclick="fecharModal('janelaModalVisualizar<?= $post->id ?>', 'fundoModalVisualizar')"><img src="\public\assets\simboloFecharPost.png" alt="Fechar Guia"></button>
         </header>
         <div class="corpoModalVisualizar-tabelaDePosts">
-            <img src="/public/assets/imagemPost.jfif" alt="Imagem do Post">
+            <img src="/<?= $post->imagem ?>" alt="Imagem do Post">
             <div class="conteudoModalVisualizar-tabelaDePosts">
                 <div class="tituloModalVisualizar-tabelaDePosts">
                     <h2><?= $post->titulo ?></h2>
@@ -133,8 +149,9 @@
                 <div class="textoModalVisualizar-tabelaDePosts">
                 <p><?= $post->descricao?></p>
                 </div>
+                <?php $usuario = \App\Core\App::get('database')->selectOne('usuarios', $post->id_autor); ?>
                 <div class="infoModalVisualizar-tabelaDePosts">
-                    <span class="autorModalVisualizar-tabelaDePosts">Autor: Leandro</span>
+                    <span class="autorModalVisualizar-tabelaDePosts">Autor: <?= $usuario->nome?></span>
                     <span class="dataModalVisualizar-tabelaDePosts"><?= $post->criado_em ?></span>
                 </div>
             </div>
@@ -150,16 +167,16 @@
             <h1>Adicionar Novo Post</h1>
             <button onclick="fecharModal('janelaModalAdicionar', 'fundoModalAdicionar')"><img src="\public\assets\simboloFecharPost.png" alt="Fechar Guia"></button>
         </header>
-        <form class="formModalAdicionar-tabelaDePosts" method="POST" action="tabeladeposts/create">
+        <form class="formModalAdicionar-tabelaDePosts" method="POST" action="tabeladeposts/create" enctype="multipart/form-data">
             <div class="campoFormModalAdicionar">
                 <label for="tituloPost">Título:</label>
                 <input type="text" id="tituloPost" name="titulo" required>
             </div>
-            <!-- <div class="campoFormModalAdicionar">
-                <label for="autorPost">Autor:</label>
-                <input type="text" id="autorPost" name="id_autor" required>
-            </div>
-            <div class="campoFormModalAdicionar">
+            
+            <input type="hidden" id="autorPost" name="id_autor" value="<?php echo $_SESSION['id']; ?>">
+            
+        
+            <!--<div class="campoFormModalAdicionar">
                 <label for="dataPost">Data:</label>
                 <input type="date" id="dataPost" name="criado_em" required>
             </div> -->

@@ -64,6 +64,11 @@
     text-decoration: none;
 }
 
+.linkDashboard button{
+    background-color: none;
+
+}
+
 @media (max-width: 768px){
     #bodyDashboard{
         padding: 20vh
