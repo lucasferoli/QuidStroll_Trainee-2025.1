@@ -19,9 +19,9 @@
         </button>
 
         <div class="botoesNavbar" id="botoesNavbar">
-            <a href="#"><i class="fas fa-home"></i>Home</a>
-            <a href="#"><i class="fas fa-newspaper"></i>Publicações</a>
-            <a href="#"><i class="fas fa-sign-in-alt"></i>Login</a>
+            <a href="/"><i class="fas fa-home"></i>Home</a>
+            <a href="/lista"><i class="fas fa-newspaper"></i>Publicações</a>
+            <a href="/login"><i class="fas fa-sign-in-alt"></i>Login</a>
         </div>
     </nav>
 
