@@ -36,9 +36,12 @@ if(!isset($_SESSION['id'])) {
     <!----------------------------------------------------------->
 
     <div class="barraDePesquisa-Posts">
-        <form method="GET"  action="admin/tabeladeposts/search">
+        <form method="GET"  action="/admin/tabeladeposts/search">
             <input type="text" name="busca" placeholder="Buscar">
         <button type="submit">O-</button>
+    </form>
+    <form method="GET"  action="/admin/tabeladeposts/clean">
+        <button type="submit">Limpar Pesquisa</button>
     </form>
     </div>
 

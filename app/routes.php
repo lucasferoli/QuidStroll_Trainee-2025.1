@@ -22,4 +22,4 @@ $router->post('login', 'LoginController@login');
 $router->post('logout', 'DashboardController@logout');
 
 $router->get('admin/tabeladeposts/search', 'TabelaDePostsAdminController@search');
-
+$router->get('admin/tabeladeposts/clean', 'TabelaDePostsAdminController@clean');

@@ -90,8 +90,10 @@ class TabelaDePostsAdminController
     } else {
         $posts = App::get('database')->selectAll('posts');
     }
-
     return view('admin/tabelaDePosts', compact('posts'));
-    header('Location: /tabeladeposts');
+    }
+
+    public function clean(){
+        header('Location: /tabeladeposts');
     }
 }
