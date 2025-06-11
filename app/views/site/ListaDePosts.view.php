@@ -25,7 +25,7 @@
     <?php $usuario = \App\Core\App::get('database')->selectOne('usuarios', $post->id_autor); ?>
     <div class="grid">
         <div class="card1">
-            <div class="imagem"></div>
+            <img class="imagem" src="/<?= $post->imagem ?>" alt="Imagem do Post">
             <div class="conteudo">
                 <h3><a href="postIndividual/<?= $post->id ?>"><?= $post->titulo ?></a></h3>
                 <p><?= $post->descricao?></p>
