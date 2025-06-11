@@ -43,6 +43,13 @@ class QueryBuilder
 
     }
 
+    public function selectWhereLike($table, $column, $value)
+{
+    $statement = $this->pdo->prepare("SELECT * FROM {$table} WHERE {$column} LIKE ?");
+    $statement->execute(["%$value%"]);
+    return $statement->fetchAll(PDO::FETCH_CLASS);
+}
+
     //INSERT INTO `posts`(`id`, `titulo`, `descricao`, `imagem`, `criado_em`, `id_autor`) 
     //VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]')
     

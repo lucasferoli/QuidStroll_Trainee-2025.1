@@ -81,4 +81,17 @@ class TabelaDePostsAdminController
         header('Location: /tabeladeposts');
 
     }
+
+    public function search(){
+      $tituloBusca = $_GET['busca'] ?? '';
+
+    if ($tituloBusca) {
+        $posts = App::get('database')->selectWhereLike('posts', 'titulo', $tituloBusca);
+    } else {
+        $posts = App::get('database')->selectAll('posts');
+    }
+
+    return view('admin/tabelaDePosts', compact('posts'));
+    header('Location: /tabeladeposts');
+    }
 }

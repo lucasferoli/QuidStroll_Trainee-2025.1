@@ -21,3 +21,5 @@ $router->post('admin/tabeladeposts/edit', 'TabelaDePostsAdminController@edit');
 $router->post('login', 'LoginController@login');
 $router->post('logout', 'DashboardController@logout');
 
+$router->get('admin/tabeladeposts/search', 'TabelaDePostsAdminController@search');
+

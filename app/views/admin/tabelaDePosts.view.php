@@ -35,6 +35,13 @@ if(!isset($_SESSION['id'])) {
     <!---------------------------- Tabela ----------------------->
     <!----------------------------------------------------------->
 
+    <div class="barraDePesquisa-Posts">
+        <form method="GET"  action="admin/tabeladeposts/search">
+            <input type="text" name="busca" placeholder="Buscar">
+        <button type="submit">O-</button>
+    </form>
+    </div>
+
     <main id="conteudoTabelaDePosts">
         <table id="tabelaDePosts">
             <thead id="cabecalhoTabelaDePosts">
