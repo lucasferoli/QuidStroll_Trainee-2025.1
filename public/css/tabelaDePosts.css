@@ -207,6 +207,7 @@
     align-items: center;
     border: none;
     background-color: #85C1E9;
+    cursor: pointer;
 }
 
 #botoes-tabelaDePosts button:hover{
@@ -368,8 +369,8 @@
     border: none;
     width: 40px;
     height: auto;
+    cursor: pointer;
 }
-
 .cabecalhoModalEditar-tabelaDePosts button img{
     width: 100%;
     height: 100%;
@@ -437,6 +438,7 @@
     background-color: #85C1E9;
     border-radius: 20px;
     align-self:flex-end;
+    cursor: pointer;
 }
 
 .botaoSalvarEdicao-tabelaDePosts:hover{
@@ -517,12 +519,14 @@
     border: 1px solid #85C1E9;
     border-radius: 20px;
     background-color: #85C1E9;
+    cursor: pointer;
 
 }
 
 #botaoExcluir{
     background-color: #E74C3C;
     border: 1px solid #E74C3C;
+    cursor: pointer;
 
 }
 #botaoExcluir:hover{

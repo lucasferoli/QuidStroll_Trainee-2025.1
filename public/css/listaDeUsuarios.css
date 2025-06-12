@@ -60,7 +60,9 @@ body{
     background-color: #85c1e9;
     border-radius: 20px;
     box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
+
 
 .botaoAdicionar-listaDeUsuarios button img{
     width: 2rem;
@@ -161,6 +163,7 @@ td img{
     align-items: center;
     border: none;
     background-color: #85C1E9;
+    cursor: pointer;
 }
 
 #paginaEmUso-listaDeUsuarios{
@@ -300,6 +303,7 @@ td img{
     border-radius: 2vh;
     transition: 0.5s;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .cancelar-listaDeUsuarios:hover{
