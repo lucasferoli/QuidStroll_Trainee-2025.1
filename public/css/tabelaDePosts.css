@@ -11,6 +11,7 @@
 /*-----------------------------------------------------------------------*/
 /*--------------------------------Cabecalho------------------------------*/
 
+
 #cabecalhoPaginaTabelaDePosts{
     width: 100%;
     height: 30vh;
@@ -139,16 +140,23 @@
     color: #1A1A1A;
     font-size: 3vh;
 }
+
 .idTabelaDePosts{
     width: 15%;
 }
 
 .tituloTabelaDePosts{
     width: 25%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .autorTabelaDePosts{
     width: 25%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .dataTabelaDePosts{
@@ -588,7 +596,8 @@
     overflow-y: auto;
     padding: 2%;
     background-color: #F4F6F7;
-    border: 2vh solid #1B4F72;
+    border: 8px solid #1B4F72;
+    border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -743,7 +752,8 @@
     overflow-y: auto;
     padding: 2%;
     background-color: #F4F6F7;
-    border: 2vh solid #1B4F72;
+    border: 8px solid #1B4F72;
+    border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
