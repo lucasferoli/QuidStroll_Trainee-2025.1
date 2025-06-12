@@ -11,9 +11,9 @@ body{
 .sidebar-listaDeUsuarios{
     display: flex;
     flex-direction: column;
-    width: 20vw;
+    width: 12vh;
     height: 100vh;
-    background-color: rgb(152, 155, 151);
+    background-color: #F4F6F7
 }
 .listaDeUsuarios{
     display: flex;
