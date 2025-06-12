@@ -10,6 +10,9 @@ footer{
     justify-content: space-between;
     align-items: center;
     height: 22vh;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 .textoFooter{
     font-family: 'Nunito', sans-serif ;
@@ -41,6 +44,7 @@ footer{
     justify-content: center;
     align-items: center;
     width: 100%;
+
 }
 
 #logosFooter .logoFooter img{
