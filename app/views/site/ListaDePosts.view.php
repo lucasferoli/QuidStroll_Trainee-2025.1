@@ -21,9 +21,9 @@
         </div>
     </div>
 
-    <?php foreach($posts as $post):?>
-    <?php $usuario = \App\Core\App::get('database')->selectOne('usuarios', $post->id_autor); ?>
     <div class="grid">
+        <?php foreach($posts as $post):?>
+        <?php $usuario = \App\Core\App::get('database')->selectOne('usuarios', $post->id_autor); ?>
         <div class="card1">
             <img src="/<?= $post->imagem ?>" alt="Imagem do Post">
             <div class="conteudo">
@@ -32,8 +32,10 @@
             </div>
             <div class="autor"><?= $usuario->nome ?></div>
         </div>
+        <?php endforeach ?>
+
+    </div>
         
-    <?php endforeach ?>
 
     </main>
     <?php 

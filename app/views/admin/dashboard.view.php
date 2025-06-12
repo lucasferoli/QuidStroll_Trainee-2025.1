@@ -30,7 +30,7 @@ if(!isset($_SESSION['id'])){
                         <p>POSTS</p>
                     </div>
                 </a>
-                <a class="linkDashboard" href="">
+                <a class="linkDashboard" href="/ListaDeUsuarios">
                     <div class="cardDashboard">
                         <p>USUÁRIOS</p>
                     </div>
@@ -38,11 +38,10 @@ if(!isset($_SESSION['id'])){
 
                 <form action="logout" method="POST">
 
-                <a class="linkDashboard" href="">
-                    <div class="cardDashboard">
-                    <button type="submit"><p>LOGOUT</p></button>    
-                    </div>
-                </a>
+                    
+                    <button class="cardLogout" type="submit"><p>LOGOUT</p></button>    
+                    
+            
                 </form>
             </div>
         <div id="logoDashboard">

@@ -32,6 +32,9 @@ if(!isset($_SESSION['id'])) {
         </div>
     </div>
 
+
+    <?php require('app\views\admin\componentes\sidebar.php'); ?>
+
     <!---------------------------- Tabela ----------------------->
     <!----------------------------------------------------------->
 

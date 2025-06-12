@@ -124,8 +124,7 @@
 
 /*-------------------------------------------------------------------------*/
 /*---------------------------ElementosDaTabela-----------------------------*/
-
-.trTabelaDePosts td, .trTabelaDePosts th{
+.trTabelaDePosts th, .autorTabelaDePosts, .dataTabelaDePosts, .acoesTabelaDePosts, .idTabelaDePosts{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,10 +145,12 @@
 }
 
 .tituloTabelaDePosts{
+    display: flex;
     width: 25%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    justify-content: flex-start;
 }
 
 .autorTabelaDePosts{

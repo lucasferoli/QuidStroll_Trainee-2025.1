@@ -68,6 +68,7 @@ h1, h2, h3, h4, h5, h6 {
     row-gap: 4.69vh;
     justify-content: center;
     padding: 0 6.25vh;
+    padding-bottom: 5%;
 }
 
 .card1 {
@@ -233,6 +234,7 @@ h1, h2, h3, h4, h5, h6 {
         padding: 0 5vw;
         margin: 0;
         gap: 8px;
+        padding-bottom: 5%;
         
     }
 

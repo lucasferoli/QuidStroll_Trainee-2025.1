@@ -41,14 +41,6 @@
             </a>
         </div>
     </div>
-
-    <main id="conteudoPagina">
-        <h1>Bem Vindo ao Painel</h1>
-        <div class="card">
-            <p>Selecione uma opção ao lado</p>
-        </div>
-    </main>
-
     <script src="\public\js\sidebar.js"></script>
 </body>
 </html>

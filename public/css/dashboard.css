@@ -49,6 +49,23 @@
     font-weight: 800;
 }
 
+.cardLogout {
+    display: flex;
+    background-color: #85C1E9;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid rgb(0, 42, 156);
+    border: 0.5vh solid #1B4F72;
+    border-radius: 2vh;
+    margin: 1vh;
+    height: 8vh;
+    width: 40vh;
+    color: #1B4F72;
+    font-family: nunito;
+    font-size: 2vh;
+    font-weight: 800;
+}
+
 #logoDashboard {
     display: flex;
     justify-content: center;
@@ -66,6 +83,7 @@
 
 .linkDashboard button{
     background-color: none;
+
 
 }
 
