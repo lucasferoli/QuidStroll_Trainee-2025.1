@@ -43,9 +43,9 @@
                         <td data-cell = "Nome"><?= $usuario->nome ?></td>
                         <td data-cell = "Email"><?= $usuario->email ?></td>
                         <td class="acoes-listaDeUsuarios">
-                            <button type="button" onclick="abrirModal('visualizarUsuario<?= $usuario->id?>')" ><img src="/public/assets/visualizar.png" alt="" id="visualizar-listaDeUsuarios"></button>
-                            <button type="button" onclick="abrirModal('editarUsuario<?= $usuario->id ?>')"><img src="/public/assets/editarUsuario-3.png" alt="" id="editar-listaDeUsuarios"></button>
-                            <button type="button" onclick="abrirModal('deletarUsuario<?= $usuario->id ?>')"><img src="/public/assets/delete.png" alt="" id="deletar-listaDeUsuarios"></button>
+                            <button type="button" onclick="abrirModal('visualizarUsuario<?= $usuario->id?>')" ><img src="\public\assets\Eye.png" alt="" id="visualizar-listaDeUsuarios"></button>
+                            <button type="button" onclick="abrirModal('editarUsuario<?= $usuario->id ?>')"><img src="/public/assets/Pen.png" alt="" id="editar-listaDeUsuarios"></button>
+                            <button type="button" onclick="abrirModal('deletarUsuario<?= $usuario->id ?>')"><img src="/public/assets/Trash.png" alt="" id="deletar-listaDeUsuarios"></button>
                         </td>
                     </tr>
                 <?php endforeach; ?>

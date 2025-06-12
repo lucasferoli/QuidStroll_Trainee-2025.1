@@ -83,6 +83,7 @@ if(!isset($_SESSION['id'])) {
     <!---------------------------------------------------------->
     <?php foreach($posts as $post): ?>
 
+        
 
 <!----------------------Editar------------------------------->
     <div class="fundoModal-tabelaDePosts" id="fundoModal"></div>
