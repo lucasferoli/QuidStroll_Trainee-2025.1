@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="/public/css/footer-landinPage.css">
 </head>
 <body>
+
 <?php
 require('app\views\site\componentes\navbar.view.php')
 ?>
@@ -93,10 +94,10 @@ require('app\views\site\componentes\navbar.view.php')
 
         </div>
     </section>
-<!---->
+
 
 <?php
-require('app\views\site\componentes\footer.view.php')
+require('app\views\site\componentes\footer.view.php');
 ?>
 
 
@@ -105,7 +106,6 @@ require('app\views\site\componentes\footer.view.php')
 
 
 
-</section>
       
     
 </body>

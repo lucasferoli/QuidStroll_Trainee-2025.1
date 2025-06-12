@@ -1,7 +1,17 @@
-body {
+html body{
     background-color: #f4f6f7;
     margin: 0;
-    padding: 0 0 1% 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
 }
 
 p {
