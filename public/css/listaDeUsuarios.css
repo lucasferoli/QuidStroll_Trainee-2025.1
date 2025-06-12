@@ -122,11 +122,14 @@ body{
 td button{
     border: none;
     background-color: #F4F6F7;
-    width: 10%;
+    width: 15%;
+    cursor: pointer;
 }
 td img{
-    width: 3rem;
-    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .acoes-listaDeUsuarios{
