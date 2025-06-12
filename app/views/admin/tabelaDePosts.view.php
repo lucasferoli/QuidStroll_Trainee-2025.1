@@ -65,7 +65,7 @@ if(!isset($_SESSION['id'])) {
                         <td class="autorTabelaDePosts"><?= $usuario->nome ?></td>
                         <td class="dataTabelaDePosts"><?= $post->criado_em ?></td>
                         <td class="acoesTabelaDePosts">
-                            <a href="postIndividual/<?= $post->id ?>">Visualizar Post Individual</a>
+                            <a href="/postIndividual/<?= $post->id ?>">Visualizar Post Individual</a>
                             <button onclick="abrirModal('janelaModalVisualizar<?= $post->id ?>', 'fundoModalVisualizar')" ><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
                             <button onclick="abrirModal('janelaModalEditar<?= $post->id ?>','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
                             <button onclick="abrirModal('janelaModalVerMais<?= $post->id ?>','fundoModalVerMais')"><img class="TresPontosTabelaDePosts" src="/public/assets/3Pontos (2).png" alt="Ver Mais"></button>
