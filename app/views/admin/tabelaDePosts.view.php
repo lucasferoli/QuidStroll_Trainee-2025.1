@@ -36,13 +36,15 @@ if(!isset($_SESSION['id'])) {
     <!----------------------------------------------------------->
 
     <div class="barraDePesquisa-Posts">
-        <form method="GET"  action="/admin/tabeladeposts/search">
+        <form method="GET"  action="/admin/tabeladeposts/search" id="form-inputSearch-Posts">
             <input type="text" name="busca" placeholder="Buscar">
-        <button type="submit">O-</button>
+        <button type="submit" id="botaoDePesquisa-Search"><img src="/public/assets/lupa.png" alt=""></button>
     </form>
-    <form method="GET"  action="/admin/tabeladeposts/clean">
-        <button type="submit">Limpar Pesquisa</button>
+
+    <form method="GET"  action="/admin/tabeladeposts/clean" id="form-refresh-Posts">
+        <button type="submit" id="botaoLimpeza-Search"><img src="/public/assets/refreshPosts.png" alt=""></button>
     </form>
+
     </div>
 
     <main id="conteudoTabelaDePosts">
@@ -65,11 +67,11 @@ if(!isset($_SESSION['id'])) {
                         <td class="autorTabelaDePosts"><?= $usuario->nome ?></td>
                         <td class="dataTabelaDePosts"><?= $post->criado_em ?></td>
                         <td class="acoesTabelaDePosts">
-                            <a href="/postIndividual/<?= $post->id ?>">Visualizar Post Individual</a>
                             <button onclick="abrirModal('janelaModalVisualizar<?= $post->id ?>', 'fundoModalVisualizar')" ><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
                             <button onclick="abrirModal('janelaModalEditar<?= $post->id ?>','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
                             <button onclick="abrirModal('janelaModalVerMais<?= $post->id ?>','fundoModalVerMais')"><img class="TresPontosTabelaDePosts" src="/public/assets/3Pontos (2).png" alt="Ver Mais"></button>
                         <button onclick="abrirModal('janelaModalExcluir<?= $post->id ?>', 'fundoModal<?= $post->id ?>')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
+                          <a href="/postIndividual/<?= $post->id ?>"><img src="/public/assets/postIndividualIcon.png" alt=""></a>
                         </td>
                     </tr>
                 <?php endforeach ?>
