@@ -37,7 +37,7 @@ if(!isset($_SESSION['id'])) {
 
     <div class="barraDePesquisa-Posts">
         <form method="GET"  action="/admin/tabeladeposts/search" id="form-inputSearch-Posts">
-            <input type="text" name="busca" placeholder="Buscar">
+            <input type="text" name="busca" placeholder="Buscar" autocomplete="off">
         <button type="submit" id="botaoDePesquisa-Search"><img src="/public/assets/lupa.png" alt=""></button>
     </form>
 
