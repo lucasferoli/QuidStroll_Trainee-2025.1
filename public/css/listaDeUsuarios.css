@@ -148,17 +148,28 @@ td img{
     margin-right: auto;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
     font-size: 20px;
+    justify-content: center;
+    text-decoration: none;
 }
-.paginacao-listaDeUsuarios button{
+
+
+
+.paginacao-listaDeUsuarios li{
+    display: flex;
+    justify-content: center;
     font-size: 1em;
     font-family: "Rubik", sans-serif;
     font-weight: 600;
     width: 3rem;
     height: 2rem;
-    align-items: center;
     border: none;
     background-color: #85C1E9;
     cursor: pointer;
+    list-style-type: none;
+}
+
+.paginacao-listaDeUsuarios li {
+    color: #0D6EFD !important;
 }
 
 #paginaEmUso-listaDeUsuarios{
@@ -167,13 +178,23 @@ td img{
     box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
 }
 
-.paginacao-listaDeUsuarios button:hover{
+.paginacao-listaDeUsuarios li:hover{
+    display: flex;
+    justify-content: center;
+    width: 3rem;
     background-color: #F4F6F7;
     border-radius: 20px;
     box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
 
 }
 
+.paginacao-listaDeUsuarios ul{
+        margin-bottom: 0 !important;
+        display: flex;
+        flex-direction: row;
+        padding-left: 0 !important;
+    }
 
 
 @media (max-width: 900px) {
@@ -195,11 +216,13 @@ td img{
             background-color: none;
     }
     .paginacao-listaDeUsuarios{
-       margin-top: 2rem;
-       margin-bottom: 1rem;
         margin-left: auto;
        margin-right: auto;
     
+    }
+
+    .paginacao-listaDeUsuarios ul{
+            margin-bottom: 0 !important;
     }
 
     

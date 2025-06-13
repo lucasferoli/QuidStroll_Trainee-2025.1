@@ -14,10 +14,13 @@ class QueryBuilder
         $this->pdo = $pdo;
     }
 
-    public function selectAll($table)
+    public function selectAll($table, $inicio = null, $rows_count = null)
     {
         $sql = "select * from {$table}";
 
+        if($inicio >= 0 && $rows_count > 0) {
+            $sql .= " LIMIT {$inicio}, {$rows_count}";
+        }
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
@@ -43,19 +46,23 @@ class QueryBuilder
 
     }
 
-    //INSERT INTO `posts`(`id`, `titulo`, `descricao`, `imagem`, `criado_em`, `id_autor`) 
-    //VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]')
-    
-    public function insert($table, $parametros) {
+    public function selectWhereLike($table, $column, $value)
+{
+    $statement = $this->pdo->prepare("SELECT * FROM {$table} WHERE {$column} LIKE ?");
+    $statement->execute(["%$value%"]);
+    return $statement->fetchAll(PDO::FETCH_CLASS);
+}
+
+    public function insert($table, $parameters) {
         $sql = sprintf('INSERT INTO %s (%s) VALUES (:%s)',
         $table,
-        implode(', ', array_keys($parametros)),
-        implode(', :', array_keys($parametros)),
+        implode(', ', array_keys($parameters)),
+        implode(', :', array_keys($parameters)),
     );
 
     try {
             $stmt = $this->pdo->prepare($sql);
-            $stmt->execute($parametros);
+            $stmt->execute($parameters);
 
             return $stmt->fetchAll(PDO::FETCH_CLASS);
 
@@ -64,7 +71,6 @@ class QueryBuilder
         }
     }
 
-    #UPDATE `usuarios` SET `id`='[value-1]',`nome`='[value-2]',`email`='[value-3]',`senha`='[value-4]' WHERE 1
     public function update($table, $id, $parametros)
     {
         $sql = sprintf('UPDATE %s SET %s WHERE id = %s',
@@ -86,7 +92,6 @@ class QueryBuilder
         }
 
     }
-        //DELETE FROM `posts` WHERE 0
     public function delete($table, $id){
      $sql = sprintf('DELETE FROM %s WHERE %s',
         $table,
@@ -103,10 +108,20 @@ class QueryBuilder
         }
     }
 
+    public function countAll($table)
+    {
+        $sql = "SELECT COUNT(*) FROM {$table}";
 
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return intval($stmt->fetch(PDO::FETCH_COLUMN));
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 
-
-    public function verificaLogin($email, $senha)
+public function verificaLogin($email, $senha)
     {
         $sql = sprintf('SELECT * FROM usuarios WHERE email = :email AND senha = :senha');
 
@@ -128,14 +143,5 @@ class QueryBuilder
         } catch (Exception $e) {
             die($e->getMessage());
         }
-
-
-
-
-
-
-    }
-    
-
-
+        
 }
