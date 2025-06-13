@@ -13,7 +13,7 @@
         <i class="fas fa-bars"></i>
     </button>
 
-    <div class="sidebar" id="sidebar">
+    <div class="sidebar collapsed" id="sidebar">
         <div class="sidebarHeader">
             <h3 class="sidebarTitle">Painel Admin</h3>
             <button class="sidebar-toggle" id="sidebarToggle">
@@ -48,7 +48,3 @@
     <script src="\public\js\sidebar.js"></script>
 </body>
 </html>
-
-<!--<form action="logout" method="POST"> 
-                    <button class="cardLogout" type="submit"><p>LOGOUT</p></button>
-                </form>
