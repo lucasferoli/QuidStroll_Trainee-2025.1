@@ -41,6 +41,18 @@
                 </div>
             </div>
         </section>   
+        <section class="areaDeComentarios">
+            <div>
+                <?php
+                require('app\views\site\componentes\criarComentario.php');                
+                ?>
+            </div>
+            <div>
+                <?php
+                require('app\views\site\componentes\visualizarComentario.php');
+                ?>
+            </div>
+        </section>
     </main>
 
     <?php 

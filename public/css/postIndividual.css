@@ -40,6 +40,7 @@
     padding: 7.8vh;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 #postIndividualConteudo{
@@ -147,6 +148,12 @@
     font-weight: 400;
     margin: 0;
 }
+
+.areaDeComentarios{
+    display: flex;
+    flex-direction: column;
+}
+
 /********************************* HOVER *****************************************/
 
 #postIndividualVoltar img:hover{

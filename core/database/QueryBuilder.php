@@ -145,3 +145,4 @@ public function verificaLogin($email, $senha)
         }
         
 }
+}
