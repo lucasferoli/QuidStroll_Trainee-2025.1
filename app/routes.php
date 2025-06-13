@@ -16,6 +16,7 @@ $router->post('ListaDeUsuarios/delete', 'ListaDeUsuariosController@delete');
 $router->get('lista', 'ListaDePostsController@index');
 $router->get('tabeladeposts', 'TabelaDePostsAdminController@index'); //antes era 'admin/tabelaDePosts' para todos os 3
 $router->post('tabeladeposts/create', 'TabelaDePostsAdminController@store');
+$router->get('postIndividual/{id}', 'PostIndividualController@index');
 
 
 
@@ -24,5 +25,8 @@ $router->post('admin/tabeladeposts/edit', 'TabelaDePostsAdminController@edit');
 
 $router->post('login', 'LoginController@login');
 $router->post('logout', 'DashboardController@logout');
+
+$router->get('admin/tabeladeposts/search', 'TabelaDePostsAdminController@search');
+$router->get('admin/tabeladeposts/clean', 'TabelaDePostsAdminController@clean');
 
 $router->get('ListaDeUsuarios', 'ListaDeUsuariosController@paginate');

@@ -57,7 +57,43 @@ class Router
      * @param string $uri
      * @param string $requestType
      */
-    public function direct($uri, $requestType)
+    
+    
+ public function direct($uri, $requestType)
+{
+    foreach ($this->routes[$requestType] as $route => $controller) {
+        $pattern = preg_replace('#\{[^/]+\}#', '([^/]+)', $route);
+        $pattern = "#^{$pattern}$#";
+
+        if (preg_match($pattern, $uri, $matches)) {
+            array_shift($matches); // Remove o match completo
+
+            list($ctrl, $action) = explode('@', $controller);
+            return $this->callActionWithParams($ctrl, $action, $matches);
+        }
+    }
+
+    throw new \Exception('No route defined for this URI.');
+}
+
+
+    
+protected function callActionWithParams($controller, $action, $params = [])
+{
+    $controller = "App\\Controllers\\{$controller}";
+    $controller = new $controller;
+
+    if (! method_exists($controller, $action)) {
+        throw new Exception(
+            "{$controller} does not respond to the {$action} action."
+        );
+    }
+
+    return call_user_func_array([$controller, $action], $params);
+}
+
+    
+     /*public function direct($uri, $requestType)
     {
         if (array_key_exists($uri, $this->routes[$requestType])) {
             return $this->callAction(
@@ -65,7 +101,7 @@ class Router
             );
         }
         throw new Exception('No route defined for this URI.');
-    }
+    }*/
 
     /**
      * Load and call the relevant controller action.

@@ -11,6 +11,7 @@ return array(
     'App\\Controllers\\ListaDePostsController' => $baseDir . '/app/Controllers/ListaDePostsController.php',
     'App\\Controllers\\ListaDeUsuariosController' => $baseDir . '/app/Controllers/ListaDeUsuariosController.php',
     'App\\Controllers\\LoginController' => $baseDir . '/app/Controllers/LoginController.php',
+    'App\\Controllers\\PostIndividualController' => $baseDir . '/app/Controllers/PostIndividualController.php',
     'App\\Controllers\\TabelaDePostsAdminController' => $baseDir . '/app/Controllers/TabelaDePostsAdminController.php',
     'App\\Core\\App' => $baseDir . '/core/App.php',
     'App\\Core\\Database\\Connection' => $baseDir . '/core/database/Connection.php',

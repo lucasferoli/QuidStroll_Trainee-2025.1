@@ -22,20 +22,18 @@
         <section id="postIndividualConteudo">
             <div id="postIndividualAutor">
                 <img src="/public/assets/foto-perfil.png" alt="">
-                <p id="postIndividualNome">Hayao Miyazaki</p>
+                <?php $usuario = \App\Core\App::get('database')->selectOne('usuarios', $post->id_autor); ?>
+                <p id="postIndividualNome"><?= $usuario->nome?></p>
                 <p id="postIndividualBolinha"> • </p>
-                <p id="postIndividualData">04/04/2025</p>
+                <p id="postIndividualData"><?= date('d/m/Y', strtotime($post->criado_em))?></p>
             </div>
             <div id="postIndividualQuids"> 
                 <div id="postIndividualImagem">
-                    <img src="/public/assets/imagem-exemplo.png" alt="">
+                    <img src="/<?= $post->imagem?>" alt="">
                 </div>
                 <div id="postIndividualTextual">
-                    <h1 id="postIndividualTituloPost">“Arte” por IA</h1>
-                    <p id="postIndividualTextoPost">A nova moda: "Arte no estilo Ghibli feita por IA" KKKKKKKKKKKK <br> 
-                        Agr qualquer um pd clicar num botão e fingir que entendeu uma obra. Com décadas de estudo, narrativa visual, animação quadro a quadro e filosofia existencial, se a IA pode gerar um frame bonitinho em 8 segundos, né <br>
-                        Daí acontece oq: <br>
-                        A diferença é q o Ghibli faz você chorar por causa de uma folha caindo, mas a IA só faz você dar like e seguir, talvez seja isso q a gnt qr hj... estética sem alma <br>
+                    <h1 id="postIndividualTituloPost"> <?= $post->titulo?> </h1>
+                    <p id="postIndividualTextoPost"><?= $post->descricao?>
                     </p>
                 </div>
             </div>

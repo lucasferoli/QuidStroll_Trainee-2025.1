@@ -48,6 +48,7 @@
     font-size: 2vh;
     font-weight: 800;
 }
+ 
 
 #logoDashboard {
     display: flex;
@@ -62,6 +63,11 @@
 
 .linkDashboard{
     text-decoration: none;
+}
+
+.linkDashboard button{
+    background-color: none;
+
 }
 
 @media (max-width: 768px){

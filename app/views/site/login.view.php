@@ -27,7 +27,7 @@
         <div class="campoSenha" >
             <label>Senha:</label>
             <div class="senhaOculta">
-                <input type="senha" id="senha" name="senha">
+                <input type="senha" id="senha" name="senha" autocomplete="off">
                 <button class="esconderSenha">
                     <i class="fas fa-eye-slash" id="iconeOcultar"></i>
                 </button>
@@ -35,9 +35,10 @@
         </div>
 
         <div class="mensagem-erro-Login">
-            <p>
-                <?php
-                session_start();
+            <p><?php
+                if (session_status() === PHP_SESSION_NONE) {
+                    session_start();
+                }
                 if(isset($_SESSION['mensagem-erro'])){
                      echo($_SESSION['mensagem-erro']);
                 }
