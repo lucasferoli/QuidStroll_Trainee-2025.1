@@ -29,7 +29,7 @@ require('app\views\site\componentes\navbar.view.php')
                 <div class="balao-descricao-landingPage">
                     <p>Um lugar feito para liberar seus pontos de vista, filosofia ou qualquer conclusão da sua mente. Vem fazer um quid!</p>
                 </div>
-                <img src="/public/assets/quidStroll-logo.png" alt="">
+                <img src="/public/assets/quidStroll-logo-Nome.png" alt="">
             </div>
         </div>
             <div class="imagem-mascote-landingPage">
@@ -56,25 +56,37 @@ require('app\views\site\componentes\navbar.view.php')
             <div class="post-landingPage"> 
                 <img src="/public/assets/118-1187209_black-hat-png-stock-by-doloresminette-pluspng-fedora.png" alt="">
                 <h1>Chapéus fedora precisam acabar</h1>
+                <div class="containerAutorBotao-ladingPage">
+
+                </div>
                 <p>Juca Silva</p>
                 <div class = "botao-ver-mais-landingPage">Ver mais</div>
             </div>
             <div class="post-landingPage"> 
                 <img src="/public/assets/fazenda-porteira.webp" alt="">
                 <h1>Cripto fazendas são o futuro</h1>
+                <div class="containerAutorBotao-ladingPage">
+                    
+                </div>
                 <p>João Silva</p>
                 <div class = "botao-ver-mais-landingPage">Ver mais</div>
             </div>
             <div class="post-landingPage"> 
                 <img src="/public/assets/casa.jpg" alt="">
                 <h1>Cripto casas que são o futuro</h1>
+                <div class="containerAutorBotao-ladingPage">
+                    
+                </div>
                 <p>Jonas Silva</p>
                 <div class = "botao-ver-mais-landingPage">Ver mais</div>
             </div>
             <div class="post-landingPage"> 
                 <img src="/public/assets/futuro.jpg" alt="">
                 <h1>Não haverá futuro</h1>
-                <p>Jô Silva</p>
+                <div class="containerAutorBotao-ladingPage">
+                    
+                </div>
+                <p><br>Jô Silva</p>
                 <div class = "botao-ver-mais-landingPage">Ver mais</div>
             </div>
 

@@ -8,6 +8,11 @@ $router->get('', 'LandingController@index');
 
 $router->get('login', 'LoginController@index');
 $router->get('dashboard', 'DashboardController@index');
+$router->get('ListaDeUsuarios', 'ListaDeUsuariosController@index');
+$router->post('ListaDeUsuarios/create', 'ListaDeUsuariosController@store');
+$router->post('ListaDeUsuarios/edit', 'ListaDeUsuariosController@edit');
+$router->post('ListaDeUsuarios/delete', 'ListaDeUsuariosController@delete');
+
 $router->get('lista', 'ListaDePostsController@index');
 $router->get('tabeladeposts', 'TabelaDePostsAdminController@index'); //antes era 'admin/tabelaDePosts' para todos os 3
 $router->post('tabeladeposts/create', 'TabelaDePostsAdminController@store');
