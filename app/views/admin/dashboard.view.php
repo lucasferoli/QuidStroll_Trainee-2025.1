@@ -38,11 +38,9 @@ if(!isset($_SESSION['id'])){
 
                 <form action="logout" method="POST">
 
-                <a class="linkDashboard" href="">
-                    <div class="cardDashboard">
-                    <button type="submit"><p>LOGOUT</p></button>    
-                    </div>
-                </a>
+   
+                    <button class="cardDashboard" type="submit"><p>LOGOUT</p></button>    
+         
                 </form>
             </div>
         <div id="logoDashboard">
