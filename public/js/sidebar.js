@@ -24,12 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    document.getElementById('logout').addEventListener('click', (e) => {
-        e.preventDefault();
-        if(confirm('Tem certeza que deseja sair?')) {
-            alert('Você foi desconectado!');
-        }
-    });
+    //document.getElementById('logout').addEventListener('click', (e) => {
+    //    e.preventDefault();
+    //    if(confirm('Tem certeza que deseja sair?')) {
+    //        alert('Você foi desconectado!');
+    //    }
+    //});
 
     window.addEventListener('resize', () => {
         if (window.innerWidth <= 768) {

@@ -21,26 +21,34 @@
             </button>
         </div>
         <nav class="sidebarNav">
-            <a href="#" class="active" data-page="dashboard">
+            <a href="app\views\admin\dashboard.view.php" class="active" data-page="dashboard">
                 <i class="fas fa-tachometer-alt"></i>
                 <span class="link-text">Dashboard</span>
             </a>
-            <a href="#" data-page="posts">
+            <a href="/tabeladeposts" data-page="posts">
                 <i class="fas fa-newspaper"></i>
                 <span class="link-text">Posts</span>
             </a>
-            <a href="#" data-page="users">
+            <a href="/ListaDeUsuarios" data-page="users">
                 <i class="fas fa-users"></i>
                 <span class="link-text">Usuários</span>
             </a>
         </nav>
         <div class="sidebarFooter">
-            <a href="#" id="logout">
-                <i class="fas fa-sign-out-alt"></i>
-                <span class="link-text">Logout</span>
+            <form action="logout" method="POST">
+            <a id="logout">
+                <button style="all:unset" type="submit">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="link-text">Logout</span>
+                </button>
             </a>
+            </form>
         </div>
     </div>
     <script src="\public\js\sidebar.js"></script>
 </body>
 </html>
+
+<!--<form action="logout" method="POST"> 
+                    <button class="cardLogout" type="submit"><p>LOGOUT</p></button>
+                </form>

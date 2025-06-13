@@ -105,7 +105,7 @@ body{
     margin-right: 0;
 }
 
-.sidebarFooter {
+.sidebarFooter a {
     position: absolute;
     bottom: 0;
     width: 88%;
