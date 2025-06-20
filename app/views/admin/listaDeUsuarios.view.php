@@ -29,6 +29,18 @@
             <button onclick="abrirModal('criarUsuario')"><img src="/public/assets/novoUsuario.png" alt="" id="novoUsuario-listaDeUsuarios"></button>
         </div>
 
+         <div class="barraDePesquisa-Posts">
+        <form method="GET"  action="/admin/tabeladeposts/search" id="form-inputSearch-Posts">
+            <input type="text" name="busca" placeholder="Buscar" autocomplete="off">
+        <button type="submit" id="botaoDePesquisa-Search"><img src="/public/assets/lupa.png" alt=""></button>
+    </form>
+
+    <form method="GET"  action="/admin/tabeladeposts/clean" id="form-refresh-Posts">
+        <button type="submit" id="botaoLimpeza-Search"><img src="/public/assets/refreshPosts.png" alt=""></button>
+    </form>
+
+    </div>
+
         <div class="campoTabela-listaDeUsuarios">
             <table class="tabela-listaDeUsuarios">
                 <thead class="cabecalhoTabela-listaDeUsuarios">

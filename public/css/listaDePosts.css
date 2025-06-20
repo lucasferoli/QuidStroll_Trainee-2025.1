@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Rubik', sans-serif;
   }
 
-.segBarraDePesquisa {
+/*.segBarraDePesquisa {
     display: flex;
     justify-content: center;
     margin: 4vh 0px 4vh 0px;
@@ -59,7 +59,83 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1.56vh 1.56vh 1.8vh 1.56vh;
     border-top-right-radius: 7.82vh;
     border-bottom-right-radius: 7.82vh;
+}*/
+.barraDePesquisa-Posts {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-size: 60px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 1% 0% 0% 0%;
 }
+
+.barraDePesquisa-Posts form {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+#form-inputSeach-Posts {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: 10px;
+}
+
+
+#botaoDePesquisa-Search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+#botaoLimpeza-Search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.barraDePesquisa-Posts button img,
+#botaoLimpeza-Search img {
+    width: 20px;
+    height: 20px;
+}
+
+.barraDePesquisa-Posts input {
+    font-size: 1rem;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.barraDePesquisa-Posts button{
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    background-color:#85C1E9;
+    transition: background-color 0.2s ease;
+}
+
+.barraDePesquisa-Posts button:hover{
+    background-color:#2E86C1;
+}
+
+
+
+
 
 .grid {
     display: grid;
