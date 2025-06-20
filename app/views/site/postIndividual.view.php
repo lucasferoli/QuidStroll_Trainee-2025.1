@@ -41,7 +41,10 @@
                 </div>
             </div>
         </section>   
-        <section class="areaDeComentarios">
+        
+    </main>
+
+    <section class="areaDeComentarios">
             <div>
                 <?php
                 require('app\views\site\componentes\criarComentario.php');                
@@ -53,7 +56,6 @@
                 ?>
             </div>
         </section>
-    </main>
 
     <?php 
     require('app\views\site\componentes\footer.view.php');

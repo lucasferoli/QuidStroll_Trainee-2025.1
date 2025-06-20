@@ -1,0 +1,51 @@
+form {
+    display: flex;
+    flex-direction: column;
+    font-size: 60px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.titulo-Comentario {
+    display: flex;
+    font-size: 50%;
+    width: 100%;
+}
+
+.campoCriar-Comentario {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.conteudo-Comentario {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.conteudo-Comentario h1 {
+    font-size: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.conteudo-Comentario input {
+    font-size: 30%;
+    margin: 0;
+    border-radius: 8px;
+    padding: 8px;
+    width: 300px;
+}
+
+.botaoEnviar-Comentario button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
