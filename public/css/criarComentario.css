@@ -66,6 +66,9 @@ form {
     align-self: center;
 
 }
+.conteudo-Comentario span{
+    font-size: 30%;
+}
 
 @media(max-width: 750px) {
     .conteudo-Comentario {

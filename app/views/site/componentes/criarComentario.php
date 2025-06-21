@@ -13,17 +13,21 @@
 <body>
  <form action="/postIndividual/{id}/create" method="POST">
     <div class="titulo-Comentario">
-        Crie seu comentário:
+        Comentários
     </div>
     <div class="campoCriar-Comentario">
         <div class="conteudo-Comentario">
-            <input type="text" name="conteudo" autocomplete="off">
+
+            <input type="text" name="conteudo" autocomplete="off" placeholder="Crie seu comentário..." class="inputComentario" maxlength="70">
             <input type="hidden" name="id_post" value="<?= $post->id ?>">
+            <span class="inputCaracteres"></span>
             <button type="submit"><img src="/public/assets/setaEnviar.png" alt=""></button>
+       
         </div>
     </div>
 </form>
     
 </body>
+<script src="/public/js/comentario.js"></script>
 </html>
 
