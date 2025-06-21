@@ -31,3 +31,4 @@ $router->get('admin/tabeladeposts/clean', 'TabelaDePostsAdminController@clean');
 $router->get('ListaDeUsuarios', 'ListaDeUsuariosController@paginate');
 
 $router->post('postIndividual/{id}/create', 'PostIndividualController@store');
+$router->post('postIndividual/{id}/delete', 'PostIndividualController@delete');

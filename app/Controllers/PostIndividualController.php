@@ -27,4 +27,9 @@ class PostIndividualController
         App::get('database')->insert('comentarios', $parametros);
         header("Location: /postIndividual/{$_POST['id_post']}");
     }
+
+   public function delete($id) {
+    App::get('database')->delete('comentarios', $id);
+    header("Location: /postIndividual/{$_POST['id_post']}");
+}
 }
