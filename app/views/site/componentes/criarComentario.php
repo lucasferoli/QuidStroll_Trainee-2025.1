@@ -21,7 +21,7 @@
             <input type="text" name="conteudo" autocomplete="off" placeholder="Crie seu comentário..." class="inputComentario" maxlength="70">
             <input type="hidden" name="id_post" value="<?= $post->id ?>">
             <span class="inputCaracteres"></span>
-            <button type="submit"><img src="/public/assets/setaEnviar.png" alt=""></button>
+            <button type="submit" class="botaoEnviarComentario"><img src="/public/assets/setaEnviar.png" alt=""></button>
        
         </div>
     </div>

@@ -9,7 +9,7 @@ form {
     align-items: flex-start;
     width: 100%;
     padding: 1% 0% 0% 0%;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .titulo-Comentario {
@@ -17,6 +17,7 @@ form {
     display: flex;
     font-size: 50%;
     width: 100%;
+    padding: 0% 0% 1% 0%;
 }
 
 .campoCriar-Comentario {
@@ -49,10 +50,11 @@ form {
 }
 
 .conteudo-Comentario button {
+    display: none;
     background-color: #3498db;
     color: white;
     border: none;
-    padding: 3%;
+    padding: 2%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     justify-content: center;
@@ -68,9 +70,10 @@ form {
 }
 .conteudo-Comentario span{
     font-size: 30%;
+    width: 50px;
 }
 
-@media(max-width: 750px) {
+@media(max-width: 800px) {
     .conteudo-Comentario {
 
     flex-direction: column;

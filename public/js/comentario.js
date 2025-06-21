@@ -9,5 +9,12 @@ input.addEventListener (
     function(){
         var textLength = input.value.length;
         result.textContent = textLength + '/' + limit;
+        if(textLength > 0){
+            document.querySelector('.botaoEnviarComentario').style.display = "flex";
+        }
+        else{
+            document.querySelector('.botaoEnviarComentario').style.display = "none";
+
+        }
 }
 );

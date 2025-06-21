@@ -18,7 +18,7 @@
     align-items: last baseline;
     gap: 10px;
     border-bottom: 1px solid #1B4F72;
-    padding: 1% 1% 1% 1%;
+    padding: 1% 1% 0% 1%;
 }
 .cabecalhoComentarioIndividual h1{
     margin: 0%;
