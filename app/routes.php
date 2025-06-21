@@ -29,5 +29,7 @@ $router->get('admin/tabeladeposts/search', 'TabelaDePostsAdminController@search'
 $router->get('admin/tabeladeposts/clean', 'TabelaDePostsAdminController@clean');
 
 $router->get('ListaDeUsuarios', 'ListaDeUsuariosController@paginate');
+$router->get('tabeladeposts', 'TabelaDePostsAdminController@paginate');
+$router->get('lista', 'ListaDePostsController@paginate');
 
 $router->post('postIndividual/{id}/create', 'PostIndividualController@store');

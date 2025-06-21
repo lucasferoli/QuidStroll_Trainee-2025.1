@@ -18,6 +18,7 @@ if(!isset($_SESSION['id'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body id="bodyPaginaTabelaDePosts">
     <!------------------------- Cabeçalho ----------------------->
@@ -87,15 +88,41 @@ if(!isset($_SESSION['id'])) {
 
     <!------------------------- Paginação ----------------------->
     <!----------------------------------------------------------->
-    <div id="paginacao-tabelaDePosts">
-        <div id="botoes-tabelaDePosts">
-            <button>&lt</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>&gt</button>
-        </div>
-    </div>
+    <nav class="paginacao-listaDeUsuarios">
+        <ul>
+            <!-- Página Anterior -->
+            <li class="page-item <?= $page <= $total_pages ? ' class="disabled"' : '' ?>">
+                <?php if ($page > 1): ?>
+                    <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page - 1 ?>">
+                        <span>&laquo;</span>
+                    </a>
+                <?php else: ?>
+                    <span>&laquo;</span>
+                <?php endif; ?>
+            </li>
+
+            <!-- Números das páginas -->
+            <?php for ($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
+                <li>
+                    <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page_number ?>" 
+                    class="<?= $page_number == $page ? 'active' : '' ?>">
+                        <?= $page_number ?>
+                    </a>
+                </li>
+            <?php endfor; ?>
+
+            <!-- Página Seguinte -->
+            <li class="page-item <?= $page >= $total_pages ? ' class="disabled"' : '' ?>">
+                <?php if ($page < $total_pages): ?>
+                    <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page + 1 ?>">
+                        <span>&raquo;</span>
+                    </a>
+                <?php else: ?>
+                    <span>&raquo;</span>
+                <?php endif; ?>
+            </li>
+        </ul>
+    </nav>
 
     <!----------------------Modal------------------------------->
     <!---------------------------------------------------------->
@@ -230,5 +257,6 @@ if(!isset($_SESSION['id'])) {
         </div>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="/public/js/indexTabelaDePosts.js"></script>
 </html>

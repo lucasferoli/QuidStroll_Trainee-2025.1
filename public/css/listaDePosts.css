@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 1% 0% 0% 0%;
+    margin: 2% 0% 2% 0%;
 }
 
 .barraDePesquisa-Posts form {
@@ -144,7 +144,6 @@ h1, h2, h3, h4, h5, h6 {
     row-gap: 4.69vh;
     justify-content: center;
     padding: 0 6.25vh;
-    padding-bottom: 5%;
 }
 
 .card1 {
@@ -394,3 +393,99 @@ h1, h2, h3, h4, h5, h6 {
     }
 
 }
+
+/*--------------------------------------------------------------------------*/
+/*----------------------------------Paginação-------------------------------*/
+.paginacao-listaDeUsuarios{
+    margin: 2% 0% 2% 0%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: fit-content;
+    padding: 1% 3% 1% 3%;
+    background-color: #85C1E9;
+    border-radius: 999px 999px 999px 999px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+    justify-content: center;
+    text-decoration: none;
+}
+
+
+
+.paginacao-listaDeUsuarios li{
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    width: 3rem;
+    height: 2rem;
+    border: none;
+    background-color: #85C1E9;
+    cursor: pointer;
+    list-style-type: none;
+}
+
+.paginacao-listaDeUsuarios li {
+    color: #0D6EFD !important;
+}
+
+#paginaEmUso-listaDeUsuarios{
+    background-color: #F4F6F7;
+    border-radius: 20px;
+    box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+.paginacao-listaDeUsuarios li:hover{
+    display: flex;
+    justify-content: center;
+    width: 3rem;
+    background-color: #F4F6F7;
+    border-radius: 20px;
+    box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+
+}
+
+.paginacao-listaDeUsuarios ul{
+        margin-bottom: 0 !important;
+        display: flex;
+        flex-direction: row;
+        padding-left: 0 !important;
+    }
+
+
+@media (max-width: 900px) {
+    .listaDeUsuarios{
+        width: 100vw;
+        height: auto;
+        overflow-x: hidden;
+    }
+    .titulo-listaDeUsuarios{
+        background-color: #F4F6F7;
+        border-bottom: 2px solid #1A1A1A;
+        font-size: 40px;
+    }
+    .sidebar-listaDeUsuarios{
+            display: none;
+            flex-direction: none;
+            width: none;
+            height: none;
+            background-color: none;
+    }
+    .paginacao-listaDeUsuarios{
+        margin-left: auto;
+       margin-right: auto;
+    
+    }
+
+    .paginacao-listaDeUsuarios ul{
+            margin-bottom: 0 !important;
+    }
+
+    
+}
+

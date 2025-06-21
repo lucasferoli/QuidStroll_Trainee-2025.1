@@ -96,4 +96,27 @@ class TabelaDePostsAdminController
     public function clean(){
         header('Location: /tabeladeposts');
     }
+
+    public function paginate()
+    {
+        $page =1;
+        if(isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero'])) {
+            $page = intval($_GET['paginacaoNumero']);
+
+            if($page <= 0){
+                return redirect('admin/tabeladeposts');
+            }
+        }
+        $itensPage = 5;
+        $inicio = $itensPage * ($page - 1);
+        $rows_count = App::get('database')->countAll('posts');
+
+        if($inicio > $rows_count){
+            return redirect('admin/tabeladeposts');
+        }
+
+        $posts = App::get('database')->selectAll('posts', $inicio, $itensPage);
+        $total_pages = ceil($rows_count / $itensPage);
+        return view('admin/tabeladeposts', compact('posts','page', 'total_pages'));
+    }
 }
