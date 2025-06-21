@@ -16,10 +16,11 @@ class PostIndividualController
     }
 
     public function store($id) {
+        session_start();
         $parametros = [
             'conteudo' => $_POST['conteudo'],
             'id_post'=> $_POST['id_post'],
-            'id_autor' => 1,
+            'id_autor' => $_SESSION['id'],
         ];
 
   
