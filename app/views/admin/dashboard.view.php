@@ -35,14 +35,15 @@ if(!isset($_SESSION['id'])){
                         <p>USUÁRIOS</p>
                     </div>
                 </a>
-
-                <form action="logout" method="POST">
-
-                    
-                    <button class="cardLogout" type="submit"><p>LOGOUT</p></button>    
-                    
-            
-                </form>
+                <div class="cardLogout">
+                    <form action="logout" method="POST">
+                    <a id="logout">
+                        <button style="all:unset" type="submit">
+                            <span class="link-text">LOGOUT</span>
+                        </button>
+                    </a>
+                    </form>
+                </div>
             </div>
         <div id="logoDashboard">
             <img src = "/public/assets/QuidStroll-logo.png" alt="Logo">

@@ -20,6 +20,11 @@ if(!isset($_SESSION['id'])) {
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body id="bodyPaginaTabelaDePosts">
+    
+    <div class="divPai">
+    <div> <?php require('app\views\admin\componentes\sidebar.php'); ?> </div>
+    
+    <div>
     <!------------------------- Cabeçalho ----------------------->
     <!----------------------------------------------------------->
 
@@ -33,7 +38,6 @@ if(!isset($_SESSION['id'])) {
     </div>
 
 
-    <?php require('app\views\admin\componentes\sidebar.php'); ?>
 
     <!---------------------------- Tabela ----------------------->
     <!----------------------------------------------------------->
@@ -81,7 +85,7 @@ if(!isset($_SESSION['id'])) {
             </tbody>
         </table>
     </main>
-
+                
     <!------------------------- Paginação ----------------------->
     <!----------------------------------------------------------->
     <div id="paginacao-tabelaDePosts">
@@ -224,8 +228,9 @@ if(!isset($_SESSION['id'])) {
                 <button type="button" onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
                 <button id = "botao-fechar-ver-mais" type="button" onclick="fecharModal('janelaModalVerMais', 'fundoModalVerMais')">fechar</button>   
             </div>
-        </div>
-
+      </div>
+    </div>
+</div>
 </body>
 <script src="/public/js/indexTabelaDePosts.js"></script>
 </html>

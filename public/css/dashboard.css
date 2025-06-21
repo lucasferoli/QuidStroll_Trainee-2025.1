@@ -20,8 +20,8 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    font-weight: 600;
-    font-family: rubik;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
     font-size: 4vh;
     color: #1B4F72;
 }
@@ -44,7 +44,7 @@
     height: 8vh;
     width: 40vh;
     color: #1B4F72;
-    font-family: nunito;
+    font-family: 'Nunito', sans-serif;
     font-size: 2vh;
     font-weight: 800;
 }
@@ -62,9 +62,14 @@
     height: 8vh;
     width: 40vh;
     color: #1B4F72;
-    font-family: nunito;
+    font-family: 'Nunito', sans-serif;
     font-size: 2vh;
     font-weight: 800;
+    cursor: pointer;
+}
+
+.cardLogout:hover {
+    background-color: #2386c1;;
 }
 
 #logoDashboard {
@@ -98,7 +103,7 @@
     }
     #textDashboard {
         font-weight: 600;
-        font-family: rubik;
+        font-family: 'Nunito', sans-serif;
         font-size: 3vh;
         color: #1B4F72;
     }

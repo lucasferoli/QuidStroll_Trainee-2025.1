@@ -19,17 +19,17 @@ body{
 }
 
 .sidebar {
-    width: 250px;
+    width: 200px;
     background: #2e86c1;
     color: #f4f6f7;
-    height: 100vh;
-    position: fixed;
+    height: 100%;
+    position: relative;
     transition: width 0.3s ease;
     overflow: hidden;
 }
 
 .sidebar.collapsed {
-    width: 70px;
+    width: 60px;
 }
 
 .sidebar.collapsed .sidebarTitle,
@@ -87,7 +87,11 @@ body{
     align-items: center;
 }
 
-.sidebarNav a:hover, .sidebarNav a.active {
+.sidebarNav a:hover {
+    background: #1b4f72;
+}
+
+.sidebarNav a.active:hover {
     background: #1b4f72;
 }
 
@@ -110,24 +114,23 @@ body{
     bottom: 0;
     width: 88%;
     padding: 15px;
+    cursor: pointer;
 }
 
 .sidebarFooter a:hover {
-    background: #1b4f72;
+    background: #e74c3c;
 }
 
 .sidebarFooter a {
     color: #f4f6f7;
     text-decoration: none;
-    display: flex;
     align-items: center;
     padding: 15px;
-    border-radius: 5px;
 }
 
 main {
-    margin-left: 250px;
-    padding: 20px;
+    margin: 5px;
+    padding: 15px 20px 15px;
     transition: margin-left 0.3s ease;
 }
 

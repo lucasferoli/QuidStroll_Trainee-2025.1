@@ -55,10 +55,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .segBarraDePesquisa i {
     color: white;
-    background-color: #0057FF;
+    background-color: #2e86c1;
     padding: 1.56vh 1.56vh 1.8vh 1.56vh;
     border-top-right-radius: 7.82vh;
     border-bottom-right-radius: 7.82vh;
+    cursor: pointer;
+}
+
+.segBarraDePesquisa i:hover {
+    background-color: #1b4f72 ;
 }
 
 .grid {
