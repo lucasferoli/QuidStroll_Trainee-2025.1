@@ -11,7 +11,7 @@ class PostIndividualController
     public function index($id)
     {
         $post = App::get('database')->selectOne('posts', $id);
-        $comentarios = App::get('database')->selectOne('comentarios', $id);
+        $comentarios = App::get('database')->selectWhereLike('comentarios', 'id_post', $post->id);
         return view('site/postIndividual', compact('post', 'comentarios'));
     }
 
@@ -21,8 +21,10 @@ class PostIndividualController
             'id_post'=> $_POST['id_post'],
             'id_autor' => 1,
         ];
+
+  
         
         App::get('database')->insert('comentarios', $parametros);
-        header('Location: /postIndividual/{$id}');
+        header("Location: /postIndividual/{$_POST['id_post']}");
     }
 }
