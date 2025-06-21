@@ -95,7 +95,7 @@ body{
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 1% 0% 0% 0%;
+    margin: 2% 0% 2% 0%;
 }
 
 .barraDePesquisa-Posts form {
@@ -168,7 +168,7 @@ body{
     width: 100%;
     height: auto;
     background-color: #F4F6F7;
-    padding: 2% 2% 0% 10%;
+    padding: 0vh 7.8vh 0vh 7.8vh;
 }
 .tabela-listaDeUsuarios{
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
@@ -186,7 +186,7 @@ body{
 }
 .cabecalhoTabela-listaDeUsuarios th{
     padding: 2% 2% 2% 2%;
-    height: auto;
+    height: 12.5vh;
     text-align: center;
     width: 10%;
 }
@@ -196,9 +196,8 @@ body{
     font-weight: 500;
     font-size: 1.25rem;
     padding: 2% 2% 2% 2%;
-    height: auto;
+    height: 12.5vh;
     text-align: center;
-    
 }
 
 
@@ -223,7 +222,7 @@ td img{
 }
 
 .paginacao-listaDeUsuarios{
-    margin: 2% 0% 0% 0%;
+    margin: 2% 0% 2% 0%;
     display: flex;
     flex-direction: row;
     gap: 1rem;

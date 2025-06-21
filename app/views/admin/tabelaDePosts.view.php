@@ -33,32 +33,35 @@ if(!isset($_SESSION['id'])) {
     </div>
 
 
-    <?php require('app\views\admin\componentes\sidebar.php'); ?>
-
-    <!---------------------------- Tabela ----------------------->
+    <!---------------------- Barra de Pesquisa ------------------>
     <!----------------------------------------------------------->
+
+    <?php require('app\views\admin\componentes\sidebar.php'); ?>
 
     <div class="barraDePesquisa-Posts">
         <form method="GET"  action="/admin/tabeladeposts/search" id="form-inputSearch-Posts">
             <input type="text" name="busca" placeholder="Buscar" autocomplete="off">
         <button type="submit" id="botaoDePesquisa-Search"><img src="/public/assets/lupa.png" alt=""></button>
-    </form>
+        </form>
 
-    <form method="GET"  action="/admin/tabeladeposts/clean" id="form-refresh-Posts">
-        <button type="submit" id="botaoLimpeza-Search"><img src="/public/assets/refreshPosts.png" alt=""></button>
-    </form>
-
+        <form method="GET"  action="/admin/tabeladeposts/clean" id="form-refresh-Posts">
+            <button type="submit" id="botaoLimpeza-Search"><img src="/public/assets/refreshPosts.png" alt=""></button>
+        </form>
     </div>
+
+    
+    <!---------------------------- Tabela ----------------------->
+    <!----------------------------------------------------------->
 
     <main id="conteudoTabelaDePosts">
         <table id="tabelaDePosts">
             <thead id="cabecalhoTabelaDePosts">
                 <tr class="trTabelaDePosts">
                     <th class="idTabelaDePosts">ID</th>
-                    <th class="tituloTabelaDePosts">TÍTULO</th>
-                    <th class="autorTabelaDePosts">AUTOR</th>
-                    <th class="dataTabelaDePosts">DATA</th>
-                    <th class="acoesTabelaDePosts">AÇÕES</th>
+                    <th class="tituloTabelaDePosts">Título</th>
+                    <th class="autorTabelaDePosts">Autor</th>
+                    <th class="dataTabelaDePosts">Data</th>
+                    <th class="acoesTabelaDePosts">Ações</th>
                 </tr>
             </thead>
             <tbody id="bodyTabelaDePosts">
