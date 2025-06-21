@@ -23,10 +23,10 @@
     </section>
     <section class="listaDeUsuarios">
         <div class="titulo-listaDeUsuarios">
-            <h1>Lista de Usuários</h1>
-        </div>
-        <div class="botaoAdicionar-listaDeUsuarios">
-            <button onclick="abrirModal('criarUsuario')"><img src="/public/assets/novoUsuario.png" alt="" id="novoUsuario-listaDeUsuarios"></button>
+            <h1>Tabela de Usuários</h1>
+            <div class="botaoAdicionar-listaDeUsuarios">
+                <button onclick="abrirModal('criarUsuario')"><img src="/public/assets/novoUsuario.png" alt="" id="novoUsuario-listaDeUsuarios"></button>
+            </div>
         </div>
 
          <div class="barraDePesquisa-Posts">
