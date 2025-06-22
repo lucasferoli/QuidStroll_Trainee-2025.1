@@ -130,7 +130,8 @@ if(!isset($_SESSION['id'])) {
 
 
                 <div class="autorModalEditar-tabelaDePosts">
-                    <p>Lorem Ipsum</p>
+                    <?php $usuario = \App\Core\App::get('database')->selectOne('usuarios', $post->id_autor); ?>
+                    <p><?= $usuario->nome?></p>
                 </div>
                 <div class="dataModalEditar-tabelaDePosts">
                     <p><?= $post->criado_em ?></p>
@@ -139,6 +140,11 @@ if(!isset($_SESSION['id'])) {
             </div>
         </form>
     </div>
+
+
+
+
+    
 <!--Modal Excluir-->
 <div class="fundoModal-tabelaDePosts" id="fundoModal<?= $post->id ?>"></div>
 <div class="modalExcluir-tabelaDePosts" id="janelaModalExcluir<?= $post->id ?>">

@@ -31,7 +31,7 @@ input.addEventListener (
 }
 );*/
 
-function verificarCampos(inputs, botaoSelector) {
+/*function verificarCampos(inputs, botaoSelector) {
     const botao = document.querySelector(botaoSelector);
 
     const algumVazio = inputs.some(inputSelector => {
@@ -64,33 +64,46 @@ function aplicarContador(inputSelector, contadorSelector, limite, camposParaVeri
         verificarCampos(camposParaVerificar, botaoSelector);
     });
 }
+    */
 
 
-
-
-/*function contadorCaracteres(inputSelector, contadorSelector, botaoSelector, limite){
-    const input = document.querySelector(inputSelector);
-    const result = document.querySelector(contadorSelector);
+function verificarCampos(inputs, botaoSelector) {
     const botao = document.querySelector(botaoSelector);
-    
-    result.textLength = 0 + '/' + limite;
 
-    input.addEventListener('input', 
-        function(){
-
-        var textLength = input.value.length;
-        result.textContent = textLength + '/' + limite;
-         if(textLength > 0){
-            botao.style.display = "flex";
-        }
-        else{
-            botao.style.display = "none";
-        }
+    const algumVazio = inputs.some(inputSelector => {
+        const input = document.querySelector(inputSelector);
+        return input.value.trim().length === 0;
     });
-}*/
 
+    if (algumVazio) {
+        botao.style.display = 'none';
+    } else {
+        botao.style.display = 'flex';
+    }
+}
 
+function aplicarContador(inputSelector, contadorSelector, limite, camposParaVerificar, botaoSelector) {
+    const input = document.querySelector(inputSelector);
+    const contador = document.querySelector(contadorSelector);
 
+    function atualizar() {
+        const textLength = input.value.length;
+        contador.textContent = textLength + '/' + limite;
+
+        if (textLength > limite) {
+            input.value = input.value.substring(0, limite);
+            contador.textContent = limite + '/' + limite;
+        }
+
+        verificarCampos(camposParaVerificar, botaoSelector);
+    }
+
+    // 🔥 Atualiza imediatamente quando carrega a página
+    atualizar();
+
+    // 🔥 E também quando digita
+    input.addEventListener('input', atualizar);
+}
 aplicarContador(
     '.inputTitulo-Adicionar', 
     '.contadorTitulo-Adicionar', 
@@ -108,13 +121,13 @@ aplicarContador(
 );
 
 
-/*
+
 
 aplicarContador(
     '.tituloModalEditar-tabelaDePosts', 
     '.contadorTitulo-Editar', 
     50, 
-    ['.tituloModalEditar-tabelaDePosts', '.inputConteudo-Adicionar'], 
+    ['.tituloModalEditar-tabelaDePosts', '.textoModalEditar-tabelaDePosts'], 
     '.botaoSalvarEdicao-tabelaDePosts'
 );
 
@@ -122,9 +135,9 @@ aplicarContador(
     '.textoModalEditar-tabelaDePosts', 
     '.contadorConteudo-Editar', 
     200, 
-    ['.tituloModalEditar-tabelaDePosts', 'textoModalEditar-tabelaDePosts'], 
+    ['.tituloModalEditar-tabelaDePosts', '.textoModalEditar-tabelaDePosts'], 
     '.botaoSalvarEdicao-tabelaDePosts'
-);*/
+);
 
 
 
