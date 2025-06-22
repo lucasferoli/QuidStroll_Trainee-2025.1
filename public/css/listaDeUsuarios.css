@@ -449,6 +449,7 @@ td img{
     padding-bottom: 2vh;
 }
 
+
 @media (max-width: 430px){
     .modal-listaDeUsuarios {
         height: 55vh;

@@ -125,8 +125,8 @@
                     <input required type="text" name = "senha">
                 </div>
                 <div class="botoesModais-listaDeUsuarios">
-                    <button>SALVAR</button>
-                    <button type="button" onclick="fecharModal('criarUsuario')">CANCELAR</button>
+                    <button class="confirmar-listaDeUsuarios">SALVAR</button>
+                    <button class="cancelar-listaDeUsuarios" type="button" onclick="fecharModal('criarUsuario')">CANCELAR</button>
                 </div>
             </div>
         </form>
@@ -150,8 +150,8 @@
                     <input type="text" value="<?= $usuario->senha ?>" name = 'senha'>
                 </div>
                 <div class="botoesModais-listaDeUsuarios">
-                    <button>SALVAR</button>
-                    <button type="button" onclick="fecharModal('editarUsuario<?= $usuario->id?>')">CANCELAR</button>
+                    <button class="confirmar-listaDeUsuarios">SALVAR</button>
+                    <button class="cancelar-listaDeUsuarios" type="button" onclick="fecharModal('editarUsuario<?= $usuario->id?>')">CANCELAR</button>
                 </div>
             </div>
         </form>
@@ -171,7 +171,7 @@
                     <input type="password" value="<?= $usuario->senha ?>" disabled>
                 </div>
                 <div class="botoesModais-listaDeUsuarios">
-                    <button type="button" onclick="fecharModal('visualizarUsuario<?= $usuario->id?>')">FECHAR</button>
+                    <button class="confirmar-listaDeUsuarios"type="button" onclick="fecharModal('visualizarUsuario<?= $usuario->id?>')">FECHAR</button>
                 </div>
             </div>
 
@@ -181,8 +181,8 @@
                 <h1>Excluir</h1>
                 <p>TEM CERTEZA QUE DESEJA <br> DELETAR O USUÁRIO?</p>
                 <div class="botoesModais-listaDeUsuarios">
-                    <button >SIM</button>
-                    <button type="button" onclick="fecharModal('deletarUsuario<?= $usuario->id?>')">NÃO</button>
+                    <button class="confirmar-listaDeUsuarios">SIM</button>
+                    <button class="cancelar-listaDeUsuarios" type="button" onclick="fecharModal('deletarUsuario<?= $usuario->id?>')">NÃO</button>
                 </div>
             </div>
         </form>
