@@ -33,14 +33,14 @@ main {
 }
 
 .texto-hs-landingPage h1{
-    color: #E74C3C ;
-    position: relative;
-    z-index: 4;
-    font-family: "Nunito", sans-serif;
-    font-weight: 900;
-    font-size: 87px;
-    margin: 0%;
-    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2));
+color: #E74C3C ;
+position: relative;
+z-index: 4;
+font-family: "Nunito", sans-serif;
+font-weight: 900;
+font-size: 75px;
+margin: 0%;
+filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2));
 }
 
 .logo-descricao-landingPage{
@@ -276,13 +276,26 @@ a{
 }
 
 
-
+@media(min-width: 2400px){
+.hero-section-landingPage {
+padding: 10%;
+height: 120%;
+}
+.texto-hs-landingPage h1 {
+width: 100%;
+font-size: 9rem;
+}
+}
 
 @media(min-width: 1500px){
   .hero-section-landingPage {
     padding: 5%;
     height: 120%;
   }
+  .posts-recentes-landingPage {
+    padding-left: 20%;
+    padding-right: 20%;
+}
 }
 
   @media (max-width: 1000px) {

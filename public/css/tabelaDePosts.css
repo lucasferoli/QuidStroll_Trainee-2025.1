@@ -465,6 +465,80 @@
     #paginacaoTabelaDePosts img{
         width: 4vw;
     }
+    .modalEditar-tabelaDePosts {
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    
+    .cabecalhoModalEditar-tabelaDePosts {
+        font-size: 1.5rem;
+        padding: 2% 3%;
+    }
+    
+    .formModalEditar-tabelaDePosts {
+        flex-direction: column;
+        padding: 3%;
+    }
+    
+    .campoImagemModalEditar-tabelaDePosts {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .campoImagemModalEditar-tabelaDePosts img {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .corpoModalEditar-tabelaDePosts {
+        width: 100%;
+        padding: 0;
+        font-size: 1rem;
+    }
+    
+    .tituloModalEditar-tabelaDePosts,
+    .textoModalEditar-tabelaDePosts {
+        font-size: 0.9rem;
+    }
+    
+    .autorModalEditar-tabelaDePosts,
+    .dataModalEditar-tabelaDePosts {
+        font-size: 0.8rem;
+    }
+    
+    .botaoSalvarEdicao-tabelaDePosts {
+        width: 50%;
+        font-size: 0.9rem;
+        margin-top: 15px;
+        align-self: center;
+    }
+    
+    /* Ajustes para os contadores */
+    .contadorTitulo-Editar,
+    .contadorConteudo-Editar {
+        font-size: 0.7rem;
+    }
+    
+    .inputTitulo-Editar input {
+        padding-right: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modalEditar-tabelaDePosts {
+        width: 95%;
+        border-width: 5px;
+    }
+    
+    .cabecalhoModalEditar-tabelaDePosts h1 {
+        font-size: 1.2rem;
+    }
+    
+    .botaoSalvarEdicao-tabelaDePosts {
+        width: 70%;
+        padding: 8px;
+    }
 }
 
 @media (max-width: 450px){
@@ -482,7 +556,7 @@
 
 @media (max-width: 350px) {
 
-        .acoesTabelaDePosts .excluirTabelaDePosts{
+    .acoesTabelaDePosts .excluirTabelaDePosts{
         display: none;
     }
 
@@ -493,8 +567,8 @@
     .acoesTabelaDePosts .visualizarTabelaDePosts {
         display: none;
     }
-
-        .acoesTabelaDePosts .TresPontosTabelaDePosts {
+    
+    .acoesTabelaDePosts .TresPontosTabelaDePosts {
         display: flex;
         height: 2.5vh;
         width: 4vw;
@@ -991,11 +1065,12 @@
 @media (max-width: 768px) {
     .modalVisualizar-tabelaDePosts,
     .modalAdicionar-tabelaDePosts {
-        width: 90%;
+        width: 70%;
     }
     
     .corpoModalVisualizar-tabelaDePosts {
-        flex-direction: column;
+        flex-direction: column !important;
+        align-items: center;
     }
     
     .corpoModalVisualizar-tabelaDePosts img {
@@ -1089,6 +1164,8 @@
     font-size: 1.1rem;
     line-height: 1.6;
     color: #333;
+    word-break: break-word; 
+    white-space: normal;
 }
 
 .infoModalVisualizar-tabelaDePosts {
