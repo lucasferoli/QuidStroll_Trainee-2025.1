@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar">
         <div class="logoNavbar">
-            <img src="/public/assets/Logo QuidStroll Original.jpg">
+            <img src="/public/assets/quidStroll-logo.png">
         </div>
         
         <button class="menuMobile" id="mobileMenu">
