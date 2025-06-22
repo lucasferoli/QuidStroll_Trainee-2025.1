@@ -9,46 +9,123 @@ function fecharModal(idModalUsuario, idFundoModal){
     document.getElementById(idFundoModal).style.display = "none";
 }
 
-// function abrirModalExcluir(idJanelaModalExcluir, idFundoModal){
-//     document.getElementById(idJanelaModalExcluir).style.display = "flex";
-//     document.getElementById(idFundoModal).style.display = "block";
+/*var input = document.querySelector('.inputTitulo-Adicionar');
+var result = document.querySelector('.contadorTitulo-Adicionar');
+var limit = 50;
+result.textContent = 0 + '/' + limit;
 
-// }
 
-// function fecharModalExcluir(idJanelaModalExcluir, idFundoModal){
-//     document.getElementById(idJanelaModalExcluir).style.display = "none";
-//     document.getElementById(idFundoModal).style.display = "none";
-// }
+input.addEventListener (
+    'input', 
+    function(){
+        var textLength = input.value.length;
+        result.textContent = textLength + '/' + limit;
+         if(textLength > 0){
+            document.querySelector('.botaoAdicionar').style.display = "flex";
+        }
+        else{
+            document.querySelector('.botaoAdicionar').style.display = "none";
 
-// //Abrir modal Adicionar
-// function abrirModal(idJanelaModalAdicionar, idFundoModalAdicionar){
-//     document.getElementById(idJanelaModalAdicionar).style.display = "flex";
-//     document.getElementById(idFundoModalAdicionar).style.display = "block";
-// }
+        }
+        
+}
+);*/
 
-// function fecharModal(idJanelaModalAdicionar, idFundoModalAdicionar){
-//     document.getElementById(idJanelaModalAdicionar).style.display = "none";
-//     document.getElementById(idFundoModalAdicionar).style.display = "none";
-// }
+function verificarCampos(inputs, botaoSelector) {
+    const botao = document.querySelector(botaoSelector);
 
-// //Abrir modal Visualizar
-// function abrirModal(idJanelaModalVisualizar, idFundoModalVizualizar){
-//     document.getElementById(idJanelaModalVisualizar).style.display = "flex";
-//     document.getElementById(idFundoModalVizualizar).style.display = "block";
-// }
+    const algumVazio = inputs.some(inputSelector => {
+        const input = document.querySelector(inputSelector);
+        return input.value.trim().length === 0;
+    });
 
-// function fecharModal(idJanelaModalVisualizar, idFundoModalVizualizar){
-//     document.getElementById(idJanelaModalVisualizar).style.display = "none";
-//     document.getElementById(idFundoModalVizualizar).style.display = "none";
-// }
+    if (algumVazio) {
+        botao.style.display = 'none';
+    } else {
+        botao.style.display = 'flex';
+    }
+}
 
-// //Abrir modal 3 pontinhos
-// function abrirModalVerMais(idjanelaModalVerMais, idfundoModalVerMais){
-//       document.getElementById(idjanelaModalVerMais).style.display = "flex";
-//       document.getElementById(idfundoModalVerMais).style.display = "flex";
-//   }
+function aplicarContador(inputSelector, contadorSelector, limite, camposParaVerificar, botaoSelector) {
+    const input = document.querySelector(inputSelector);
+    const contador = document.querySelector(contadorSelector);
 
-//   function fecharModalVerMais(idjanelaModalVerMais, idfundoModalVerMais){
-//       document.getElementById(idjanelaModalVerMais).style.display = "none";
-//       document.getElementById(idfundoModalVerMais).style.display = "none";
-//   }
+    contador.textContent = '0/' + limite;
+
+    input.addEventListener('input', function() {
+        const textLength = input.value.length;
+        contador.textContent = textLength + '/' + limite;
+
+        if (textLength > limite) {
+            input.value = input.value.substring(0, limite);
+            contador.textContent = limite + '/' + limite;
+        }
+
+        verificarCampos(camposParaVerificar, botaoSelector);
+    });
+}
+
+
+
+
+/*function contadorCaracteres(inputSelector, contadorSelector, botaoSelector, limite){
+    const input = document.querySelector(inputSelector);
+    const result = document.querySelector(contadorSelector);
+    const botao = document.querySelector(botaoSelector);
+    
+    result.textLength = 0 + '/' + limite;
+
+    input.addEventListener('input', 
+        function(){
+
+        var textLength = input.value.length;
+        result.textContent = textLength + '/' + limite;
+         if(textLength > 0){
+            botao.style.display = "flex";
+        }
+        else{
+            botao.style.display = "none";
+        }
+    });
+}*/
+
+
+
+aplicarContador(
+    '.inputTitulo-Adicionar', 
+    '.contadorTitulo-Adicionar', 
+    50, 
+    ['.inputTitulo-Adicionar', '.inputConteudo-Adicionar'], 
+    '.botaoAdicionar'
+);
+
+aplicarContador(
+    '.inputConteudo-Adicionar', 
+    '.contadorConteudo-Adicionar', 
+    200, 
+    ['.inputTitulo-Adicionar', '.inputConteudo-Adicionar'], 
+    '.botaoAdicionar'
+);
+
+
+
+
+aplicarContador(
+    '.tituloModalEditar-tabelaDePosts', 
+    '.contadorTitulo-Editar', 
+    50, 
+    ['.tituloModalEditar-tabelaDePosts', '.inputConteudo-Adicionar'], 
+    '.botaoSalvarEdicao-tabelaDePosts'
+);
+
+aplicarContador(
+    '.textoModalEditar-tabelaDePosts', 
+    '.contadorConteudo-Editar', 
+    200, 
+    ['.tituloModalEditar-tabelaDePosts', 'textoModalEditar-tabelaDePosts'], 
+    '.botaoSalvarEdicao-tabelaDePosts'
+);
+
+
+
+

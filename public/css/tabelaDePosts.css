@@ -800,6 +800,46 @@
     z-index: 2;
     display: none;
 }
+.botaoAdicionar{
+    display: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.labelTituloPost-Adicionar{
+    display: flex;
+    position: relative;
+    z-index: 8;
+}
+.contadorTitulo-Adicionar{
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 90%;
+    width: 50px;
+    color: #85C1E9;
+}
+
+.labelTituloPost-Adicionar input {
+    width: 100%;
+}
+
+.labelConteudoPost-Adicionar{
+    display: flex;
+    flex-direction: column;
+}
+
+.labelConteudoPost-Adicionar textarea{
+    width: 100%;
+   height: 40px; /* altura que realmente funciona */
+    resize: none;
+    padding: 8px;
+    line-height: 1.4;
+    box-sizing: border-box;
+}
 
 /* Responsividade dos modais*/
 @media (max-width: 1024px) {

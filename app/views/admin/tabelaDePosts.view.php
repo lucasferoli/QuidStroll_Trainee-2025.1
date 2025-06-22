@@ -117,9 +117,18 @@ if(!isset($_SESSION['id'])) {
             <input type="file" class="form-control" id = "imagem" name="imagem" accept="image/*">
         </div>
             <div class="corpoModalEditar-tabelaDePosts">
-                <input class="tituloModalEditar-tabelaDePosts" name="titulo" value="<?= $post->titulo ?>">
+                <label for="" class="inputTitulo-Editar">
+                    <input class="tituloModalEditar-tabelaDePosts" name="titulo" value="<?= $post->titulo ?>">
+                    <span class="contadorTitulo-Editar"></span>
+                </label>
+                
+                <label for="" class="inputConteudo-Editar">
+                    <textarea class="textoModalEditar-tabelaDePosts" name="descricao"><?= $post->descricao ?></textarea>
+                    <span class="contadorConteudo-Editar"></span>
+                </label>
+                
 
-                <textarea class="textoModalEditar-tabelaDePosts" name="descricao"><?= $post->descricao ?></textarea>
+
                 <div class="autorModalEditar-tabelaDePosts">
                     <p>Lorem Ipsum</p>
                 </div>
@@ -189,19 +198,13 @@ if(!isset($_SESSION['id'])) {
 
 
                 <label for="" class="labelTituloPost-Adicionar">
-                    <input type="text" id="tituloPost" name="titulo" required maxlength="50">
-                    <span class="contadorTitulo-Adicionar"> exem</span>
+                    <input type="text" class="inputTitulo-Adicionar" id="tituloPost" name="titulo" required maxlength="50" autocomplete="off">
+                    <span class="contadorTitulo-Adicionar"></span>
                 </label>
                 
             </div>
             
             <input type="hidden" id="autorPost" name="id_autor" value="<?php echo $_SESSION['id']; ?>">
-            
-        
-            <!--<div class="campoFormModalAdicionar">
-                <label for="dataPost">Data:</label>
-                <input type="date" id="dataPost" name="criado_em" required>
-            </div> -->
             <div class="campoFormModalAdicionar">
                 <label for="imagemPost">Imagem:</label>
                 <input type="file" id="imagemPost" name="imagem" accept="image/*">
@@ -209,13 +212,13 @@ if(!isset($_SESSION['id'])) {
             <div class="campoFormModalAdicionar">
                 <label for="conteudoPost">Conteúdo:</label>
                 <label for="" class="labelConteudoPost-Adicionar">
-                    <textarea id="conteudoPost" name="descricao" rows="5" required maxlength="200"></textarea>
-                    <span class="contadorConteudoAdicionar">exme</span>
+                    <textarea id="conteudoPost" class="inputConteudo-Adicionar" name="descricao" rows="5" required maxlength="200"></textarea>
+                    <span class="contadorConteudo-Adicionar"></span>
                 </label>
             </div>
             <div class="botoesFormModalAdicionar">
                 <button type="button" onclick="fecharModal('janelaModalAdicionar', 'fundoModalAdicionar')">Cancelar</button>
-                <button type="submit">Adicionar</button>
+                <button type="submit" class="botaoAdicionar">Adicionar</button>
             </div>
         </form>
     </div>
