@@ -32,7 +32,7 @@
             </div>
             <div id="postIndividualQuids"> 
                 <div id="postIndividualImagem">
-                    <img src="/<?= $post->imagem?>" alt="">
+                    <img src="/<?= $post->imagem ?>" alt="Imagem do Post" onerror="this.src='/public/assets/default-fallback-image.png'; this.alt='';">
                 </div>
                 <div id="postIndividualTextual">
                     <h1 id="postIndividualTituloPost"> <?= $post->titulo?> </h1>
