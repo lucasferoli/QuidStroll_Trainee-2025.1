@@ -11,19 +11,10 @@
 
 </head>
 <body>
-    <?php 
-    require('app\views\site\componentes\navbar.view.php');
+    <?php
+    require('app\views\site\componentes\navbar.view.php')
     ?>
     <main>
-    
-    <!--
-    <div class="segBarraDePesquisa">
-        <div class="barraDePesquisa">
-            <input type="text" placeholder="Barra de pesquisa...">
-            <i class="fas fa-search"></i>
-        </div>
-    </div>  -->
-
 
     <div class="barraDePesquisa-Posts">
         <form method="GET"  action="/admin/tabeladeposts/search" id="form-inputSearch-Posts">
@@ -40,14 +31,17 @@
     <div class="grid">
         <?php foreach($posts as $post):?>
         <?php $usuario = \App\Core\App::get('database')->selectOne('usuarios', $post->id_autor); ?>
-        <div class="card1">
-            <img src="/<?= $post->imagem ?>" alt="Imagem do Post">
-            <div class="conteudo">
-                <h3><a href="postIndividual/<?= $post->id ?>"><?= $post->titulo ?></a></h3>
-                <p><?= $post->descricao?></p>
+        <a style="text-decoration: none;" class="link-listaDePosts" href="postIndividual/<?= $post->id ?>">
+            <div class="card1">
+                <img src="/<?= $post->imagem ?>" alt="Imagem do Post" onerror="this.src='/public/assets/default-fallback-image.png'; this.alt='';">
+                <div class="conteudo">
+                    <h3><?= $post->titulo ?></h3>
+                    <p><?= $post->descricao?></p>
+                </div>
+                <div class="autor">Criado por: <?= $usuario->nome ?></div>
             </div>
-            <div class="autor"><?= $usuario->nome ?></div>
-        </div>
+
+        </a>
         <?php endforeach ?>
 
     </div>
@@ -57,36 +51,37 @@
     <nav class="paginacao-listaDeUsuarios">
         <ul>
             <!-- Página Anterior -->
-            <li class="page-item <?= $page <= $total_pages ? ' class="disabled"' : '' ?>">
-                <?php if ($page > 1): ?>
-                    <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page - 1 ?>">
+            <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page - 1 ?>">
+                <li class="page-item <?= $page <= $total_pages ? ' class="disabled"' : '' ?>">
+                    <?php if ($page > 1): ?>
+                        
+                            <span>&laquo;</span>
+                        
+                    <?php else: ?>
                         <span>&laquo;</span>
-                    </a>
-                <?php else: ?>
-                    <span>&laquo;</span>
-                <?php endif; ?>
-            </li>
-
+                    <?php endif; ?>
+                </li>
+            </a>
             <!-- Números das páginas -->
             <?php for ($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
-                <li>
-                    <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page_number ?>" 
-                    class="<?= $page_number == $page ? 'active' : '' ?>">
+                <a style="display: block; text-decoration: none;" href="?paginacaoNumero=<?= $page_number ?>">
+                    <li class="<?= $page_number == $page ? 'active' : '' ?>">
                         <?= $page_number ?>
-                    </a>
-                </li>
+                    </li>
+                </a>
             <?php endfor; ?>
+                
 
             <!-- Página Seguinte -->
-            <li class="page-item <?= $page >= $total_pages ? ' class="disabled"' : '' ?>">
-                <?php if ($page < $total_pages): ?>
-                    <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page + 1 ?>">
+            <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page + 1 ?>">
+                <li class="page-item <?= $page >= $total_pages ? ' class="disabled"' : '' ?>">
+                    <?php if ($page < $total_pages): ?>
+                            <span>&raquo;</span>
+                    <?php else: ?>
                         <span>&raquo;</span>
-                    </a>
-                <?php else: ?>
-                    <span>&raquo;</span>
-                <?php endif; ?>
-            </li>
+                    <?php endif; ?>
+                </li>
+            </a>
         </ul>
     </nav>
 

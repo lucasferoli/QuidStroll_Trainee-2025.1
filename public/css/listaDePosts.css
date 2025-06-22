@@ -14,52 +14,10 @@ main {
     flex: 1;
 }
 
-p {
-    font-family: 'Nunito', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
+h1{
     font-family: 'Rubik', sans-serif;
-  }
-
-/*.segBarraDePesquisa {
-    display: flex;
-    justify-content: center;
-    margin: 4vh 0px 4vh 0px;
-    width: 100%;
-    height: 5.6vh;
-
 }
 
-.barraDePesquisa {
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    width: 40%;
-    height: 100%;
-    border: 2px solid #1B4F72;
-    border-radius: 50px;
-    font-size: 16px;
-    background-color: white;
-}
-
-.barraDePesquisa input {
-    flex: 1; 
-    border: none;
-    outline: none;
-    padding: 0 1.56vh;
-    font-size: 2.19vh;
-    background-color: transparent; 
-    color: black; 
-}
-
-.segBarraDePesquisa i {
-    color: white;
-    background-color: #0057FF;
-    padding: 1.56vh 1.56vh 1.8vh 1.56vh;
-    border-top-right-radius: 7.82vh;
-    border-bottom-right-radius: 7.82vh;
-}*/
 .barraDePesquisa-Posts {
     width: 100%;
     display: flex;
@@ -84,7 +42,6 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     gap: 10px;
 }
-
 
 #botaoDePesquisa-Search {
     display: flex;
@@ -134,9 +91,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
-
-
 .grid {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -160,6 +114,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+
 .card1 img{
     width: 100%;
     height: 100%;
@@ -175,11 +130,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .card1 .conteudo h3 {
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 400;
     margin-bottom: 0.93vh;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-family: rubik;
 }
 
 .card1 .conteudo p {
@@ -188,6 +144,7 @@ h1, h2, h3, h4, h5, h6 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-family: 'Nunito', sans-serif;
 }
 
 .card1 .autor {
@@ -207,7 +164,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 40.6vh;
     border-radius: 10px;
     border: 3px solid #1B4F72;
-    box-shadow: 0 2px 4px #001959;
+    box-shadow: 0 2px 4px #0A639E;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -319,13 +276,12 @@ h1, h2, h3, h4, h5, h6 {
         height: 30.16vh;
         border-radius: 10px;
         border: 3px solid #1B4F72;
-        box-shadow: 0 2px 4px #001959;
+        box-shadow: 0 2px 4px #0A639E;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         overflow: hidden;
     }
-    
     .card1 .conteudo {
         padding: 1.56vh;
         color: #000;
@@ -352,7 +308,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .card {
         background-color: #c1e0f7;
-        box-shadow: 0 2px 4px #001959;
+        box-shadow: 0 2px 4px #0A639E;
         width: 90%;
         height: 10vh;
         flex-direction: row;
@@ -364,7 +320,7 @@ h1, h2, h3, h4, h5, h6 {
         width: 100%;
         height: 100%;
         overflow: hidden;
-    
+        object-fit: contain;
     }
 
     .card .conteudo {
@@ -430,7 +386,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .paginacao-listaDeUsuarios li {
-    color: #0D6EFD !important;
+    color: #0A639E !important;
 }
 
 #paginaEmUso-listaDeUsuarios{
@@ -489,3 +445,11 @@ h1, h2, h3, h4, h5, h6 {
     
 }
 
+/*--------------------------------------------------------------*/
+.card1 {
+    transition: transform 0.2s ease;
+}
+
+.card1:hover{
+    transform: scale(1.1); 
+}
