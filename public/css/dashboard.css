@@ -65,6 +65,11 @@
     font-family: nunito;
     font-size: 2vh;
     font-weight: 800;
+    cursor: pointer;
+}
+
+.cardLogout:hover {
+    background-color: #2e86c1;
 }
 
 #logoDashboard {
@@ -84,8 +89,6 @@
 
 .linkDashboard button{
     background-color: none;
-
-
 }
 
 @media (max-width: 768px){
@@ -109,6 +112,15 @@
         flex-direction: column;
     }
     .cardDashboard {
+        border: 0.5vh solid #1B4F72;
+        border-radius: 1.25vh;
+        margin: 0.5vh;
+        height: 6vh;
+        width: 25vh;
+        font-size: 1.5vh;
+    }
+
+    .cardLogout {
         border: 0.5vh solid #1B4F72;
         border-radius: 1.25vh;
         margin: 0.5vh;
