@@ -202,19 +202,20 @@ main {
 
 
 .post-landingPage {
-  flex: 0 0 250px;
+  flex: 0 0 242px;
   background-color: white;
   border: 2px solid #2E86C1;
   border-radius: 20px;
   padding: 16px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   gap: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-
+  height: 400px;
+  overflow: hidden;
 }
-
 
 .post-landingPage img {
   width: 100%;
@@ -223,33 +224,31 @@ main {
   object-fit: cover;
 }
 
-
 .post-landingPage h1 {
-  display: -webkit-box;
-  -webkit-line-clamp: 1; /* 1 linha */
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+  display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
   font-size: 140%;
-  max-width: 75%;
+  max-width: 90%;
   margin: 0 auto;
   text-align: center;
 }
 
 .post-landingPage p {
-  display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+  display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
   font-size: 100%;
-  max-width: 75%;
+  max-width: 90%;
   margin: 0 auto;
   text-align: center;
 }
-
 
 .botao-ver-mais-landingPage {
   display: flex;
