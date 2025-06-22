@@ -57,13 +57,43 @@ document.querySelectorAll('.modalEditar-tabelaDePosts').forEach(modal => {
 
 
 
+function aplicarContador(inputSelector, contadorSelector, limite, camposParaVerificar, botaoSelector) {
+    const input = document.querySelector(inputSelector);
+    const contador = document.querySelector(contadorSelector);
+    const botao = document.querySelector(botaoSelector);
 
+    if (!input || !contador || !botao) return;
 
+    function atualizarContador() {
+        let tamanho = input.value.length;
+        contador.textContent = tamanho + '/' + limite;
+        if (tamanho > limite) {
+            input.value = input.value.substring(0, limite);
+            contador.textContent = limite + '/' + limite;
+        }
+    }
 
+    function verificarCampos() {
+        const algumVazio = camposParaVerificar.some(selector => {
+            const campo = document.querySelector(selector);
+            return !campo || campo.value.trim().length === 0;
+        });
 
+        if (algumVazio) {
+            botao.style.display = 'none';
+        } else {
+            botao.style.display = 'flex';
+        }
+    }
 
+    atualizarContador();
+    verificarCampos();
 
-
+    input.addEventListener('input', () => {
+        atualizarContador();
+        verificarCampos();
+    });
+}
 
 aplicarContador(
     '.inputTitulo-Adicionar', 
@@ -84,21 +114,7 @@ aplicarContador(
 
 
 
-aplicarContador(
-    '.tituloModalEditar-tabelaDePosts', 
-    '.contadorTitulo-Editar', 
-    50, 
-    ['.tituloModalEditar-tabelaDePosts', '.textoModalEditar-tabelaDePosts'], 
-    '.botaoSalvarEdicao-tabelaDePosts'
-);
 
-aplicarContador(
-    '.textoModalEditar-tabelaDePosts', 
-    '.contadorConteudo-Editar', 
-    200, 
-    ['.tituloModalEditar-tabelaDePosts', '.textoModalEditar-tabelaDePosts'], 
-    '.botaoSalvarEdicao-tabelaDePosts'
-);
 
 
 
