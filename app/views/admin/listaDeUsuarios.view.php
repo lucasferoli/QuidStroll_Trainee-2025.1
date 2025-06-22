@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="tela"></div>
@@ -115,75 +114,81 @@
     <form action="/ListaDeUsuarios/create" method="POST">
         <div class="modal-listaDeUsuarios" id="criarUsuario">
             <h1>Criar</h1>
-                <div>
-                    <p>Nome:</p>
-                    <input required type="text" name = "nome">
-                </div>
-                <div>
-                    <p>Email:</p>
-                    <input required type="email" name = "email">
-                </div>
-                <div>
-                    <p>Senha:</p>
-                    <input required type="text" name = "senha">
+                <div class="modalConteudo-listaDeUsuarios">
+                        <div class="nomeInput-listaDeUsuarios">
+                            <p>Nome:</p>
+                            <input required type="text" name = "nome">
+                        </div>
+                        <div class="nomeInput-listaDeUsuarios">
+                            <p>Email:</p>
+                            <input required type="email" name = "email">
+                        </div>
+                        <div class="nomeInput-listaDeUsuarios">
+                            <p>Senha:</p>
+                            <input required type="text" name = "senha">
+                        </div>
                 </div>
                 <div class="botoesModais-listaDeUsuarios">
-                    <button class="confirmar-listaDeUsuarios">SALVAR</button>
-                    <button class="cancelar-listaDeUsuarios" type="button" onclick="fecharModal('criarUsuario')">CANCELAR</button>
+                        <button class="confirmar-listaDeUsuarios">SALVAR</button>
+                        <button class="cancelar-listaDeUsuarios" type="button" onclick="fecharModal('criarUsuario')">CANCELAR</button>
                 </div>
-            </div>
-        </form>
+        </div>
+    </form>
 
 
         <?php foreach($usuarios as $usuario): ?>
         <form action="/ListaDeUsuarios/edit" method="POST">
             <div class="modal-listaDeUsuarios" id="editarUsuario<?= $usuario->id ?>">
                 <h1>Editar</h1>
-                <input type="hidden" value ="<?= $usuario->id ?>" name = 'id'>
-                <div>
-                    <p>Nome:</p>
-                    <input type="text" value="<?= $usuario->nome ?>" name = 'nome'> 
-                </div>
-                <div>
-                    <p>Email:</p>
-                    <input type="email" value="<?= $usuario->email ?>" name = 'email'>
-                </div>
-                <div>
-                    <p>Senha:</p>
-                    <input type="text" value="<?= $usuario->senha ?>" name = 'senha'>
-                </div>
-                <div class="botoesModais-listaDeUsuarios">
-                    <button class="confirmar-listaDeUsuarios">SALVAR</button>
-                    <button class="cancelar-listaDeUsuarios" type="button" onclick="fecharModal('editarUsuario<?= $usuario->id?>')">CANCELAR</button>
-                </div>
+                    <div class="modalConteudo-listaDeUsuarios">
+                        <input type="hidden" value ="<?= $usuario->id ?>" name = 'id'>
+                        <div class="nomeInput-listaDeUsuarios">
+                            <p>Nome:</p>
+                            <input type="text" value="<?= $usuario->nome ?>" name = 'nome'> 
+                        </div>
+                        <div class="nomeInput-listaDeUsuarios">
+                            <p>Email:</p>
+                            <input type="email" value="<?= $usuario->email ?>" name = 'email'>
+                        </div>
+                        <div class="nomeInput-listaDeUsuarios">
+                            <p>Senha:</p>
+                            <input type="text" value="<?= $usuario->senha ?>" name = 'senha'>
+                        </div>
+                    </div>
+                    <div class="botoesModais-listaDeUsuarios">
+                        <button class="confirmar-listaDeUsuarios">SALVAR</button>
+                        <button class="cancelar-listaDeUsuarios" type="button" onclick="fecharModal('editarUsuario<?= $usuario->id?>')">CANCELAR</button>
+                    </div>
             </div>
         </form>
 
             <div class="modal-listaDeUsuarios" id= "visualizarUsuario<?= $usuario->id ?>" >
                 <h1>Informações</h1>
-                <div>
-                    <p>Nome:</p>
-                    <input type="text" value="<?= $usuario->nome ?>" disabled> 
-                </div>
-                <div>
-                    <p>Email:</p>
-                    <input type="email" value="<?= $usuario->email ?>" disabled>
-                </div>
-                <div>
-                    <p>Senha:</p>
-                    <input type="password" value="<?= $usuario->senha ?>" disabled>
-                </div>
-                <div class="botoesModais-listaDeUsuarios">
-                    <button class="confirmar-listaDeUsuarios"type="button" onclick="fecharModal('visualizarUsuario<?= $usuario->id?>')">FECHAR</button>
-                </div>
+                    <div class="modalConteudo-listaDeUsuarios">
+                        <div class="nomeInput-listaDeUsuarios">
+                            <p>Nome:</p>
+                            <input type="text" value="<?= $usuario->nome ?>" disabled> 
+                        </div>
+                        <div class="nomeInput-listaDeUsuarios">
+                            <p>Email:</p>
+                            <input type="email" value="<?= $usuario->email ?>" disabled>
+                        </div>
+                        <div class="nomeInput-listaDeUsuarios">
+                            <p>Senha:</p>
+                            <input type="password" value="<?= $usuario->senha ?>" disabled>
+                        </div>
+                    </div>
+                    <div class="botoesModais-listaDeUsuarios">
+                            <button class="confirmar-listaDeUsuarios"type="button" onclick="fecharModal('visualizarUsuario<?= $usuario->id?>')">FECHAR</button>
+                    </div>
             </div>
 
         <form action="ListaDeUsuarios/delete" method="POST">
-            <div class="modal-listaDeUsuarios" id="deletarUsuario<?= $usuario->id ?>">
+            <div class="modal-listaDeUsuarios modal-deletarUsuario" id="deletarUsuario<?= $usuario->id ?>">
                     <input name="id" value="<?= $usuario->id ?>" type="hidden">
                 <h1>Excluir</h1>
-                <p>TEM CERTEZA QUE DESEJA <br> DELETAR O USUÁRIO?</p>
-                <div class="botoesModais-listaDeUsuarios">
+                <p>TEM CERTEZA QUE DESEJA <br> EXCLUIR O USUÁRIO?</p>
+                <div class="botoesModais-listaDeUsuarios botoesModais-deletarUsuario">
                     <button class="confirmar-listaDeUsuarios">SIM</button>
                     <button class="cancelar-listaDeUsuarios" type="button" onclick="fecharModal('deletarUsuario<?= $usuario->id?>')">NÃO</button>
                 </div>
@@ -194,6 +199,5 @@
     </section>
     
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src = "/public/js/listaDeUsuarios.js"></script>
 </html>
