@@ -582,6 +582,7 @@
 
 }
 
+
 /*botões não testados. podendo haver interferencia com o css pelo padrão do css de "button".*/
 
 /*----------------------Modal-------------------------------*/
@@ -1224,10 +1225,8 @@
 
 }
 
-.corpo-do-VerMais {
+.fundoModal-tabelaDePosts-teste {
     position: absolute;
-    left: 170%;
-    bottom: 800%;
     display: none; 
     justify-content: center;
     align-items: center;
