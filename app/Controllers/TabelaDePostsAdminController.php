@@ -72,7 +72,7 @@ class TabelaDePostsAdminController
             'titulo' => $_POST['titulo'],
             'descricao'=> $_POST['descricao'],
             'imagem' => $caminhoDaImagem,
-            'id_autor' => 1,
+            'id_autor' => $_POST['id_autor'],
             'criado_em' => $_POST['criado_em'],
 
         ];

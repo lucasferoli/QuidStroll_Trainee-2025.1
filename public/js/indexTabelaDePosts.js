@@ -108,7 +108,7 @@ aplicarContador(
 );
 
 
-
+/*
 
 aplicarContador(
     '.tituloModalEditar-tabelaDePosts', 
@@ -124,7 +124,7 @@ aplicarContador(
     200, 
     ['.tituloModalEditar-tabelaDePosts', 'textoModalEditar-tabelaDePosts'], 
     '.botaoSalvarEdicao-tabelaDePosts'
-);
+);*/
 
 
 

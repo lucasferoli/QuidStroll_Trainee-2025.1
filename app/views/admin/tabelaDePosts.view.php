@@ -106,7 +106,7 @@ if(!isset($_SESSION['id'])) {
             <h1>Editar Post</h1>
             <button onclick="fecharModal('janelaModalEditar<?= $post->id ?>', 'fundoModal')"><img src="/public/assets/simboloFecharPost.png" alt="Fechar Guia"></button>
         </header>
-        <form class="formModalEditar-tabelaDePosts" method="POST"  action="admin/tabeladeposts/edit" enctype="multipart/form-data" >
+        <form class="formModalEditar-tabelaDePosts" method="POST"  action="/admin/tabeladeposts/edit" enctype="multipart/form-data" >
             <input name="id"  value="<?= $post->id ?>" type="hidden">
             <input name="criado_em"  value="<?= $post->criado_em ?>" type="hidden">
             <input name="id_autor"  value="<?= $post->id_autor ?>" type="hidden">
