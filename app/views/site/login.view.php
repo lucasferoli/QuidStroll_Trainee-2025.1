@@ -27,8 +27,8 @@
         <div class="campoSenha" >
             <label>Senha:</label>
             <div class="senhaOculta">
-                <input type="senha" id="senha" name="senha" autocomplete="off">
-                <button class="esconderSenha">
+                <input type="password" id="senha" name="senha" autocomplete="off">
+                <button type="button" class="esconderSenha">
                     <i class="fas fa-eye-slash" id="iconeOcultar"></i>
                 </button>
             </div>
