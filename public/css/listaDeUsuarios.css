@@ -25,7 +25,7 @@ body{
     font-size: 8vh;
     justify-content: start;
     align-items: center;
-    padding-left: 10%;
+    padding-left: 15%;
 }
 .titulo-listaDeUsuarios h1{
     display: flex;
@@ -46,10 +46,10 @@ body{
     flex-direction: row;
     padding: 2% 0% 0% 10%;
     width: 70%;
-    height: auto;
+    height: 15vh;
     background-color: #F4F6F7;
     justify-content: end;
-    padding-right: 10%;
+    padding-right: 16%;
 }
 .botaoAdicionar-listaDeUsuarios button{
     display: flex;
@@ -163,16 +163,17 @@ body{
 
 
 .campoTabela-listaDeUsuarios{
-    width: 100%;
     height: auto;
     background-color: #F4F6F7;
     padding: 0vh 7.8vh 0vh 7.8vh;
+    margin: 0px 2px 0px 60px ;
 }
+
 .tabela-listaDeUsuarios{
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
     border-collapse: separate;
     border-spacing: 0;
-    border-radius: 30px;
+    border-radius: 2vh;
     overflow: hidden;
 }
 .cabecalhoTabela-listaDeUsuarios{
@@ -184,15 +185,16 @@ body{
 }
 .cabecalhoTabela-listaDeUsuarios th{
     padding: 2% 2% 2% 2%;
-    height: 12.5vh;
+    height: 14vh;
     text-align: center;
     width: 10%;
+    font-size: 3.5vh;
 }
 
 .corpoTabela-listaDeUsuarios td{
     font-family: 'Nunito', sans-serif;
     font-weight: 500;
-    font-size: 1.25rem;
+    font-size: 3vh;
     padding: 2% 2% 2% 2%;
     height: 12.5vh;
     text-align: center;
@@ -282,57 +284,100 @@ td img{
 
 
 @media (max-width: 900px) {
-    .listaDeUsuarios{
-        width: 100vw;
+    .titulo-listaDeUsuarios h1 {
+        font-size: 2rem;
+    }
+    
+    .cabecalhoTabela-listaDeUsuarios th {
+        font-size: 1rem;
+        padding: 1%;
         height: auto;
-        overflow-x: hidden;
     }
-    .titulo-listaDeUsuarios{
-        background-color: #F4F6F7;
-        border-bottom: 2px solid #1A1A1A;
-        font-size: 40px;
-    }
-    .sidebar-listaDeUsuarios{
-            display: none;
-            flex-direction: none;
-            width: none;
-            height: none;
-            background-color: none;
-    }
-    .paginacao-listaDeUsuarios{
-        margin-left: auto;
-       margin-right: auto;
     
+    .corpoTabela-listaDeUsuarios td {
+        font-size: 0.9rem;
+        padding: 1%;
+        height: auto;
     }
-
-    .paginacao-listaDeUsuarios ul{
-            margin-bottom: 0 !important;
-    }
-
     
+    .botaoAdicionar-listaDeUsuarios {
+        padding: 2% 5%;
+        width: 100vh;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 750px){
-    .tabela-listaDeUsuarios{
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0% 10% 0% 10%;
-    }
-    th{
-        display: none;
-    }
-    td{
-        display: block;
-    }
-    td::before{
-        content: attr(data-cell) " ";
-        display: flex;
-        justify-content: flex-start;
-        font-weight: 700;
+    .tabela-listaDeUsuarios {
+        width: 90%; /* Ajuste a largura conforme necessário */
+        margin: 0 auto; /* Isso centraliza a tabela */
+        padding: 0;
     }
     
+    .cabecalhoTabela-listaDeUsuarios {
+        display: none;
+    }
+    
+    .corpoTabela-listaDeUsuarios tr {
+        display: block;
+        margin-bottom: 2rem;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 1rem;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        width: 100%; /* Garante que a linha ocupe toda a largura */
+    }
+    
+    .corpoTabela-listaDeUsuarios td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        height: auto;
+        text-align: right;
+        border-bottom: 1px solid #eee;
+        width: 100%; /* Garante que a célula ocupe toda a largura */
+        box-sizing: border-box; /* Inclui padding na largura total */
+    }
+    
+    /* Adicione esta regra para garantir que o container da tabela também esteja centralizado */
+    .campoTabela-listaDeUsuarios {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0 auto;
+        width: 100%;
+    }
 }
 
+@media (max-width: 430px) {
+    .titulo-listaDeUsuarios {
+        height: auto;
+        padding: 5px 5px 5px 65px;
+        justify-content: center;
+    }
+    
+    .titulo-listaDeUsuarios h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .barraDePesquisa-Posts input {
+        width: 100%;
+    }
+    
+    .paginacao-listaDeUsuarios {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+    
+    .paginacao-listaDeUsuarios li {
+        width: 2rem;
+        height: 1.5rem;
+        font-size: 0.8rem;
+    }
+}
 /**************************************MODAL********************************************/
 
 .modal-listaDeUsuarios {
@@ -342,7 +387,6 @@ td img{
     padding: 4vh;
     display: none;
     flex-direction: column;
-    position: absolute;
     border-radius: 5vh;
     border: 2vh solid #1B4F72;
     z-index: 5;
@@ -350,6 +394,7 @@ td img{
     position: fixed; /* alterado de absolute para fixed */
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .modal-listaDeUsuarios h1{
@@ -451,7 +496,6 @@ td img{
     .modal-listaDeUsuarios {
         height: 55vh;
         width: 40vh;
-        padding: 2vh;
         border-radius: 4vh;
         border: 1vh solid #1B4F72;
         gap: 1vh;
