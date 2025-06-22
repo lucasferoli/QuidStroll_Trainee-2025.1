@@ -11,39 +11,60 @@ function fecharModal(idModalUsuario, idFundoModal){
 
 
 
-function verificarCampos(inputs, botaoSelector) {
-    const botao = document.querySelector(botaoSelector);
 
-    const algumVazio = inputs.some(inputSelector => {
-        const input = document.querySelector(inputSelector);
-        return input.value.trim().length === 0;
-    });
+document.querySelectorAll('.modalEditar-tabelaDePosts').forEach(modal => {
+    const tituloInput = modal.querySelector('.tituloModalEditar-tabelaDePosts');
+    const conteudoInput = modal.querySelector('.textoModalEditar-tabelaDePosts');
+    const contadorTitulo = modal.querySelector('.contadorTitulo-Editar');
+    const contadorConteudo = modal.querySelector('.contadorConteudo-Editar');
+    const botao = modal.querySelector('.botaoSalvarEdicao-tabelaDePosts');
+    const limiteTitulo = 50;
+    const limiteConteudo = 200;
 
-    if (algumVazio) {
-        botao.style.display = 'none';
-    } else {
-        botao.style.display = 'flex';
-    }
-}
-
-function aplicarContador(inputSelector, contadorSelector, limite, camposParaVerificar, botaoSelector) {
-    const input = document.querySelector(inputSelector);
-    const contador = document.querySelector(contadorSelector);
-
-    function atualizar() {
-        const textLength = input.value.length;
-        contador.textContent = textLength + '/' + limite;
-
-        if (textLength > limite) {
+    function atualizarContador(input, contador, limite) {
+        let tamanho = input.value.length;
+        contador.textContent = tamanho + '/' + limite;
+        if (tamanho > limite) {
             input.value = input.value.substring(0, limite);
             contador.textContent = limite + '/' + limite;
         }
-
-        verificarCampos(camposParaVerificar, botaoSelector);
     }
-    atualizar();
-    input.addEventListener('input', atualizar);
-}
+
+    function verificarCampos() {
+        if (tituloInput.value.trim().length > 0 && conteudoInput.value.trim().length > 0) {
+            botao.style.display = 'flex';
+        } else {
+            botao.style.display = 'none';
+        }
+    }
+
+   
+    atualizarContador(tituloInput, contadorTitulo, limiteTitulo);
+    atualizarContador(conteudoInput, contadorConteudo, limiteConteudo);
+    verificarCampos();
+
+  
+    tituloInput.addEventListener('input', () => {
+        atualizarContador(tituloInput, contadorTitulo, limiteTitulo);
+        verificarCampos();
+    });
+
+    conteudoInput.addEventListener('input', () => {
+        atualizarContador(conteudoInput, contadorConteudo, limiteConteudo);
+        verificarCampos();
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
 aplicarContador(
     '.inputTitulo-Adicionar', 
     '.contadorTitulo-Adicionar', 
