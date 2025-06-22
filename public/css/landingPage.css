@@ -275,6 +275,9 @@ a{
   color: inherit;
 }
 
+
+
+
 @media(min-width: 1500px){
   .hero-section-landingPage {
     padding: 5%;
@@ -282,7 +285,7 @@ a{
   }
 }
 
-  @media (max-width: 600px) {
+  @media (max-width: 1000px) {
     .imagem-mascote-landingPage{
       display: none;
     }
