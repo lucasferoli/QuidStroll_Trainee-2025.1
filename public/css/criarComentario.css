@@ -45,20 +45,27 @@ form {
     font-size: 30%;
     margin: 0;
     border-radius: 8px;
-    padding: 8px;
+    padding: 8px 70px 8px 8px;
     width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .conteudo-Comentario button {
     display: none;
     background-color: #3498db;
-    color: white;
     border: none;
     padding: 2%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     justify-content: center;
     align-items: center;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.conteudo-Comentario button:hover{
+    background-color: #1B4F72;
+
 }
 
 .conteudo-Comentario button img{
@@ -68,9 +75,24 @@ form {
     align-self: center;
 
 }
+
+.conteudo-Comentario label{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 0;
+}
+
 .conteudo-Comentario span{
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
     font-size: 30%;
     width: 50px;
+    color: #85C1E9;
 }
 
 @media(max-width: 800px) {
