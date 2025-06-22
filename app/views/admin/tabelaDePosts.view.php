@@ -88,48 +88,50 @@ if(!isset($_SESSION['id'])) {
 
     <!------------------------- Paginação ----------------------->
     <!----------------------------------------------------------->
-    <nav class="paginacao-listaDeUsuarios">
-        <ul>
-            <!-- Página Anterior -->
-            <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page - 1 ?>">
-                <li class="page-item <?= $page <= $total_pages ? ' class="disabled"' : '' ?>">
-                    <?php if ($page > 1): ?>
-                        
+    <?php if (!isset($_GET['busca'])): ?>
+        <nav class="paginacao-listaDeUsuarios">
+            <ul>
+                <!-- Página Anterior -->
+                <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page - 1 ?>">
+                    <li class="page-item <?= $page <= $total_pages ? ' class="disabled"' : '' ?>">
+                        <?php if ($page > 1): ?>
+                            
                             <span>&laquo;</span>
-                        
-                    <?php else: ?>
-                        <span>&laquo;</span>
-                    <?php endif; ?>
-                </li>
-            </a>
-            <!-- Números das páginas -->
-            <?php for ($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
-                <a style="display: block; text-decoration: none;" href="?paginacaoNumero=<?= $page_number ?>">
-                    <li class="<?= $page_number == $page ? 'active' : '' ?>">
-                        <?= $page_number ?>
-                    </li>
-                </a>
-            <?php endfor; ?>
-                
-
-            <!-- Página Seguinte -->
-            <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page + 1 ?>">
-                <li class="page-item <?= $page >= $total_pages ? ' class="disabled"' : '' ?>">
+                            
+                            <?php else: ?>
+                                <span>&laquo;</span>
+                                <?php endif; ?>
+                            </li>
+                        </a>
+                        <!-- Números das páginas -->
+                        <?php for ($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
+                            <a style="display: block; text-decoration: none;" href="?paginacaoNumero=<?= $page_number ?>">
+                                <li class="<?= $page_number == $page ? 'active' : '' ?>">
+                                    <?= $page_number ?>
+                                </li>
+                            </a>
+                            <?php endfor; ?>
+                            
+                            
+                            <!-- Página Seguinte -->
+                            <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page + 1 ?>">
+                                <li class="page-item <?= $page >= $total_pages ? ' class="disabled"' : '' ?>">
                     <?php if ($page < $total_pages): ?>
-                            <span>&raquo;</span>
-                    <?php else: ?>
                         <span>&raquo;</span>
-                    <?php endif; ?>
-                </li>
-            </a>
-        </ul>
-    </nav>
-
-
-    <!----------------------Modal------------------------------->
-    <!---------------------------------------------------------->
-    <?php foreach($posts as $post): ?>
-
+                        <?php else: ?>
+                            <span>&raquo;</span>
+                            <?php endif; ?>
+                        </li>
+                    </a>
+                </ul>
+            </nav>
+            <?php endif; ?>
+            
+            
+            <!----------------------Modal------------------------------->
+            <!---------------------------------------------------------->
+            <?php foreach($posts as $post): ?>
+                
 
 <!----------------------Editar------------------------------->
     <div class="fundoModal-tabelaDePosts" id="fundoModal"></div>
