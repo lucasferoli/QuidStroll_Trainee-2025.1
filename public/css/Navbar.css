@@ -13,7 +13,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 15px 30px !important;
     background-image: linear-gradient( to right, white 20%,#85c1e9 80%);
     width: 100%;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
