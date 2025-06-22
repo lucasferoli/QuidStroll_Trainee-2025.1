@@ -294,7 +294,7 @@
     display: flex;
     justify-content: center;
     font-size: 1em;
-    font-family: 'Nunito', sans-serif;
+    font-family: "Rubik", sans-serif;
     font-weight: 600;
     width: 3rem;
     height: 2rem;
@@ -305,7 +305,7 @@
 }
 
 .paginacao-listaDeUsuarios li {
-    color: #0D6EFD !important;
+    color: #0A639E !important;
 }
 
 #paginaEmUso-listaDeUsuarios{
@@ -332,6 +332,37 @@
         padding-left: 0 !important;
     }
 
+
+@media (max-width: 900px) {
+    .listaDeUsuarios{
+        width: 100vw;
+        height: auto;
+        overflow-x: hidden;
+    }
+    .titulo-listaDeUsuarios{
+        background-color: #F4F6F7;
+        border-bottom: 2px solid #1A1A1A;
+        font-size: 40px;
+    }
+    .sidebar-listaDeUsuarios{
+            display: none;
+            flex-direction: none;
+            width: none;
+            height: none;
+            background-color: none;
+    }
+    .paginacao-listaDeUsuarios{
+        margin-left: auto;
+       margin-right: auto;
+    
+    }
+
+    .paginacao-listaDeUsuarios ul{
+            margin-bottom: 0 !important;
+    }
+
+    
+}
 
 @media (max-width: 900px) {
     .listaDeUsuarios{
