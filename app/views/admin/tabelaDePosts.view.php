@@ -185,7 +185,14 @@ if(!isset($_SESSION['id'])) {
         <form class="formModalAdicionar-tabelaDePosts" method="POST" action="tabeladeposts/create" enctype="multipart/form-data">
             <div class="campoFormModalAdicionar">
                 <label for="tituloPost">Título:</label>
-                <input type="text" id="tituloPost" name="titulo" required>
+
+
+
+                <label for="" class="labelTituloPost-Adicionar">
+                    <input type="text" id="tituloPost" name="titulo" required maxlength="50">
+                    <span class="contadorTitulo-Adicionar"> exem</span>
+                </label>
+                
             </div>
             
             <input type="hidden" id="autorPost" name="id_autor" value="<?php echo $_SESSION['id']; ?>">
@@ -201,7 +208,10 @@ if(!isset($_SESSION['id'])) {
             </div>
             <div class="campoFormModalAdicionar">
                 <label for="conteudoPost">Conteúdo:</label>
-                <textarea id="conteudoPost" name="descricao" rows="5" required></textarea>
+                <label for="" class="labelConteudoPost-Adicionar">
+                    <textarea id="conteudoPost" name="descricao" rows="5" required maxlength="200"></textarea>
+                    <span class="contadorConteudoAdicionar">exme</span>
+                </label>
             </div>
             <div class="botoesFormModalAdicionar">
                 <button type="button" onclick="fecharModal('janelaModalAdicionar', 'fundoModalAdicionar')">Cancelar</button>
