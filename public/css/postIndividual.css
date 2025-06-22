@@ -6,22 +6,41 @@
 }
 #postIndividualVoltar{
     display: flex;
-    height: 23.55vh;
-    padding-left: 20vh;
+    height: 15vh;
+    padding-left: 10vh;
     align-items: center;
     border-bottom: 0.15vh solid #1B4F72;
     background: #F4F6F7;
     gap: 3vh;
 }
 
-#postIndividualVoltar img{
+#postIndividualVoltar img {
+    width: 10vh; 
+    height: auto; 
+    padding: 0; 
+    transition: 0.3s ease; 
+    border-radius: 50%; 
+}
+
+#postIndividualImagem img {
     display: flex;
-    width: 11.56vh;
-    padding: 3.28px 2.81px;
+    max-width: 100%; 
+    max-height: 100%; 
+    height: auto; 
+    object-fit: contain; 
+}
+
+#postIndividualImagem {
+    display: flex;
+    width: 100%; 
+    max-width: 74.6vh; 
     flex-direction: column;
-    align-items: flex-start;
-    border-radius: 10vh;
-    transition: 0.5s ease;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vh;
+    height: auto; 
+    padding: 1vh; 
+    box-sizing: border-box; 
 }
 
 #postIndividualTituloPagina{
@@ -53,6 +72,8 @@
     border-radius: 2.3vh;
     border: 0.15vh solid #1B4F72;
     background: #1B4F72;
+    word-break: break-word; 
+    white-space: normal;
 }
 
 #postIndividualAutor{
@@ -132,6 +153,8 @@
     font-weight: 600;
     line-height: normal;
     margin: 0;
+    word-break: break-word; 
+    white-space: normal;
  
 }
 

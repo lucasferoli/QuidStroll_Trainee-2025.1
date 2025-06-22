@@ -20,7 +20,7 @@
             <form action="/postIndividual/<?= $comentario->id ?>/delete" method="POST">
     <input name="id_post" value="<?= $comentario->id_post ?>" type="hidden">
     <button type="submit">
-        <img src="/public/assets/excluirComentario.png" alt="">
+        <img src="/public/assets/simboloFecharPost.png" alt="">
     </button>
 </form>
         
