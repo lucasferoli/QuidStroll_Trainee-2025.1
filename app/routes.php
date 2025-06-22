@@ -28,8 +28,18 @@ $router->post('logout', 'DashboardController@logout');
 $router->get('admin/tabeladeposts/search', 'TabelaDePostsAdminController@search');
 $router->get('admin/tabeladeposts/clean', 'TabelaDePostsAdminController@clean');
 
+$router->get('ListaDeUsuarios/search', 'ListaDeUsuariosController@search');
+$router->get('ListaDeUsuarios/clean', 'ListaDeUsuariosController@clean');
+
+$router->get('lista/search', 'ListaDePostsController@search');
+$router->get('lista/clean', 'ListaDePostsController@clean');
+
+
+
 $router->get('ListaDeUsuarios', 'ListaDeUsuariosController@paginate');
 $router->get('tabeladeposts', 'TabelaDePostsAdminController@paginate');
 $router->get('lista', 'ListaDePostsController@paginate');
 
 $router->post('postIndividual/{id}/create', 'PostIndividualController@store');
+$router->post('postIndividual/{id}/delete', 'PostIndividualController@delete');
+

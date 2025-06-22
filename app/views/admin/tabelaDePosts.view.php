@@ -136,7 +136,7 @@ if(!isset($_SESSION['id'])) {
             <h1>Editar Post</h1>
             <button onclick="fecharModal('janelaModalEditar<?= $post->id ?>', 'fundoModal')"><img src="/public/assets/simboloFecharPost.png" alt="Fechar Guia"></button>
         </header>
-        <form class="formModalEditar-tabelaDePosts" method="POST"  action="admin/tabeladeposts/edit" enctype="multipart/form-data" >
+        <form class="formModalEditar-tabelaDePosts" method="POST"  action="/admin/tabeladeposts/edit" enctype="multipart/form-data" >
             <input name="id"  value="<?= $post->id ?>" type="hidden">
             <input name="criado_em"  value="<?= $post->criado_em ?>" type="hidden">
             <input name="id_autor"  value="<?= $post->id_autor ?>" type="hidden">
@@ -147,11 +147,21 @@ if(!isset($_SESSION['id'])) {
             <input type="file" class="form-control" id = "imagem" name="imagem" accept="image/*">
         </div>
             <div class="corpoModalEditar-tabelaDePosts">
-                <input class="tituloModalEditar-tabelaDePosts" name="titulo" value="<?= $post->titulo ?>">
+                <label for="" class="inputTitulo-Editar">
+                    <input class="tituloModalEditar-tabelaDePosts" name="titulo" value="<?= $post->titulo ?>">
+                    <span class="contadorTitulo-Editar"></span>
+                </label>
+                
+                <label for="" class="inputConteudo-Editar">
+                    <textarea class="textoModalEditar-tabelaDePosts" name="descricao"><?= $post->descricao ?></textarea>
+                    <span class="contadorConteudo-Editar"></span>
+                </label>
+                
 
-                <textarea class="textoModalEditar-tabelaDePosts" name="descricao"><?= $post->descricao ?></textarea>
+
                 <div class="autorModalEditar-tabelaDePosts">
-                    <p>Lorem Ipsum</p>
+                    <?php $usuario = \App\Core\App::get('database')->selectOne('usuarios', $post->id_autor); ?>
+                    <p><?= $usuario->nome?></p>
                 </div>
                 <div class="dataModalEditar-tabelaDePosts">
                     <p><?= $post->criado_em ?></p>
@@ -160,6 +170,11 @@ if(!isset($_SESSION['id'])) {
             </div>
         </form>
     </div>
+
+
+
+
+    
 <!--Modal Excluir-->
 <div class="fundoModal-tabelaDePosts" id="fundoModal<?= $post->id ?>"></div>
 <div class="modalExcluir-tabelaDePosts" id="janelaModalExcluir<?= $post->id ?>">
@@ -215,27 +230,31 @@ if(!isset($_SESSION['id'])) {
         <form class="formModalAdicionar-tabelaDePosts" method="POST" action="tabeladeposts/create" enctype="multipart/form-data">
             <div class="campoFormModalAdicionar">
                 <label for="tituloPost">Título:</label>
-                <input type="text" id="tituloPost" name="titulo" required>
+
+
+
+                <label for="" class="labelTituloPost-Adicionar">
+                    <input type="text" class="inputTitulo-Adicionar" id="tituloPost" name="titulo" required maxlength="50" autocomplete="off">
+                    <span class="contadorTitulo-Adicionar"></span>
+                </label>
+                
             </div>
             
             <input type="hidden" id="autorPost" name="id_autor" value="<?php echo $_SESSION['id']; ?>">
-            
-        
-            <!--<div class="campoFormModalAdicionar">
-                <label for="dataPost">Data:</label>
-                <input type="date" id="dataPost" name="criado_em" required>
-            </div> -->
             <div class="campoFormModalAdicionar">
                 <label for="imagemPost">Imagem:</label>
                 <input type="file" id="imagemPost" name="imagem" accept="image/*">
             </div>
             <div class="campoFormModalAdicionar">
                 <label for="conteudoPost">Conteúdo:</label>
-                <textarea id="conteudoPost" name="descricao" rows="5" required></textarea>
+                <label for="" class="labelConteudoPost-Adicionar">
+                    <textarea id="conteudoPost" class="inputConteudo-Adicionar" name="descricao" rows="5" required maxlength="200"></textarea>
+                    <span class="contadorConteudo-Adicionar"></span>
+                </label>
             </div>
             <div class="botoesFormModalAdicionar">
                 <button type="button" onclick="fecharModal('janelaModalAdicionar', 'fundoModalAdicionar')">Cancelar</button>
-                <button type="submit">Adicionar</button>
+                <button type="submit" class="botaoAdicionar">Adicionar</button>
             </div>
         </form>
     </div>

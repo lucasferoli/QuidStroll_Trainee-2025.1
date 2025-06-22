@@ -71,6 +71,24 @@ class QueryBuilder
         }
     }
 
+    public function selectAllOrderBy($table, $orderBy, $direction = 'DESC', $inicio = null, $rows_count = null)
+{
+    $sql = "SELECT * FROM {$table} ORDER BY {$orderBy} {$direction}";
+
+    if($inicio >= 0 && $rows_count > 0) {
+        $sql .= " LIMIT {$inicio}, {$rows_count}";
+    }
+
+    try {
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
+    } catch (Exception $e) {
+        die($e->getMessage());
+    }
+}
+
     public function update($table, $id, $parametros)
     {
         $sql = sprintf('UPDATE %s SET %s WHERE id = %s',

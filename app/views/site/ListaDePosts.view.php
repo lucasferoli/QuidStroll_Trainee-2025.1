@@ -26,12 +26,12 @@
 
 
     <div class="barraDePesquisa-Posts">
-        <form method="GET"  action="/admin/tabeladeposts/search" id="form-inputSearch-Posts">
+        <form method="GET"  action="/lista/search" id="form-inputSearch-Posts">
             <input type="text" name="busca" placeholder="Buscar" autocomplete="off">
         <button type="submit" id="botaoDePesquisa-Search"><img src="/public/assets/lupa.png" alt=""></button>
     </form>
 
-    <form method="GET"  action="/admin/tabeladeposts/clean" id="form-refresh-Posts">
+    <form method="GET"  action="/lista/clean" id="form-refresh-Posts">
         <button type="submit" id="botaoLimpeza-Search"><img src="/public/assets/refreshPosts.png" alt=""></button>
     </form>
 
@@ -43,7 +43,7 @@
         <div class="card1">
             <img src="/<?= $post->imagem ?>" alt="Imagem do Post">
             <div class="conteudo">
-                <h3><a href="postIndividual/<?= $post->id ?>"><?= $post->titulo ?></a></h3>
+                <h3><a href="/postIndividual/<?= $post->id ?>"><?= $post->titulo ?></a></h3>
                 <p><?= $post->descricao?></p>
             </div>
             <div class="autor"><?= $usuario->nome ?></div>

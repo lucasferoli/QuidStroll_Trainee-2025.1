@@ -46,53 +46,17 @@ require('app\views\site\componentes\navbar.view.php')
 
     <section class="posts-recentes-landingPage">
         <h1 id="titulo-pr-landingPage">Quidies recentes</h1>
-        
         <div class="carrossel-posts-landingPage">
+        <?php foreach($posts as $post): ?>
+        <?php $usuario = \App\Core\App::get('database')->selectOne('usuarios', $post->id_autor); ?>
+        
             <div class="post-landingPage"> 
-                <img src="/public/assets/GTN1H5JWEAAq7Kx.jfif" alt="">
-                <h1>Cortar o cabelo é muito estranho</h1>
-                <p>Jose Silva</p>
-                <div class = "botao-ver-mais-landingPage">Ver mais</div>
+                <img src="/<?= $post->imagem ?>" alt="">
+                <h1><?= $post->titulo ?></h1>
+                <p><?= $usuario->nome ?></p>
+                <div class = "botao-ver-mais-landingPage"><a href="/postIndividual/<?= $post->id ?>">Ver mais </a></div>
             </div>
-            <div class="post-landingPage"> 
-                <img src="/public/assets/118-1187209_black-hat-png-stock-by-doloresminette-pluspng-fedora.png" alt="">
-                <h1>Chapéus fedora precisam acabar</h1>
-                <div class="containerAutorBotao-ladingPage">
-
-                </div>
-                <p>Juca Silva</p>
-                <div class = "botao-ver-mais-landingPage">Ver mais</div>
-            </div>
-            <div class="post-landingPage"> 
-                <img src="/public/assets/fazenda-porteira.webp" alt="">
-                <h1>Cripto fazendas são o futuro</h1>
-                <div class="containerAutorBotao-ladingPage">
-                    
-                </div>
-                <p>João Silva</p>
-                <div class = "botao-ver-mais-landingPage">Ver mais</div>
-            </div>
-            <div class="post-landingPage"> 
-                <img src="/public/assets/casa.jpg" alt="">
-                <h1>Cripto casas que são o futuro</h1>
-                <div class="containerAutorBotao-ladingPage">
-                    
-                </div>
-                <p>Jonas Silva</p>
-                <div class = "botao-ver-mais-landingPage">Ver mais</div>
-            </div>
-            <div class="post-landingPage"> 
-                <img src="/public/assets/futuro.jpg" alt="">
-                <h1>Não haverá futuro</h1>
-                <div class="containerAutorBotao-ladingPage">
-                    
-                </div>
-                <p><br>Jô Silva</p>
-                <div class = "botao-ver-mais-landingPage">Ver mais</div>
-            </div>
-
-
-        </div>
+        <?php endforeach ?>   
     </section>
 
 

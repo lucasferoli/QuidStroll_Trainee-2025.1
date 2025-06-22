@@ -36,4 +36,20 @@ class ListaDePostsController
         return view('site/ListaDePosts', compact('posts','page', 'total_pages'));
     }
     
+
+
+     public function search(){
+      $tituloBusca = $_GET['busca'] ?? '';
+
+    if ($tituloBusca) {
+        $posts = App::get('database')->selectWhereLike('posts', 'titulo', $tituloBusca);
+    } else {
+        $posts = App::get('database')->selectAll('posts');
+    }
+    return view('site/ListaDePosts', compact('posts'));
+    }
+
+    public function clean(){
+        header('Location: /lista');
+    }
 }

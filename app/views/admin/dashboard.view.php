@@ -24,6 +24,11 @@ if(!isset($_SESSION['id'])){
         <div id="textoDashboard">
             <p>DASHBOARD</p>
         </div>
+        <a class="linkDashboard" href="/">
+                    <div class="cardDashboard">
+                        <p>HOME</p>
+                    </div>
+                </a>
             <div id="cardsDashboard">
                 <a class="linkDashboard" href="/tabeladeposts">
                     <div class="cardDashboard">

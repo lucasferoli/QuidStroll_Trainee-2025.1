@@ -10,6 +10,7 @@ class LandingController
 
     public function index()
     {
-        return view('site/landingPage');
+       $posts = App::get('database')->selectAllOrderBy('posts', 'id', 'DESC', 0, 5);
+return view('site/landingPage', compact('posts'));
     }
 }

@@ -78,4 +78,20 @@ class ListaDeUsuariosController {
         return view('admin/ListaDeUsuarios', compact('usuarios','page', 'total_pages'));
     }
 
+
+     public function search(){
+      $nomeBusca = $_GET['busca'] ?? '';
+
+    if ($nomeBusca) {
+        $usuarios = App::get('database')->selectWhereLike('usuarios', 'nome', $nomeBusca);
+    } else {
+        $usuarios = App::get('database')->selectAll('usuarios');
+    }
+    return view('admin/ListaDeUsuarios', compact('usuarios'));
+    }
+
+    public function clean(){
+        header('Location: /ListaDeUsuarios');
+    }
+
 }

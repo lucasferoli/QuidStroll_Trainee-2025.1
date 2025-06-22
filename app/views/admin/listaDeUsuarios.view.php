@@ -27,13 +27,15 @@
             </div>
         </div>
 
+        <!-- BARRA DE PESQUISA-->
+
          <div class="barraDePesquisa-Posts">
-        <form method="GET"  action="/admin/tabeladeposts/search" id="form-inputSearch-Posts">
+        <form method="GET"  action="/ListaDeUsuarios/search" id="form-inputSearch-Posts">
             <input type="text" name="busca" placeholder="Buscar" autocomplete="off">
         <button type="submit" id="botaoDePesquisa-Search"><img src="/public/assets/lupa.png" alt=""></button>
     </form>
 
-    <form method="GET"  action="/admin/tabeladeposts/clean" id="form-refresh-Posts">
+    <form method="GET"  action="/ListaDeUsuarios/clean" id="form-refresh-Posts">
         <button type="submit" id="botaoLimpeza-Search"><img src="/public/assets/refreshPosts.png" alt=""></button>
     </form>
 
