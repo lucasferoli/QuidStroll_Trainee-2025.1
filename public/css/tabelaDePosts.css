@@ -451,7 +451,7 @@
 
 @media (max-width: 350px) {
 
-        .acoesTabelaDePosts .excluirTabelaDePosts{
+    .acoesTabelaDePosts .excluirTabelaDePosts{
         display: none;
     }
 
@@ -463,6 +463,10 @@
         display: none;
     }
 
+    .acoesTabelaDePosts .postIndividual {
+        display: none;
+    }
+
         .acoesTabelaDePosts .TresPontosTabelaDePosts {
         display: flex;
         height: 2.5vh;
@@ -470,7 +474,10 @@
         padding-left: 0%;
     }
 
+
 }
+
+
 
 /*botões não testados. podendo haver interferencia com o css pelo padrão do css de "button".*/
 
