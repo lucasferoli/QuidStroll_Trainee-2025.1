@@ -51,10 +51,10 @@ require('app\views\site\componentes\navbar.view.php')
         <?php $usuario = \App\Core\App::get('database')->selectOne('usuarios', $post->id_autor); ?>
         
             <div class="post-landingPage"> 
-                <img src="/public/assets/GTN1H5JWEAAq7Kx.jfif" alt="">
+                <img src="/<?= $post->imagem ?>" alt="">
                 <h1><?= $post->titulo ?></h1>
                 <p><?= $usuario->nome ?></p>
-                <div class = "botao-ver-mais-landingPage">Ver mais</div>
+                <div class = "botao-ver-mais-landingPage"><a href="/postIndividual/<?= $post->id ?>">Ver mais </a></div>
             </div>
         <?php endforeach ?>   
     </section>
