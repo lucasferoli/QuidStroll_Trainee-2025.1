@@ -15,12 +15,10 @@
 </head>
 <body>
     <div class="tela"></div>
-    <section class="sidebar-listaDeUsuarios">
 
     <?php require('app\views\admin\componentes\sidebar.php'); ?>
 
         <!-- NECESSARIOS MELHORIAS EM RESPONSIVIDADE E BOTOES DE PAGINAÇÃO!!-->
-    </section>
     <section class="listaDeUsuarios">
         <div class="titulo-listaDeUsuarios">
             <h1>Tabela de Usuários</h1>

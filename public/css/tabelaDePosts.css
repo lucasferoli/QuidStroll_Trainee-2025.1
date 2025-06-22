@@ -17,7 +17,6 @@
     height: 30vh;
     display: flex;
     flex-direction: row;
-    border-top: 0.1vh solid #1B4F72;
     border-bottom: 0.1vh solid #1A1A1A;
 }
 
@@ -26,14 +25,14 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    padding-left: 10%;
+    padding-left: 15%;
 }
 #tituloPaginaTabelaDePosts h1{
     display: flex;
     height: 9vh;
     flex-direction: column;
-    color: #1A1A1A;
-    font-family: Rubik;
+    color: #1b4f72;
+    font-family: 'Nunito', sans-serif;
     font-size: 8vh;
     font-weight: 700;
     white-space: nowrap;
@@ -49,7 +48,7 @@
 #criarNovoPost img{
     height: 8vh;    
     background-color: #85C1E9;
-    border-radius: 2.8vh;
+    border-radius: 2vh;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
 }
 #criarNovoPost button, .acoesTabelaDePosts button, #paginacaoTabelaDePosts button{
@@ -74,19 +73,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 5vh;
+    border-radius: 2vh;
 }
 
 #tabelaDePosts{
     width: 100%;
     border-spacing: 0;
-    border-radius: 5vh;
+    border-radius: 2vh;
     background-color: #F4F6F7;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 #cabecalhoTabelaDePosts{
-    font-family: rubik;
+    font-family: 'Nunito', sans-serif;
     color: #1A1A1A;
     font-weight:800;
 }
@@ -96,10 +95,10 @@
     justify-content: center;
     align-items: center;
     background-color: #85C1E9;
-    border-radius: 5vh 5vh 0vh 0vh;
+    border-radius: 2vh;
     gap: 2.5vh;
     box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.25);
-    font-family: rubik;
+    font-family: 'Nunito', sans-serif;
     color: #1A1A1A;
     font-weight:800;
 }
@@ -207,12 +206,12 @@
     align-items: center;
     justify-content: center;
     white-space: nowrap;
-    font-family: rubik;
+    font-family: 'Nunito', sans-serif;
     font-size: 3.5vh;
     font-weight: 700;
 }
 .trTabelaDePosts td{
-    font-family: nunito;
+    font-family: 'Nunito', sans-serif;
     font-weight: 500;
     color: #1A1A1A;
     font-size: 3vh;
@@ -253,7 +252,7 @@
 }
 
 .acoesTabelaDePosts img{
-    width: 100%;
+    width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -262,7 +261,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
     height: 30px;
     border: none;
     border-radius: 8px;
@@ -296,7 +294,7 @@
     display: flex;
     justify-content: center;
     font-size: 1em;
-    font-family: "Rubik", sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-weight: 600;
     width: 3rem;
     height: 2rem;
@@ -527,7 +525,7 @@
     height: 100%;
 }
 .formModalEditar-tabelaDePosts{
-    font-family: "Rubik", sans-serif;
+    font-family: 'Nunito', sans-serif;
     display: flex;
     flex-direction: row;
     padding: 3%;
@@ -582,7 +580,7 @@
 
 .botaoSalvarEdicao-tabelaDePosts{
     width: 30%;
-    font-family: "Rubik", sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 40%;
     font-weight: 500;
     color: #1A1A1A;
@@ -663,7 +661,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Rubik", sans-serif;
+    font-family: "Nunito", sans-serif;
     width: 30%;
     height: 30%;
     font-size: 30px;
@@ -766,7 +764,7 @@
 }
 
 .cabecalhoModalAdicionar-tabelaDePosts h1 {
-    font-family: "Rubik", sans-serif;
+    font-family: "Nunito", sans-serif;
     font-size: 2.5rem;
     color: #1B4F72;
 }
@@ -922,7 +920,7 @@
 }
 
 .cabecalhoModalVisualizar-tabelaDePosts h1 {
-    font-family: "Rubik", sans-serif;
+    font-family: "Nunito", sans-serif;
     font-size: 2.5rem;
     color: #1B4F72;
 }

@@ -13,7 +13,6 @@ body{
     color: #f4f6f7;
     border: none;
     border-radius: 5px;
-    padding: 10px 15px;
     z-index: 1000;
     cursor: pointer;
 }
@@ -22,7 +21,7 @@ body{
     width: 250px;
     background: #2e86c1;
     color: #f4f6f7;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     transition: width 0.3s ease;
     overflow: hidden;
@@ -49,8 +48,6 @@ body{
 .sidebarHeader {
     padding: 30px;
     text-align: center;
-    border-bottom: 1px solid #1b4f72;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
@@ -87,7 +84,11 @@ body{
     align-items: center;
 }
 
-.sidebarNav a:hover, .sidebarNav a.active {
+.sidebarNav a:hover {
+    background: #1b4f72;
+}
+
+.sidebarNav a.active:hover {
     background: #1b4f72;
 }
 
@@ -110,10 +111,11 @@ body{
     bottom: 0;
     width: 88%;
     padding: 15px;
+    margin: 10px;
 }
 
 .sidebarFooter a:hover {
-    background: #1b4f72;
+    background: #e74c3c;
 }
 
 .sidebarFooter a {
@@ -126,7 +128,7 @@ body{
 }
 
 main {
-    margin-left: 250px;
+    margin-left: 60px;
     padding: 20px;
     transition: margin-left 0.3s ease;
 }
