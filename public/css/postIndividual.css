@@ -4,12 +4,13 @@
     display: flex;
     flex-direction: column;
 }
+
 #postIndividualVoltar{
     display: flex;
     height: 15vh;
     padding-left: 10vh;
     align-items: center;
-    border-bottom: 0.15vh solid #1B4F72;
+    padding-top: 8vh;
     background: #F4F6F7;
     gap: 3vh;
 }
@@ -321,11 +322,13 @@
         padding: 0;
     }
 
+    
 @media (max-width: 320px){
     #postIndividualVoltar {
         display: flex;
         height: 12vh;
         padding-left: 4.5vh;
+        padding-top: 4vh;
     }
     #postIndividualTextual {
         height: 75.2vh;
