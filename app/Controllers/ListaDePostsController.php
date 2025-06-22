@@ -11,7 +11,7 @@ class ListaDePostsController
     public function index()
     {
         $posts = App::get('database')->selectAll('posts');
-        return view('site/ListaDePosts', compact('posts'));
+        return view('lista', compact('posts'));
     } 
     public function paginate()
     {
@@ -20,7 +20,7 @@ class ListaDePostsController
             $page = intval($_GET['paginacaoNumero']);
 
             if($page <= 0){
-                return redirect('site/ListaDePosts');
+                return redirect('lista');
             }
         }
         $itensPage = 6;
@@ -28,7 +28,7 @@ class ListaDePostsController
         $rows_count = App::get('database')->countAll('posts');
 
         if($inicio > $rows_count){
-            return redirect('site/ListaDePosts');
+            return redirect('lista');
         }
 
         $posts = App::get('database')->selectAll('posts', $inicio, $itensPage);

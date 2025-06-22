@@ -11,10 +11,11 @@
 
 </head>
 <body>
-    <?php
+    
+    <main>
+        <?php
     require('app\views\site\componentes\navbar.view.php')
     ?>
-    <main>
 
     <div class="barraDePesquisa-Posts">
         <form method="GET"  action="/lista/search" id="form-inputSearch-Posts">
