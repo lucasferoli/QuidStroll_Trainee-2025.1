@@ -76,7 +76,7 @@ if(!isset($_SESSION['id'])) {
                         <td class="acoesTabelaDePosts">
                             <button onclick="abrirModal('janelaModalVisualizar<?= $post->id ?>', 'fundoModalVisualizar')" ><img class="visualizarTabelaDePosts" src="/public/assets/eye_9352623.png" alt="Visualizar"></button>
                             <button onclick="abrirModal('janelaModalEditar<?= $post->id ?>','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/editor_11168974.png" alt="Editar"></button>
-                            <button onclick="abrirModal('janelaModalVerMais<?= $post->id ?>','fundoModalVerMais')"><img class="TresPontosTabelaDePosts" src="/public/assets/3Pontos (2).png" alt="Ver Mais"></button>
+                            <button onclick="abrirModal('janelaModalVerMais<?= $post->id ?>','fundoModalVerMais<?= $post->id ?>')"><img class="TresPontosTabelaDePosts" src="/public/assets/3Pontos (2).png" alt="Ver Mais"></button>
                         <button onclick="abrirModal('janelaModalExcluir<?= $post->id ?>', 'fundoModal<?= $post->id ?>')"><img class="excluirTabelaDePosts" src="/public/assets/trash-bin_6880490.png" alt="Excluir"></button>
                           <a class="postIndividual" href="/postIndividual/<?= $post->id ?>"><img src="/public/assets/document_4933804.png" alt=""></a>
                         </td>
@@ -221,7 +221,16 @@ if(!isset($_SESSION['id'])) {
             </div>
         </div>
     </div>
-
+    <!----------------- MODAL DE TELAS PEQUENAS ------------------------------>
+    <div class="ModalVerMais" id="fundoModalVerMais<?= $post->id ?>">
+        <div class="corpo-do-VerMais" id="janelaModalVerMais<?= $post->id ?>">
+            <button type="button" onclick="abrirModal('janelaModalVisualizar', 'fundoModalVisualizar')"><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
+            <button type="button" onclick="abrirModalEditar('janelaModalEditar','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
+            <button type="button" onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
+            <button id = "botao-fechar-ver-mais" type="button" onclick="fecharModal('janelaModalVerMais', 'fundoModalVerMais')">fechar</button>   
+        </div>
+    </div>
+    
         <?php endforeach ?>   
 
      <!--Modal Adicionar-->
@@ -269,15 +278,7 @@ if(!isset($_SESSION['id'])) {
      
 
 
-    <!----------------- MODAL DE TELAS PEQUENAS ------------------------------>
-        <div class="ModalVerMais" id="fundoModalVerMais">
-            <div class="corpo-do-VerMais" id="janelaModalVerMais">
-                <button type="button" onclick="abrirModal('janelaModalVisualizar', 'fundoModalVisualizar')"><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
-                <button type="button" onclick="abrirModalEditar('janelaModalEditar','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
-                <button type="button" onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
-                <button id = "botao-fechar-ver-mais" type="button" onclick="fecharModal('janelaModalVerMais', 'fundoModalVerMais')">fechar</button>   
-            </div>
-        </div>
+    
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
