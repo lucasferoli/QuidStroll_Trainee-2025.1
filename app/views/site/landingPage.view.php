@@ -17,12 +17,11 @@
 </head>
 <body>
 
-<?php
-require('app\views\site\componentes\navbar.view.php')
-?>
 
 
-
+    <?php
+    require('app\views\site\componentes\navbar.view.php')
+    ?>
     <section class="hero-section-landingPage">
         <div class="texto-hs-landingPage">
             <h1>A regra é opinar!</h1>

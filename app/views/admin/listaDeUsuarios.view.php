@@ -69,8 +69,9 @@
 
             </table>
         </div>
-    <nav class="paginacao-listaDeUsuarios">
-        <ul>
+        <?php if (!isset($_GET['busca'])): ?>
+            <nav class="paginacao-listaDeUsuarios">
+                <ul>
             <!-- Página Anterior -->
             <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page - 1 ?>">
                 <li class="page-item <?= $page <= $total_pages ? ' class="disabled"' : '' ?>">
@@ -90,29 +91,30 @@
                         <?= $page_number ?>
                     </li>
                 </a>
-            <?php endfor; ?>
+                <?php endfor; ?>
                 
-
-            <!-- Página Seguinte -->
-            <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page + 1 ?>">
-                <li class="page-item <?= $page >= $total_pages ? ' class="disabled"' : '' ?>">
-                    <?php if ($page < $total_pages): ?>
+                
+                <!-- Página Seguinte -->
+                <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page + 1 ?>">
+                    <li class="page-item <?= $page >= $total_pages ? ' class="disabled"' : '' ?>">
+                        <?php if ($page < $total_pages): ?>
                             <span>&raquo;</span>
-                    <?php else: ?>
-                        <span>&raquo;</span>
-                    <?php endif; ?>
-                </li>
-            </a>
-        </ul>
+                            <?php else: ?>
+                                <span>&raquo;</span>
+                                <?php endif; ?>
+                            </li>
+                        </a>
+                    </ul>
     </nav>
-
-        
-       
-<!-------------------------------------MODAL-------------------------------------------->
-
-        <form action="/ListaDeUsuarios/create" method="POST">
-            <div class="modal-listaDeUsuarios" id="criarUsuario">
-                <h1>Criar</h1>
+    
+    <?php endif; ?>
+    
+    
+    <!-------------------------------------MODAL-------------------------------------------->
+    
+    <form action="/ListaDeUsuarios/create" method="POST">
+        <div class="modal-listaDeUsuarios" id="criarUsuario">
+            <h1>Criar</h1>
                 <div>
                     <p>Nome:</p>
                     <input required type="text" name = "nome">

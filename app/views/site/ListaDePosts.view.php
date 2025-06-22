@@ -48,8 +48,9 @@
         
     <!------------------------- Paginação ----------------------->
     <!----------------------------------------------------------->
-    <nav class="paginacao-listaDeUsuarios">
-        <ul>
+    <?php if (!isset($_GET['busca'])): ?>
+        <nav class="paginacao-listaDeUsuarios">
+            <ul>
             <!-- Página Anterior -->
             <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page - 1 ?>">
                 <li class="page-item <?= $page <= $total_pages ? ' class="disabled"' : '' ?>">
@@ -57,7 +58,7 @@
                         
                             <span>&laquo;</span>
                         
-                    <?php else: ?>
+                            <?php else: ?>
                         <span>&laquo;</span>
                     <?php endif; ?>
                 </li>
@@ -76,14 +77,15 @@
             <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page + 1 ?>">
                 <li class="page-item <?= $page >= $total_pages ? ' class="disabled"' : '' ?>">
                     <?php if ($page < $total_pages): ?>
-                            <span>&raquo;</span>
-                    <?php else: ?>
                         <span>&raquo;</span>
-                    <?php endif; ?>
-                </li>
+                        <?php else: ?>
+                            <span>&raquo;</span>
+                            <?php endif; ?>
+                        </li>
             </a>
         </ul>
     </nav>
+    <?php endif; ?>
 
 
     </main>
