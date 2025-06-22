@@ -22,8 +22,6 @@ body{
     height: 30vh;
     display: flex;
     flex-direction: row;
-    border-top: 0.1vh solid #1B4F72;
-    border-bottom: 0.1vh solid #1A1A1A;
     font-size: 8vh;
     justify-content: start;
     align-items: center;
@@ -33,8 +31,8 @@ body{
     display: flex;
     height: 9vh;
     flex-direction: column;
-    color: #1A1A1A;
-    font-family: Rubik;
+    color: #1B4F72;
+    font-family: 'Nunito', sans-serif;
     font-size: 8vh;
     font-weight: 700;
     white-space: nowrap;
@@ -178,7 +176,7 @@ body{
     overflow: hidden;
 }
 .cabecalhoTabela-listaDeUsuarios{
-    font-family: "Rubik", sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-weight: 700;
     background-color: #85C1E9;
     box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.25);
@@ -192,7 +190,7 @@ body{
 }
 
 .corpoTabela-listaDeUsuarios td{
-    font-family: "Nunito", sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-weight: 500;
     font-size: 1.25rem;
     padding: 2% 2% 2% 2%;
@@ -244,7 +242,7 @@ td img{
     display: flex;
     justify-content: center;
     font-size: 1em;
-    font-family: "Rubik", sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-weight: 600;
     width: 3rem;
     height: 2rem;
@@ -360,14 +358,14 @@ td img{
     justify-content: center;
     align-items: center;
     padding: 1vh 0vh 4vh 0vh;
-    font-family: rubik;
+    font-family: 'Nunito', sans-serif;
     color: #1B4F72;
     font-size: 6vh;
     border-bottom: 0.1vh solid #1B4F72;
 }
 
 .modal-listaDeUsuarios p{
-    font-family: Nunito;
+    font-family: 'Nunito', sans-serif;
     font-size: 3vh;
     font-weight: bold;
     color: #1B4F72;
@@ -396,7 +394,7 @@ td img{
 }
 
 .botoesModais-listaDeUsuarios button{
-    font-family: Nunito;
+    font-family: 'Nunito', sans-serif;
     color: #F4F6F7;
     background-color: #2E86C1;
     border: 0vh;
