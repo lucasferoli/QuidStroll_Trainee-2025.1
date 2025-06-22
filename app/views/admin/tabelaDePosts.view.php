@@ -91,38 +91,40 @@ if(!isset($_SESSION['id'])) {
     <nav class="paginacao-listaDeUsuarios">
         <ul>
             <!-- Página Anterior -->
-            <li class="page-item <?= $page <= $total_pages ? ' class="disabled"' : '' ?>">
-                <?php if ($page > 1): ?>
-                    <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page - 1 ?>">
+            <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page - 1 ?>">
+                <li class="page-item <?= $page <= $total_pages ? ' class="disabled"' : '' ?>">
+                    <?php if ($page > 1): ?>
+                        
+                            <span>&laquo;</span>
+                        
+                    <?php else: ?>
                         <span>&laquo;</span>
-                    </a>
-                <?php else: ?>
-                    <span>&laquo;</span>
-                <?php endif; ?>
-            </li>
-
+                    <?php endif; ?>
+                </li>
+            </a>
             <!-- Números das páginas -->
             <?php for ($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
-                <li>
-                    <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page_number ?>" 
-                    class="<?= $page_number == $page ? 'active' : '' ?>">
+                <a style="display: block; text-decoration: none;" href="?paginacaoNumero=<?= $page_number ?>">
+                    <li class="<?= $page_number == $page ? 'active' : '' ?>">
                         <?= $page_number ?>
-                    </a>
-                </li>
+                    </li>
+                </a>
             <?php endfor; ?>
+                
 
             <!-- Página Seguinte -->
-            <li class="page-item <?= $page >= $total_pages ? ' class="disabled"' : '' ?>">
-                <?php if ($page < $total_pages): ?>
-                    <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page + 1 ?>">
+            <a style="text-decoration: none;" href="?paginacaoNumero=<?= $page + 1 ?>">
+                <li class="page-item <?= $page >= $total_pages ? ' class="disabled"' : '' ?>">
+                    <?php if ($page < $total_pages): ?>
+                            <span>&raquo;</span>
+                    <?php else: ?>
                         <span>&raquo;</span>
-                    </a>
-                <?php else: ?>
-                    <span>&raquo;</span>
-                <?php endif; ?>
-            </li>
+                    <?php endif; ?>
+                </li>
+            </a>
         </ul>
     </nav>
+
 
     <!----------------------Modal------------------------------->
     <!---------------------------------------------------------->

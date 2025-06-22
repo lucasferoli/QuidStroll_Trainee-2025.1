@@ -14,52 +14,10 @@ main {
     flex: 1;
 }
 
-p {
-    font-family: 'Nunito', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
+h1{
     font-family: 'Rubik', sans-serif;
-  }
-
-/*.segBarraDePesquisa {
-    display: flex;
-    justify-content: center;
-    margin: 4vh 0px 4vh 0px;
-    width: 100%;
-    height: 5.6vh;
-
 }
 
-.barraDePesquisa {
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    width: 40%;
-    height: 100%;
-    border: 2px solid #1B4F72;
-    border-radius: 50px;
-    font-size: 16px;
-    background-color: white;
-}
-
-.barraDePesquisa input {
-    flex: 1; 
-    border: none;
-    outline: none;
-    padding: 0 1.56vh;
-    font-size: 2.19vh;
-    background-color: transparent; 
-    color: black; 
-}
-
-.segBarraDePesquisa i {
-    color: white;
-    background-color: #0057FF;
-    padding: 1.56vh 1.56vh 1.8vh 1.56vh;
-    border-top-right-radius: 7.82vh;
-    border-bottom-right-radius: 7.82vh;
-}*/
 .barraDePesquisa-Posts {
     width: 100%;
     display: flex;
@@ -84,7 +42,6 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     gap: 10px;
 }
-
 
 #botaoDePesquisa-Search {
     display: flex;
@@ -134,12 +91,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-a{
-  text-decoration: none;
-  color: inherit;
-}
-
-
 .grid {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -150,18 +101,17 @@ a{
 }
 
 .card1 {
-    background-color: #c1e0f7;
     width: 34.4vh;
     height: 40.6vh;
     border-radius: 10px;
     border: 3px solid #1B4F72;
-    box-shadow: 0 2px 4px #001959;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
     text-align: center;
 }
+
 
 .card1 img{
     width: 100%;
@@ -171,6 +121,8 @@ a{
 }
 
 .card1 .conteudo {
+    border-top: #1B4F72 1px solid;
+    background-color: #c1e0f7;
     padding: 1.56vh;
     color: #000;
 }
@@ -178,11 +130,12 @@ a{
 
 .card1 .conteudo h3 {
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 400;
     margin-bottom: 0.93vh;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-family: rubik;
 }
 
 .card1 .conteudo p {
@@ -191,10 +144,12 @@ a{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
 }
 
 .card1 .autor {
-    background-color: #0A639E;
+    background-color: #1B4F72;
     color: white;
     font-weight: 600;
     font-size: 12px;
@@ -210,7 +165,7 @@ a{
     height: 40.6vh;
     border-radius: 10px;
     border: 3px solid #1B4F72;
-    box-shadow: 0 2px 4px #001959;
+    box-shadow: 0 2px 4px #0A639E;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -242,33 +197,7 @@ a{
     font-weight: 600;
 }
 
-.paginacao-listaDePosts{
-    margin: 2% 0% 0% 0%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-    width: fit-content;
-    padding: 1% 3% 1% 3%;
-    background-color: #0A639E;
-    border-radius: 999px 999px 999px 999px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
-    font-size: 20px;
-}
-.paginacao-listaDePosts button{
-    font-size: 0.9em;
-    font-family: "Rubik", sans-serif;
-    font-weight: 600;
-    color: #f4f6f7;
-    width: 0.9rem;
-    height: 0.3rem;
-    display: flex;
-    align-items: center;
-    border: none;
-    background-color: #0A639E;
-}
+
 
 
 @media only screen and (max-width: 806px) {
@@ -281,6 +210,59 @@ a{
         margin-right: 20vh;
         margin-bottom: 15vh; 
     }
+    .paginacao-listaDeUsuarios{
+    margin: 2% 0% 2% 0%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: fit-content;
+    padding: 1% 3% 1% 3%;
+    background-color: #85C1E9;
+    border-radius: 999px 999px 999px 999px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+    justify-content: center;
+    text-decoration: none;
+}
+
+
+
+.paginacao-listaDeUsuarios li{
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    width: 3rem;
+    height: 2rem;
+    border: none;
+    background-color: #85C1E9;
+    cursor: pointer;
+    list-style-type: none;
+}
+
+.paginacao-listaDeUsuarios li {
+    color: #0A639E !important;
+}
+
+#paginaEmUso-listaDeUsuarios{
+    background-color: #F4F6F7;
+    border-radius: 20px;
+    box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+.paginacao-listaDeUsuarios li:hover{
+    display: flex;
+    justify-content: center;
+    width: 3rem;
+    background-color: #F4F6F7;
+    border-radius: 20px;
+    box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+
+}
 }
 
 @media only screen and (max-width: 500px) {
@@ -319,16 +301,15 @@ a{
     .card1 {
         background-color: #c1e0f7;
         width: 52vw;
-        height: 30.16vh;
+        height: 40.16vh;
         border-radius: 10px;
         border: 3px solid #1B4F72;
-        box-shadow: 0 2px 4px #001959;
+        box-shadow: 0 2px 4px #0A639E;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         overflow: hidden;
     }
-    
     .card1 .conteudo {
         padding: 1.56vh;
         color: #000;
@@ -355,19 +336,19 @@ a{
 
     .card {
         background-color: #c1e0f7;
-        box-shadow: 0 2px 4px #001959;
+        box-shadow: 0 2px 4px #0A639E;
         width: 90%;
         height: 10vh;
         flex-direction: row;
         align-items: center;
         padding: 10px;
     }
-
+    
     .card1 img {
         width: 100%;
         height: 100%;
         overflow: hidden;
-    
+        object-fit:cover;
     }
 
     .card .conteudo {
@@ -433,7 +414,7 @@ a{
 }
 
 .paginacao-listaDeUsuarios li {
-    color: #0D6EFD !important;
+    color: #0A639E !important;
 }
 
 #paginaEmUso-listaDeUsuarios{
@@ -492,3 +473,11 @@ a{
     
 }
 
+/*--------------------------------------------------------------*/
+.card1 {
+    transition: transform 0.2s ease;
+}
+
+.card1:hover{
+    transform: scale(1.1); 
+}
