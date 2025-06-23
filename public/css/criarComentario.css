@@ -107,3 +107,13 @@ form {
 
     
 }
+
+@media(max-width: 375px) {
+    .conteudo-Comentario input {
+    width: 250px;
+}
+
+
+    
+    
+}
