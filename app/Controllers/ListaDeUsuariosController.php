@@ -62,7 +62,7 @@ class ListaDeUsuariosController {
             $page = intval($_GET['paginacaoNumero']);
 
             if($page <= 0){
-                return redirect('admin/ListaDeUsuarios');
+                return redirect('ListaDeUsuarios');
             }
         }
         $itensPage = 5;
@@ -70,7 +70,7 @@ class ListaDeUsuariosController {
         $rows_count = App::get('database')->countAll('usuarios');
 
         if($inicio > $rows_count){
-            return redirect('admin/ListaDeUsuarios');
+            return redirect('ListaDeUsuarios');
         }
 
         $usuarios = App::get('database')->selectAll('usuarios', $inicio, $itensPage);

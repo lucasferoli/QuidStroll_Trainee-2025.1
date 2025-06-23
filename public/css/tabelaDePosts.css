@@ -1165,6 +1165,8 @@
     font-size: 2rem;
     color: #1A1A1A;
     margin: 0;
+    word-break: break-word; 
+    white-space: normal;
 }
 
 .textoModalVisualizar-tabelaDePosts p {
@@ -1192,6 +1194,10 @@
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 2;
     display: none;
+}
+
+.botao3pontinhos{
+    background: none;
 }
 
 @media (max-width: 480px) {

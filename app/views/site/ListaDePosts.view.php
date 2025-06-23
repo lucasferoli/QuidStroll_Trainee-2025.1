@@ -32,7 +32,7 @@
     <div class="grid">
         <?php foreach($posts as $post):?>
         <?php $usuario = \App\Core\App::get('database')->selectOne('usuarios', $post->id_autor); ?>
-        <a style="text-decoration: none;" class="link-listaDePosts" href="postIndividual/<?= $post->id ?>">
+        <a style="text-decoration: none;" class="link-listaDePosts" href="/postIndividual/<?= $post->id ?>">
             <div class="card1">
                 <img src="/<?= $post->imagem ?>" alt="Imagem do Post" onerror="this.src='/public/assets/default-fallback-image.png'; this.alt='';">
                 <div class="conteudo">

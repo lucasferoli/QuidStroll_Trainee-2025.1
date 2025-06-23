@@ -104,7 +104,7 @@ class TabelaDePostsAdminController
             $page = intval($_GET['paginacaoNumero']);
 
             if($page <= 0){
-                return redirect('admin/tabeladeposts');
+                return redirect('tabeladeposts');
             }
         }
         $itensPage = 5;
@@ -112,7 +112,7 @@ class TabelaDePostsAdminController
         $rows_count = App::get('database')->countAll('posts');
 
         if($inicio > $rows_count){
-            return redirect('admin/tabeladeposts');
+            return redirect('tabeladeposts');
         }
 
         $posts = App::get('database')->selectAll('posts', $inicio, $itensPage);

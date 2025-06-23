@@ -76,7 +76,7 @@ if(!isset($_SESSION['id'])) {
                         <td class="acoesTabelaDePosts">
                             <button onclick="abrirModal('janelaModalVisualizar<?= $post->id ?>', 'fundoModalVisualizar')" ><img class="visualizarTabelaDePosts" src="/public/assets/eye_9352623.png" alt="Visualizar"></button>
                             <button onclick="abrirModal('janelaModalEditar<?= $post->id ?>','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/editor_11168974.png" alt="Editar"></button>
-                            <button onclick="abrirModal('modalAcoes-TabelaDePosts<?= $post->id ?>','fundoModal<?= $post->id ?>')"><img class="TresPontosTabelaDePosts" src="/public/assets/3Pontos (2).png" alt="Ver Mais"></button>
+                            <button onclick="abrirModal('modalAcoes-TabelaDePosts<?= $post->id ?>','fundoModal<?= $post->id ?>')" class="botao3pontinhos"><img class="TresPontosTabelaDePosts" src="/public/assets/3Pontos (2).png" alt="Ver Mais"></button>
                         <button onclick="abrirModal('janelaModalExcluir<?= $post->id ?>', 'fundoModal<?= $post->id ?>')"><img class="excluirTabelaDePosts" src="/public/assets/trash-bin_6880490.png" alt="Excluir"></button>
                           <a class="postIndividual" href="/postIndividual/<?= $post->id ?>"><img src="/public/assets/document_4933804.png" alt=""></a>
                         </td>
@@ -276,7 +276,7 @@ if(!isset($_SESSION['id'])) {
             <div class="campoFormModalAdicionar">
                 <label for="conteudoPost">Conteúdo:</label>
                 <label for="" class="labelConteudoPost-Adicionar">
-                    <textarea id="conteudoPost" class="inputConteudo-Adicionar" name="descricao" rows="5" required maxlength="200"></textarea>
+                    <textarea id="conteudoPost" class="inputConteudo-Adicionar" name="descricao" rows="5" required maxlength="700"></textarea>
                     <span class="contadorConteudo-Adicionar"></span>
                 </label>
             </div>
