@@ -222,8 +222,8 @@ if(!isset($_SESSION['id'])) {
         </div>
     </div>
     <!----------------- MODAL DE TELAS PEQUENAS ------------------------------>
-    <!-- <div class="ModalVerMais" id="fundoModalVerMais<?= $post->id ?>">
-        <div class="corpo-do-VerMais" id="janelaModalVerMais<?= $post->id ?>">
+    <!-- <div class="ModalVerMais" id="fundoModalVerMais">
+        <div class="corpo-do-VerMais" id="janelaModalVerMais">
             <button type="button" onclick="abrirModal('janelaModalVisualizar', 'fundoModalVisualizar')"><img class="visualizarTabelaDePosts" src="\public\assets\Eye.png" alt="Visualizar"></button>
             <button type="button" onclick="abrirModalEditar('janelaModalEditar','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/Pen.png" alt="Editar"></button>
             <button type="button" onclick="abrirModalExcluir('janelaModalExcluir', 'fundoModal')"><img class="excluirTabelaDePosts" src="/public/assets/Trash.png" alt="Excluir"></button>
@@ -234,19 +234,20 @@ if(!isset($_SESSION['id'])) {
    
     <!--Modal 3 pontos Excluir-->
 
-    <div class="fundoModal-tabelaDePosts-teste" id="fundoModal-teste<?= $post->id ?>">
-        <div class="modalExcluir-tabelaDePosts-teste" id="janelaModalExcluir-teste<?= $post->id ?>">
-        <div class="cabecalhoModalExcluir-tabelaDePosts">
-        </div>
+    <div class="modalAcoes-TabelaDePosts" id="modalAcoes-TabelaDePosts">
+        <div class="campoModalAcoes-TabelaDePosts">
             <button onclick="abrirModal('janelaModalVisualizar<?= $post->id ?>', 'fundoModalVisualizar')" ><img class="visualizarTabelaDePosts" src="/public/assets/eye_9352623.png" alt="Visualizar"></button>
             <button onclick="abrirModal('janelaModalEditar<?= $post->id ?>','fundoModal')"><img class="editarTabelaDePosts" src="/public/assets/editor_11168974.png" alt="Editar"></button>
             <button onclick="abrirModal('janelaModalExcluir<?= $post->id ?>', 'fundoModal<?= $post->id ?>')"><img class="excluirTabelaDePosts" src="/public/assets/trash-bin_6880490.png" alt="Excluir"></button>
             <a class="postIndividual" href="/postIndividual/<?= $post->id ?>"><img src="/public/assets/document_4933804.png" alt=""></a>
-            <button id = "botao-fechar-ver-mais" type="button" onclick="fecharModal('janelaModalVerMais', 'fundoModalVerMais')">Fechar</button>   
+            <button onclick="fecharModal('modalAcoes-TabelaDePosts<?= $post->id ?>', 'fundoModal')"><img src="/public/assets/simboloFecharPost.png" alt="Fechar Guia"></button> 
         </div>
+    </div>
     
         <?php endforeach ?>   
 
+
+    
      <!--Modal Adicionar-->
     <div class="fundoModalAdicionar-tabelaDePosts" id="fundoModalAdicionar"></div>
     <div class="modalAdicionar-tabelaDePosts" id="janelaModalAdicionar">

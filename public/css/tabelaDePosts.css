@@ -1225,18 +1225,44 @@
 
 }
 
-.fundoModal-tabelaDePosts-teste {
-    position: absolute;
-    display: none; 
+.modalAcoes-TabelaDePosts {
+    position: absolute !important;
+    display: flex; 
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     border: 2px solid #1B4F72;
     background-color: #2E86C1;
-    width: 100%;
-    height: 100%;
+    width: fit-content;
+    height: fit-content;
     position: relative;
     gap: 1vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, 50%);
+    z-index: 400;
+
 }
+.campoModalAcoes-TabelaDePosts{
+    display: flex;
+    flex-direction: row;
+}
+
+.modalAcoes-TabelaDePosts button{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+}
+.modalAcoes-TabelaDePosts img{
+    width: 70px;
+    height: 70px;
+}
+
+
 
 .corpo-do-VerMais .visualizarTabelaDePosts {
     width: 100%;

@@ -19,7 +19,7 @@ document.querySelectorAll('.modalEditar-tabelaDePosts').forEach(modal => {
     const contadorConteudo = modal.querySelector('.contadorConteudo-Editar');
     const botao = modal.querySelector('.botaoSalvarEdicao-tabelaDePosts');
     const limiteTitulo = 50;
-    const limiteConteudo = 200;
+    const limiteConteudo = 700;
 
     function atualizarContador(input, contador, limite) {
         let tamanho = input.value.length;
@@ -106,7 +106,7 @@ aplicarContador(
 aplicarContador(
     '.inputConteudo-Adicionar', 
     '.contadorConteudo-Adicionar', 
-    200, 
+    700, 
     ['.inputTitulo-Adicionar', '.inputConteudo-Adicionar'], 
     '.botaoAdicionar'
 );
