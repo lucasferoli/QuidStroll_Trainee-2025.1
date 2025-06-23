@@ -14,7 +14,8 @@
     <?php foreach($comentarios as $comentario): ?>
     <div class="comentarioIndividual">
         <div class="cabecalhoComentarioIndividual">
-            <h1>Anônimo</h1>
+            <?php $usuario = \App\Core\App::get('database')->selectOne('usuarios', $comentario->id_autor); ?>
+            <h1><?= $usuario->nome ?></h1>
             <?= date('d/m/Y', strtotime($comentario->data))?>
 
             <form action="/postIndividual/<?= $comentario->id ?>/delete" method="POST">
