@@ -252,7 +252,7 @@ if(!isset($_SESSION['id'])) {
             <div class="campoFormModalAdicionar">
                 <label for="conteudoPost">Conteúdo:</label>
                 <label for="" class="labelConteudoPost-Adicionar">
-                    <textarea id="conteudoPost" class="inputConteudo-Adicionar" name="descricao" rows="5" required maxlength="200"></textarea>
+                    <textarea id="conteudoPost" class="inputConteudo-Adicionar" name="descricao" rows="5" required maxlength="700"></textarea>
                     <span class="contadorConteudo-Adicionar"></span>
                 </label>
             </div>
