@@ -17,13 +17,14 @@
             <?php $usuario = \App\Core\App::get('database')->selectOne('usuarios', $comentario->id_autor); ?>
             <h1><?= $usuario->nome ?></h1>
             <?= date('d/m/Y', strtotime($comentario->data))?>
-
+           <?php if(isset($_SESSION['id'])): ?>
             <form action="/postIndividual/<?= $comentario->id ?>/delete" method="POST">
     <input name="id_post" value="<?= $comentario->id_post ?>" type="hidden">
     <button type="submit">
         <img src="/public/assets/simboloFecharPost.png" alt="">
     </button>
 </form>
+<?php endif; ?>
         
         </div>
             <div class="conteudoComentarioIndividual"><?= $comentario->conteudo?></div>

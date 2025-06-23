@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -21,7 +23,14 @@
         <div class="botoesNavbar" id="botoesNavbar">
             <a href="/"><i class="fas fa-home"></i>Home</a>
             <a href="/lista"><i class="fas fa-newspaper"></i>Publicações</a>
-            <a href="/login"><i class="fas fa-sign-in-alt"></i>Login</a>
+            <?php if(isset($_SESSION['id'])): ?>
+                <a href="/login"><i class="fas fa-sign-in-alt"></i>Dashboard</a>
+                <?php else: ?>
+                <a href="/login"><i class="fas fa-sign-in-alt"></i>Login</a>
+            <?php endif; ?>
+            
+            
+            
         </div>
     </nav>
 

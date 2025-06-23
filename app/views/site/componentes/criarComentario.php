@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <?php if(isset($_SESSION['id'])): ?>
  <form action="/postIndividual/{id}/create" method="POST">
     <div class="titulo-Comentario">
         Comentários
@@ -23,13 +24,12 @@
             <span class="inputCaracteres"></span>
 
             </label>
-
             <button type="submit" class="botaoEnviarComentario"><img src="/public/assets/setaEnviar.png" alt=""></button>
        
         </div>
     </div>
 </form>
-    
+    <?php endif; ?>
 </body>
 <script src="/public/js/comentario.js"></script>
 </html>
