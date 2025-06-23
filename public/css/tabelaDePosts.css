@@ -554,7 +554,7 @@
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 400px) {
 
     .acoesTabelaDePosts .excluirTabelaDePosts{
         display: none;
@@ -593,7 +593,7 @@
     display: none;
     flex-direction: column;
     position: fixed;
-    z-index: 3;
+    z-index: 100;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -708,10 +708,11 @@
 
 .fundoModal-tabelaDePosts {
     position: fixed;
-    z-index: 2;
+
+    z-index: 1;
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     opacity: 0.6;
     display: none;
 }
@@ -1227,30 +1228,33 @@
 
 .modalAcoes-TabelaDePosts {
     position: absolute !important;
-    display: flex; 
+    display: none; 
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: 2px solid #1B4F72;
-    background-color: #2E86C1;
+    background-color: #F4F6F7;
     width: fit-content;
     height: fit-content;
     position: relative;
-    gap: 1vh;
-    top: 50%;
+    top:50%;
     left: 50%;
-    transform: translate(50%, 50%);
-    z-index: 400;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #1B4F72;
+    
 
 }
 .campoModalAcoes-TabelaDePosts{
     display: flex;
     flex-direction: row;
+    gap: 10px;
 }
 
 .modalAcoes-TabelaDePosts button{
-    width: 70px;
-    height: 70px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1258,8 +1262,8 @@
     border: none;
 }
 .modalAcoes-TabelaDePosts img{
-    width: 70px;
-    height: 70px;
+    width: 40px;
+    height: 40px;
 }
 
 
