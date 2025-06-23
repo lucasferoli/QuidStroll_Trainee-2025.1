@@ -137,3 +137,7 @@ git config --global user.email email@codejr.com.br
 4. Rode o comando composer `dump-autoload`;
 
 5. Crie um banco de dados `sql` com o nome de `sua preferencia e coloque o nome dele dentro do arquivo start_application que está dentro do diretorio bootstrap`;
+
+### Manual de Uso
+
+[Manual de Uso](https://www.canva.com/design/DAGrGONJVs4/yWIh82FHRNtTrXPq_YZ7AA/edit?utm_content=DAGrGONJVs4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
